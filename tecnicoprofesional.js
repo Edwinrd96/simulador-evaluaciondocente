@@ -1347,18 +1347,7 @@ La prueba escrita, de manera aislada, NO evidencia la competencia en su integral
     competenciaEvaluada: "Aplicación de retroalimentación formativa y descriptiva fundamentada en evidencias de aprendizaje",
     nivelDificultad: "Alta"
   },
-  {
-    id: 93,
-    categoria: "Competencias Técnicas Especializadas",
-    especialidad: "Sostenibilidad y Protección Ambiental",
-    pregunta: "En el taller de Mecánica Automotriz de un politécnico público, el docente a cargo de la práctica de mantenimiento de motores térmicos instruye a los estudiantes a verter los aceites e hidrocarburos usados directamente en las rejillas del drenaje pluvial del centro educativo, aduciendo que la municipalidad local carece de camiones de recogida de residuos tóxicos. ¿Qué dictamen normativo aplica a esta situación?",
-    opciones: [
-      "Es un procedimiento tolerado ante condiciones de precariedad de infraestructura urbana e inexistencia de plantas de reciclaje municipales.",
-      "Constituye una falta grave contra los protocolos de Seguridad, Salud y Protección Ambiental de la ETP, los cuales mandatan el almacenamiento hermético y la gestión de retiro regulado de desechos peligrosos con gestores autorizados conforme a la Ley 64-00.",
-      "Es una acción permitida debido a que los volúmenes de aceites generados en laboratorios escolares están exentos de penalizaciones ambientales por ley.",
-      "La responsabilidad penal y ambiental recae de manera exclusiva sobre los estudiantes que ejecutaron la acción de vertido físico del hidrocarburo."
-      },
-  {
+{
     id: 93,
     categoria: "Competencias Técnicas Especializadas",
     especialidad: "Sostenibilidad y Protección Ambiental",

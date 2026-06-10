@@ -9841,7 +9841,6 @@ const bancoPreguntas = [
     competenciaEvaluada: "Prevención del abandono escolar, orientación vocacional como herramienta de retención, trabajo con familias y gestión de casos múltiples con intervención diferenciada"
   },
 
-    const bancoPreguntas = [
   {
     id: 701,
     categoria: "Acoso Escolar – Identificación de Riesgos / Protocolos de Convivencia / Trabajo Interdisciplinario",
@@ -10052,7 +10051,6 @@ const bancoPreguntas = [
     nivelDificultad: "Alta",
     competenciaEvaluada: "Aplicación del modelo normativo del servicio desde el inicio, reorientación institucional con base en el PNI-ORE y defensa ética del rol del psicólogo escolar"
   },
-const bancoPreguntas = [
   {
     id: 711,
     categoria: "Negligencia / Protección de NNA / Ruta Crítica / Articulación Intersectorial",
