@@ -1082,7 +1082,1339 @@ La prueba escrita, de manera aislada, NO evidencia la competencia en su integral
         ],
         respuestaCorrecta: 1,
         explicacion: "Base Legal: Ley 136-03 (Protección a NNA), Normas de Convivencia Escolar y Seguridad MTP. La tolerancia de dinámicas abusivas y machistas en espacios de alto riesgo vulnera los derechos humanos y atenta contra la seguridad industrial básica. El docente es responsable civil y penalmente de mantener la disciplina y seguridad psicosocial en el recinto."
-    }
+    },
+  {
+    id: 81,
+    categoria: "Competencias Docentes Generales",
+    especialidad: "Ética y Conducta Profesional",
+    pregunta: "Un docente de la especialidad de Informática del segundo ciclo de secundaria crea un grupo de WhatsApp privado con tres estudiantes de sexto grado para darles seguimiento exclusivo sobre un proyecto de desarrollo de software, fuera del horario del politécnico y sin la presencia de los padres o tutores. ¿Qué valoración técnico-normativa corresponde a esta situación?",
+    opciones: [
+      "El docente actúa de manera correcta porque fomenta el uso de las TIC y el aprendizaje cooperativo avanzado según las bases curriculares.",
+      "El docente viola el Código de Ética establecido en la Orden Departamental 22-2023, ya que las comunicaciones digitales deben realizarse por canales oficiales del MINERD, incluir a los padres o tutores y tener un fin estrictamente pedagógico institucional.",
+      "El docente puede mantener el grupo privado siempre que los estudiantes sean mayores de 16 años y firmen un consentimiento escrito de participación en el proyecto.",
+      "El docente debe solicitar una autorización verbal inmediata al Director del politécnico para convalidar el canal de comunicación empleado."
+    ],
+    respuestaCorrecta: 1,
+    explicacion: "La Orden Departamental 22-2023 prohíbe la creación de canales de comunicación informales, directos o privados entre el personal docente y los estudiantes sin la inclusión de los padres, tutores y fuera de los entornos institucionales del MINERD, con la finalidad de resguardar los derechos y la integridad de los menores.",
+    fundamentoNormativo: {
+      documento: "Orden Departamental No. 22-2023 que crea el Código de Ética",
+      capitulo: "Capítulo II: De las Relaciones en el Entorno Escolar",
+      apartado: "Artículos sobre límites en el uso de herramientas tecnológicas y redes de comunicación",
+      justificacion: "Regula y limita la comunicación digital entre docentes y alumnos, ordenando la obligatoriedad de usar canales formales e institucionales."
+    },
+    competenciaEvaluada: "Cumplimiento del código de ética y la normativa de protección de Niños, Niñas y Adolescentes (NNA)",
+    nivelDificultad: "Alta"
+  },
+  {
+    id: 82,
+    categoria: "Competencias Docentes Generales",
+    especialidad: "Evaluación de los Aprendizajes",
+    pregunta: "Durante el desarrollo de un Módulo Formativo de la especialidad de Contabilidad y Finanzas, un docente decide evaluar la competencia específica utilizando únicamente un examen escrito teórico de 50 preguntas de opción múltiple al final del período. Los estudiantes externan su inconformidad alegando que no han podido demostrar su dominio procedimental. ¿Qué principio del enfoque curricular ha sido vulnerado?",
+    opciones: [
+      "El principio de acumulación de conocimientos teóricos indispensables para las pruebas nacionales de fin de ciclo.",
+      "El enfoque de evaluación auténtica y por evidencias contemplado en el currículo dominicano, el cual exige que en la Modalidad Técnico Profesional se evalúen desempeños y productos reales del perfil técnico.",
+      "El derecho de cátedra del docente que le faculta a determinar de manera autónoma el tipo de instrumento evaluativo según la Ordenanza 03-2017.",
+      "La vinculación directa con el examen de admisión requerido por las universidades del sector productivo nacional."
+    ],
+    respuestaCorrecta: 1,
+    explicacion: "El diseño curricular basado en competencias de la República Dominicana prescribe la evaluación auténtica. En educación técnica, evaluar solo con exámenes memorísticos contradice la naturaleza procedimental y actitudinal de los Resultados de Aprendizaje (RA), requiriendo instrumentos que evalúen productos o simulaciones de desempeño real.",
+    fundamentoNormativo: {
+      documento: "Bases de la Revisión y Actualización Curricular / Ordenanza 03-2017",
+      capitulo: "Componente de la Evaluación de los Aprendizajes",
+      apartado: "Tipos de evaluación y recolección de evidencias",
+      justificacion: "Establece que la evaluación debe ser integral, continua y basada en el desempeño técnico, requiriendo evidencias que demuestren el saber hacer."
+    },
+    competenciaEvaluada: "Diseño y aplicación de estrategias de evaluación auténtica orientadas al enfoque por competencias",
+    nivelDificultad: "Alta"
+  },
+  {
+    id: 83,
+    categoria: "Competencias Docentes Generales",
+    especialidad: "Inclusión Educativa y Atención a la Diversidad",
+    pregunta: "Un estudiante con discapacidad motriz moderada ingresa al grado de 5to de la especialidad de Gestión Administrativa y Tributaria. El docente del módulo formativo asume que el estudiante no podrá cumplir con los Resultados de Aprendizaje porque el aula técnica se encuentra en un segundo nivel sin rampa de acceso y el mobiliario no está adecuado. ¿Cuál es el procedimiento normativo correcto en este caso?",
+    opciones: [
+      "Sugerir al estudiante o a sus tutores el traslado inmediato a una modalidad general para mitigar riesgos de accidentes en las instalaciones del politécnico.",
+      "Coordinar con el equipo directivo y el Departamento de Orientación y Psicología la aplicación de ajustes razonables, tales como reubicar el aula técnica al primer nivel y adaptar el mobiliario, garantizando su permanencia y participación plena según la Ordenanza 05-2024.",
+      "Exonerar al estudiante de las actividades prácticas de simulación de oficina y evaluarlo exclusivamente mediante monografías de investigación teórica.",
+      "Suspender de forma temporal la asistencia del alumno hasta que el MINERD concluya una remodelación estructural integral del plantel educativo."
+    ],
+    respuestaCorrecta: 1,
+    explicacion: "La Ordenanza 05-2024 sobre Educación Inclusiva obliga a los centros educativos dominicanos a implementar ajustes razonables de carácter físico, metodológico y organizativo para eliminar las barreras de aprendizaje y garantizar la permanencia plena del estudiantado en cualquier modalidad de su elección.",
+    fundamentoNormativo: {
+      documento: "Ordenanza No. 05-2024 que regula la Educación Inclusiva en el Sistema Educativo Dominicano",
+      capitulo: "Capítulo III: De los Ajustes Razonables y la Accesibilidad Universal",
+      apartado: "Artículos sobre la eliminación de barreras físicas y curriculares en centros de educación secundaria",
+      justificacion: "Estipula el derecho de los estudiantes a recibir educación adaptada en su propio entorno escolar mediante la gestión de adecuaciones razonables oportunas."
+    },
+    competenciaEvaluada: "Gestión de la inclusión educativa y aplicación de ajustes razonables en entornos de la Educación Técnico Profesional (ETP)",
+    nivelDificultad: "Alta"
+  },
+  {
+    id: 84,
+    categoria: "Competencias Técnicas Especializadas",
+    especialidad: "Formación en Centros de Trabajo (FCT)",
+    pregunta: "Durante el período de Formación en Centros de Trabajo (FCT), una empresa receptora de pasantías solicita que un estudiante de la especialidad de Servicios Turísticos realice de manera exclusiva y a tiempo completo labores de conserjería general durante sus 8 horas diarias, argumentando sobrecarga operativa en esa área. ¿Cómo debe proceder el Coordinador de FCT del politécnico?",
+    opciones: [
+      "Aceptar la solicitud de la empresa para proyectar una imagen de colaboración, adaptabilidad y flexibilidad del centro educativo ante el sector socioproductivo.",
+      "Intervenir ante la empresa para reorientar las actividades del estudiante según el plan formativo y el convenio suscrito, ya que las actividades de FCT deben responder estrictamente a los Resultados de Aprendizaje (RA) del perfil profesional normado por la Ordenanza 03-2017.",
+      "Modificar el plan curricular interno del Módulo Formativo para convalidar las tareas de conserjería como un nuevo indicador de logro técnico acumulativo.",
+      "Instar al estudiante a cumplir con las tareas asignadas y prometerle compensar la calificación con una bonificación automática en los módulos teóricos ordinarios."
+    ],
+    respuestaCorrecta: 1,
+    explicacion: "De acuerdo con el Reglamento de FCT y la Ordenanza 03-2017, la pasantía formativa no constituye un vínculo laboral y sus actividades deben alinearse estrictamente al programa formativo del título. Cualquier tarea que desvirtúe los Resultados de Aprendizaje debe ser corregida por el Coordinador de FCT.",
+    fundamentoNormativo: {
+      documento: "Ordenanza 03-2017 / Reglamento de Formación en Centros de Trabajo (FCT)",
+      capitulo: "Título V: De la Vinculación con el Sector Socioproductivo y el Desarrollo de la FCT",
+      apartado: "Artículos sobre deberes del centro, plan formativo concertado y derechos del alumno pasante",
+      justificacion: "Determina que la permanencia en la empresa tiene fines pedagógicos insustituibles y debe regirse por las competencias establecidas en el Catálogo Nacional de Cualificaciones."
+    },
+    competenciaEvaluada: "Supervisión, gestión y aseguramiento de la calidad pedagógica en los procesos de Formación en Centros de Trabajo (FCT)",
+    nivelDificultad: "Alta"
+  },
+  {
+    id: 85,
+    categoria: "Competencias Técnicas Especializadas",
+    especialidad: "Seguridad Industrial y Gestión de Riesgos",
+    pregunta: "En el taller de Electromecánica de un politécnico, un estudiante se rehúsa a utilizar las gafas de protección de impacto y el calzado dieléctrico durante una práctica de mecanizado y conexionado eléctrico, argumentando que le provocan calor excesivo e incomodidad física. ¿Cuál es el accionar correcto del docente a cargo?",
+    opciones: [
+      "Permitirle realizar la práctica técnica sin el Equipo de Protección Personal (EPP) bajo un descargo de responsabilidad firmado de puño y letra por el alumno.",
+      "Impedir inmediatamente el acceso del estudiante al área de máquinas de taller y aplicar el protocolo de seguridad establecido, debido a que el uso de EPP es obligatorio, mandatorio y no negociable según el Manual de Gestión de Talleres.",
+      "Asignarle una actividad de investigación teórica en el aula común para que el alumno no pierda la puntuación correspondiente al indicador de logro del día.",
+      "Autorizar el uso parcial de los EPP únicamente en los momentos en que se manipulen corrientes eléctricas superiores a los 220 voltios."
+    ],
+    respuestaCorrecta: 1,
+    explicacion: "El Manual de Gestión de Talleres de la Dirección de Educación Técnico Profesional del MINERD establece que la seguridad industrial es prioritaria. Ningún estudiante puede ingresar o trabajar en zonas de riesgo sin el EPP normado; el docente incurriría en una falta grave de supervisión si lo consiente.",
+    fundamentoNormativo: {
+      documento: "Manual de Gestión de Talleres y Laboratorios de la Dirección de Educación Técnico Profesional (MINERD)",
+      capitulo: "Sección III: Protocolos de Seguridad, Higiene y Salud Ocupacional en Contextos Escolares",
+      apartado: "Normativa de uso obligatorio de Equipos de Protección Personal (EPP)",
+      justificacion: "Dispone el carácter imperativo del cumplimiento de las normas de protección biológica, física y mecánica dentro de todos los talleres técnicos de la red pública y privada."
+    },
+    competenciaEvaluada: "Aplicación y fiscalización de protocolos de seguridad industrial, salud ocupacional y prevención de riesgos en talleres",
+    nivelDificultad: "Alta"
+  },
+  {
+    id: 86,
+    categoria: "Competencias Docentes Generales",
+    especialidad: "Estrategias Metodológicas Activas (ABP)",
+    pregunta: "Un docente del área de Desarrollo y Administración de Aplicaciones Informáticas implementa la estrategia de Aprendizaje Basado en Proyectos (ABP). Diseña una situación de aprendizaje donde los estudiantes deben programar un software de inventario real requerido por una microempresa del entorno geográfico del centro educativo. Respecto al marco curricular dominicano, ¿cómo se valora esta propuesta metodológica?",
+    opciones: [
+      "Es inapropiada porque la vinculación formal con empresas externas está reservada exclusivamente para el período de pasantías de FCT en sexto grado.",
+      "Es altamente pertinente porque el ABP en la Modalidad Técnico Profesional fomenta la movilización de saberes, el desarrollo cooperativo y responde a necesidades reales del sector socioproductivo local.",
+      "Es restrictiva debido a que expone al politécnico a litigios legales por derechos de propiedad intelectual con empresas comerciales no reguladas por el MINERD.",
+      "Es válida únicamente si la microempresa realiza una donación económica formal o de licencias de software al laboratorio del politécnico."
+    ],
+    respuestaCorrecta: 1,
+    explicacion: "Las Bases del Currículo Dominicano impulsan las estrategias de aprendizaje activo como el ABP. En la educación técnico-profesional, conectar el aprendizaje con demandas reales del sector socioproductivo potencia las competencias profesionales y transversales de los estudiantes de forma significativa.",
+    fundamentoNormativo: {
+      documento: "Bases de la Revisión y Actualización Curricular / Lineamientos Curriculares de la Modalidad Técnico Profesional",
+      capitulo: "Capítulo de Estrategias de Enseñanza y Aprendizaje por Competencias",
+      apartado: "El Aprendizaje Basado en Proyectos y la vinculación con el entorno socioproductivo",
+      justificacion: "Valida la articulación comunitaria y empresarial como un recurso didáctico potente para el desarrollo de competencias fundamentales y específicas."
+    },
+    competenciaEvaluada: "Planificación didáctica y ejecución de estrategias metodológicas activas orientadas al perfil profesional técnico",
+    nivelDificultad: "Alta"
+  },
+  {
+    id: 87,
+    categoria: "Competencias Técnicas Especializadas",
+    especialidad: "Resultados de Aprendizaje y Criterios de Evaluación",
+    pregunta: "Un docente de la especialidad de Mecanizado de Metales evalúa un producto final fabricado por un estudiante. Al contrastarlo, nota que posee un acabado geométrico impecable, pero el alumno requirió el doble del tiempo estipulado en el Criterio de Evaluación (CE) del Módulo Formativo, el cual exige estándares de optimización temporal industrial. ¿Qué dictamen técnico metodológico debe emitir el docente?",
+    opciones: [
+      "Asignar la calificación máxima porque la calidad estética y estructural del producto subsana cualquier demora en el contexto escolar.",
+      "Determinar que el Resultado de Aprendizaje (RA) no ha sido alcanzado plenamente en este proceso evaluativo, debido a que los Criterios de Evaluación actúan como referentes integrales de calidad y eficiencia estandarizados por el Catálogo Nacional de Cualificaciones.",
+      "Calcular un promedio matemático simple entre la excelente puntuación del acabado y la penalización por el retraso para otorgar una nota mínima de aprobación.",
+      "Modificar el Criterio de Evaluación del Módulo Formativo de manera autónoma para flexibilizar los tiempos de entrega generales del grupo pedagógico."
+    ],
+    respuestaCorrecta: 1,
+    explicacion: "En el enfoque de la educación técnica basada en competencias del MINERD, los Criterios de Evaluación definen las condiciones obligatorias que validan el logro de un RA. El cumplimiento parcial (calidad sin eficiencia temporal) indica que la competencia laboral formal no se ha consolidado según el estándar del catálogo.",
+    fundamentoNormativo: {
+      documento: "Ordenanza 03-2017 / Catálogo Nacional de Cualificaciones de la República Dominicana",
+      capitulo: "Estructura de los Módulos Formativos y Unidades de Competencia",
+      apartado: "Función pedagógica y evaluativa de los Resultados de Aprendizaje (RA) y Criterios de Evaluación (CE)",
+      justificacion: "Los Criterios de Evaluación son normativos y prescriptivos; garantizan que el egresado cumpla de forma exacta con los requerimientos técnicos exigidos por el sector laboral."
+    },
+    competenciaEvaluada: "Evaluación técnica del aprendizaje basada en criterios e indicadores de cualificación profesional",
+    nivelDificultad: "Alta"
+  },
+  {
+    id: 88,
+    categoria: "Competencias Docentes Generales",
+    especialidad: "Gestión del Aula y Convivencia Armoniosa",
+    pregunta: "Durante un debate técnico en el aula de 6to grado de la especialidad de Logística y Transporte, dos estudiantes se insultan verbalmente de forma agresiva debido a una discrepancia sobre canales de distribución de mercancías. El docente interviene de inmediato y dictamina la expulsión definitiva de ambos alumnos del centro educativo por el resto del año escolar. ¿Qué evaluación normativa amerita el accionar del docente?",
+    opciones: [
+      "Es una medida correcta porque ejerce un control estricto del aula y sienta un precedente de disciplina rigurosa dentro de la modalidad técnica.",
+      "Incurre en una falta grave que vulnera el derecho fundamental a la educación y el principio de proporcionalidad, ya que las Normas de Convivencia Armoniosa prohíben la expulsión expedita y exigen agotar el debido proceso disciplinario sin privar de la escolaridad.",
+      "Es adecuada, siempre y cuando se cuente con la posterior ratificación verbal por parte del Coordinador Pedagógico del politécnico.",
+      "Debió sustituir la expulsión definitiva por una sanción de trabajo forzoso continuo en las labores de limpieza del almacén de simulación del centro por un período de un mes."
+    ],
+    respuestaCorrecta: 1,
+    explicacion: "Las Normas del Sistema Educativo Dominicano para la Convivencia Armoniosa prohíben taxativamente medidas extremas de expulsión que vulneren la Ley 66-97 o la Ley 136-03. Las sanciones deben poseer un carácter restaurativo y formativo, ejecutadas por las instancias correspondientes del centro tras agotar el debido proceso.",
+    fundamentoNormativo: {
+      documento: "Normas del Sistema Educativo Dominicano para la Convivencia Armoniosa en los Centros Educativos Públicos y Privados",
+      capitulo: "Capítulo IV: De las Faltas, sus Medidas Educativas y Disciplinarias y el Debido Proceso",
+      apartado: "Artículos relativos a la tipificación de faltas graves y la prohibición de exclusión escolar directa",
+      justificacion: "Regula los procedimientos disciplinarios e impide la vulneración del derecho a la permanencia escolar a través de decisiones unilaterales de los docentes."
+    },
+    competenciaEvaluada: "Gestión del clima de aula, resolución pacífica de conflictos y aplicación de normativas de convivencia institucional",
+    nivelDificultad: "Alta"
+  },
+  {
+    id: 89,
+    categoria: "Competencias Técnicas Especializadas",
+    especialidad: "Gestión de Laboratorios y Protocolos de Emergencia",
+    pregunta: "En el laboratorio de la especialidad de Química Industrial se produce un derrame menor de un reactivo corrosivo debido a la manipulación incorrecta de un matraz por parte de un alumno. El docente a cargo no cuenta con las Fichas de Datos de Seguridad (MSDS) visibles y desconoce el paradero del kit de neutralización química. De acuerdo con las normas de gestión técnica de espacios formativos, ¿qué se evidencia en este escenario?",
+    opciones: [
+      "Una situación habitual y aceptable, puesto que los reactivos utilizados en el ciclo de secundaria poseen baja concentración industrial.",
+      "Un incumplimiento crítico de los estándares del Manual de Gestión de Talleres y Laboratorios de la DETP, el cual dictamina la obligatoriedad de indexar las fichas de seguridad y mantener operativos los recursos de mitigación ante emergencias.",
+      "La necesidad regulatoria de clausurar definitivamente el laboratorio y transferir los Resultados de Aprendizaje de la especialidad a un formato 100% digitalizado.",
+      "Que la responsabilidad directa del resguardo, limpieza y neutralización química de los espacios formativos recae únicamente sobre el personal de conserjería general."
+    ],
+    respuestaCorrecta: 1,
+    explicacion: "El Manual de Gestión de Talleres y Laboratorios de la Dirección de Educación Técnico Profesional exige que todo entorno donde se manipulen sustancias químicas posea un mapa de riesgos, fichas de seguridad accesibles y herramientas de contingencia operativas para asegurar la salud de los estudiantes y docentes.",
+    fundamentoNormativo: {
+      documento: "Manual de Gestión de Talleres y Laboratorios de la Dirección de Educación Técnico Profesional (MINERD)",
+      capitulo: "Sección V: Lineamientos Operativos para la Administración de Laboratorios Técnicos y Manejo de Reactivos",
+      apartado: "Protocolos de almacenamiento de sustancias, etiquetado y respuestas rápidas ante incidentes",
+      justificacion: "Establece las directrices imperativas de organización de insumos peligrosos y la preservación de la seguridad colectiva en los entornos de aprendizaje técnico."
+    },
+    competenciaEvaluada: "Administración, control de riesgos y aplicación de planes de contingencia en laboratorios especializados",
+    nivelDificultad: "Alta"
+  },
+  {
+    id: 90,
+    categoria: "Competencias Docentes Generales",
+    especialidad: "Planificación Curricular",
+    pregunta: "Durante la elaboración de su planificación docente didáctica, un profesor de la especialidad de Agropecuaria redacta un indicador de logro completamente nuevo que no figura en el documento de diseño curricular del MINERD, justificando que la infraestructura productiva de su politécnico cuenta con tecnologías avanzadas no contempladas en la norma nacional. ¿Qué evaluación amerita esta acción?",
+    opciones: [
+      "Es una iniciativa correcta, ya que el currículo basado en competencias es abierto y faculta al docente a crear indicadores según los recursos locales del centro.",
+      "Es una infracción técnico-pedagógica que altera la homogeneidad de la certificación nacional, puesto que los indicadores de logro se encuentran preestablecidos y estandarizados con carácter obligatorio en el diseño curricular revisado y actualizado.",
+      "Es válida siempre que sea avalada por una comisión mixta integrada por los empresarios del sector agropecuario de la provincia.",
+      "Es facultativa, debido a que el componente técnico profesional no se rige por indicadores de logro oficiales, sino por los manuales de las maquinarias empleadas."
+    ],
+    respuestaCorrecta: 1,
+    explicacion: "El currículo dominicano es flexible en sus estrategias y adaptaciones contextuales, pero los Indicadores de Logro e hitos evaluativos del Diseño Curricular Oficial del MINERD son normativos y de obligatorio cumplimiento a nivel nacional para certificar el perfil profesional de egreso de forma equitativa.",
+    fundamentoNormativo: {
+      documento: "Bases de la Revisión y Actualización Curricular / Diseños Curriculares del Segundo Ciclo de Secundaria",
+      capitulo: "Componente Estructural del Currículo Dominicano",
+      apartado: "Carácter vinculante y obligatorio de las competencias, contenidos e indicadores de logro oficiales",
+      justificacion: "Norma la homogeneidad del sistema educativo preuniversitario dominicano para impedir la fragmentación o devaluación de las certificaciones técnicas."
+    },
+    competenciaEvaluada: "Diseño y estructuración de la planificación didáctica en estricta alineación con el Diseño Curricular Oficial del MINERD",
+    nivelDificultad: "Alta"
+  },
+  {
+    id: 91,
+    categoria: "Competencias Técnicas Especializadas",
+    especialidad: "Mantenimiento e Infraestructura de Talleres",
+    pregunta: "El docente responsable del taller de la especialidad de Instalaciones Eléctricas observa que los multímetros digitales de medición y las herramientas de corte manual muestran un desgaste severo que podría alterar las lecturas métricas en las prácticas estudiantiles e incrementar el riesgo de accidentes. No obstante, decide prorrogar su sustitución hasta que queden inoperables para evitar gestiones burocráticas. ¿Cómo se califica normativamente esta decisión?",
+    opciones: [
+      "Es un manejo presupuestario acertado que optimiza el ciclo de vida de los activos fijos del politécnico hasta su límite operativo real.",
+      "Es un incumplimiento de las obligaciones de gestión de entornos formativos dispuestas en el Manual de Gestión de Talleres, el cual compromete al docente a planificar e informar sobre la ejecución de mantenimientos preventivos y calibraciones.",
+      "Es adecuada, ya que la responsabilidad legal por el deterioro físico de cualquier instrumental dentro del politécnico recae de manera exclusiva en el Distrito Educativo.",
+      "Es válida, siempre que el docente ordene a los estudiantes adquirir sus propios multímetros e instrumental de corte como requisito obligatorio de ingreso al taller."
+    ],
+    respuestaCorrecta: 1,
+    explicacion: "El Manual de Gestión de Talleres y Laboratorios de la DETP estipula de manera explícita que los docentes técnicos actúan como custodios de los activos didácticos e industriales y deben prever e informar el estado de los equipos para garantizar la precisión del aprendizaje y evitar riesgos de accidentes por fallos materiales.",
+    fundamentoNormativo: {
+      documento: "Manual de Gestión de Talleres y Laboratorios de la Dirección de Educación Técnico Profesional (MINERD)",
+      capitulo: "Sección IV: Conservación, Inventario y Planes de Mantenimiento Preventivo y Correctivo de Equipos",
+      apartado: "Responsabilidades del personal docente y técnico sobre la gestión de recursos de aprendizaje industriales",
+      justificacion: "Establece las funciones docentes orientadas a la fiscalización del estado óptimo del equipamiento para mantener los estándares pedagógicos e industriales de seguridad."
+    },
+    competenciaEvaluada: "Planificación, conservación y reporte técnico de infraestructura y equipamiento de talleres bajo criterios de seguridad",
+    nivelDificultad: "Alta"
+  },
+  {
+    id: 92,
+    categoria: "Competencias Docentes Generales",
+    especialidad: "Retroalimentación Efectiva",
+    pregunta: "Un docente de la especialidad de Enfermería recibe los cuadernos y portafolios de evidencias de sus estudiantes sobre técnicas de movilización de pacientes intrahospitalarios. Al momento de asentar la corrección, plasma una calificación numérica abstracta de 72/100 en la portada, omitiendo glosas, anotaciones cualitativas sobre los aciertos o recomendaciones metodológicas de mejora. ¿Qué principio pedagógico dominicano se está desatendiendo?",
+    opciones: [
+      "El principio de confidencialidad del dato numérico estipulado en las ordenanzas de la Modalidad General.",
+      "La función diagnóstica y formativa de la evaluación curricular dominicana, la cual exige proveer una retroalimentación descriptiva y oportuna que guíe al estudiante a identificar cómo consolidar los aprendizajes específicos no logrados.",
+      "La directriz técnica de la Ordenanza 03-2017 que prohíbe taxativamente realizar comentarios textuales en las evidencias evaluadas de los módulos de salud.",
+      "La autonomía del estudiante para deducir de forma independiente sus propios errores procedimentales mediante el autoaprendizaje reflexivo puro."
+    ],
+    respuestaCorrecta: 1,
+    explicacion: "El sistema de evaluación basado en competencias del MINERD determina que la calificación aislada no constituye una evaluación integral. La retroalimentación es un derecho del estudiante y un deber docente, indispensable para reorientar el proceso de aprendizaje y asegurar la superación de las brechas de desempeño técnico.",
+    fundamentoNormativo: {
+      documento: "Bases de la Revisión y Actualización Curricular / Normativas Oficiales de Evaluación de los Aprendizajes del MINERD",
+      capitulo: "Estrategias de Evaluación y Acompañamiento Formativo",
+      apartado: "La retroalimentación como motor del proceso formativo y el desarrollo metacognitivo del alumno",
+      justificacion: "Mandata que todo proceso evaluativo debe ir acompañado de una comunicación clara y constructiva con el alumno respecto a su nivel de dominio y estrategias de mejora."
+    },
+    competenciaEvaluada: "Aplicación de retroalimentación formativa y descriptiva fundamentada en evidencias de aprendizaje",
+    nivelDificultad: "Alta"
+  },
+  {
+    id: 93,
+    categoria: "Competencias Técnicas Especializadas",
+    especialidad: "Sostenibilidad y Protección Ambiental",
+    pregunta: "En el taller de Mecánica Automotriz de un politécnico público, el docente a cargo de la práctica de mantenimiento de motores térmicos instruye a los estudiantes a verter los aceites e hidrocarburos usados directamente en las rejillas del drenaje pluvial del centro educativo, aduciendo que la municipalidad local carece de camiones de recogida de residuos tóxicos. ¿Qué dictamen normativo aplica a esta situación?",
+    opciones: [
+      "Es un procedimiento tolerado ante condiciones de precariedad de infraestructura urbana e inexistencia de plantas de reciclaje municipales.",
+      "Constituye una falta grave contra los protocolos de Seguridad, Salud y Protección Ambiental de la ETP, los cuales mandatan el almacenamiento hermético y la gestión de retiro regulado de desechos peligrosos con gestores autorizados conforme a la Ley 64-00.",
+      "Es una acción permitida debido a que los volúmenes de aceites generados en laboratorios escolares están exentos de penalizaciones ambientales por ley.",
+      "La responsabilidad penal y ambiental recae de manera exclusiva sobre los estudiantes que ejecutaron la acción de vertido físico del hidrocarburo."
+      },
+  {
+    id: 93,
+    categoria: "Competencias Técnicas Especializadas",
+    especialidad: "Sostenibilidad y Protección Ambiental",
+    pregunta: "En el taller de Mecánica Automotriz de un politécnico público, el docente a cargo de la práctica de mantenimiento de motores térmicos instruye a los estudiantes a verter los aceites e hidrocarburos usados directamente en las rejillas del drenaje pluvial del centro educativo, aduciendo que la municipalidad local carece de camiones de recogida de residuos tóxicos. ¿Qué dictamen normativo aplica a esta situación?",
+    opciones: [
+      "Es un procedimiento tolerado ante condiciones de precariedad de infraestructura urbana e inexistencia de plantas de reciclaje municipales.",
+      "Constituye una falta grave contra los protocolos de Seguridad, Salud y Protección Ambiental de la ETP, los cuales mandatan el almacenamiento hermético y la gestión de retiro regulado de desechos peligrosos con gestores autorizados conforme a la Ley 64-00.",
+      "Es una acción permitida debido a que los volúmenes de aceites generados en laboratorios escolares están exentos de penalizaciones ambientales por ley.",
+      "La responsabilidad penal y ambiental recae de manera exclusiva sobre los estudiantes que ejecutaron la acción de vertido físico del hidrocarburo."
+    ],
+    respuestaCorrecta: 1,
+    explicacion: "La gestión de residuos en los talleres de la Modalidad Técnico Profesional debe apegarse a las normativas nacionales de medio ambiente y al Manual de Gestión de Talleres. El vertido de hidrocarburos es ilegal y altamente contaminante; el docente debe garantizar el acopio seguro (tanques herméticos etiquetados) hasta su disposición final autorizada.",
+    fundamentoNormativo: {
+      documento: "Manual de Gestión de Talleres y Laboratorios / Articulación con la Ley 64-00 de Medio Ambiente",
+      capitulo: "Gestión de Residuos Sólidos y Peligrosos en Entornos de Aprendizaje",
+      apartado: "Clasificación, almacenamiento y disposición final de desechos de talleres técnicos",
+      justificacion: "Prohíbe estrictamente la contaminación de suelos y acuíferos, obligando a los politécnicos a establecer protocolos de manejo de residuos industriales."
+    },
+    competenciaEvaluada: "Aplicación de normativas de sostenibilidad, protección ambiental y manejo de residuos tóxicos en talleres",
+    nivelDificultad: "Alta"
+  },
+  {
+    id: 94,
+    categoria: "Competencias Docentes Generales",
+    especialidad: "Trabajo Colaborativo y Planificación",
+    pregunta: "En una reunión de Comunidad de Práctica (Comunidad de Aprendizaje), el docente del módulo de 'Ofimática' se niega a coordinar su planificación con la docente del módulo de 'Comunicación Empresarial', argumentando que su carga horaria es independiente y que la articulación interdisciplinaria solo es obligatoria en el Primer Ciclo de Secundaria. ¿Cuál es el sustento técnico que invalida esta postura?",
+    opciones: [
+      "La articulación solo es exigible si el Director del politécnico emite un memorándum de obligatoriedad a principio del año escolar.",
+      "El diseño curricular de la Modalidad Técnico Profesional estipula que los Módulos Formativos deben articularse de forma sinérgica para garantizar el desarrollo integral de las competencias del perfil profesional, superando la fragmentación del conocimiento.",
+      "El docente de Ofimática tiene la potestad legal de rechazar el trabajo colaborativo basándose en el principio de libertad de cátedra del Estatuto del Docente.",
+      "La articulación entre módulos técnicos y académicos se realiza exclusivamente durante el período de Formación en Centros de Trabajo (FCT)."
+    ],
+    respuestaCorrecta: 1,
+    explicacion: "Las Bases de la Revisión y Actualización Curricular establecen la articulación de las áreas como una estrategia indispensable del enfoque por competencias. En la ETP, los módulos no son islas; se complementan para lograr el perfil de egreso, requiriendo planificación conjunta entre el equipo docente.",
+    fundamentoNormativo: {
+      documento: "Bases de la Revisión y Actualización Curricular / Ordenanza 03-2017",
+      capitulo: "Estrategias de Planificación y Articulación Curricular",
+      apartado: "La articulación de los Módulos Formativos y el trabajo colegiado docente",
+      justificacion: "Define la obligatoriedad del trabajo colaborativo entre docentes para conectar los Resultados de Aprendizaje de distintos módulos en proyectos comunes."
+    },
+    competenciaEvaluada: "Integración de la planificación articulada y participación activa en el trabajo colegiado docente",
+    nivelDificultad: "Alta"
+  },
+  {
+    id: 95,
+    categoria: "Competencias Técnicas Especializadas",
+    especialidad: "Vinculación Escuela-Empresa",
+    pregunta: "Durante la tercera semana de FCT de un estudiante de Mecatrónica, el gerente de la empresa receptora contacta al Coordinador de Vinculación del politécnico y le ofrece contratar al alumno de manera inmediata con un salario fijo, a condición de que el estudiante abandone sus módulos teóricos pendientes en el centro educativo y asuma un horario laboral completo. ¿Cuál debe ser la respuesta institucional del Coordinador?",
+    opciones: [
+      "Aprobar la propuesta, procediendo a certificar automáticamente al estudiante, dado que la inserción laboral temprana es el objetivo último de la ETP.",
+      "Rechazar la condición de abandono escolar, recordando a la empresa que la FCT es un proceso pedagógico inalienable y que el estudiante debe culminar su carga académica para obtener el título de bachiller técnico, promoviendo en su lugar alternativas de contratación post-egreso.",
+      "Delegar la decisión exclusivamente en la asociación de padres y tutores (APMAE), eximiendo al politécnico de cualquier responsabilidad contractual.",
+      "Exigir a la empresa que el salario ofertado al estudiante sea depositado en la cuenta institucional del politécnico en calidad de donación por reclutamiento."
+    ],
+    respuestaCorrecta: 1,
+    explicacion: "El Reglamento de FCT y la Ley 66-97 protegen el derecho a la educación formal. Promover o consentir la deserción escolar a cambio de empleo vulnera la misión del sistema educativo. El politécnico debe proteger la titulación del alumno y negociar su inserción laboral para el momento posterior a su graduación.",
+    fundamentoNormativo: {
+      documento: "Reglamento de Formación en Centros de Trabajo (FCT) / Ley General de Educación 66-97",
+      capitulo: "Naturaleza y Fines de la Formación en Centros de Trabajo",
+      apartado: "Prohibición de sustitución de puestos de trabajo y protección de la escolaridad",
+      justificacion: "Establece que la FCT no implica relación laboral y el centro educativo es garante de la culminación del ciclo formativo del estudiante."
+    },
+    competenciaEvaluada: "Gestión ética de la vinculación escuela-empresa salvaguardando la trayectoria formativa y titulación del estudiante",
+    nivelDificultad: "Alta"
+  },
+  {
+    id: 96,
+    categoria: "Competencias Docentes Generales",
+    especialidad: "Protección de Niños, Niñas y Adolescentes (NNA)",
+    pregunta: "Un docente de 4to grado de la Modalidad Técnico Profesional observa que una estudiante presenta hematomas recurrentes y un cambio drástico en su comportamiento, retrayéndose en las prácticas de taller. Al abordarla confidencialmente, la estudiante le confiesa ser víctima de maltrato físico severo en su hogar. ¿Cuál es el protocolo de actuación inmediato que debe agotar el docente según la legislación dominicana?",
+    opciones: [
+      "Visitar personalmente el hogar de la estudiante al finalizar la jornada para confrontar a los tutores e intentar mediar en el conflicto familiar.",
+      "Comunicar el caso de manera formal, inmediata y por escrito a la Dirección del politécnico y al Departamento de Orientación y Psicología, para que estos activen la denuncia ante el Consejo Nacional para la Niñez y la Adolescencia (CONANI) y el Ministerio Público.",
+      "Guardar el secreto profesional prometido a la estudiante para mantener su confianza, limitándose a brindarle apoyo moral dentro del horario de clases.",
+      "Exponer la situación de la estudiante frente al pleno de la asamblea de padres y madres para generar presión social sobre los agresores."
+    ],
+    respuestaCorrecta: 1,
+    explicacion: "La Ley 136-03 (Código para el Sistema de Protección y los Derechos Fundamentales de NNA) y las normativas del MINERD establecen la obligatoriedad de denuncia ante casos de abuso. El docente no debe investigar ni confrontar, sino reportar a las instancias directivas y de orientación para que se canalice la protección legal de la menor.",
+    fundamentoNormativo: {
+      documento: "Ley 136-03 (Código de Protección de NNA) / Normas de Convivencia Armoniosa",
+      capitulo: "Derechos de Protección contra el Abuso y la Violencia",
+      apartado: "Obligatoriedad de denuncia por parte del personal de instituciones educativas",
+      justificacion: "El personal docente actúa como garante de derechos y tiene responsabilidad legal vinculante de reportar sospechas o evidencias de maltrato infantil."
+    },
+    competenciaEvaluada: "Aplicación de protocolos de actuación ante vulneración de derechos y protección integral de estudiantes",
+    nivelDificultad: "Alta"
+  },
+  {
+    id: 97,
+    categoria: "Competencias Técnicas Especializadas",
+    especialidad: "Mantenimiento Preventivo y Correctivo",
+    pregunta: "Durante una evaluación práctica en el laboratorio de Procesamiento de Alimentos, la selladora industrial de vacío sufre un cortocircuito que funde su cableado externo. Faltando tres estudiantes por evaluarse, el docente decide empalmar los cables quemados utilizando cinta adhesiva de papelería para poder concluir el examen ese mismo día. ¿Qué valoración técnica merece este proceder?",
+    opciones: [
+      "Es una medida pedagógica eficiente que demuestra resiliencia y proactividad docente frente a imprevistos técnicos en evaluaciones críticas.",
+      "Es una acción temeraria que transgrede los protocolos de Seguridad Industrial, ya que el equipo debió ser desenergizado, rotulado como inoperante (bloqueo/etiquetado) y reportado para un mantenimiento correctivo especializado.",
+      "Es correcto, siempre y cuando el docente manipule la máquina personalmente y no permita que los estudiantes restantes entren en contacto directo con la misma.",
+      "El procedimiento es válido si se reduce el voltaje de la maquinaria a la mitad para evitar nuevos cortocircuitos durante los exámenes pendientes."
+    ],
+    respuestaCorrecta: 1,
+    explicacion: "El Manual de Gestión de Laboratorios y las normas universales de salud ocupacional prohíben las reparaciones improvisadas en equipos eléctricos industriales, ya que exponen a la comunidad educativa a riesgos letales de electrocución e incendios. Ante una falla, aplica el protocolo de 'Lockout/Tagout' (Bloqueo y Etiquetado).",
+    fundamentoNormativo: {
+      documento: "Manual de Gestión de Talleres y Laboratorios de la DETP",
+      capitulo: "Gestión de Mantenimiento de Maquinarias y Equipos",
+      apartado: "Procedimientos ante averías críticas y prohibición de intervenciones no especializadas",
+      justificacion: "Protege la integridad física de los usuarios al normar que las fallas eléctricas estructurales requieren intervención de técnicos cualificados."
+    },
+    competenciaEvaluada: "Gestión de averías e implementación de protocolos de aislamiento de equipos defectuosos para prevenir riesgos",
+    nivelDificultad: "Alta"
+  },
+  {
+    id: 98,
+    categoria: "Competencias Docentes Generales",
+    especialidad: "Atención a la Diversidad y Ajustes Razonables",
+    pregunta: "Un estudiante diagnosticado con daltonismo severo cursa la especialidad de Diseño Gráfico. Durante el Módulo Formativo de 'Teoría y Psicología del Color', el docente exige al estudiante que identifique y mezcle pigmentos basándose estrictamente en su apreciación visual cromática, asignándole la calificación mínima por no lograr la exactitud de las paletas. Según el marco inclusivo dominicano, ¿cómo debió proceder el educador?",
+    opciones: [
+      "El docente actuó conforme a los estándares técnicos, ya que el Catálogo Nacional de Cualificaciones no permite flexibilizar las capacidades físicas de los perfiles profesionales.",
+      "Debió implementar ajustes razonables metodológicos, tales como proporcionar software con identificadores hexadecimales de color y paletas etiquetadas numéricamente, permitiendo al estudiante alcanzar el Resultado de Aprendizaje mediante herramientas tecnológicas.",
+      "Exonerar permanentemente al estudiante de cursar todos los Módulos Formativos vinculados al diseño de interfaces y enfocarlo exclusivamente en programación de código fuente.",
+      "Recomendar al Departamento de Psicología el traslado del estudiante a la especialidad de Contabilidad, dada la incompatibilidad de su condición con las artes gráficas."
+    ],
+    respuestaCorrecta: 1,
+    explicacion: "La Ordenanza 05-2024 de Educación Inclusiva obliga a los docentes a diseñar ajustes razonables que permitan a los estudiantes con discapacidad o condiciones específicas sortear las barreras de aprendizaje. En diseño, el uso de códigos de color (HEX, RGB) es una competencia profesional real y un ajuste inclusivo válido.",
+    fundamentoNormativo: {
+      documento: "Ordenanza No. 05-2024 sobre Educación Inclusiva",
+      capitulo: "Estrategias de Diseño Universal para el Aprendizaje (DUA) y Ajustes Razonables",
+      apartado: "Adecuaciones de acceso y metodológicas para estudiantes con discapacidad sensorial",
+      justificacion: "Garantiza la participación y el aprendizaje en igualdad de condiciones, empleando herramientas alternativas sin reducir el nivel de exigencia de la competencia."
+    },
+    competenciaEvaluada: "Diseño e implementación de ajustes razonables en entornos técnicos garantizando el logro de las competencias",
+    nivelDificultad: "Alta"
+  },
+  {
+    id: 99,
+    categoria: "Competencias Técnicas Especializadas",
+    especialidad: "Innovación y Empleabilidad",
+    pregunta: "En el desarrollo de un proyecto productivo de la especialidad de Agropecuaria, un grupo de estudiantes diseña e implementa un sistema de riego automatizado con sensores de humedad de bajo costo (Arduino), el cual no estaba explícitamente detallado en el manual tradicional, pero que optimiza el uso del agua en un 40% y logra sobradamente los Resultados de Aprendizaje. ¿Qué evaluación normativa se debe hacer de esta iniciativa?",
+    opciones: [
+      "Debe ser sancionada por desviación del currículo tradicional, ya que los métodos didácticos técnicos deben ceñirse estrictamente a las tecnologías descritas en los manuales oficiales de los años 90.",
+      "Debe valorarse como una demostración de excelencia, puesto que el currículo por competencias de la ETP promueve activamente el emprendimiento, la innovación tecnológica y la resolución sostenible de problemas profesionales.",
+      "Debe anularse la calificación del módulo, argumentando que el uso de electrónica no corresponde a la especialidad Agropecuaria sino a la de Equipos Electrónicos.",
+      "Es aceptable únicamente si el politécnico patenta el sistema y obliga a los estudiantes a ceder sus derechos comerciales a la Dirección Distrital."
+    ],
+    respuestaCorrecta: 1,
+    explicacion: "El Diseño Curricular de la Modalidad Técnico Profesional está orientado a desarrollar competencias transversales de innovación, emprendimiento y adaptación tecnológica. Las soluciones creativas que cumplan o superen los Criterios de Evaluación y promuevan la sostenibilidad son el ideal del perfil de egreso dominicano.",
+    fundamentoNormativo: {
+      documento: "Bases de la Revisión y Actualización Curricular / Perfil de Egreso de la Modalidad Técnico Profesional",
+      capitulo: "Competencias Fundamentales y Profesionales",
+      apartado: "Desarrollo del Pensamiento Lógico, Creativo y Crítico, y Resolución de Problemas",
+      justificacion: "Incentiva a los estudiantes a integrar tecnologías emergentes y enfoques sostenibles (ahorro de agua) en la ejecución de sus proyectos productivos."
+    },
+    competenciaEvaluada: "Fomento de la innovación, el emprendimiento y la transferencia tecnológica en la ejecución de proyectos técnicos",
+    nivelDificultad: "Alta"
+  },
+  {
+    id: 100,
+    categoria: "Competencias Docentes Generales",
+    especialidad: "Permanencia Escolar y Atención al Contexto",
+    pregunta: "Un estudiante excelente de 5to grado de la especialidad de Comercio y Mercadeo comienza a presentar inasistencias superiores al 20% en el semestre. Al investigar, el docente descubre que el estudiante está laborando de manera informal en las mañanas para sustentar a su familia debido a una crisis económica. ¿Qué estrategia integral debe activar el centro educativo según la normativa vigente?",
+    opciones: [
+      "Reprobar automáticamente al estudiante por incumplir con el 80% de asistencia presencial exigido, sin lugar a revisión ni consideraciones sociales.",
+      "Referir el caso a la Unidad de Orientación y Psicología y a la Dirección para establecer una ruta de apoyo, flexibilización cronogramada y tutorías que protejan la permanencia escolar y eviten la deserción.",
+      "Aprobar todos los módulos formativos del estudiante de manera administrativa por compasión, liberándolo de la responsabilidad de entregar evidencias de aprendizaje.",
+      "Transferir compulsivamente al estudiante al subsistema de Educación de Personas Jóvenes y Adultas (PREPARA) para que libere su horario diurno completo."
+    ],
+    respuestaCorrecta: 1,
+    explicacion: "Si bien la asistencia es un requisito, la Ley 66-97 y las políticas de retención del MINERD establecen que la escuela debe agotar todos los medios posibles (orientación, flexibilización de entregas, acompañamiento) para evitar la exclusión del sistema educativo por vulnerabilidad económica de los NNA.",
+    fundamentoNormativo: {
+      documento: "Ley General de Educación 66-97 / Normativas de Evaluación y Promoción",
+      capitulo: "Garantía del Derecho a la Educación y Prevención del Abandono Escolar",
+      apartado: "Responsabilidad institucional frente a factores de riesgo de deserción y trabajo infantil",
+      justificacion: "Prioriza el interés superior del adolescente y mandata a la escuela a ser un ente protector que brinde alternativas formativas ante contextos de alta vulnerabilidad."
+    },
+    competenciaEvaluada: "Implementación de estrategias institucionales para la prevención de la deserción y protección del derecho a la educación",
+    nivelDificultad: "Alta"
+  },
 
+  {
+    id: 101,
+    categoria: "Competencias Docentes Generales",
+    especialidad: "Planificación por Competencias",
+    pregunta: "En el Módulo Formativo de 'Atención al Cliente' de la especialidad de Comercio y Mercadeo, un docente diseña una unidad de aprendizaje cuyo Resultado de Aprendizaje (RA) exige 'Aplicar técnicas de comunicación asertiva en la resolución de quejas presenciales'. Sin embargo, en sus secuencias didácticas, todas las actividades se limitan a que los estudiantes copien en sus cuadernos las definiciones de comunicación emitidas por el libro de texto y respondan un cuestionario escrito de selección múltiple. ¿Qué deficiencia técnico-pedagógica presenta esta planificación?",
+    opciones: [
+      "No presenta deficiencias, ya que el dominio teórico de los conceptos es el paso fundamental y único requerido en el segundo ciclo de secundaria técnica.",
+      "Muestra una ruptura en la alineación constructiva, debido a que las actividades de enseñanza y evaluación (teóricas) no son coherentes con la naturaleza procedimental y actitudinal (aplicación práctica) que demanda el Resultado de Aprendizaje oficial.",
+      "La planificación es correcta, pero el docente debe asegurarse de utilizar un libro de texto avalado explícitamente por el Ministerio de Trabajo.",
+      "La deficiencia radica en que no incluyó actividades de pasantía en la secuencia didáctica, las cuales son obligatorias en todos los módulos de cuarto grado."
+    ],
+    respuestaCorrecta: 1,
+    explicacion: "En el diseño curricular dominicano basado en competencias, debe existir una 'alineación constructiva' (coherencia) entre el Resultado de Aprendizaje (RA), las actividades didácticas y la evaluación. Si el RA exige un desempeño o aplicación ('saber hacer'), las actividades no pueden limitarse a la memorización ('saber qué').",
+    fundamentoNormativo: {
+      documento: "Bases de la Revisión y Actualización Curricular / Ordenanza 03-2017",
+      capitulo: "Diseño y Planificación de la Enseñanza en la ETP",
+      apartado: "Articulación entre Resultados de Aprendizaje, Actividades y Criterios de Evaluación",
+      justificacion: "Establece que las estrategias de enseñanza deben movilizar recursos conceptuales, procedimentales y actitudinales en situaciones reales o simuladas congruentes con el RA."
+    },
+    competenciaEvaluada: "Diseño de planificaciones didácticas con estricta alineación constructiva hacia el perfil de egreso",
+    nivelDificultad: "Alta"
+  },
+  {
+    id: 102,
+    categoria: "Competencias Docentes Generales",
+    especialidad: "Evaluación por Evidencias",
+    pregunta: "Al finalizar el módulo de 'Elaboración de Productos de Panadería', el docente requiere como evidencia de aprendizaje un portafolio físico. Al calificar a una estudiante, le otorga la nota mínima argumentando que, aunque incluyó todas las fichas técnicas, los cálculos de mermas correctos y las fotografías que demuestran un amasado y horneado impecables, la carpeta exterior no estaba decorada con creatividad ni tenía letras de colores. ¿Qué principio de la evaluación curricular dominicana se ha vulnerado?",
+    opciones: [
+      "El principio de estética profesional, el cual es transversal a todas las especialidades técnicas del sistema.",
+      "La evaluación auténtica fundamentada en Criterios de Evaluación (CE), ya que el docente penalizó basándose en aspectos decorativos subjetivos ajenos a los indicadores de logro técnicos establecidos en el Catálogo Nacional de Cualificaciones.",
+      "La autonomía del centro educativo para incorporar competencias de educación artística dentro de los módulos de la familia de industrias alimentarias.",
+      "No se vulnera ningún principio, dado que el docente utilizó una rúbrica, la cual legitima cualquier criterio que él decida incluir de forma unilateral."
+    ],
+    respuestaCorrecta: 1,
+    explicacion: "En la ETP, la evaluación es referida a criterios preestablecidos. Los Criterios de Evaluación (CE) del diseño curricular determinan exactamente qué se debe observar para validar la competencia. Calificar en base a decoraciones subjetivas desvirtúa la validez y confiabilidad de la evaluación técnica.",
+    fundamentoNormativo: {
+      documento: "Ordenanza 03-2017 / Diseño Curricular de la Modalidad Técnico Profesional",
+      capitulo: "La Evaluación de los Aprendizajes en la ETP",
+      apartado: "Función de los Criterios de Evaluación y objetividad del proceso evaluativo",
+      justificacion: "Garantiza que la certificación del estudiante dependa exclusivamente de la demostración de las competencias profesionales definidas en su perfil, eliminando sesgos subjetivos."
+    },
+    competenciaEvaluada: "Aplicación de instrumentos de evaluación objetivos y centrados en evidencias de desempeño técnico",
+    nivelDificultad: "Alta"
+  },
+  {
+    id: 103,
+    categoria: "Competencias Técnicas Especializadas",
+    especialidad: "Gestión de Talleres y Seguridad",
+    pregunta: "Antes de iniciar una clase práctica de corte y soldadura en el taller de Mecanizado, el docente realiza su inspección rutinaria y detecta que los dos extintores del área están descargados y con la fecha de mantenimiento vencida. Pese a que los estudiantes ya tienen puestos sus Equipos de Protección Personal (EPP), ¿cuál es la decisión gerencial y normativa que debe tomar el docente?",
+    opciones: [
+      "Iniciar la práctica técnica ordenando a los estudiantes que trabajen con extrema precaución para no atrasar el cronograma del Módulo Formativo.",
+      "Suspender inmediatamente cualquier actividad práctica que implique riesgo de ignición, reportar la irregularidad por escrito a la Dirección y reubicar a los estudiantes en una actividad teórica hasta que se recarguen los equipos de extinción.",
+      "Proceder con la práctica, pero delegar en un estudiante la tarea de sostener una cubeta con agua cerca de las estaciones de soldadura como medida mitigadora.",
+      "Avisar verbalmente al personal de conserjería para que busque un extintor de otra área al finalizar la jornada académica."
+    ],
+    respuestaCorrecta: 1,
+    explicacion: "El Manual de Gestión de Talleres prohíbe categóricamente el inicio de operaciones industriales, térmicas o mecánicas de alto riesgo si los dispositivos de respuesta a emergencias (extintores, botiquines, paradas de emergencia) no están operativos. La seguridad humana precede a cualquier cronograma académico.",
+    fundamentoNormativo: {
+      documento: "Manual de Gestión de Talleres y Laboratorios de la Dirección de Educación Técnico Profesional",
+      capitulo: "Gestión de Riesgos y Protocolos de Seguridad Contra Incendios",
+      apartado: "Condiciones habilitantes para el uso de talleres con maquinaria en caliente",
+      justificacion: "Establece la paralización preventiva de actividades formativas ante la inoperancia de sistemas de seguridad crítica, protegiendo la vida de la comunidad escolar."
+    },
+    competenciaEvaluada: "Fiscalización de condiciones de seguridad y aplicación de la política de cero tolerancia ante riesgos no controlados",
+    nivelDificultad: "Alta"
+  },
+  {
+    id: 104,
+    categoria: "Competencias Técnicas Especializadas",
+    especialidad: "Formación en Centros de Trabajo (FCT)",
+    pregunta: "En una clínica privada receptora de estudiantes de la especialidad de Cuidados de Enfermería, el supervisor empresarial instruye a una alumna pasante de 17 años a administrar por vía intravenosa un medicamento de alto riesgo a un paciente en la Unidad de Cuidados Intensivos, sin la supervisión directa de una enfermera graduada. Al enterarse, ¿cómo debe proceder el Coordinador de FCT del politécnico?",
+    opciones: [
+      "Felicitar a la alumna por haber ganado la confianza de la clínica, documentando el hecho como una evidencia de excelencia profesional en su bitácora.",
+      "Intervenir de urgencia ante la gerencia de la clínica para cancelar esa orden y recordar que los estudiantes de FCT tienen restricciones legales de actuación autónoma, no pueden asumir responsabilidades civiles directas sobre pacientes y deben estar bajo supervisión constante.",
+      "Permitir la práctica siempre y cuando el paciente firme un descargo legal a favor del Ministerio de Educación.",
+      "Modificar el convenio de pasantía para incluir una cláusula donde el centro educativo se responsabiliza económicamente por cualquier mala praxis de la estudiante."
+    ],
+    respuestaCorrecta: 1,
+    explicacion: "El Reglamento de FCT y las leyes de salud de la RD prohíben que estudiantes no titulados realicen procedimientos invasivos o de alto riesgo de forma autónoma. El pasante está en un proceso de aprendizaje, y el Coordinador debe velar porque la empresa respete los límites formativos y legales del convenio.",
+    fundamentoNormativo: {
+      documento: "Reglamento de Formación en Centros de Trabajo (FCT) / Ordenanza 03-2017",
+      capitulo: "Derechos, Deberes y Restricciones del Estudiante durante la FCT",
+      apartado: "Supervisión obligatoria y prohibición de asunción de responsabilidades civiles o penales por parte del pasante",
+      justificacion: "Salvaguarda la integridad legal y física del estudiante y de terceros, enmarcando la pasantía estrictamente en la observación, asistencia y prácticas supervisadas."
+    },
+    competenciaEvaluada: "Monitoreo del cumplimiento normativo y protección del alcance legal de los estudiantes en la vinculación Escuela-Empresa",
+    nivelDificultad: "Alta"
+  },
+  {
+    id: 105,
+    categoria: "Competencias Docentes Generales",
+    especialidad: "Gestión de Aula y Convivencia Escolar",
+    pregunta: "Un docente de Informática descubre que varios estudiantes de su curso han creado 'memes' degradantes sobre un compañero con discapacidad auditiva y los están difundiendo masivamente a través del Wi-Fi del laboratorio. El estudiante afectado está llorando en el aula. Siguiendo las Normas de Convivencia Armoniosa del MINERD, ¿cuál es el protocolo inmediato que el docente debe ejecutar?",
+    opciones: [
+      "Ignorar la situación argumentando que las interacciones en redes sociales escapan a la jurisdicción disciplinaria del politécnico.",
+      "Incautar y destruir los teléfonos móviles de los agresores frente a toda la clase para dar una lección ejemplarizadora de moralidad.",
+      "Contener y proteger a la víctima, detener la actividad académica para abordar la gravedad de la situación, y derivar el caso inmediatamente al equipo de gestión y al departamento de Orientación y Psicología para agotar el debido proceso por falta grave (ciberacoso).",
+      "Obligar a los agresores a pedir disculpas públicas instantáneas y cerrar el caso sin notificar a la dirección ni a los padres, para no afectar el récord académico de los implicados."
+    ],
+    respuestaCorrecta: 2,
+    explicacion: "Las Normas de Convivencia Armoniosa tipifican el ciberacoso y la discriminación como faltas graves o muy graves. El docente actúa como primer respondiente: protege a la víctima, interviene pedagógicamente y canaliza hacia las instancias institucionales para aplicar el protocolo de atención y el debido proceso disciplinario.",
+    fundamentoNormativo: {
+      documento: "Normas del Sistema Educativo Dominicano para la Convivencia Armoniosa / Ordenanza 04-2023",
+      capitulo: "Abordaje de Situaciones de Violencia, Acoso Escolar (Bullying) y Ciberacoso",
+      apartado: "Protocolos de actuación docente frente a vulneraciones de derechos y dignidad estudiantil",
+      justificacion: "Establece la ruta crítica obligatoria para detener el daño emocional, activar el acompañamiento psicológico e involucrar a las familias mediante un proceso justo."
+    },
+    competenciaEvaluada: "Implementación de protocolos institucionales para la prevención y abordaje del acoso escolar y protección de la dignidad",
+    nivelDificultad: "Alta"
+  },
+  {
+    id: 106,
+    categoria: "Competencias Docentes Generales",
+    especialidad: "Aprendizaje Basado en Problemas (ABP)",
+    pregunta: "Para evaluar el Módulo de 'Gestión de Nóminas', el docente entrega a sus estudiantes un cálculo salarial completamente resuelto, con todas las deducciones fiscales de ley aplicadas. Luego les instruye: 'Transcriban este documento exacto en Excel y envíenlo. A esto le llamaremos Aprendizaje Basado en Problemas'. ¿Es correcta esta afirmación desde la didáctica técnico-profesional?",
+    opciones: [
+      "Sí, porque el uso de herramientas tecnológicas como Excel transforma automáticamente cualquier ejercicio de copia en una estrategia de ABP.",
+      "No, porque en el Aprendizaje Basado en Problemas (ABP) el docente debe presentar una situación o caso abierto y desestructurado (ej. los datos brutos de empleados de una empresa ficticia), para que el estudiante investigue, aplique normativas y construya la solución de forma analítica.",
+      "Sí, porque en el nivel secundario técnico no se exige que los estudiantes resuelvan problemas por sí mismos, sino que repliquen los modelos del docente.",
+      "No, porque el ABP prohíbe el uso de software de cálculo, debiendo realizarse todos los procesos exclusivamente con papel y lápiz."
+    ],
+    respuestaCorrecta: 1,
+    explicacion: "El ABP (Aprendizaje Basado en Problemas) es una estrategia metodológica activa donde el problema es el detonante del aprendizaje. Transcribir un ejercicio resuelto es una actividad mecánica de ofimática, no una resolución de problemas, pues no moviliza competencias de análisis, investigación ni toma de decisiones.",
+    fundamentoNormativo: {
+      documento: "Bases de la Revisión y Actualización Curricular",
+      capitulo: "Estrategias de Enseñanza y Aprendizaje",
+      apartado: "Definición y aplicación del Aprendizaje Basado en Problemas (ABP)",
+      justificacion: "Define el ABP como una estrategia que parte de un problema del entorno profesional que los estudiantes deben analizar y resolver de manera colaborativa, no como un ejercicio de transcripción."
+    },
+    competenciaEvaluada: "Comprensión y diseño de situaciones de aprendizaje auténticas mediante estrategias metodológicas activas",
+    nivelDificultad: "Alta"
+  },
+  {
+    id: 107,
+    categoria: "Competencias Técnicas Especializadas",
+    especialidad: "Resultados de Aprendizaje (RA)",
+    pregunta: "Una docente asume un módulo formativo de la especialidad de Servicios Gastronómicos. Al revisar el diseño curricular oficial, nota que el último Resultado de Aprendizaje (RA) exige 'Dominar vocabulario técnico en idioma inglés para la presentación de menús internacionales'. Como ella no posee fluidez en inglés, decide omitir este RA y redistribuir la carga horaria entre los RAs de cocina nacional. ¿Cuál es el impacto normativo de esta decisión?",
+    opciones: [
+      "Es una adaptación curricular válida porque prioriza la cultura gastronómica dominicana por encima de lenguas extranjeras.",
+      "Invalida la certificación del Módulo Formativo para ese grupo, ya que los Resultados de Aprendizaje son prescriptivos, obligatorios y conforman el estándar de la cualificación profesional; la docente debió solicitar apoyo a un profesor de idiomas para articular el contenido.",
+      "Es una decisión pertinente basada en la flexibilidad curricular, siempre que los estudiantes sean evaluados rigurosamente en los demás Resultados de Aprendizaje.",
+      "Solo amerita una amonestación menor, pero los estudiantes pueden graduarse con ese RA marcado como 'Exonerado por causa docente' en el sistema SIGERD."
+    ],
+    respuestaCorrecta: 1,
+    explicacion: "En el sistema de Cualificaciones y en la Ordenanza 03-2017, los Resultados de Aprendizaje son innegociables, pues garantizan que el egresado posee las competencias que el sector productivo demanda. Un docente no puede eliminar un RA; ante carencias de perfil, debe recurrir al trabajo colaborativo o la co-enseñanza.",
+    fundamentoNormativo: {
+      documento: "Ordenanza 03-2017 y Catálogo Nacional de Cualificaciones",
+      capitulo: "Estructura de los Módulos Formativos y Titulación",
+      apartado: "Carácter vinculante de los Resultados de Aprendizaje en la evaluación de la competencia",
+      justificacion: "Establece que para acreditar un Módulo Formativo, el estudiante debe demostrar competencia en absolutamente todos los Resultados de Aprendizaje que lo componen."
+    },
+    competenciaEvaluada: "Gestión de la integridad del diseño curricular y articulación interdisciplinaria para cubrir brechas de perfil",
+    nivelDificultad: "Alta"
+  },
+  {
+    id: 108,
+    categoria: "Competencias Técnicas Especializadas",
+    especialidad: "Mantenimiento Preventivo de Laboratorios",
+    pregunta: "En el laboratorio de Redes Informáticas, el docente nota que los 'racks' de servidores y 'switches' presentan una acumulación crítica de polvo y los ventiladores emiten ruidos por obstrucción. Considera que, como el equipo aún enciende, no es necesario intervenir y espera que el distrito educativo envíe personal de limpieza general. ¿Qué establece el Manual de Gestión de Talleres sobre esta situación?",
+    opciones: [
+      "El docente actúa correctamente, ya que el mantenimiento técnico de infraestructura tecnológica escapa a sus funciones pedagógicas.",
+      "El docente incumple sus funciones, pues es su responsabilidad directa diseñar, documentar y coordinar con los estudiantes y la dirección rutinas periódicas de mantenimiento preventivo y limpieza técnica del equipamiento de su laboratorio.",
+      "Debe esperar al cierre del año escolar para solicitar la sustitución completa de los equipos afectados por garantía del proveedor.",
+      "La responsabilidad recae sobre la Asociación de Padres, Madres, Tutores y Amigos de la Escuela (APMAE), quienes deben contratar técnicos externos."
+    ],
+    respuestaCorrecta: 1,
+    explicacion: "El Manual de Gestión de Talleres responsabiliza a los docentes del área técnica de la custodia, conservación y mantenimiento preventivo nivel 1 (limpieza, ajuste, calibración) de sus equipos. Además, el mantenimiento preventivo es una competencia transversal que debe enseñarse a los estudiantes mediante la práctica real.",
+    fundamentoNormativo: {
+      documento: "Manual de Gestión de Talleres y Laboratorios de la Dirección de Educación Técnico Profesional",
+      capitulo: "Planificación del Mantenimiento Preventivo y Correctivo",
+      apartado: "Funciones del docente de taller respecto a la conservación de la infraestructura didáctica",
+      justificacion: "Obliga al docente técnico a garantizar la operatividad de los equipos, previniendo el deterioro prematuro de la inversión estatal."
+    },
+    competenciaEvaluada: "Aplicación de planes de mantenimiento preventivo y salvaguarda de los activos tecnológicos del centro",
+    nivelDificultad: "Alta"
+  },
+  {
+    id: 109,
+    categoria: "Competencias Docentes Generales",
+    especialidad: "Inclusión y Ajustes Razonables",
+    pregunta: "Un estudiante de la especialidad de Desarrollo de Software tiene un diagnóstico de TDAH (Trastorno por Déficit de Atención e Hiperactividad). El docente ha programado una prueba práctica de programación continua de 3 horas. Para garantizar la equidad evaluativa de acuerdo a la Ordenanza 05-2024, ¿qué ajuste razonable debe aplicar el docente?",
+    opciones: [
+      "Exigirle que complete la prueba en 1 hora para forzar su capacidad de concentración bajo presión profesional.",
+      "Otorgarle un esquema de la misma prueba técnica fragmentada en bloques de 45 minutos, con pausas activas supervisadas de 10 minutos entre ellos, evaluando el mismo nivel de complejidad técnica pero adaptando el tiempo y la dinámica.",
+      "Sustituir la prueba de programación por un ensayo teórico sobre la historia de las computadoras para evitarle frustraciones.",
+      "Obligar al estudiante a consumir sus medicamentos recetados frente al docente como condición excluyente para participar en la evaluación."
+    ],
+    respuestaCorrecta: 1,
+    explicacion: "La inclusión educativa exige 'ajustes razonables' metodológicos y de acceso. En el caso del TDAH, fragmentar las tareas largas y permitir pausas activas son estrategias avaladas científicamente e institucionalmente. Esto nivela el campo de juego sin rebajar la exigencia de la competencia técnica (programar).",
+    fundamentoNormativo: {
+      documento: "Ordenanza No. 05-2024 sobre Educación Inclusiva en el Sistema Educativo Dominicano",
+      capitulo: "Ajustes Razonables en el Proceso de Evaluación",
+      apartado: "Adecuaciones de tiempo, espacio y formato para estudiantes con neurodivergencias",
+      justificacion: "Faculta y obliga al docente a diversificar la forma de administrar las evaluaciones para remover barreras vinculadas a la condición del estudiante."
+    },
+    competenciaEvaluada: "Diseño y aplicación de estrategias de evaluación equitativas mediante ajustes razonables documentados",
+    nivelDificultad: "Alta"
+  },
+  {
+    id: 110,
+    categoria: "Competencias Docentes Generales",
+    especialidad: "Ética Profesional Docente",
+    pregunta: "Un docente de la especialidad de Contabilidad ofrece 'tutorías de reforzamiento técnico' los sábados en los laboratorios del mismo politécnico público. Por participar en estas tutorías, cobra a los padres de sus propios estudiantes una cuota mensual y asegura que quienes asistan obtendrán los indicadores de logro que reprobaron en la semana. ¿Cómo se valora este comportamiento según la normativa de ética del MINERD?",
+    opciones: [
+      "Es una acción lícita y aplaudible que demuestra vocación de servicio y fomento del emprendimiento docente en tiempo extra.",
+      "Constituye una violación grave al Código de Ética y Conducta Profesional y a la gratuidad de la educación pública, ya que está prohibido lucrarse mediante cobros a sus propios alumnos por reforzamientos y utilizar bienes del Estado para beneficio personal.",
+      "Es permitido, siempre que el docente entregue un 20% de los beneficios económicos a la Dirección del politécnico para la compra de materiales gastables.",
+      "Solo es falta si las tutorías se imparten a estudiantes de otras escuelas, pero con sus alumnos directos es una práctica de extensión académica."
+    ],
+    respuestaCorrecta: 1,
+    explicacion: "La Orden Departamental 22-2023 (Código de Ética) y la Ley 66-97 prohíben tajantemente que el personal docente exija o reciba pagos de los estudiantes de la red pública, especialmente cuando se condiciona la superación de indicadores de logro (conflicto de intereses y corrupción). Además, usar el plantel para lucro privado es ilícito.",
+    fundamentoNormativo: {
+      documento: "Orden Departamental 22-2023 / Ley General de Educación 66-97",
+      capitulo: "Código de Ética y Conducta / Principio de Gratuidad",
+      apartado: "Prohibición de cobros indebidos, conflicto de intereses y uso indebido de las instalaciones escolares",
+      justificacion: "Protege el derecho a la educación gratuita y salvaguarda la integridad y transparencia del proceso de evaluación de los aprendizajes."
+    },
+    competenciaEvaluada: "Cumplimiento del código de ética, transparencia y probidad en el ejercicio de las funciones docentes",
+    nivelDificultad: "Alta"
+  },
+  {
+    id: 111,
+    categoria: "Competencias Técnicas Especializadas",
+    especialidad: "Evaluación en Formación en Centros de Trabajo (FCT)",
+    pregunta: "Al concluir las 360 horas de FCT, un estudiante de 'Soporte de Redes y Sistemas Informáticos' presenta una bitácora impecable con todos los Resultados de Aprendizaje documentados y validados. Sin embargo, el tutor de la empresa decide otorgarle una calificación final de 50/100, alegando verbalmente que 'el joven es muy callado y no encaja con la cultura extrovertida de nuestra empresa'. ¿Cómo debe proceder el Coordinador de FCT institucional?",
+    opciones: [
+      "Registrar el 50/100 de forma automática en el SIGERD, puesto que la evaluación de la empresa es inapelable y soberana.",
+      "Convocar una mesa de consenso entre el tutor empresarial y el politécnico para revisar la rúbrica de evaluación, demostrando que la calificación de FCT debe basarse en el logro de competencias técnicas y transversales acordadas, no en sesgos subjetivos de personalidad.",
+      "Reprobar al estudiante y obligarlo a repetir las 360 horas de pasantía en otra empresa durante el verano.",
+      "Ignorar la nota de la empresa y colocar un 100/100 por cuenta propia, falsificando la firma del gerente en el reporte final del MINERD."
+    ],
+    respuestaCorrecta: 1,
+    explicacion: "El Reglamento de FCT establece que la evaluación es compartida (Tutor de Empresa y Coordinador de FCT) y debe basarse en instrumentos objetivos (rúbricas, bitácoras) que midan los RAs. El Coordinador de FCT tiene el deber de garantizar la justicia evaluativa y mediar cuando existan sesgos personales que perjudiquen al estudiante.",
+    fundamentoNormativo: {
+      documento: "Reglamento de Formación en Centros de Trabajo (FCT)",
+      capitulo: "Evaluación y Seguimiento de la FCT",
+      apartado: "Proceso de evaluación concertada y uso de instrumentos de recolección de evidencias",
+      justificacion: "Asegura que la evaluación del desempeño en pasantía sea justa, técnica y alineada a los estándares del currículo, evitando arbitrariedades empresariales."
+    },
+    competenciaEvaluada: "Mediación y aseguramiento de la evaluación objetiva por competencias en la vinculación empresarial",
+    nivelDificultad: "Alta"
+  },
+  {
+    id: 112,
+    categoria: "Competencias Técnicas Especializadas",
+    especialidad: "Uso de Equipos de Protección Personal (EPP)",
+    pregunta: "Durante la manipulación de gases refrigerantes en el taller de Refrigeración y Acondicionamiento de Aire, un docente permite a los estudiantes realizar las purgas sin usar guantes de nitrilo ni gafas de seguridad, indicando que 'los accidentes solo ocurren a los novatos y nosotros ya estamos en sexto grado'. ¿Qué análisis crítico merece esta instrucción desde la normativa de ETP?",
+    opciones: [
+      "Es una técnica de empoderamiento psicológico que eleva la autoconfianza laboral del estudiante próximo a graduarse.",
+      "Es una negligencia grave e inaceptable; el manejo de refrigerantes conlleva riesgo de congelación por expansión brusca y ceguera. Los protocolos de seguridad industrial son de aplicación obligatoria sin distinción de grado o experiencia.",
+      "Es aceptable si el taller cuenta con ventilación cruzada natural y las ventanas están completamente abiertas.",
+      "Solo se considera falta si ocurre un accidente físico; de lo contrario, se enmarca en la libertad metodológica del maestro de taller."
+    ],
+    respuestaCorrecta: 1,
+    explicacion: "En la educación técnica, la prevención no es negociable. La manipulación de gases a presión sin EPP es una violación directa al Manual de Gestión de Talleres y a los estándares universales de seguridad industrial (OSHA/Normas ISO). La falsa confianza es la principal causa de accidentes graves en entornos técnicos.",
+    fundamentoNormativo: {
+      documento: "Manual de Gestión de Talleres y Laboratorios / Protocolos de Seguridad Industrial",
+      capitulo: "Manejo de Sustancias Peligrosas y Riesgos Químicos/Físicos",
+      apartado: "Obligatoriedad permanente del uso de EPP según el nivel de riesgo de la operación",
+      justificacion: "Estipula que los docentes son civil y administrativamente responsables de garantizar la seguridad física de los estudiantes, independientemente del nivel de pericia asumido."
+    },
+    competenciaEvaluada: "Aplicación inflexible de normativas de salud y seguridad en operaciones de alto riesgo técnico",
+    nivelDificultad: "Alta"
+  },
+  {
+    id: 113,
+    categoria: "Competencias Docentes Generales",
+    especialidad: "Trabajo Colaborativo Docente",
+    pregunta: "Los docentes de 'Matemática' (modalidad académica) y 'Mecanizado' (modalidad técnica) diseñan un proyecto integrado donde los estudiantes deben fabricar engranajes en el torno, pero utilizando fórmulas trigonométricas de la clase de matemáticas para calcular los ángulos de corte con tolerancia micrométrica. ¿Cómo se clasifica esta práctica pedagógica en el marco del currículo dominicano?",
+    opciones: [
+      "Una sobrecarga académica innecesaria que contraviene la separación estricta de asignaturas dispuesta por el MINERD.",
+      "Una excelente implementación de la articulación interdisciplinaria e integración de saberes, fomentada por las Bases de la Actualización Curricular para darle sentido práctico a las ciencias básicas en la ETP.",
+      "Una intrusión del área académica en los módulos profesionales, lo cual está prohibido por la Dirección de Educación Técnico Profesional.",
+      "Un proyecto válido solo para las escuelas politécnicas privadas que tienen currículos internacionales independientes."
+    ],
+    respuestaCorrecta: 1,
+    explicacion: "El diseño curricular basado en competencias de la República Dominicana fomenta explícitamente la articulación de las áreas. Conectar la matemática con las operaciones de taller es el escenario ideal de la ETP, pues desarrolla competencias fundamentales (pensamiento lógico, resolución de problemas) aplicadas a un perfil profesional.",
+    fundamentoNormativo: {
+      documento: "Bases de la Revisión y Actualización Curricular",
+      capitulo: "Estrategias de Articulación de las Áreas de Conocimiento",
+      apartado: "Articulación Interdisciplinaria e Intradisciplinaria",
+      justificacion: "Promueve la conexión transversal entre las asignaturas académicas y los módulos técnicos para generar un aprendizaje significativo y aplicado."
+    },
+    competenciaEvaluada: "Diseño y ejecución de proyectos de integración curricular interdisciplinaria",
+    nivelDificultad: "Alta"
+  },
+  {
+    id: 114,
+    categoria: "Competencias Docentes Generales",
+    especialidad: "Retroalimentación Efectiva y Evaluación Formativa",
+    pregunta: "Una docente de 'Diseño de Itinerarios Turísticos' corrige un plan de viaje complejo elaborado por un estudiante. Al devolver el trabajo, la docente ha colocado una 'X' roja gigante sobre el presupuesto del itinerario, pero no agrega ningún comentario, explicación, ni indica dónde está el error de cálculo. ¿Por qué esta práctica contradice la normativa de evaluación del MINERD?",
+    opciones: [
+      "Porque el color rojo está prohibido por normativas de psicología escolar en la educación secundaria.",
+      "Porque carece de retroalimentación descriptiva. La evaluación formativa exige que el docente comunique al estudiante de forma clara cuáles fueron sus fallas, por qué ocurrieron y cuáles son los pasos específicos para mejorar su desempeño y lograr la competencia.",
+      "Porque los presupuestos turísticos no se evalúan de forma numérica, sino a través de sociodramas y exposiciones verbales.",
+      "Porque un estudiante de secundaria tiene la madurez cognitiva para descubrir sus propios errores sin necesidad de orientación docente."
+    ],
+    respuestaCorrecta: 1,
+    explicacion: "La evaluación en el currículo dominicano es continua y formativa. El simple señalamiento de un error (la 'X') es punitivo. La verdadera evaluación aporta información útil (retroalimentación descriptiva) que permite al estudiante movilizar recursos metacognitivos para enmendar sus fallas procedimentales.",
+    fundamentoNormativo: {
+      documento: "Bases de la Revisión y Actualización Curricular / Normas de Evaluación de los Aprendizajes",
+      capitulo: "El Proceso de Evaluación por Competencias",
+      apartado: "El carácter formativo y la obligatoriedad de la retroalimentación continua",
+      justificacion: "Establece que la corrección de producciones debe constituir un proceso de acompañamiento dialógico que guíe al estudiante hacia el dominio del indicador de logro."
+    },
+    competenciaEvaluada: "Provisión de retroalimentación pedagógica constructiva orientada a la mejora continua del aprendizaje",
+    nivelDificultad: "Alta"
+  },
+  {
+    id: 115,
+    categoria: "Competencias Técnicas Especializadas",
+    especialidad: "Innovación y Sostenibilidad Ambiental",
+    pregunta: "Durante el desarrollo de un Módulo Formativo en la especialidad de Agropecuaria, un grupo de estudiantes propone a su docente aprovechar los residuos orgánicos del comedor escolar para crear un sistema de compostaje y lombricultura, sustituyendo así los fertilizantes químicos importados que usaban en las parcelas del politécnico. ¿Cómo debe gestionar el docente esta propuesta?",
+    opciones: [
+      "Rechazarla de plano, ya que la recolección de basura del comedor es competencia exclusiva del personal de conserjería.",
+      "Integrar y apoyar el proyecto en su planificación, puesto que responde a las competencias transversales de protección ambiental, innovación sostenible y reducción de costos operativos, principios promovidos en la ETP dominicana.",
+      "Cobrar una tarifa extra a la cooperativa del comedor para retirar sus desechos y depositar los fondos en la cuenta personal del docente de taller.",
+      "Autorizar el proyecto únicamente si el Ministerio de Medio Ambiente emite una licencia de impacto ambiental clase A para la escuela."
+    ],
+    respuestaCorrecta: 1,
+    explicacion: "El perfil de egreso de la ETP busca formar ciudadanos profesionales capaces de aportar soluciones sostenibles. El compostaje en escuelas agropecuarias (Economía Circular) es una práctica altamente recomendada, alinea los módulos con las competencias fundamentales del currículo (Ambiental y de Salud, Pensamiento Creativo).",
+    fundamentoNormativo: {
+      documento: "Diseño Curricular Modalidad Técnico Profesional / Competencias Fundamentales",
+      capitulo: "Competencia Ambiental y de la Salud / Competencia Científica y Tecnológica",
+      apartado: "Resolución de problemas técnicos aplicando criterios de sostenibilidad y ecología",
+      justificacion: "Impulsa el desarrollo de prácticas técnico-profesionales que minimicen el impacto ambiental y promuevan el aprovechamiento de los recursos locales."
+    },
+    competenciaEvaluada: "Integración de la gestión ambiental y el desarrollo sostenible en las prácticas operativas de la especialidad",
+    nivelDificultad: "Alta"
+  },
+  {
+    id: 116,
+    categoria: "Competencias Docentes Generales",
+    especialidad: "Protección a NNA y Permanencia Escolar",
+    pregunta: "Un docente de 6to grado técnico detecta que un estudiante de 16 años se queda dormido constantemente en el taller, presenta bajo rendimiento y signos de agotamiento extremo. Tras indagar, el alumno revela que está trabajando de noche cargando furgones en un muelle hasta las 3:00 a.m. para ayudar económicamente en su casa. ¿Qué responsabilidad ineludible tiene el docente en este caso?",
+    opciones: [
+      "Aconsejar al estudiante que consuma bebidas energéticas antes de entrar al politécnico para mantener la alerta en el taller.",
+      "Reportar el caso al Departamento de Orientación y a la Dirección del centro, ya que el trabajo infantil nocturno y peligroso está prohibido por la Ley 136-03 y vulnera el derecho a la educación, debiendo el centro canalizar la intervención con las autoridades de protección (CONANI / Ministerio de Trabajo).",
+      "Exigirle al estudiante que renuncie inmediatamente al trabajo bajo amenaza de ser reprobado por ausencias mentales en clase.",
+      "Felicitar la actitud de responsabilidad familiar del joven y exonerarlo de tomar exámenes para que pueda dormir durante la jornada escolar."
+    ],
+    respuestaCorrecta: 1,
+    explicacion: "La Ley 136-03 prohíbe el trabajo en adolescentes que interfiera con su escolaridad o implique riesgos físicos graves (trabajo pesado y nocturno). El docente no es juez, pero es un garante de derechos que debe activar la ruta de protección institucional para salvaguardar la salud y educación del NNA.",
+    fundamentoNormativo: {
+      documento: "Ley 136-03, Código de Protección de Niños, Niñas y Adolescentes",
+      capitulo: "Derechos de Protección y Regulaciones del Trabajo de Adolescentes",
+      apartado: "Prohibición de peores formas de trabajo infantil y labores que impidan la educación",
+      justificacion: "Establece el deber de los actores del sistema educativo de denunciar e intervenir ante situaciones de explotación laboral que comprometan el desarrollo integral de los menores."
+    },
+    competenciaEvaluada: "Detección y canalización institucional de casos de vulneración de derechos y prevención del trabajo infantil peligroso",
+    nivelDificultad: "Alta"
+  },
+  {
+    id: 117,
+    categoria: "Competencias Técnicas Especializadas",
+    especialidad: "Control de Calidad en Talleres",
+    pregunta: "En el Módulo de 'Confección Industrial de Prendas de Vestir', las rúbricas y criterios de evaluación estipulan márgenes de error de costura de máximo 2 milímetros. Un grupo de estudiantes entrega un lote de 20 camisas, pero el 30% presenta costuras torcidas y cuellos asimétricos. Argumentando que 'se esforzaron mucho', la docente les asigna la calificación de 'Logrado Excelencia'. ¿Qué principio técnico y evaluativo se compromete con esta decisión?",
+    opciones: [
+      "La calidad como estándar industrial y el rigor de los Criterios de Evaluación del Módulo, pues evaluar por 'esfuerzo' ignorando los defectos técnicos desvirtúa el perfil de egreso y certifica una competencia no dominada según el Catálogo Nacional de Cualificaciones.",
+      "Ninguno, puesto que en el sistema preuniversitario dominicano la actitud y el esfuerzo tienen un peso normativo superior a la calidad técnica del producto terminado.",
+      "El principio de producción en masa, dado que lo importante en la ETP es la cantidad de piezas elaboradas por minuto, no su acabado estético.",
+      "Se compromete la relación laboral con la empresa proveedora de telas, que exigirá el pago inmediato por el material desperdiciado."
+    ],
+    respuestaCorrecta: 1,
+    explicacion: "En la ETP, el 'saber hacer' incluye hacerlo con los estándares de calidad del sector socioproductivo. Si un estudiante no cumple los criterios de calidad (RAs y CEs), no se ha logrado la competencia. El esfuerzo se valora como competencia actitudinal, pero no puede sustituir la exactitud de la competencia técnica.",
+    fundamentoNormativo: {
+      documento: "Ordenanza 03-2017 y Marco Nacional de Cualificaciones",
+      capitulo: "Evaluación de Competencias y Certificación",
+      apartado: "El cumplimiento de los estándares de calidad definidos en los Criterios de Evaluación",
+      justificacion: "Norma que la titulación técnica debe dar fe pública ante los empleadores de que el egresado domina los procesos productivos con rigor técnico, precisión y calidad."
+    },
+    competenciaEvaluada: "Aplicación estricta de métricas de control de calidad industrial en la evaluación de productos formativos",
+    nivelDificultad: "Alta"
+  },
+  {
+    id: 118,
+    categoria: "Competencias Docentes Generales",
+    especialidad: "Gestión del Aula y Resolución de Conflictos",
+    pregunta: "En el laboratorio de Diseño Asistido por Computadora, dos estudiantes inician una fuerte discusión verbal arrebatándose un mouse porque ambos necesitan usar la única impresora 3D disponible para entregar su proyecto final en la próxima hora. El conflicto escala y se levantan de sus asientos. ¿Cuál es el abordaje metodológico y disciplinario que debe aplicar el docente?",
+    opciones: [
+      "Ignorar el conflicto para fomentar que los estudiantes desarrollen habilidades de supervivencia y negociación agresiva empresarial.",
+      "Intervenir inmediatamente para detener la escalada física, separar a los estudiantes, utilizar el diálogo reflexivo (mediación) para desescalar la tensión, y reorganizar la logística de impresión, aplicando posteriormente las medidas formativas correspondientes de las Normas de Convivencia.",
+      "Desconectar la impresora 3D y reprobar automáticamente a ambos estudiantes en el Módulo Formativo completo por alterar el orden público.",
+      "Permitir que el estudiante con mayor índice académico imprima primero, estableciendo el mérito teórico como el único criterio de mediación técnica."
+    ],
+    respuestaCorrecta: 1,
+    explicacion: "El docente es el mediador primario en el aula. Las Normas de Convivencia Armoniosa priorizan la resolución pacífica, la mediación y el restablecimiento de las relaciones operativas. El docente debe controlar el espacio físico, mediar para resolver el nudo logístico (la impresora) y aplicar medidas disciplinarias formativas, no destructivas.",
+    fundamentoNormativo: {
+      documento: "Normas del Sistema Educativo Dominicano para la Convivencia Armoniosa",
+      capitulo: "Estrategias Preventivas y de Resolución Pacífica de Conflictos",
+      apartado: "La mediación escolar, el diálogo y el rol del docente como gestor del clima de aula",
+      justificacion: "Establece protocolos para evitar la escalada de violencia, garantizando un clima de respeto y organizando los recursos educativos para minimizar fricciones."
+    },
+    competenciaEvaluada: "Mediación de conflictos interpersonales y gestión equitativa de recursos en ambientes de aprendizaje práctico",
+    nivelDificultad: "Alta"
+  },
+  {
+    id: 119,
+    categoria: "Competencias Docentes Generales",
+    especialidad: "Planificación de Secuencias Didácticas",
+    pregunta: "Al auditar el cuaderno de planificación de un docente de Mecatrónica, el Coordinador Técnico observa que todas las secuencias didácticas diarias incluyen las fases de 'Inicio' (motivación, recuperación de saberes) y 'Desarrollo' (práctica en taller), pero omiten sistemáticamente la fase de 'Cierre'. ¿Por qué esta omisión impacta negativamente el aprendizaje según el currículo dominicano?",
+    opciones: [
+      "No impacta negativamente, ya que el 'Cierre' es una formalidad administrativa exclusiva para las escuelas de educación primaria.",
+      "Porque elimina el espacio pedagógico destinado a la metacognición, síntesis, evaluación de los procesos realizados e institucionalización del aprendizaje, impidiendo que el estudiante reflexione sobre cómo y qué aprendió durante la práctica.",
+      "Porque sin la fase de cierre el docente no puede asignar tareas para el hogar, incumpliendo la cuota de tareas obligatorias del MINERD.",
+      "Porque el cierre es el único momento permitido legalmente para que los estudiantes limpien el taller técnico."
+    ],
+    respuestaCorrecta: 1,
+    explicacion: "En el enfoque por competencias, la fase de cierre de una secuencia didáctica es indispensable. Es el momento de la metacognición ('¿Qué hicimos? ¿Cómo lo resolvimos? ¿Qué falló?'). Sin esta reflexión, la práctica en el taller corre el riesgo de convertirse en un activismo mecánico sin interiorización del aprendizaje.",
+    fundamentoNormativo: {
+      documento: "Bases de la Revisión y Actualización Curricular",
+      capitulo: "Diseño y Momentos de la Secuencia Didáctica",
+      apartado: "El Cierre Didáctico y los Procesos de Metacognición",
+      justificacion: "Define la estructura innegociable de la clase (Inicio, Desarrollo, Cierre), siendo el cierre fundamental para la retroalimentación, síntesis y consolidación de las competencias movilizadas."
+    },
+    competenciaEvaluada: "Estructuración completa y efectiva de secuencias didácticas garantizando los procesos de metacognición",
+    nivelDificultad: "Alta"
+  },
+  {
+    id: 120,
+    categoria: "Competencias Técnicas Especializadas",
+    especialidad: "Gestión de Inventario y Herramientas",
+    pregunta: "Al finalizar el semestre, el politécnico realiza un inventario en el área de Electromecánica y descubre la pérdida de valiosas herramientas de precisión (micrómetros, verniers y multímetros). La auditoría revela que el docente permitía a los estudiantes tomar las herramientas directamente de los anaqueles sin firmar ninguna bitácora de préstamo, vale de salida o ficha de asignación diaria. ¿Qué establece la normativa técnica respecto a esta práctica operativa?",
+    opciones: [
+      "Que el docente confió correctamente en los valores morales de los estudiantes, y las pérdidas deben asumirse como mermas naturales del proceso educativo.",
+      "Que el docente incurrió en una falta de controles administrativos severa, puesto que el Manual de Gestión de Talleres exige la implementación y supervisión estricta de sistemas de pañol, inventario rotativo y registros de préstamos (vales) para proteger los activos del centro.",
+      "Que las herramientas de precisión, al ser materiales de uso común, no requieren registro de entrada o salida, a diferencia de la maquinaria pesada.",
+      "Que la dirección del politécnico debe descontar el costo de las herramientas faltantes exclusivamente del salario de los estudiantes."
+    ],
+    respuestaCorrecta: 1,
+    explicacion: "El control de inventario no solo es una necesidad administrativa escolar, sino una competencia procedimental de la industria. El Manual de Gestión de Talleres obliga a establecer un 'pañol' (almacén de herramientas) controlado con registros de préstamo. El docente técnico es responsable de auditar este proceso diariamente.",
+    fundamentoNormativo: {
+      documento: "Manual de Gestión de Talleres y Laboratorios de la Dirección de Educación Técnico Profesional",
+      capitulo: "Gestión Administrativa, Pañol y Control de Inventarios de Activos",
+      apartado: "Sistemas de vales, trazabilidad y control de entrada/salida de herramentales e insumos didácticos",
+      justificacion: "Responsabiliza al docente del taller de implementar sistemas de control para salvaguardar los bienes del Estado y enseñar disciplina industrial a los pasantes."
+    },
+    competenciaEvaluada: "Implementación de sistemas administrativos y de pañol para el control y resguardo del inventario técnico",
+    nivelDificultad: "Alta"
+  },
+  {
+    id: 121,
+    categoria: "Competencias Docentes Generales",
+    especialidad: "Evaluación por Evidencias y Equidad",
+    pregunta: "En el Módulo de Gestión Administrativa, un estudiante de escasos recursos entrega su portafolio de evidencias impreso en papel bond blanco y negro, estructurado con una impecable organización técnica, cálculos correctos y análisis financieros exactos. Sin embargo, el docente le descuenta 30 puntos de la calificación final porque no utilizó carpetas de cuero ni papel fotográfico a color como exigían las instrucciones de formato. ¿Qué valoración técnico-pedagógica tiene esta acción?",
+    opciones: [
+      "Es una acción pedagógica válida porque fomenta el estándar de presentación visual corporativa de alta gerencia.",
+      "Es una práctica discriminatoria y contraria al enfoque de evaluación por competencias, el cual establece que la calificación debe centrarse en los Criterios de Evaluación y en las evidencias del saber hacer técnico, no en el poder adquisitivo del estudiante para costear recursos estéticos.",
+      "Es aceptable siempre y cuando el docente haya notificado el descuento de puntos desde el inicio del semestre.",
+      "Constituye un ejercicio de autonomía docente fundamentado en la libertad de cátedra del nivel secundario."
+    ],
+    respuestaCorrecta: 1,
+    explicacion: "El sistema de evaluación dominicano es inclusivo y se basa en el logro de competencias. Penalizar a un estudiante por la falta de recursos económicos para adornos estéticos cuando la evidencia técnica y procedimental (el Resultado de Aprendizaje) es correcta, vulnera el principio de equidad y los estándares de evaluación de la Ordenanza 03-2017.",
+    fundamentoNormativo: {
+      documento: "Ordenanza 03-2017 / Bases de la Revisión Curricular",
+      capitulo: "La Evaluación de los Aprendizajes y el Principio de Equidad",
+      apartado: "Uso de evidencias de desempeño centradas en el indicador de logro",
+      justificacion: "Garantiza que la evaluación mida el dominio de la competencia profesional y evite barreras de aprendizaje o penalizaciones por vulnerabilidad socioeconómica."
+    },
+    competenciaEvaluada: "Aplicación de evaluaciones objetivas y equitativas centradas en la evidencia del aprendizaje",
+    nivelDificultad: "Alta"
+  },
+  {
+    id: 122,
+    categoria: "Competencias Técnicas Especializadas",
+    especialidad: "Formación en Centros de Trabajo (FCT)",
+    pregunta: "El Coordinador de FCT realiza una visita de supervisión a un taller industrial y encuentra que un estudiante de sexto grado de Mecanizado está operando de manera autónoma una prensa hidráulica de 50 toneladas, mientras el supervisor de la empresa se encuentra en una reunión fuera de las instalaciones. ¿Cuál debe ser la intervención normativa inmediata del Coordinador?",
+    opciones: [
+      "Registrar el hecho como un excelente indicador de autonomía, madurez e integración laboral en la bitácora del estudiante.",
+      "Intervenir para detener la operación inmediatamente, retirar al estudiante de la maquinaria y levantar un acta de incumplimiento a la empresa, debido a que el Reglamento de FCT prohíbe taxativamente que los pasantes operen maquinarias de alto riesgo sin la supervisión física y directa del tutor empresarial.",
+      "Aprovechar la oportunidad para tomar una fotografía promocional del estudiante para las redes sociales del politécnico.",
+      "Solicitar al estudiante que disminuya la velocidad de la máquina a un 50% hasta que el supervisor regrese de su reunión."
+    ],
+    respuestaCorrecta: 1,
+    explicacion: "El Reglamento de FCT establece límites claros sobre la actuación de los pasantes. Nunca reemplazan a un trabajador y no pueden ejecutar maniobras de riesgo industrial sin el acompañamiento directo de un profesional titulado. Dejar a un pasante solo ante una prensa pesada es una negligencia crítica compartida.",
+    fundamentoNormativo: {
+      documento: "Reglamento de Formación en Centros de Trabajo (FCT) / Ordenanza 03-2017",
+      capitulo: "Obligaciones de la Empresa Colaboradora y Restricciones del Pasante",
+      apartado: "Prohibición de asunción de roles de riesgo sin tutoría directa",
+      justificacion: "Salvaguarda la integridad física y legal del estudiante frente a negligencias de supervisión en entornos laborales reales."
+    },
+    competenciaEvaluada: "Supervisión de prácticas laborales seguras y fiscalización del cumplimiento de convenios empresa-escuela",
+    nivelDificultad: "Alta"
+  },
+  {
+    id: 123,
+    categoria: "Competencias Docentes Generales",
+    especialidad: "Inclusión Educativa y Atención a la Diversidad",
+    pregunta: "Una estudiante con discapacidad visual leve (ceguera parcial corregible) ingresa a la especialidad de Artes Culinarias. El docente del módulo de Cocina Básica, argumentando medidas de prevención de accidentes, decide exonerar permanentemente a la estudiante de las prácticas con cuchillos y estufas, asignándole en su lugar tareas exclusivas de mecanografiar recetas en la computadora. Según el marco legal, ¿cómo se evalúa esta decisión?",
+    opciones: [
+      "Es una medida proteccionista correcta que exonera al MINERD de cualquier demanda por negligencia civil.",
+      "Es una acción segregadora que vulnera la Ordenanza 05-2024. El docente debió realizar ajustes razonables de acceso (ej. iluminación adecuada, estaciones con contraste visual, guantes de corte) para garantizar que la estudiante participe y desarrolle las mismas competencias prácticas que sus pares.",
+      "Es pertinente porque los Catálogos Nacionales de Cualificaciones prohíben el ingreso de estudiantes con barreras visuales a familias profesionales relacionadas con alimentos y bebidas.",
+      "Es un ajuste válido siempre que la estudiante firme un acuerdo aceptando que recibirá un título técnico con validez restringida a trabajos de oficina."
+    ],
+    respuestaCorrecta: 1,
+    explicacion: "La inclusión educativa prohíbe la exclusión sistemática de las actividades núcleo del aprendizaje. Exonerar a un alumno de las prácticas técnicas por una discapacidad leve es discriminación. La Ordenanza 05-2024 obliga al politécnico a proporcionar 'ajustes razonables' que eliminen la barrera sin anular la competencia.",
+    fundamentoNormativo: {
+      documento: "Ordenanza No. 05-2024 sobre Educación Inclusiva / Ley 5-13 sobre Discapacidad",
+      capitulo: "De los Ajustes Razonables y la Accesibilidad Universal",
+      apartado: "Derecho a la participación plena en las actividades prácticas mediante apoyos específicos",
+      justificacion: "Garantiza el derecho inalienable del estudiantado a formarse en las competencias de su perfil profesional sin ser relegados a roles teóricos por motivos de discapacidad."
+    },
+    competenciaEvaluada: "Aplicación del Diseño Universal para el Aprendizaje (DUA) y ajustes razonables en talleres técnicos",
+    nivelDificultad: "Alta"
+  },
+  {
+    id: 124,
+    categoria: "Competencias Técnicas Especializadas",
+    especialidad: "Mantenimiento y Seguridad Industrial",
+    pregunta: "Durante la preparación del taller de Instalaciones Eléctricas, el docente identifica que el cable de conexión a tierra del panel principal de simulación se ha roto. A pesar de esto, decide unir los cables con cinta adhesiva de papelería para no retrasar la evaluación práctica de circuitos trifásicos programada para ese día. ¿Qué implicaciones normativas conlleva esta acción?",
+    opciones: [
+      "Demuestra capacidad de resolución de problemas bajo presión y optimización de los escasos recursos del politécnico.",
+      "Incurre en una falta grave de seguridad. Según el Manual de Gestión de Talleres, debió desenergizar el panel, aplicar el protocolo de bloqueo/etiquetado (Lockout/Tagout) y suspender las prácticas hasta que personal calificado repare la tierra física para evitar un riesgo de electrocución letal.",
+      "Es un procedimiento permitido transitoriamente, siempre que el docente supervise personalmente cada conexión que realicen los estudiantes.",
+      "Solo se considera falta si algún estudiante sufre una descarga eléctrica real durante la evaluación."
+    ],
+    respuestaCorrecta: 1,
+    explicacion: "La conexión a tierra es el sistema de protección vital en talleres eléctricos. Repararla de forma negligente con cinta no aislante ante un circuito trifásico es un peligro inminente. La normativa prohíbe el uso de equipos en estado de riesgo y exige protocolos de aislamiento (LOTO) inmediatos.",
+    fundamentoNormativo: {
+      documento: "Manual de Gestión de Talleres y Laboratorios / Protocolos de Seguridad Ocupacional",
+      capitulo: "Prevención de Riesgos Eléctricos y Sistemas de Protección",
+      apartado: "Prohibición de uso de infraestructuras eléctricas defectuosas y aplicación de medidas de contingencia",
+      justificacion: "Establece la preservación de la vida y la integridad de los estudiantes como prioridad absoluta sobre el cumplimiento del calendario de evaluaciones."
+    },
+    competenciaEvaluada: "Gestión de riesgos eléctricos e implementación de protocolos de seguridad ante fallas críticas de infraestructura",
+    nivelDificultad: "Alta"
+  },
+  {
+    id: 125,
+    categoria: "Competencias Docentes Generales",
+    especialidad: "Convivencia Escolar y Prevención de Violencia",
+    pregunta: "Dos estudiantes del politécnico inician un forcejeo violento en el pasillo. El docente de turno interviene sujetando fuertemente a uno de ellos por el cuello de la camisa, empujándolo contra los casilleros y arrastrándolo hasta la oficina del director. Según el marco legal de protección de NNA y convivencia dominicana, ¿cómo se califica la intervención del maestro?",
+    opciones: [
+      "Es una técnica de contención física justificada y legítima para restaurar el orden público y la autoridad docente en situaciones de caos.",
+      "Constituye una falta muy grave tipificada como maltrato físico y vulneración de derechos, ya que la Ley 136-03 y las Normas de Convivencia prohíben absolutamente el uso de la fuerza desproporcionada, golpes o castigos corporales por parte del personal educativo.",
+      "Es una acción permitida exclusivamente si el estudiante agredido es mayor de 16 años y presenta complexión física robusta.",
+      "Se considera correcta si el docente levanta un acta anecdótica justificando el uso de la fuerza como autodefensa preventiva."
+    ],
+    respuestaCorrecta: 1,
+    explicacion: "El Código para el Sistema de Protección y los Derechos Fundamentales de Niños, Niñas y Adolescentes (Ley 136-03) y las Normas de Convivencia Armoniosa del MINERD prohíben de forma absoluta los tratos crueles, denigrantes o físicos. Intervenir en un pleito requiere técnicas de mediación verbal y separación segura, nunca ejercer violencia física contra el NNA.",
+    fundamentoNormativo: {
+      documento: "Ley 136-03 (Código de NNA) / Normas del Sistema Educativo para la Convivencia Armoniosa",
+      capitulo: "Derechos y Garantías / Faltas del Personal Docente",
+      apartado: "Prohibición taxativa del castigo corporal, maltrato físico o psicológico",
+      justificacion: "Garantiza la integridad personal de los estudiantes, penalizando cualquier agresión por parte de las autoridades escolares independientemente de la falta cometida por el alumno."
+    },
+    competenciaEvaluada: "Aplicación de normativas de disciplina escolar positiva y respeto a la integridad física de los estudiantes",
+    nivelDificultad: "Alta"
+  },
+  {
+    id: 126,
+    categoria: "Competencias Técnicas Especializadas",
+    especialidad: "Vinculación Escuela-Empresa",
+    pregunta: "Una empresa multinacional contacta al Coordinador Técnico del politécnico ofreciendo donar un lote de 50 monitores CRT (tubo de rayos catódicos) obsoletos y con fugas de plomo evidentes, con el fin de obtener certificaciones de reducción de impuestos. El docente acepta inmediatamente sin inspeccionar, argumentando que 'a caballo regalado no se le mira el colmillo'. ¿Qué infracción normativa ocurre aquí?",
+    opciones: [
+      "Ninguna, puesto que la autogestión de recursos tecnológicos es una competencia docente altamente valorada.",
+      "Transgrede el Manual de Gestión de Talleres, el cual obliga al centro a evaluar técnicamente las donaciones, rechazando aquellos equipos obsoletos o tóxicos que representen pasivos ambientales, riesgos de salud (plomo) o costos inasumibles de disposición final para el MINERD.",
+      "Viola las normativas porque debió exigir adicionalmente que la empresa pagara un estipendio económico mensual a los estudiantes por usar los equipos.",
+      "Es una infracción únicamente si los monitores no vienen acompañados de sus manuales de usuario originales."
+    ],
+    respuestaCorrecta: 1,
+    explicacion: "Aceptar 'chatarra electrónica' (e-waste) peligrosa convierte al politécnico en un vertedero tóxico y genera un problema de salud ocupacional grave. El MINERD estipula que toda donación tecnológica debe someterse a una evaluación de pertinencia curricular y seguridad antes de ser aceptada e ingresada al inventario del centro.",
+    fundamentoNormativo: {
+      documento: "Manual de Gestión de Talleres y Laboratorios / Políticas de Vinculación y Donaciones",
+      capitulo: "Gestión de Activos Fijos y Relaciones Corporativas",
+      apartado: "Criterios técnicos para la recepción, inspección y descarte de equipamiento donado",
+      justificacion: "Evita que las escuelas asuman pasivos ambientales y riesgos tóxicos disfrazados de filantropía corporativa."
+    },
+    competenciaEvaluada: "Gestión técnica de donaciones empresariales, control de calidad y prevención de riesgos ambientales",
+    nivelDificultad: "Alta"
+  },
+  {
+    id: 127,
+    categoria: "Competencias Docentes Generales",
+    especialidad: "Aprendizaje Basado en Proyectos (ABP)",
+    pregunta: "Un docente de la especialidad de Turismo implementa la estrategia de Aprendizaje Basado en Proyectos (ABP). Para ello, indica a los estudiantes que su 'proyecto' consistirá únicamente en copiar la definición de ecoturismo de la página web del Ministerio de Turismo y pegarla en un trifolio digital para leerlo en clase. Desde el enfoque curricular por competencias, ¿qué evaluación merece esta actividad?",
+    opciones: [
+      "Es una actividad excelente porque el uso de herramientas digitales (trifolio) garantiza automáticamente el logro de las competencias profesionales.",
+      "No clasifica como ABP. Un verdadero proyecto en la ETP requiere plantear un desafío real, investigación profunda, planificación, ejecución de un producto auténtico (ej. diseñar una ruta ecoturística sostenible local) y una evaluación integral de las competencias, no una simple transcripción.",
+      "Es correcta, pero la lectura del trifolio debe realizarse obligatoriamente en idioma inglés para cumplir con la transversalidad.",
+      "Se considera ABP siempre que el trabajo sea impreso y depositado físicamente en la biblioteca del politécnico."
+    ],
+    respuestaCorrecta: 1,
+    explicacion: "El Aprendizaje Basado en Proyectos (ABP) no es sinónimo de hacer una manualidad o copiar información. Las Bases del Currículo Dominicano definen el ABP como una metodología investigativa, colaborativa y productiva donde los estudiantes resuelven problemas del mundo real. La actividad descrita es un simple ejercicio de copia y pega.",
+    fundamentoNormativo: {
+      documento: "Bases de la Revisión y Actualización Curricular",
+      capitulo: "Estrategias Metodológicas para el Aprendizaje Significativo",
+      apartado: "Definición y rigor metodológico del Aprendizaje Basado en Proyectos",
+      justificacion: "Establece el rigor necesario para que las estrategias activas realmente movilicen competencias complejas de análisis, síntesis y creación profesional."
+    },
+    competenciaEvaluada: "Dominio metodológico para el diseño y ejecución de la estrategia de Aprendizaje Basado en Proyectos",
+    nivelDificultad: "Alta"
+  },
+  {
+    id: 128,
+    categoria: "Competencias Técnicas Especializadas",
+    especialidad: "Criterios de Evaluación y Calidad Técnica",
+    pregunta: "En el Módulo de Redes y Comunicaciones, un Criterio de Evaluación oficial exige: 'Configurar enlaces de red optimizando la longitud del cableado estructurado según estándares TIA/EIA'. Un estudiante logra establecer la conexión a internet, pero desperdicia 20 metros de cable innecesarios, dejando la instalación desordenada. El docente lo califica con 100/100 afirmando que 'al final, el internet funciona'. ¿Cuál es el error técnico-evaluativo del maestro?",
+    opciones: [
+      "Ignorar que el Criterio de Evaluación del diseño curricular evalúa no solo el resultado final (conexión), sino también la eficiencia, el respeto a los estándares industriales (TIA/EIA) y la calidad del proceso, por lo cual la competencia no se ha logrado de forma óptima.",
+      "Calificar de forma numérica, ya que las redes informáticas solo se evalúan mediante listas de cotejo cualitativas.",
+      "No haber cobrado al estudiante el costo económico del cable desperdiciado como medida correctiva.",
+      "Haber utilizado el estándar TIA/EIA, el cual fue derogado para escuelas públicas por ordenanzas recientes."
+    ],
+    respuestaCorrecta: 1,
+    explicacion: "En la Educación Técnico Profesional (ETP), no basta con que un producto 'funcione'. El estudiante debe demostrar el dominio del proceso con los niveles de calidad y eficiencia dictados por el Catálogo Nacional de Cualificaciones. Ignorar el desperdicio y el desorden invalida la evaluación de la competencia profesional.",
+    fundamentoNormativo: {
+      documento: "Ordenanza 03-2017 / Catálogo Nacional de Cualificaciones",
+      capitulo: "Evaluación de los Aprendizajes y Criterios de Calidad",
+      apartado: "La integralidad de la evaluación (proceso, producto y estándares normativos)",
+      justificacion: "Asegura que el estudiante no solo aprenda empirismo, sino que adquiera disciplina técnica, optimización de recursos y respeto por las normas de calidad empresarial."
+    },
+    competenciaEvaluada: "Aplicación de estándares técnicos y normativas de calidad industrial durante la evaluación de producciones",
+    nivelDificultad: "Alta"
+  },
+  {
+    id: 129,
+    categoria: "Competencias Docentes Generales",
+    especialidad: "Ética Profesional",
+    pregunta: "Para financiar una excursión recreativa personal a fin de año, el docente encargado del taller de Electrónica instala una pequeña nevera dentro del laboratorio y se dedica a vender refrescos, golosinas y recargas telefónicas a sus estudiantes durante las horas de clase técnica. Frente al marco regulatorio del MINERD, ¿cómo debe ser procesada esta situación?",
+    opciones: [
+      "Como una excelente iniciativa de emprendimiento transversal que sirve de modelo de negocios para la asignatura de Formación y Orientación Laboral (FOL).",
+      "Como una falta disciplinaria grave por conflicto de intereses, uso indebido del tiempo y espacio pedagógico para lucro personal, y violación al Código de Ética y Conducta Profesional establecido en la Orden Departamental 22-2023.",
+      "Como una acción permitida si los precios de los productos no superan los establecidos por el Instituto Nacional de Protección a los Derechos del Consumidor (Pro Consumidor).",
+      "Como un acuerdo informal válido entre el docente y los estudiantes, exento de regulaciones institucionales siempre que las ventas ocurran durante la hora de recreo."
+    ],
+    respuestaCorrecta: 1,
+    explicacion: "La Orden Departamental 22-2023 prohíbe explícitamente a los docentes realizar negocios personales, ventas, rifas o cobros a sus alumnos dentro del centro educativo. Utilizar el taller técnico como un establecimiento comercial distrae del objetivo pedagógico y constituye una grave falta ética y administrativa.",
+    fundamentoNormativo: {
+      documento: "Orden Departamental 22-2023 (Código de Ética y Conducta Profesional)",
+      capitulo: "De los Deberes y Prohibiciones del Personal Docente",
+      apartado: "Prohibición de actividades comerciales y lucro personal dentro de la jornada y recintos escolares",
+      justificacion: "Preserva la integridad de la función docente y la naturaleza exclusivamente académica y formativa de los espacios escolares públicos y privados."
+    },
+    competenciaEvaluada: "Cumplimiento ético de la función docente y prohibición de actividades comerciales incompatibles",
+    nivelDificultad: "Alta"
+  },
+  {
+    id: 130,
+    categoria: "Competencias Técnicas Especializadas",
+    especialidad: "Manejo de Sustancias y Gestión de Riesgos Químicos",
+    pregunta: "En una práctica del módulo de Sanidad Vegetal (Especialidad Agropecuaria), sobran 2 litros de insecticida de alta toxicidad. El docente instruye a los estudiantes a trasvasar el químico a botellas plásticas de refresco recicladas, sin colocarles etiquetas de advertencia, y almacenarlas en el casillero de herramientas comunes. ¿Qué infracción técnica ocurre en este escenario?",
+    opciones: [
+      "Ninguna, ya que es una práctica de reutilización de plásticos alineada con la protección ambiental transversal del currículo.",
+      "Una violación crítica a las normativas de Seguridad y Salud Ocupacional del MINERD y Medio Ambiente (Ley 64-00), ya que está estrictamente prohibido trasvasar agroquímicos a envases de alimentos sin rotulación, lo que podría ocasionar una intoxicación letal accidental.",
+      "La única falta es no haber pedido a los estudiantes que pintaran las botellas de negro para evitar que la luz degrade el insecticida.",
+      "El procedimiento es legal si el casillero de herramientas se mantiene cerrado con candado durante los fines de semana."
+    ],
+    respuestaCorrecta: 1,
+    explicacion: "Almacenar sustancias tóxicas en envases de consumo humano sin rotular es una de las causas más comunes de intoxicaciones fatales. El Manual de Gestión de Talleres y las leyes ambientales obligan a almacenar químicos en sus envases originales, con Fichas de Seguridad (MSDS) y en gabinetes exclusivos y ventilados.",
+    fundamentoNormativo: {
+      documento: "Manual de Gestión de Talleres / Ley 64-00 de Medio Ambiente y Recursos Naturales",
+      capitulo: "Manejo Seguro de Sustancias Peligrosas y Agroquímicos",
+      apartado: "Prohibición de almacenamiento de químicos en envases de grado alimenticio y obligatoriedad de etiquetado",
+      justificacion: "Previene incidentes catastróficos y garantiza el manejo estandarizado de sustancias peligrosas en entornos de aprendizaje."
+    },
+    competenciaEvaluada: "Aplicación estricta de protocolos de bioseguridad, etiquetado y almacenamiento de materiales peligrosos",
+    nivelDificultad: "Alta"
+  },
+  {
+    id: 131,
+    categoria: "Competencias Docentes Generales",
+    especialidad: "Articulación y Trabajo Colaborativo",
+    pregunta: "En un politécnico con la especialidad de Cuidados de Enfermería, los docentes técnicos solicitan al profesor de Idioma Extranjero (Inglés) que dedique un tiempo a enseñar vocabulario médico y frases de triaje hospitalario para fortalecer el perfil del egresado. El docente de Inglés se niega rotundamente, afirmando: 'Mi diseño curricular es general y no tengo obligación de enseñar cosas de salud'. ¿Qué sustento normativo refuta esta postura?",
+    opciones: [
+      "El profesor de inglés tiene la razón jurídica, ya que los módulos académicos y técnicos pertenecen a Direcciones Generales distintas dentro del MINERD y no deben mezclarse.",
+      "La Ordenanza 03-2017 y las Bases Curriculares exigen la articulación intradisciplinar e interdisciplinar. En la ETP, las asignaturas académicas deben contextualizarse y alinearse sinérgicamente para tributar al perfil profesional técnico de los estudiantes.",
+      "La negativa es correcta a menos que los docentes técnicos le paguen horas extras al profesor de inglés por diseñar ese contenido especializado.",
+      "El vocabulario médico en inglés está reservado exclusivamente para los programas de educación universitaria, no para la secundaria."
+    ],
+    respuestaCorrecta: 1,
+    explicacion: "En la Modalidad Técnico Profesional, el componente académico no es un apéndice aislado; su propósito es complementar la formación integral del técnico. El diseño curricular por competencias obliga a los docentes de áreas generales (Matemática, Lenguas, Ciencias) a contextualizar sus contenidos en beneficio de la especialidad técnica (articulación).",
+    fundamentoNormativo: {
+      documento: "Bases de la Revisión y Actualización Curricular / Ordenanza 03-2017",
+      capitulo: "Características de la Modalidad Técnico Profesional",
+      apartado: "La integración y articulación del componente académico con el componente técnico-profesional",
+      justificacion: "Determina que el politécnico debe funcionar como una unidad académica coherente, donde todas las áreas de conocimiento enriquecen el perfil laboral y humano del egresado."
+    },
+    competenciaEvaluada: "Participación en la articulación interdisciplinaria y contextualización de la enseñanza hacia el perfil profesional",
+    nivelDificultad: "Alta"
+  },
+  {
+    id: 132,
+    categoria: "Competencias Técnicas Especializadas",
+    especialidad: "Emprendimiento e Innovación",
+    pregunta: "Como proyecto final del módulo, una estudiante de Informática desarrolla una aplicación móvil innovadora y completamente funcional para la comercialización local de útiles escolares. El docente evaluador le resta 20 puntos argumentando que 'la educación técnica es para formar empleados que trabajen en empresas ajenas, no para que los alumnos hagan negocios propios'. ¿Cómo se evalúa esta justificación frente al diseño curricular vigente?",
+    opciones: [
+      "El docente acierta, porque el emprendimiento en el currículo dominicano es exclusivo de la modalidad académica en artes.",
+      "El docente contraviene los fundamentos del diseño curricular, ya que el perfil de egreso de la ETP y las competencias transversales promueven explícitamente la capacidad emprendedora, la autogestión y la creación de iniciativas de negocio por parte de los bachilleres técnicos.",
+      "La deducción de puntos es válida debido a que la estudiante no registró el código fuente de la aplicación en la Oficina Nacional de Derecho de Autor (ONDA) antes de la presentación.",
+      "Es correcto, ya que el módulo de Formación y Orientación Laboral (FOL) prohíbe incentivar el autoempleo antes de la mayoría de edad."
+    ],
+    respuestaCorrecta: 1,
+    explicacion: "La Educación Técnico Profesional (ETP) en República Dominicana no solo forma para la inserción laboral subordinada, sino también para el emprendimiento productivo. Castigar la innovación y la mentalidad empresarial de un estudiante demuestra desconocimiento absoluto de la Competencia Fundamental de Pensamiento Lógico, Creativo y Crítico del MINERD.",
+    fundamentoNormativo: {
+      documento: "Bases de la Revisión y Actualización Curricular / Perfil del Egresado de ETP",
+      capitulo: "Competencias Fundamentales y Emprendimiento",
+      apartado: "Desarrollo de la cultura emprendedora, innovación y autogestión económica en los jóvenes",
+      justificacion: "Establece el fomento de la innovación técnica y la creación de microempresas como un eje transversal deseable y necesario en la educación secundaria."
+    },
+    competenciaEvaluada: "Fomento, valoración y acompañamiento de la cultura emprendedora y la innovación técnica estudiantil",
+    nivelDificultad: "Alta"
+  },
+  {
+    id: 133,
+    categoria: "Competencias Docentes Generales",
+    especialidad: "Convivencia Escolar y Retroalimentación Ética",
+    pregunta: "Tras aplicar una evaluación práctica en el taller, un docente decide imprimir la lista completa de calificaciones y pegarla en la puerta exterior del aula. Además, resalta con un marcador rojo fluorescente los nombres de los estudiantes reprobados, escribiendo al margen la palabra 'Deficientes'. Según la normativa de convivencia y evaluación dominicana, ¿cuál es el análisis de esta situación?",
+    opciones: [
+      "Es un método altamente eficaz para generar competitividad académica y motivación extrínseca entre el alumnado técnico.",
+      "Constituye una práctica denigrante, humillante y vulneradora de la privacidad estudiantil, prohibida por las Normas de Convivencia y la Ley 136-03. La retroalimentación de la evaluación debe ser descriptiva, formativa y comunicarse en un ambiente de respeto y confidencialidad.",
+      "Es una acción administrativa ordinaria amparada por las directrices de transparencia en la gestión pública escolar.",
+      "Es correcto siempre que el docente haya obtenido previamente el permiso verbal del representante de curso."
+    ],
+    respuestaCorrecta: 1,
+    explicacion: "Publicar listas humillantes ('escraches' académicos) transgrede los derechos fundamentales de los niños, niñas y adolescentes. La Ley 136-03 protege el derecho a la imagen y el respeto, mientras que las Normas de Evaluación del MINERD mandatan que los resultados deben discutirse como un proceso formativo, privado y constructivo.",
+    fundamentoNormativo: {
+      documento: "Normas del Sistema Educativo Dominicano para la Convivencia Armoniosa / Ley 136-03",
+      capitulo: "Principios de Trato Digno y Confidencialidad",
+      apartado: "Prohibición de prácticas evaluativas o disciplinarias que conlleven humillación o daño psicológico",
+      justificacion: "Protege la integridad emocional del estudiante, garantizando un ambiente escolar libre de estigmatización y violencia psicológica."
+    },
+    competenciaEvaluada: "Comunicación ética de resultados evaluativos garantizando el respeto, la dignidad y la privacidad del estudiante",
+    nivelDificultad: "Alta"
+  },
+  {
+    id: 134,
+    categoria: "Competencias Técnicas Especializadas",
+    especialidad: "FCT y Prevención de Acoso",
+    pregunta: "Una estudiante de 17 años en el programa de FCT se acerca llorando a su Coordinador Técnico y le informa que el supervisor de planta de la empresa le realiza comentarios sexuales inapropiados de forma constante e intenta aislarla en el almacén. El Coordinador le responde: 'Ignóralo y concéntrate en aprender, no podemos arruinar el convenio con la empresa por algo sin importancia'. ¿Qué mandato legal está violando el Coordinador?",
+    opciones: [
+      "La política de resiliencia empresarial promovida en el programa de Formación y Orientación Laboral.",
+      "La Ley 136-03 y el Reglamento de FCT. El Coordinador es garante de derechos y tiene la obligación ineludible de suspender inmediatamente la pasantía en ese centro, proteger a la menor, reportar el caso a la Dirección y denunciar el presunto acoso ante las autoridades competentes.",
+      "El mandato de secreto comercial corporativo, ya que debe discutirlo primero con Recursos Humanos de la empresa antes de escuchar a la estudiante.",
+      "Ninguno, puesto que en el entorno laboral de la FCT los estudiantes asumen las normativas internas de la empresa, no las del centro educativo."
+    ],
+    respuestaCorrecta: 1,
+    explicacion: "Ignorar una denuncia de acoso sexual hacia una menor (estudiante en FCT) hace al docente cómplice y responsable por omisión ante la ley dominicana. El Reglamento de FCT prioriza la integridad moral y física de los NNA. El convenio con la empresa debe cesar de inmediato si el entorno es hostil y peligroso.",
+    fundamentoNormativo: {
+      documento: "Ley 136-03 (Código de NNA) / Reglamento de Formación en Centros de Trabajo",
+      capitulo: "Protección Contra el Abuso y Suspensión o Rescisión de Convenios",
+      apartado: "Rutas de actuación obligatoria ante situaciones de abuso o acoso sexual en espacios de aprendizaje laboral",
+      justificacion: "El centro educativo es legalmente responsable de asegurar ambientes de pasantía seguros, libres de violencia y acoso, debiendo intervenir sin dilación ante cualquier denuncia."
+    },
+    competenciaEvaluada: "Gestión de crisis y aplicación de protocolos legales ante situaciones de acoso en la Formación en Centros de Trabajo",
+    nivelDificultad: "Alta"
+  },
+  {
+    id: 135,
+    categoria: "Competencias Docentes Generales",
+    especialidad: "Derechos y Permanencia Escolar (Embarazo Adolescente)",
+    pregunta: "El docente del taller de Logística nota que una estudiante de 5to grado técnico muestra signos físicos de embarazo. En medio de una clase, detiene la explicación y le exige en voz alta frente a todo el grupo que debe traer una prueba de embarazo al día siguiente, indicándole que 'en este politécnico no se permiten alumnas embarazadas porque dañan el prestigio del centro'. Según las leyes dominicanas, ¿qué constituye este accionar?",
+    opciones: [
+      "Una medida disciplinaria fundamentada en el Estatuto Estudiantil de Educación Media que protege el orden moral de las instituciones.",
+      "Una vulneración múltiple y gravísima a la Ley 136-03 y la Constitución. La educación es un derecho universal, la expulsión o acoso por embarazo es discriminación ilegal, y la exhibición pública del tema viola el derecho a la privacidad e intimidad de la adolescente.",
+      "Una acción amparada bajo el derecho constitucional de los colegios técnicos privados a seleccionar su propia matrícula de estudiantes.",
+      "Un abordaje necesario para evitar que la estudiante levante objetos pesados en el taller durante el desarrollo del embarazo."
+    ],
+    respuestaCorrecta: 1,
+    explicacion: "En la República Dominicana (Ley 136-03 y políticas del MINERD), está terminantemente prohibido suspender, expulsar o discriminar a una estudiante por estar embarazada. El docente, además de incurrir en discriminación ilegal, viola el derecho a la confidencialidad al exponer su salud médica ante todo el salón.",
+    fundamentoNormativo: {
+      documento: "Ley 136-03 (Código de Protección a NNA) / Constitución de la República Dominicana",
+      capitulo: "Derecho a la Educación, a la Intimidad y a la No Discriminación",
+      apartado: "Prohibición absoluta de exclusión escolar por motivos de embarazo adolescente",
+      justificacion: "Establece la obligatoriedad del Estado y los centros educativos de garantizar la permanencia escolar de las adolescentes embarazadas en un entorno de respeto."
+    },
+    competenciaEvaluada: "Protección de los derechos fundamentales de las estudiantes y aplicación de normativas antidiscriminación institucional",
+    nivelDificultad: "Alta"
+  },
+  {
+    id: 136,
+    categoria: "Competencias Técnicas Especializadas",
+    especialidad: "Diseño Curricular y Evaluación",
+    pregunta: "Un docente, recién graduado de ingeniería, es contratado para impartir un módulo en el politécnico. En lugar de utilizar los Resultados de Aprendizaje (RA) del Diseño Curricular Oficial del MINERD, decide evaluar a los estudiantes aplicando un examen complejo descargado directamente de un pensum universitario internacional, incluyendo temas como termodinámica avanzada que no corresponden al nivel medio. ¿Cuál es el impacto normativo de este proceder?",
+    opciones: [
+      "Es una práctica de vanguardia que eleva los estándares del politécnico y prepara mejor a los estudiantes para el futuro.",
+      "Es una infracción al principio de congruencia técnica. La certificación del MINERD requiere evaluar estrictamente las competencias y Resultados de Aprendizaje estipulados en el currículo de Nivel Secundario Técnico, siendo improcedente exigir competencias de educación superior no programadas.",
+      "Es válido siempre y cuando el docente traduzca el examen al español y les otorgue un bono de 10 puntos por nivel de dificultad.",
+      "Representa una falta menor que puede subsanarse si se promedian los resultados del examen universitario con las calificaciones de asistencia."
+    ],
+    respuestaCorrecta: 1,
+    explicacion: "El diseño curricular de la ETP está basado en el Marco Nacional de Cualificaciones. Los Resultados de Aprendizaje son vinculantes y definen el límite y alcance del perfil del bachiller técnico (Nivel 3). Evaluar competencias ajenas al diseño oficial invalida el proceso, genera frustración y desvirtúa la titulación estatal.",
+    fundamentoNormativo: {
+      documento: "Ordenanza 03-2017 y Bases de la Revisión y Actualización Curricular",
+      capitulo: "Alineación Curricular y Perfil del Egresado Técnico",
+      apartado: "Obligatoriedad de ceñir los procesos de enseñanza y evaluación a los Resultados de Aprendizaje y Criterios preestablecidos",
+      justificacion: "Asegura la coherencia, legalidad y estandarización nacional de los procesos de certificación técnica del nivel preuniversitario."
+    },
+    competenciaEvaluada: "Alineación estricta de los procesos evaluativos y de enseñanza con el diseño curricular oficial del nivel correspondiente",
+    nivelDificultad: "Alta"
+  },
+  {
+    id: 137,
+    categoria: "Competencias Docentes Generales",
+    especialidad: "Permanencia Escolar y Normativa de Evaluación",
+    pregunta: "Un estudiante de la especialidad de Comercio se ausenta durante 15 días laborables porque estuvo hospitalizado a causa del virus del dengue. Al reintegrarse, presenta su certificado médico original sellado por la clínica. El docente rechaza la excusa médica afirmando: 'Las reglas son las reglas, si no viniste a presentar tus evidencias en la fecha, tienes un cero definitivo en esos Resultados de Aprendizaje'. Según el MINERD, ¿cómo debe procederse?",
+    opciones: [
+      "El docente actúa correctamente, ya que el calendario escolar y las fechas de evaluación son inamovibles bajo cualquier circunstancia.",
+      "El docente incurre en una violación al derecho a la evaluación. Las normativas ordenan la flexibilización, reprogramación y aplicación de estrategias de recuperación para estudiantes que presentan ausencias justificadas por razones comprobables de salud mayor.",
+      "El estudiante debe ser enviado directamente a la modalidad de educación de adultos porque superó el límite de inasistencias permitidas en el semestre.",
+      "El centro educativo debe aplicar un examen genérico de cultura general para compensar todas las notas técnicas perdidas."
+    ],
+    respuestaCorrecta: 1,
+    explicacion: "El sistema educativo es garante de derechos. Las normativas de evaluación contemplan explícitamente la reprogramación y la flexibilización ante causas de fuerza mayor comprobadas (enfermedad). Castigar a un alumno con 'ceros' tras sufrir una hospitalización es una práctica antipedagógica y contraria a la ley.",
+    fundamentoNormativo: {
+      documento: "Ordenanzas vigentes de Evaluación de los Aprendizajes / Normas de Convivencia",
+      capitulo: "Disposiciones sobre Asistencia, Promoción y Estrategias de Recuperación",
+      apartado: "Derecho a la reprogramación de evaluaciones ante inasistencias justificadas médica o legalmente",
+      justificacion: "Garantiza el derecho a la educación y previene el fracaso escolar derivado de vulnerabilidades biológicas o accidentes."
+    },
+    competenciaEvaluada: "Aplicación de estrategias de flexibilización y recuperación pedagógica ante situaciones de fuerza mayor",
+    nivelDificultad: "Alta"
+  },
+  {
+    id: 138,
+    categoria: "Competencias Técnicas Especializadas",
+    especialidad: "Conservación de Activos y Mantenimiento",
+    pregunta: "En el taller de Mecanizado, el docente responsable utiliza la fresadora CNC (Control Numérico Computarizado) durante todo un semestre sin aplicar ninguna rutina de lubricación de los ejes, a pesar de que el panel digital emite alertas de falta de aceite. El docente alega que 'el Distrito no ha mandado presupuesto para comprar lubricantes'. Al final del ciclo, el motor de la máquina colapsa por fricción térmica. De acuerdo al Manual de Talleres, ¿cuál fue la falla del docente?",
+    opciones: [
+      "Ninguna, puesto que la gestión y compra de insumos de mantenimiento recae enteramente en las altas esferas del MINERD y no en el facilitador del aula.",
+      "Incumplió su deber de salvaguarda. Ante la falta de insumos de lubricación que comprometan la integridad de un equipo de alto costo, el docente debe aplicar el protocolo de paro preventivo de la maquinaria, documentar el riesgo por escrito a la Dirección y evitar su uso destructivo.",
+      "Fue un error menor; debió utilizar aceite de cocina o de motor automotriz usado como sustituto temporal para evitar el colapso de los engranajes.",
+      "La falla fue de los estudiantes por no recolectar dinero entre ellos para comprar el aceite industrial requerido por la fresadora."
+    ],
+    respuestaCorrecta: 1,
+    explicacion: "El Manual de Gestión de Talleres establece que el docente es custodio de la infraestructura. Si un equipo reporta alarmas críticas de mantenimiento y no hay insumos, el equipo NO DEBE operarse. Forzar su funcionamiento hasta destruirlo es negligencia en la conservación de los bienes del Estado.",
+    fundamentoNormativo: {
+      documento: "Manual de Gestión de Talleres y Laboratorios de la DETP",
+      capitulo: "Conservación, Mantenimiento Preventivo y Uso de Activos Fijos",
+      apartado: "Protocolos de paralización preventiva de maquinarias ante riesgos de daños por falta de mantenimiento",
+      justificacion: "Norma el deber fiduciario del docente respecto a la protección del equipamiento industrial, previniendo daños económicos graves al Estado."
+    },
+    competenciaEvaluada: "Toma de decisiones gerenciales frente al riesgo de deterioro de equipos e implementación de protocolos de paro preventivo",
+    nivelDificultad: "Alta"
+  },
+  {
+    id: 139,
+    categoria: "Competencias Docentes Generales",
+    especialidad: "Estrategias Metodológicas Activas",
+    pregunta: "En un acompañamiento áulico al docente del Módulo de 'Promoción de Productos Turísticos', el supervisor observa que el docente dedica el 90% de sus clases a dictar textos en voz alta desde un libro mientras los estudiantes transcriben silenciosamente en sus cuadernos. Al finalizar, califica la 'buena caligrafía'. A la luz del currículo dominicano vigente, ¿cómo se evalúa esta dinámica de clase?",
+    opciones: [
+      "Como una práctica metodológica excelente y recomendada para fijar el conocimiento teórico fundamental previo a las pasantías.",
+      "Como una metodología pasiva y obsoleta que contraviene radicalmente el enfoque por competencias y el paradigma constructivista de la Ordenanza 03-2017, los cuales exigen la aplicación de metodologías activas (estudio de casos, proyectos, simulaciones) centradas en el estudiante.",
+      "Como una técnica apropiada si se complementa con exámenes teóricos de memorización a final del período escolar.",
+      "Como una práctica exclusiva y normativamente correcta para los primeros tres meses del semestre, debiendo cambiar a prácticas al final."
+    ],
+    respuestaCorrecta: 1,
+    explicacion: "El diseño curricular basado en competencias de la RD destierra explícitamente el dictado y la transcripción pasiva como herramientas centrales del aprendizaje. La ETP requiere movilizar saberes ('aprender haciendo'). Dictar conceptos durante el 90% del tiempo impide el desarrollo de competencias fundamentales y profesionales.",
+    fundamentoNormativo: {
+      documento: "Bases de la Revisión y Actualización Curricular / Diseño Curricular de Nivel Secundario",
+      capitulo: "El Enfoque por Competencias y Estrategias Metodológicas Activas",
+      apartado: "El rol protagónico del estudiante y el docente como guía, mediador y facilitador de experiencias auténticas",
+      justificacion: "Determina que la enseñanza en la educación preuniversitaria debe alejarse del memorismo pasivo y enfocarse en la resolución de problemas y la producción técnica."
+    },
+    competenciaEvaluada: "Diseño e implementación de estrategias metodológicas constructivistas y activas en el aula técnica",
+    nivelDificultad: "Alta"
+  },
+  {
+    id: 140,
+    categoria: "Competencias Técnicas Especializadas",
+    especialidad: "Protocolos de Emergencia Industrial",
+    pregunta: "Durante una sesión práctica en el taller de Soldadura, se activa repentinamente la alarma general de evacuación por un conato de incendio en el edificio administrativo contiguo. El docente de soldadura cierra la puerta del taller con llave por dentro y les dice a sus estudiantes: 'Ese problema es allá afuera. Aquí no podemos perder el tiempo porque nos faltan 5 puntos de soldadura para terminar el proyecto'. ¿Qué normativa transgrede el educador de manera flagrante?",
+    opciones: [
+      "El principio de concentración laboral intensiva propio de la familia profesional de Fabricación Mecánica.",
+      "Las directrices universales de Seguridad Ocupacional y los protocolos de Gestión de Riesgos del MINERD, los cuales dictaminan que ante una alarma general de evacuación, todo el personal y estudiantado debe paralizar maquinarias y abandonar el edificio ordenadamente hacia el punto de encuentro.",
+      "Los estatutos de protección de propiedad intelectual, puesto que debió guardar los proyectos en la caja fuerte antes de evacuar.",
+      "Las reglas de limpieza, ya que el protocolo exige barrer el taller de soldadura completamente antes de salir en caso de incendio."
+    ],
+    respuestaCorrecta: 1,
+    explicacion: "Ignorar una alarma de evacuación e impedir la salida de los estudiantes encerrándolos en un espacio lleno de gases y fuentes térmicas (taller de soldadura) es un acto de negligencia temeraria. Los protocolos de emergencia del MINERD (y la Ley) son de acatamiento forzoso y prioritario sobre cualquier objetivo académico.",
+    fundamentoNormativo: {
+      documento: "Manual de Gestión de Talleres y Laboratorios / Protocolos Institucionales de Emergencia",
+      capitulo: "Planes de Evacuación, Contingencia y Seguridad Contra Incendios",
+      apartado: "Obligatoriedad de paralización de tareas y evacuación inmediata ante activación de alarmas",
+      justificacion: "Protege el derecho fundamental a la vida frente a contingencias, estipulando la evacuación obligatoria sin excepciones por motivos de productividad académica."
+    },
+    competenciaEvaluada: "Liderazgo en la aplicación rigurosa de planes institucionales de evacuación y manejo de emergencias",
+    nivelDificultad: "Alta"
+  }
+  
  
 ];
