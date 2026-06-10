@@ -9630,12 +9630,639 @@ const bancoPreguntas = [
     nivelDificultad: "Alta",
     competenciaEvaluada: "Identificación de indicadores de negligencia, activación de Ruta Crítica y trabajo interdisciplinario"
   },
+  {
+    id: 691,
+    categoria: "Protección Infantil – Abuso Físico / Ruta Crítica",
+    pregunta: `Durante el recreo, la psicóloga escolar de una escuela primaria del Gran Santo Domingo observa que una niña de 9 años de 3er grado se niega a participar en los juegos, permanece sentada sola y cuando intenta levantarse hace gestos de dolor. Al acercarse discretamente, la niña dice que "se cayó en casa". La psicóloga la acompaña a enfermería donde la enfermera detecta múltiples hematomas en la espalda y en los brazos en diferentes estados de cicatrización. La niña llora y pide que no llamen a su mamá "porque ella se va a poner brava". Esa misma tarde, la madre llega al centro antes de la salida y solicita hablar con la psicóloga para preguntar cómo va su hija académicamente, sin hacer mención a ningún incidente. La directora del centro está en una reunión de distrito y no estará disponible en toda la tarde. ¿Cuál debe ser la actuación del psicólogo escolar en esta situación?`,
+    opciones: [
+      "Atender a la madre en la reunión solicitada sin revelar los hallazgos físicos, registrar el caso en el expediente y esperar la disponibilidad de la directora para activar cualquier protocolo, garantizando así la cadena de mando institucional.",
+      "Activar de inmediato la Ruta Crítica institucional con el miembro del equipo de gestión disponible, documentar detalladamente los hallazgos físicos con apoyo de la enfermera, no revelar los hallazgos a la madre en la reunión mientras la investigación está en curso, y reportar el caso al CONANI sin esperar el regreso de la directora.",
+      "Informar a la madre sobre los hematomas durante la reunión solicitada para obtener su explicación antes de tomar decisiones, ya que la versión de la familia es parte del proceso de valoración del caso.",
+      "Derivar el caso al orientador del centro para que realice la entrevista con la niña y la familia, ya que la psicóloga no debe comprometer su relación de confianza con la estudiante interviniendo directamente en un posible caso de abuso."
+    ],
+    respuestaCorrecta: 1,
+    explicacion: `Los hematomas múltiples en diferentes estados de cicatrización constituyen indicadores físicos de maltrato que activan obligatoriamente la Ruta Crítica, independientemente de la disponibilidad de la directora. Informar a la madre antes de completar el reporte al CONANI podría comprometer la seguridad de la niña y destruir evidencia. La Ruta Crítica establece que ante la ausencia de la dirección, cualquier miembro del equipo de gestión disponible debe asumir la responsabilidad de activar el protocolo. La Ley 136-03 establece la obligación de denuncia inmediata sin necesidad de autorización jerárquica.`,
+    fundamentoNormativo: {
+      documento: "Guía de Ruta Crítica para la Prevención y Atención de la Violencia (MINERD) / Ley 136-03",
+      capitulo: "Ruta Crítica – Indicadores de Maltrato Físico; Activación del Protocolo Institucional",
+      apartado: "Indicadores físicos de abuso; Procedimiento de activación ante ausencia de dirección; Art. 52 y 53 Ley 136-03 – Obligatoriedad de denuncia; Manejo de la familia durante el proceso de reporte",
+      justificacion: "La Ruta Crítica establece que los indicadores físicos de maltrato obligan a la activación inmediata del protocolo sin necesidad de esperar a la máxima autoridad del centro. La Ley 136-03 hace obligatoria la denuncia al CONANI por parte de cualquier persona con conocimiento del hecho. Alertar a la madre antes del reporte puede comprometer la seguridad del NNA."
+    },
+    nivelDificultad: "Alta",
+    competenciaEvaluada: "Aplicación de Ruta Crítica ante maltrato físico, priorización de protección del NNA sobre cadena de mando y manejo estratégico de la familia durante el proceso"
+  },
+  {
+    id: 692,
+    categoria: "Inclusión Educativa – Discapacidad Intelectual / Ajustes Razonables / Trabajo Interdisciplinario",
+    pregunta: `En un centro educativo del Cibao, el psicólogo escolar recibe la referencia de un estudiante de 12 años de 6to grado que ha repetido el grado dos veces. La maestra reporta que el niño no logra leer textos simples, tiene dificultades para seguir instrucciones de más de dos pasos, requiere asistencia constante en actividades de la vida cotidiana escolar y sus compañeros frecuentemente se burlan de él. Los padres afirman que "siempre ha sido así" y que en la familia "todos lo tratan como bebé". El equipo docente solicita al psicólogo que emita un informe para tramitar la exclusión del estudiante del aula regular y su traslado a un centro especial, argumentando que el nivel del niño "no corresponde con el currículo de primaria". No existe ninguna evaluación formal previa ni diagnóstico documentado. ¿Cuál es la secuencia de actuación correcta del psicólogo escolar?`,
+    opciones: [
+      "Elaborar el informe de reubicación solicitado por el equipo docente, ya que la trayectoria de doble repitencia y las observaciones acumuladas constituyen evidencia suficiente para justificar el traslado al centro especial.",
+      "Realizar una evaluación psicopedagógica completa en el ámbito de competencia escolar, documentar las barreras al aprendizaje y los apoyos requeridos, orientar a la familia sobre el proceso, coordinar con el equipo de inclusión del distrito para determinar los apoyos necesarios, implementar ajustes razonables con los docentes y, si la evaluación especializada lo indica, gestionar la derivación adecuada respetando la decisión familiar informada.",
+      "Negar cualquier intervención hasta tanto la familia presente un diagnóstico clínico de discapacidad intelectual emitido por un especialista externo, ya que sin diagnóstico el psicólogo no tiene base para actuar.",
+      "Iniciar de forma inmediata el proceso de derivación al centro de educación especial más cercano, comunicando a la familia que es lo más conveniente para el niño y que el centro regular no cuenta con los recursos necesarios para atenderlo."
+    ],
+    respuestaCorrecta: 1,
+    explicacion: `La Ordenanza 05-2024 establece que ningún estudiante puede ser excluido de la educación regular sin un proceso formal de evaluación y sin agotar las estrategias de ajuste razonable. La ausencia de evaluación previa hace inválida cualquier solicitud de reubicación. El psicólogo escolar debe iniciar la evaluación psicopedagógica, implementar ajustes, coordinar con el equipo de inclusión del distrito y orientar a la familia. La decisión de reubicación, si fuera pertinente, corresponde a un proceso formal interdisciplinario y con participación familiar informada, nunca a una solicitud docente sin sustento evaluativo.`,
+    fundamentoNormativo: {
+      documento: "Ordenanza 05-2024 sobre Educación Inclusiva / Manual Operativo de los Centros de Orientación y Psicología (2015)",
+      capitulo: "Capítulo IV – Proceso de Evaluación para Inclusión; Capítulo III – Ajustes Razonables",
+      apartado: "Art. 22 – Proceso formal previo a cualquier reubicación; Art. 18 – Ajustes razonables como respuesta prioritaria; Art. 9 – Participación familiar en decisiones de escolarización; Funciones del psicólogo en evaluación psicopedagógica",
+      justificacion: "La Ordenanza 05-2024 prohíbe la exclusión o reubicación sin proceso formal de evaluación y sin participación de la familia. El Manual Operativo establece que la evaluación psicopedagógica es competencia del psicólogo escolar y precede cualquier decisión de escolarización."
+    },
+    nivelDificultad: "Alta",
+    competenciaEvaluada: "Protección del derecho a la educación inclusiva, evaluación psicopedagógica y resistencia a presiones institucionales que vulneran la normativa"
+  },
+  {
+    id: 693,
+    categoria: "Salud Mental Escolar – Autolesiones / Intervención en Crisis / Ética",
+    pregunta: `Una estudiante de 15 años de 3ro de bachillerato es referida al psicólogo escolar por su tutora, quien notó que la joven usa mangas largas incluso en días de mucho calor. Durante la entrevista individual, la estudiante reconoce voluntariamente que se hace cortes en los brazos "para sentir algo diferente cuando todo se acumula", pero afirma que no tiene deseos de morir. Pide que esto quede entre ella y el psicólogo porque "si mis padres se enteran me van a castigar y todo empeorará". El psicólogo verifica que los cortes son superficiales y recientes. La estudiante asiste regularmente a clases, mantiene buenas relaciones con sus compañeras y no reporta otros factores de riesgo. La tutora espera afuera del consultorio para recibir información sobre la entrevista. ¿Cuál es la actuación profesionalmente correcta del psicólogo en este caso?`,
+    opciones: [
+      "Respetar íntegramente la confidencialidad solicitada por la estudiante, registrar el caso en el expediente, establecer un plan de seguimiento semanal y evitar informar a la familia para no deteriorar la confianza terapéutica ni generar consecuencias negativas en el hogar.",
+      "Explicar con calidez a la estudiante los límites de la confidencialidad en situaciones de riesgo físico, informar al equipo de gestión, involucrar a la familia con un abordaje cuidadoso que no genere victimización secundaria, diseñar un plan de intervención con seguimiento estructurado y descartar riesgo suicida activo, documentando todo el proceso.",
+      "Informar a la tutora que espera afuera sobre los hallazgos de la entrevista de forma inmediata, ya que ella fue quien realizó la referencia y tiene responsabilidad sobre el caso.",
+      "Aplicar el protocolo de emergencia para riesgo suicida de forma inmediata, contactar a los padres por teléfono en ese momento y solicitar el traslado de la estudiante a un centro de salud mental, ya que las autolesiones siempre constituyen una emergencia de nivel máximo."
+    ],
+    respuestaCorrecta: 1,
+    explicacion: `Las autolesiones, aunque el estudiante niegue ideación suicida, constituyen una conducta de riesgo físico que supera el límite de la confidencialidad. Los lineamientos establecen que el psicólogo debe informar a la familia y al equipo de gestión, pero con un abordaje que evite la victimización secundaria y que preserve la alianza terapéutica. La tutora no tiene derecho a la información de la entrevista individual. La activación de un protocolo de emergencia máxima sin valorar la gradación del riesgo sería una respuesta desproporcionada que podría dañar el proceso. El abordaje correcto incluye la valoración precisa del riesgo, la intervención familiar cuidadosa y el seguimiento estructurado.`,
+    fundamentoNormativo: {
+      documento: "Lineamientos del Proceso de Orientación y Psicología (Actualización 2023-2024) / Manual Operativo de los Centros de Orientación y Psicología (2015)",
+      capitulo: "Intervención en Salud Mental – Autolesiones; Límites de la Confidencialidad con NNA",
+      apartado: "Protocolo ante conductas de autolesión; Criterios para ruptura de confidencialidad ante riesgo físico; Abordaje familiar en situaciones de salud mental; Documentación del proceso de intervención",
+      justificacion: "Los lineamientos 2023-2024 establecen que las autolesiones activan los límites de la confidencialidad, requiriendo informar a la familia con un enfoque que minimice el daño. El manual operativo establece la gradación de respuestas según nivel de riesgo y la documentación obligatoria de todo el proceso."
+    },
+    nivelDificultad: "Alta",
+    competenciaEvaluada: "Valoración graduada del riesgo, manejo ético de la confidencialidad ante autolesiones y abordaje familiar estratégico"
+  },
+  {
+    id: 694,
+    categoria: "Ciberacoso / Convivencia Escolar / Protección de NNA",
+    pregunta: `El psicólogo escolar de un liceo del sur del país es contactado por la madre de una estudiante de 14 años quien le muestra capturas de pantalla de un grupo de WhatsApp donde compañeras del centro están publicando fotos editadas de forma humillante de su hija, difundiendo rumores sobre su vida sexual y coordinando que nadie le hable. La madre está muy angustiada y exige que el psicólogo identifique a todas las responsables y las expulse del centro ese mismo día. La estudiante afectada no ha ido a clases en tres días. La directora del centro está disponible. Al revisar el caso, el psicólogo identifica que varias de las estudiantes señaladas como agresoras también tienen historias de conflictos entre ellas y que algunas podrían estar actuando bajo presión de otras. ¿Cómo debe proceder el psicólogo escolar de manera integral?`,
+    opciones: [
+      "Satisfacer la demanda de la madre, identificar a las estudiantes del grupo de WhatsApp y recomendar a la directora la expulsión inmediata de todas, dado que la evidencia fotográfica es suficiente y la demora en actuar podría agravar el daño a la víctima.",
+      "Activar el protocolo institucional de acoso y ciberacoso, garantizar el reingreso seguro de la estudiante afectada con medidas de protección, realizar entrevistas individuales a todas las partes involucradas para establecer roles y niveles de responsabilidad, orientar a la directora sobre las medidas disciplinarias proporcionales según la normativa, y acompañar terapéuticamente a la víctima documentando todo el proceso.",
+      "Informar a la madre que el ciberacoso ocurrido fuera del horario escolar no es competencia del centro educativo y orientarla para que realice la denuncia directamente ante el Ministerio Público.",
+      "Iniciar un proceso de mediación grupal entre la estudiante afectada y las compañeras señaladas como agresoras, con la participación de todas las familias, para restaurar las relaciones del grupo antes de aplicar medidas disciplinarias."
+    ],
+    respuestaCorrecta: 1,
+    explicacion: `Las Normas de Convivencia Armoniosa y los Lineamientos 2023-2024 establecen que el ciberacoso entre estudiantes del centro, aunque ocurra en plataformas digitales externas, es competencia del centro educativo cuando afecta la convivencia escolar y la integridad de sus estudiantes. El protocolo exige proteger a la víctima, investigar con entrevistas individuales para determinar roles, y aplicar medidas disciplinarias proporcionales. La expulsión inmediata sin proceso de investigación viola el debido proceso. La mediación no es apropiada en casos de acoso con desequilibrio de poder. El ciberacoso con contenido sexual sobre una menor de edad también puede activar la Ruta Crítica.`,
+    fundamentoNormativo: {
+      documento: "Normas del Sistema Educativo Dominicano para la Convivencia Armoniosa / Lineamientos del Proceso de Orientación y Psicología (Actualización 2023-2024) / Ley 136-03",
+      capitulo: "Protocolo de Ciberacoso; Procedimiento de Investigación en Casos de Acoso Escolar",
+      apartado: "Competencia del centro ante ciberacoso entre estudiantes; Procedimiento de investigación y determinación de roles; Medidas disciplinarias proporcionales; Protección de la víctima durante el proceso; Art. 46 Ley 136-03 – Derecho a la integridad",
+      justificacion: "Las Normas de Convivencia establecen que el ciberacoso entre estudiantes del mismo centro, independientemente del medio o el momento en que ocurra, es competencia del sistema educativo cuando impacta la convivencia escolar. El protocolo requiere investigación, protección de la víctima y proporcionalidad en las medidas."
+    },
+    nivelDificultad: "Alta",
+    competenciaEvaluada: "Aplicación del protocolo de ciberacoso, protección de la víctima, proporcionalidad en medidas disciplinarias y manejo de la presión familiar"
+  },
+  {
+    id: 695,
+    categoria: "Embarazo Adolescente / Permanencia Escolar / Trabajo con Familias",
+    pregunta: `La psicóloga escolar de una escuela secundaria del este del país es informada por una docente de que una estudiante de 16 años de 2do de bachillerato está embarazada de aproximadamente cuatro meses. La docente afirma que "se nota y los demás estudiantes ya hablan". La abuela, que es quien ejerce la tutoría, llega al centro muy alterada y pide que la joven sea "dada de baja voluntaria" porque "está en una situación que no corresponde a la escuela". La estudiante, al ser entrevistada de forma privada, expresa que quiere continuar sus estudios, que tiene miedo de quedarse sin educación y que la abuela tomará la decisión sin consultarle. El padre del bebé es mayor de edad y no es estudiante del centro. ¿Cuál debe ser la actuación del psicólogo escolar?`,
+    opciones: [
+      "Respetar la decisión de la tutora legal de dar de baja a la estudiante, ya que tiene autoridad sobre la menor, y orientar a la joven sobre opciones educativas alternativas como la educación de adultos.",
+      "Garantizar el derecho de la estudiante a permanecer en el sistema educativo, explicar a la tutora el marco normativo que prohíbe la exclusión por embarazo, orientar emocionalmente a la joven, diseñar junto al equipo docente los ajustes necesarios para acompañar su trayectoria escolar, y valorar los indicadores del caso para determinar si la relación con el padre mayor de edad requiere activar la Ruta Crítica.",
+      "Llamar al padre del bebé al centro educativo para que participe en la reunión familiar y contribuya a la decisión sobre la continuidad escolar de la joven.",
+      "Citar al equipo de gestión para que la directora convenza a la abuela de no retirar a la estudiante, delegando en la autoridad directiva la defensa del derecho a la permanencia."
+    ],
+    respuestaCorrecta: 1,
+    explicacion: `El embarazo adolescente no es causal de exclusión del sistema educativo según la normativa dominicana vigente. El psicólogo escolar debe defender activamente el derecho a la permanencia de la estudiante, orientar a la tutora sobre el marco legal, acompañar emocionalmente a la joven y coordinar los apoyos necesarios para su continuidad. Adicionalmente, el hecho de que el padre del bebé sea mayor de edad y la estudiante tenga 16 años obliga al psicólogo a valorar si existe una situación de abuso sexual que deba ser reportada según la Ley 136-03 y la Ruta Crítica. La delegación en la familia o en la dirección sin intervención directa del psicólogo no es adecuada.`,
+    fundamentoNormativo: {
+      documento: "Lineamientos del Proceso de Orientación y Psicología (Actualización 2023-2024) / Ley 136-03 / Guía de Ruta Crítica",
+      capitulo: "Permanencia Escolar – Embarazo Adolescente; Protección ante Abuso Sexual",
+      apartado: "Protocolo de acompañamiento a estudiantes embarazadas; Prohibición de exclusión por embarazo; Art. 408 Código Penal y Ley 136-03 sobre relaciones sexuales con menores; Activación de Ruta Crítica ante indicadores de abuso",
+      justificacion: "Los lineamientos vigentes y la normativa dominicana prohíben la exclusión escolar por embarazo y establecen el acompañamiento como función del psicólogo. La Ley 136-03 obliga a valorar si la relación con un adulto mayor constituye una situación de abuso que requiera denuncia."
+    },
+    nivelDificultad: "Alta",
+    competenciaEvaluada: "Defensa del derecho a la permanencia escolar, orientación a familias sobre normativa y activación de Ruta Crítica ante posible abuso sexual"
+  },
+  {
+    id: 696,
+    categoria: "Evaluación Psicopedagógica – Altas Capacidades / Inclusión / Trabajo Interdisciplinario",
+    pregunta: `Un estudiante de 10 años de 5to grado en una escuela pública de Santiago es referido al psicólogo por conducta "problemática": interrumpe la clase con preguntas que los docentes describen como "fuera del tema", termina las asignaciones en una fracción del tiempo asignado, se aburre visiblemente y ha empezado a generar conflictos con compañeros argumentando que las actividades "son para niños pequeños". Su rendimiento académico es excelente, pero los docentes reportan que es "arrogante" y "difícil de manejar". La madre comenta que en casa hace experimentos por su cuenta, lee enciclopedias por placer y pregunta sobre temas de secundaria. Ningún docente ha considerado la posibilidad de altas capacidades. El equipo de gestión ha sugerido aplicarle un plan de convivencia por las conductas disruptivas. ¿Cuál debe ser la actuación del psicólogo escolar?`,
+    opciones: [
+      "Aplicar el plan de convivencia solicitado por el equipo de gestión para abordar las conductas disruptivas, ya que la conducta en el aula es la problemática principal y debe ser el foco de la intervención.",
+      "Realizar una evaluación psicopedagógica que explore el perfil de altas capacidades, orientar al equipo docente sobre las características del estudiante, proponer al equipo de gestión y a la familia ajustes curriculares de enriquecimiento y ampliación en lugar de medidas disciplinarias, y coordinar con el equipo de inclusión del distrito para determinar los apoyos especializados requeridos.",
+      "Informar a la familia que el niño debe ser evaluado por un psicólogo clínico externo para descartar TDAH u otros trastornos antes de que el psicólogo escolar pueda intervenir.",
+      "Orientar a los docentes sobre estrategias de manejo conductual para reducir las interrupciones en el aula, sin realizar una evaluación formal ya que el rendimiento académico excelente indica que no hay ninguna necesidad de apoyo."
+    ],
+    respuestaCorrecta: 1,
+    explicacion: `El perfil descrito es consistente con altas capacidades: rendimiento excepcional, curiosidad intelectual avanzada, aburrimiento ante tareas por debajo de su nivel y dificultades de convivencia derivadas de la falta de adecuación curricular. La Ordenanza 05-2024 incluye a los estudiantes con altas capacidades dentro del marco de la educación inclusiva y establece que requieren ajustes curriculares específicos. Aplicar un plan de convivencia sin valorar el origen de las conductas es una respuesta inadecuada que no aborda la causa real. El psicólogo debe liderar la evaluación e impulsar los ajustes curriculares de enriquecimiento.`,
+    fundamentoNormativo: {
+      documento: "Ordenanza 05-2024 sobre Educación Inclusiva / Manual Operativo de los Centros de Orientación y Psicología (2015)",
+      capitulo: "Capítulo II – Estudiantes con Necesidades Específicas de Apoyo Educativo; Altas Capacidades",
+      apartado: "Art. 12 – Altas capacidades como NEE; Art. 18 – Ajustes curriculares de enriquecimiento; Evaluación psicopedagógica del perfil de altas capacidades; Rol del psicólogo en orientación al equipo docente",
+      justificacion: "La Ordenanza 05-2024 reconoce las altas capacidades como una necesidad específica de apoyo educativo que requiere ajustes curriculares de enriquecimiento. El Manual Operativo establece que el psicólogo escolar debe evaluar y orientar al equipo docente ante estos perfiles, evitando la patologización de conductas que tienen origen en la inadecuación curricular."
+    },
+    nivelDificultad: "Alta",
+    competenciaEvaluada: "Identificación de altas capacidades, aplicación de la Ordenanza 05-2024 y liderazgo técnico ante presiones institucionales hacia la disciplina"
+  },
+  {
+    id: 697,
+    categoria: "Violencia Intrafamiliar / Ruta Crítica / Ética Profesional",
+    pregunta: `Un estudiante de 14 años de 1ro de bachillerato llega al consultorio del psicólogo escolar un lunes por la mañana con el labio partido y moretones visibles en el pómulo. Cuando el psicólogo le pregunta con calidez qué ocurrió, el joven, después de un largo silencio, explica que su padre llegó borracho el viernes por la noche y golpeó a su madre y también a él cuando intentó defenderla. Dice que esto "pasa seguido" pero que nunca habían sido golpes tan visibles. Pide al psicólogo que no haga "un escándalo" porque su padre es profesor en otro centro del mismo distrito y teme que si se denuncia "todo se complica". El psicólogo conoce personalmente al padre del estudiante. ¿Cuál es la actuación ética y profesionalmente correcta?`,
+    opciones: [
+      "Registrar el caso en el expediente y hablar de forma discreta con el padre del estudiante, aprovechando el conocimiento personal para mediar en la situación familiar y evitar una denuncia formal que podría dañar la carrera del padre.",
+      "Documentar los indicadores físicos, activar la Ruta Crítica institucional reportando el caso al CONANI y a las autoridades competentes, garantizando la protección tanto del estudiante como de la madre, con independencia de la identidad o el cargo del agresor, y brindar acompañamiento psicológico al joven durante el proceso.",
+      "Orientar al estudiante para que sea él quien decida si desea que se haga la denuncia, respetando su autonomía, y actuar solo si él otorga su consentimiento explícito.",
+      "Reportar el caso únicamente al equipo de gestión del centro para que evalúe si es pertinente activar la Ruta Crítica, dado que la situación involucra a un docente del sistema y requiere un manejo institucional de mayor nivel."
+    ],
+    respuestaCorrecta: 1,
+    explicacion: `La violencia física documentada con lesiones visibles obliga al psicólogo a activar la Ruta Crítica sin consideración al cargo, la identidad ni el conocimiento personal del agresor. La Ley 136-03 y la Ruta Crítica no establecen excepciones por condición laboral del victimario. La intervención directa personal del psicólogo con el padre agresor sería una violación ética grave que podría alertar al agresor y poner en riesgo a la víctima y a su madre. El consentimiento del adolescente no es requisito para la denuncia cuando existen lesiones físicas evidentes.`,
+    fundamentoNormativo: {
+      documento: "Guía de Ruta Crítica para la Prevención y Atención de la Violencia / Ley 136-03 / Estatuto del Docente Dominicano",
+      capitulo: "Ruta Crítica – Violencia Intrafamiliar; Ética Profesional ante Conflicto de Interés",
+      apartado: "Obligatoriedad de activación de la Ruta ante lesiones físicas; Art. 52-53 Ley 136-03 – Denuncia sin excepción por condición del agresor; Estatuto del Docente – Responsabilidad ética del personal educativo",
+      justificacion: "La Ruta Crítica y la Ley 136-03 establecen la obligación de denuncia sin excepciones. El conocimiento personal del agresor y su condición de docente no modifican la obligación legal ni ética del psicólogo escolar. Actuar de forma encubierta con el agresor constituiría una falta ética grave."
+    },
+    nivelDificultad: "Alta",
+    competenciaEvaluada: "Independencia ética ante conflicto de interés, obligatoriedad de la Ruta Crítica y protección de NNA ante violencia intrafamiliar"
+  },
+  {
+    id: 698,
+    categoria: "Trabajo Interdisciplinario – Liderazgo Institucional / Programas Preventivos / Planificación",
+    pregunta: `Al inicio del año escolar, el psicólogo de un centro educativo multigrado del suroeste del país elabora su planificación anual con componentes de prevención del abuso, convivencia escolar, salud mental y orientación vocacional. Al presentarla al equipo de gestión, la subdirectora le comunica que "el psicólogo aquí está para atender casos, no para hacer talleres" y que el tiempo del psicólogo debe dedicarse exclusivamente a la atención individual de estudiantes referidos. Además, propone que los espacios de orientación grupal sean eliminados para no "quitar tiempo de clase". Varios docentes apoyan esta postura. ¿Cómo debe responder el psicólogo escolar?`,
+    opciones: [
+      "Aceptar la postura del equipo de gestión y dedicarse exclusivamente a la atención individual, ya que el equipo directivo tiene autoridad sobre la distribución del tiempo en el centro.",
+      "Presentar al equipo de gestión el sustento normativo del Manual Operativo y de los Lineamientos que establecen las funciones preventivas y grupales como parte integral del servicio de orientación, proponer un modelo de planificación que integre ambas funciones sin afectar los tiempos de clase, y documentar la situación ante el distrito si la postura directiva persiste en contradecir la normativa.",
+      "Implementar los programas preventivos de forma informal fuera del horario oficial para cumplir con la planificación sin generar conflicto con el equipo directivo.",
+      "Consultar a los docentes sobre qué actividades preventivas están dispuestos a ceder para determinar qué parte del programa puede ejecutarse con el apoyo institucional disponible."
+    ],
+    respuestaCorrecta: 1,
+    explicacion: `El Manual Operativo y los Lineamientos establecen explícitamente que el servicio de orientación y psicología tiene una función preventiva de primer orden, que incluye programas grupales y acciones de prevención comunitaria. Reducir el servicio exclusivamente a la atención individual contradice la normativa vigente. El psicólogo debe defender técnicamente su planificación basándose en la normativa, proponer soluciones y documentar la situación ante la instancia superior si la contradicción persiste. Actuar de forma clandestina o subordinar completamente el programa a la voluntad directiva compromete la calidad del servicio.`,
+    fundamentoNormativo: {
+      documento: "Manual Operativo de los Centros de Orientación y Psicología (2015) / Lineamientos del Proceso de Orientación y Psicología (Actualización 2023-2024) / Planificación Anual Unidad de Orientación y Psicología",
+      capitulo: "Funciones del Psicólogo Escolar – Componente Preventivo; Planificación del Servicio",
+      apartado: "Funciones preventivas y grupales como parte integral del servicio; Estructura de la planificación anual; Componentes obligatorios del programa de orientación; Mecanismos de defensa técnica del servicio ante autoridades",
+      justificacion: "El Manual Operativo y la Planificación Anual establecen que la prevención grupal es una función esencial del psicólogo escolar, no opcional. La subordinación total al modelo reactivo de atención individual contradice la normativa y limita el impacto del servicio."
+    },
+    nivelDificultad: "Alta",
+    competenciaEvaluada: "Liderazgo técnico institucional, defensa normativa del rol del psicólogo y gestión de conflictos con la autoridad directiva"
+  },
+  {
+    id: 699,
+    categoria: "Duelo / Intervención en Crisis / Comunidad Educativa",
+    pregunta: `Un lunes por la mañana, el psicólogo escolar de un liceo de una zona rural recibe la noticia de que un estudiante de 16 años de 2do de bachillerato murió el fin de semana en un accidente de tránsito. El joven era muy conocido y querido en el centro. Varios estudiantes llegan llorando, un grupo de compañeros cercanos se niega a entrar a clases, una docente que era su tutora está en estado de shock y no puede continuar su jornada, y la directora solicita al psicólogo que "normalice todo rápido para no perder más clases". Algunos padres comienzan a llegar al centro sin ser citados. ¿Cómo debe gestionar el psicólogo esta situación de manera integral?`,
+    opciones: [
+      "Acatar la instrucción de la directora, reiniciar las clases con normalidad y citar a los estudiantes más afectados para atención individual a lo largo de la semana, ya que la rutina es el mejor mecanismo de recuperación ante el duelo.",
+      "Activar el protocolo de intervención en crisis por pérdida colectiva: coordinar con la directora un espacio de acogida para el grupo, atender de forma diferenciada a los estudiantes más afectados y a la docente en estado de shock, gestionar la presencia de las familias con información clara, implementar actividades de elaboración del duelo colectivo y establecer un plan de seguimiento para los próximos días, documentando el proceso.",
+      "Informar a la directora que es imposible retomar las clases ese día y que el centro debe suspender la jornada por respeto al duelo, gestionando el cierre del centro ante las autoridades del distrito.",
+      "Concentrar toda la atención del psicólogo en el grupo de amigos más cercanos al estudiante fallecido durante toda la jornada, delegando en los docentes el manejo del resto del estudiantado afectado."
+    ],
+    respuestaCorrecta: 1,
+    explicacion: `Los lineamientos establecen que la muerte de un estudiante activa el protocolo de intervención en crisis por duelo colectivo, que implica un abordaje diferenciado de toda la comunidad educativa: estudiantes, docentes y familias. El psicólogo lidera el proceso de acogida y elaboración colectiva, atiende de forma prioritaria a los más afectados, y establece un plan de seguimiento. Forzar la "normalidad" ante una pérdida colectiva puede generar duelos patológicos. La suspensión total sin protocolo tampoco es la respuesta adecuada. La gestión debe ser integral y documentada.`,
+    fundamentoNormativo: {
+      documento: "Lineamientos del Proceso de Orientación y Psicología (Actualización 2023-2024) / Manual Operativo de los Centros de Orientación y Psicología (2015)",
+      capitulo: "Intervención en Crisis – Duelo Colectivo; Protocolos de Respuesta ante Muerte de Estudiante",
+      apartado: "Protocolo de intervención ante muerte de estudiante; Atención diferenciada a comunidad educativa en crisis; Rol del psicólogo como coordinador del proceso de duelo institucional; Plan de seguimiento post-crisis",
+      justificacion: "Los lineamientos 2023-2024 establecen el protocolo de duelo colectivo como una intervención en crisis que requiere coordinación integral por parte del psicólogo, incluyendo acogida grupal, atención diferenciada, gestión familiar y seguimiento documentado."
+    },
+    nivelDificultad: "Alta",
+    competenciaEvaluada: "Gestión de duelo colectivo, liderazgo en intervención en crisis y coordinación con la comunidad educativa completa"
+  },
+  {
+    id: 700,
+    categoria: "Orientación Vocacional – Seguimiento de Casos / Trabajo con Familias / Permanencia",
+    pregunta: `El psicólogo escolar detecta que tres estudiantes de 4to de bachillerato con excelente expediente académico han comenzado a mostrar desinterés, ausentismo leve y una marcada desmotivación en los últimos dos meses. Al realizar entrevistas individuales, los tres estudiantes expresan variantes del mismo mensaje: sus familias les han dicho que "estudiar no sirve para nada aquí" y que lo mejor es irse al exterior o trabajar. Uno de ellos tiene una oferta de trabajo en una empresa familiar que implicaría abandonar el bachillerato a dos meses de graduarse. Otro ha sido presionado por su padre para viajar de forma irregular. El tercero dice que simplemente "no ve futuro". Los tres tienen potencial académico documentado y el psicólogo había trabajado previamente con ellos en orientación vocacional con resultados positivos. ¿Cuál debe ser la actuación del psicólogo escolar?`,
+    opciones: [
+      "Respetar la autonomía de los estudiantes y las decisiones familiares, registrar el riesgo de abandono en los expedientes y notificar al distrito para que aplique el protocolo de baja si alguno deja de asistir.",
+      "Activar el protocolo de prevención del abandono escolar para cada caso con estrategias diferenciadas: retomar el proceso de orientación vocacional con proyección de futuro concreto, convocar a las familias para sesiones de orientación sobre oportunidades del sistema educativo y consecuencias del abandono, articular con programas de apoyo disponibles, y documentar el seguimiento individualizado de cada estudiante hasta su graduación.",
+      "Concentrar la intervención en el estudiante con oferta de trabajo, ya que su caso es el más urgente, y dar seguimiento mensual a los otros dos hasta verificar si concretan el abandono.",
+      "Informar a la directora del centro para que cite a las familias y les comunique la obligatoriedad de culminar el bachillerato, delegando en la autoridad directiva la gestión de la retención escolar."
+    ],
+    respuestaCorrecta: 1,
+    explicacion: `El Manual Operativo y los Lineamientos establecen que el psicólogo escolar debe activar el protocolo de prevención del abandono ante señales tempranas de riesgo, con intervención individualizada y trabajo con familias. Estudiantes a dos meses de graduarse representan un caso de alta prioridad. La orientación vocacional es un instrumento clave de retención. Las familias deben ser involucradas con un enfoque orientador, no punitivo. Esperar a que el abandono se concrete o delegar exclusivamente en la dirección contradice las funciones preventivas del psicólogo establecidas en la normativa.`,
+    fundamentoNormativo: {
+      documento: "Lineamientos del Proceso de Orientación y Psicología (Actualización 2023-2024) / Manual Operativo de los Centros de Orientación y Psicología (2015) / Planificación Anual Unidad de Orientación y Psicología",
+      capitulo: "Permanencia Escolar – Prevención del Abandono; Orientación Vocacional como Herramienta de Retención; Trabajo con Familias",
+      apartado: "Protocolo de intervención ante señales tempranas de riesgo de abandono; Orientación vocacional con proyección de futuro; Estrategias de trabajo con familias en riesgo de abandono; Seguimiento individualizado documentado",
+      justificacion: "Los lineamientos vigentes y el Manual Operativo establecen que la prevención del abandono es una función prioritaria del psicólogo escolar que requiere intervención temprana, diferenciada por caso, con involucramiento familiar y seguimiento documentado. La orientación vocacional es reconocida como herramienta de retención escolar."
+    },
+    nivelDificultad: "Alta",
+    competenciaEvaluada: "Prevención del abandono escolar, orientación vocacional como herramienta de retención, trabajo con familias y gestión de casos múltiples con intervención diferenciada"
+  },
 
-
-
-
-
-
+    const bancoPreguntas = [
+  {
+    id: 701,
+    categoria: "Acoso Escolar – Identificación de Riesgos / Protocolos de Convivencia / Trabajo Interdisciplinario",
+    pregunta: `El psicólogo escolar de una escuela básica del Distrito Nacional recibe en su consultorio a una madre visiblemente angustiada que relata que su hijo de 11 años de 5to grado lleva tres semanas negándose a asistir a la escuela, ha dejado de comer con normalidad, presenta insomnio y ha expresado que "no quiere seguir viviendo así". La madre pensó inicialmente que era "pereza", pero encontró en el cuaderno del niño frases como "soy un inútil" y "nadie me quiere en esa escuela". Al citar al niño, este revela entre lágrimas que un grupo de compañeros de su grado lo llaman "gordo" y "tonto" todos los días, le esconden los materiales, le rompen las tareas y en el recreo lo empujan cuando los maestros no ven. Dice que se lo contó a su maestra hace dos semanas y ella le respondió que "se pusiera firme porque los niños son así". Uno de los agresores identificados es hijo de un miembro de la Asociación de Padres del centro que tiene influencia política en la comunidad. La directora, al ser informada del caso, dice que hay que "manejarlo con cuidado para no crear problemas con esa familia".  ¿Cuál debe ser la actuación integral del psicólogo escolar en este caso?`,
+    opciones: [
+      "Seguir la orientación de la directora y manejar el caso con discreción, abordando la situación únicamente a través de la orientación individual del niño afectado para fortalecer su autoestima, sin activar formalmente el protocolo de acoso hasta verificar mejor los hechos.",
+      "Activar el protocolo institucional de acoso escolar documentando los indicadores físicos, emocionales y conductuales del estudiante afectado, realizar entrevistas individuales a todas las partes sin revelar la identidad del denunciante, implementar medidas de protección inmediata para el niño, orientar al equipo docente sobre su responsabilidad ante situaciones de acoso, informar a las familias involucradas con los procedimientos establecidos, y elevar el caso al distrito si la presión institucional impide la correcta aplicación del protocolo, independientemente de la influencia de la familia del agresor.",
+      "Convocar una reunión conjunta con las familias del niño afectado y de los agresores para mediar el conflicto y llegar a un acuerdo de convivencia, aprovechando la presencia de los padres para resolver la situación de forma rápida y pacífica.",
+      "Remitir el caso directamente al orientador del grado para que maneje la situación, ya que el psicólogo escolar debe reservar su intervención para los casos de mayor complejidad clínica."
+    ],
+    respuestaCorrecta: 1,
+    explicacion: `Las Normas de Convivencia Armoniosa establecen con claridad que el acoso escolar requiere la activación del protocolo institucional formal, que incluye documentación, protección de la víctima, entrevistas individuales separadas y notificación a familias. La mediación conjunta está contraindicada ante el desequilibrio de poder. La condición sociopolítica de la familia del agresor no modifica en ningún caso la obligación del psicólogo de aplicar el protocolo. Si la presión institucional impide la correcta aplicación, el psicólogo debe escalar al distrito educativo. La frase "no quiero seguir viviendo así" también obliga al psicólogo a realizar una valoración de riesgo emocional del estudiante afectado como parte de la intervención.`,
+    fundamentoNormativo: {
+      documento: "Normas del Sistema Educativo Dominicano para la Convivencia Armoniosa / Lineamientos del Proceso de Orientación y Psicología (Actualización 2023-2024)",
+      capitulo: "Protocolo de Acoso Escolar – Procedimiento de Activación e Investigación; Ética Profesional ante Presiones Institucionales",
+      apartado: "Procedimiento formal ante acoso escolar documentado; Protección de la víctima durante el proceso; Exclusión de la mediación ante desequilibrio de poder; Obligación del psicólogo de escalar ante obstáculos institucionales; Valoración de riesgo emocional asociado al acoso",
+      justificacion: "Las Normas de Convivencia establecen el protocolo formal de acoso como obligatorio cuando existen indicadores documentados, sin excepciones por influencia familiar. Los lineamientos 2023-2024 establecen la obligación del psicólogo de defender la correcta aplicación de los protocolos ante presiones institucionales."
+    },
+    nivelDificultad: "Alta",
+    competenciaEvaluada: "Aplicación de protocolo de acoso escolar, independencia ética ante presión institucional y valoración de riesgo emocional asociado"
+  },
+  {
+    id: 702,
+    categoria: "Salud Mental Escolar – Depresión / Derivación / Seguimiento de Casos",
+    pregunta: `Una docente de 8vo grado de un centro educativo del Cibao refiere al psicólogo a una estudiante de 13 años porque "ya no participa en clase, se sienta al fondo, nunca habla y parece que está en otro mundo". Al entrevistarla, la psicóloga observa que la joven mantiene contacto visual mínimo, responde con monosílabos, refiere sentirse "vacía la mayor parte del tiempo", dice que ya nada le causa alegría, que duerme muchas horas pero aún se siente cansada, que ha perdido interés en actividades que antes le gustaban como el dibujo y que come muy poco. Afirma que esto lleva así "como dos meses o más". No reporta ideación suicida en ese momento. La psicóloga también identifica que la estudiante presenta manchas en el uniforme con frecuencia, que la madre no ha asistido a ninguna citación desde el año pasado y que sus calificaciones han bajado progresivamente. La directora académica le informa a la psicóloga que la estudiante "solo necesita motivación, que los jóvenes de ahora son muy flojos". ¿Cuál debe ser la actuación profesionalmente adecuada de la psicóloga escolar?`,
+    opciones: [
+      "Aceptar la apreciación de la directora académica y diseñar un plan de motivación académica para la estudiante, registrando el caso como bajo rendimiento escolar con seguimiento trimestral.",
+      "Documentar los indicadores observados que apuntan a un estado depresivo prolongado, iniciar un proceso de acompañamiento psicológico en el ámbito escolar, gestionar la referencia a un especialista en salud mental externo con el respaldo de la documentación del caso, explorar los indicadores de posible negligencia en el hogar que podrían activar la Ruta Crítica, e insistir en el contacto con la familia con acompañamiento del equipo de gestión dado el historial de no respuesta.",
+      "Remitir la estudiante de forma inmediata a un centro de salud mental sin proceso previo de acompañamiento escolar ni documentación, ya que la gravedad del cuadro supera las competencias del psicólogo escolar.",
+      "Esperar a que la familia asista a una citación para obtener información del contexto familiar antes de intervenir, ya que sin el consentimiento del tutor no es posible iniciar ninguna acción de orientación con la estudiante."
+    ],
+    respuestaCorrecta: 1,
+    explicacion: `Los lineamientos establecen que el psicólogo escolar puede y debe iniciar el acompañamiento psicológico en el ámbito escolar ante indicadores de afectación emocional prolongada, documentar el caso y gestionar la referencia especializada. La apreciación de la directora académica no modifica la obligación profesional del psicólogo. La ausencia sostenida de la madre y los signos de descuido físico activan la valoración de posible negligencia según la Ruta Crítica. El acompañamiento y la derivación no son excluyentes; deben ocurrir en paralelo con documentación rigurosa.`,
+    fundamentoNormativo: {
+      documento: "Lineamientos del Proceso de Orientación y Psicología (Actualización 2023-2024) / Manual Operativo de los Centros de Orientación y Psicología (2015) / Guía de Ruta Crítica",
+      capitulo: "Intervención en Salud Mental Escolar – Depresión; Proceso de Derivación y Referencia; Indicadores de Negligencia",
+      apartado: "Funciones del psicólogo ante indicadores de depresión en adolescentes; Protocolo de referencia a especialistas con documentación del caso; Indicadores de negligencia que activan la Ruta Crítica; Gestión de casos con familias de baja respuesta",
+      justificacion: "Los lineamientos 2023-2024 establecen que el psicólogo escolar inicia el acompañamiento psicológico escolar y gestiona la derivación de forma simultánea, con documentación rigurosa. Los indicadores físicos de descuido junto a la ausencia familiar sostenida deben ser valorados como posibles indicadores de negligencia."
+    },
+    nivelDificultad: "Alta",
+    competenciaEvaluada: "Identificación de indicadores de depresión adolescente, gestión de derivación simultánea al acompañamiento escolar y valoración de negligencia"
+  },
+  {
+    id: 703,
+    categoria: "Educación Inclusiva – Necesidades Específicas de Apoyo Educativo / Evaluación / Familia",
+    pregunta: `El psicólogo escolar de una escuela básica de zona rural del suroeste recibe la referencia de un niño de 8 años de 2do grado que a pesar de un año de intervención docente no logra reconocer las letras, invierte números y letras de forma sistemática, tiene dificultades para reproducir secuencias rítmicas y presenta una marcada diferencia entre su capacidad para expresarse oralmente, que es excelente, y su desempeño escrito, que es muy bajo. El niño es descrito por su maestra como "inteligente pero no le entra la lectura". Sus padres son agricultores con educación primaria incompleta y la madre afirma que "en la familia todos aprendemos tarde, no es nada malo". Cuando el psicólogo sugiere que el niño podría necesitar una evaluación especializada, la familia se niega porque "no quieren que lo etiqueten" y porque el centro especializado más cercano queda a dos horas de camino. El equipo docente ha agotado sus estrategias habituales y la brecha con sus compañeros se amplía cada mes. ¿Cuál es la actuación correcta del psicólogo escolar?`,
+    opciones: [
+      "Respetar la negativa familiar y continuar con las estrategias docentes actuales, registrando en el expediente que la familia rechazó la evaluación especializada como exoneración de responsabilidad del centro.",
+      "Realizar la evaluación psicopedagógica en el ámbito de competencia escolar para documentar el perfil de aprendizaje del niño, implementar de inmediato ajustes razonables curriculares y metodológicos que no requieren diagnóstico externo, orientar a la familia con información clara y accesible sobre el beneficio de la evaluación especializada —no para etiquetar sino para apoyar— y explorar con la Dirección del Distrito alternativas de acceso al especialista que reduzcan las barreras geográficas y económicas.",
+      "Emitir un diagnóstico presuntivo de dislexia en el informe escolar para que la familia comprenda la necesidad de apoyo especializado y se motive a buscar atención externa.",
+      "Solicitar a la Dirección del Centro que la matrícula del niño sea condicionada a que la familia gestione la evaluación especializada, como medida de presión para garantizar el acceso del niño al apoyo que necesita."
+    ],
+    respuestaCorrecta: 1,
+    explicacion: `La Ordenanza 05-2024 establece que los ajustes razonables no requieren diagnóstico clínico externo para ser implementados; la evaluación psicopedagógica escolar es suficiente para iniciar los apoyos. El psicólogo no tiene competencia para emitir diagnósticos clínicos como dislexia. Condicionar la matrícula a la evaluación especializada viola el derecho a la educación. El trabajo con la familia debe ser orientador y empático, y el psicólogo debe articular con el distrito para reducir las barreras de acceso geográfico, ya que la distancia no puede ser un obstáculo para el derecho a la evaluación.`,
+    fundamentoNormativo: {
+      documento: "Ordenanza 05-2024 sobre Educación Inclusiva / Manual Operativo de los Centros de Orientación y Psicología (2015)",
+      capitulo: "Ajustes Razonables sin Diagnóstico Previo; Evaluación Psicopedagógica Escolar; Articulación con Familias y Distrito",
+      apartado: "Art. 18 – Los ajustes razonables no requieren diagnóstico clínico; Límites del diagnóstico del psicólogo escolar; Rol del distrito en el acceso a evaluación especializada; Orientación a familias con resistencia a la evaluación",
+      justificacion: "La Ordenanza 05-2024 es explícita en que los ajustes razonables proceden desde la evaluación psicopedagógica escolar, sin esperar diagnóstico externo. El Manual Operativo delimita las competencias diagnósticas del psicólogo escolar y establece el proceso de articulación con el distrito para superar barreras de acceso."
+    },
+    nivelDificultad: "Alta",
+    competenciaEvaluada: "Aplicación de ajustes razonables sin diagnóstico externo, límites del rol diagnóstico y trabajo con familias resistentes"
+  },
+  {
+    id: 704,
+    categoria: "Protección Infantil – Abuso Sexual por Adulto de la Comunidad / Ruta Crítica / Confidencialidad",
+    pregunta: `Una estudiante de 12 años de 6to grado de una escuela del norte del país es enviada al consultorio del psicólogo por su maestra porque "parece distraída y asustada desde hace semanas". Durante una entrevista cuidadosa y no sugestiva, la niña revela que el señor que vive frente a su casa, a quien toda la comunidad conoce y respeta como "don Ramón", la ha tocado de forma inapropiada en varias ocasiones cuando ella pasa cerca de su casa sola. Dice que no le ha contado a su madre porque "me dijo que si hablo me va a echar a mí la culpa a mí" y que tiene miedo porque "él conoce a todo el mundo". El psicólogo identifica que la niña muestra signos claros de angustia, evitación y vergüenza. La madre de la niña trabaja en la misma escuela como personal de limpieza y está disponible en ese momento en las instalaciones. El acusado no tiene ninguna relación formal con el centro educativo. ¿Cómo debe actuar el psicólogo escolar?`,
+    opciones: [
+      "Llamar de inmediato a la madre, que está disponible en el centro, para informarle lo que la niña reveló y que sea ella quien decida los próximos pasos, ya que como tutora tiene el derecho y la responsabilidad de actuar primero.",
+      "Documentar cuidadosamente la revelación de la niña sin presionarla a repetir los hechos, activar la Ruta Crítica institucional notificando al equipo de gestión disponible y reportar el caso al CONANI de forma inmediata, sin informar a la madre en ese momento si hay riesgo de que su reacción no controlada pueda comprometer la seguridad de la niña o la integridad del proceso, y garantizar el acompañamiento emocional de la estudiante durante todo el proceso.",
+      "Orientar a la niña para que ella misma le cuente a su madre lo que ocurrió durante esa misma tarde, acompañándola emocionalmente en el proceso para que se sienta apoyada al hacer la revelación familiar.",
+      "Esperar a que la niña autorice explícitamente la activación del protocolo antes de actuar, ya que forzar el proceso sin su consentimiento podría retraumatizarla y destruir la relación de confianza construida."
+    ],
+    respuestaCorrecta: 1,
+    explicacion: `Ante una revelación de abuso sexual, la Ruta Crítica y la Ley 136-03 obligan al reporte inmediato al CONANI sin necesidad del consentimiento de la víctima ni de la autorización del tutor. En este caso específico, informar a la madre de forma impulsiva antes de completar el reporte puede comprometer el proceso: la madre podría confrontar al agresor, alertarlo o reaccionar de forma que revictimice a la niña. El psicólogo debe proteger la integridad del proceso y de la víctima, garantizar el acompañamiento emocional de la niña y activar el protocolo con el equipo de gestión disponible. La Ruta Crítica establece el orden correcto de actuaciones para estos casos.`,
+    fundamentoNormativo: {
+      documento: "Guía de Ruta Crítica para la Prevención y Atención de la Violencia / Ley 136-03",
+      capitulo: "Ruta Crítica – Abuso Sexual Extrafamiliar; Manejo de la Revelación; Reporte al CONANI",
+      apartado: "Procedimiento ante revelación de abuso sexual; Obligatoriedad del reporte sin consentimiento previo; Protección de la integridad del proceso ante familiares del NNA; Art. 52-53 Ley 136-03 – Denuncia obligatoria; Acompañamiento emocional durante el proceso",
+      justificacion: "La Ruta Crítica establece que el reporte al CONANI es obligatorio e inmediato ante revelación de abuso sexual, y que el orden de activación del protocolo debe proteger tanto a la víctima como la integridad del proceso investigativo, lo que puede implicar gestionar con cautela la notificación familiar."
+    },
+    nivelDificultad: "Alta",
+    competenciaEvaluada: "Manejo de la revelación de abuso sexual, activación de Ruta Crítica y gestión estratégica del entorno familiar durante el proceso"
+  },
+  {
+    id: 705,
+    categoria: "Convivencia Escolar – Cultura de Paz / Mediación / Programas Preventivos / Planificación",
+    pregunta: `Al inicio del segundo trimestre, el psicólogo escolar de un liceo del este del país analiza los datos de su seguimiento institucional y detecta un incremento preocupante: 14 casos de conflictos físicos entre estudiantes en el primer trimestre, 9 referidos por conducta agresiva, 3 activaciones del protocolo de acoso y una percepción generalizada entre los docentes de que "el ambiente del centro está muy pesado". Al presentar estos datos al equipo de gestión para proponer un plan de intervención preventiva grupal con talleres de cultura de paz, resolución de conflictos y mediación entre pares, la directora responde que "los psicólogos de antes no necesitaban hacer eso y el centro funcionaba bien" y propone en cambio aumentar las sanciones disciplinarias para "poner orden". Dos docentes apoyan la postura de la directora y uno le pide al psicólogo que "se concrete a atender los casos referidos". ¿Cuál es la actuación técnicamente correcta del psicólogo en esta situación?`,
+    opciones: [
+      "Aceptar el criterio directivo y enfocarse en la atención individual de los casos referidos, ya que la directora tiene autoridad sobre la dinámica del centro y el psicólogo no debe generar conflictos institucionales.",
+      "Presentar al equipo de gestión el análisis de datos como evidencia técnica de la necesidad de intervención preventiva, fundamentar la propuesta en el Manual Operativo y los Lineamientos que establecen la función preventiva del psicólogo como parte integral del servicio, proponer un plan que articule la intervención grupal con la atención individual de casos, y documentar por escrito la postura directiva para elevarla al distrito si persiste la contradicción con la normativa.",
+      "Implementar los talleres de cultura de paz de forma autónoma sin informar al equipo de gestión, aprovechando los espacios de tutoría de los docentes que sí apoyan la iniciativa.",
+      "Remitir todos los casos de conflicto al orientador de grado para reducir la carga de trabajo y así liberar tiempo para los programas preventivos, sin informar al equipo de gestión del cambio en la distribución de funciones."
+    ],
+    respuestaCorrecta: 1,
+    explicacion: `El Manual Operativo y los Lineamientos 2023-2024 establecen que la función preventiva es un componente esencial e irrenunciable del servicio de orientación y psicología. El uso de datos institucionales para fundamentar la propuesta es una práctica técnica correcta que fortalece la posición del psicólogo. Ante la resistencia directiva, el psicólogo debe insistir con respaldo normativo documentado, proponer soluciones integrativas y escalar al distrito si la contradicción con la normativa persiste. Actuar de forma clandestina o delegar funciones sin autorización son respuestas inadecuadas que comprometen la integridad del servicio.`,
+    fundamentoNormativo: {
+      documento: "Manual Operativo de los Centros de Orientación y Psicología (2015) / Lineamientos del Proceso de Orientación y Psicología (Actualización 2023-2024) / Planificación Anual Unidad de Orientación y Psicología",
+      capitulo: "Función Preventiva del Servicio de Orientación; Programas de Cultura de Paz y Convivencia; Liderazgo Técnico Institucional",
+      apartado: "Componente preventivo como función esencial del servicio; Uso de datos para la planificación de intervenciones; Mecanismos de defensa técnica ante resistencia directiva; Escalamiento al distrito ante contradicciones normativas",
+      justificacion: "El Manual Operativo establece la función preventiva como parte integral del servicio de orientación, no como opcional. Los lineamientos 2023-2024 respaldan el uso de datos institucionales para la planificación y la defensa técnica del servicio ante presiones institucionales."
+    },
+    nivelDificultad: "Alta",
+    competenciaEvaluada: "Liderazgo técnico basado en evidencia, defensa normativa de la función preventiva y gestión de resistencia institucional"
+  },
+  {
+    id: 706,
+    categoria: "Trabajo con Familias – Violencia Intrafamiliar / Protección / Ruta Crítica",
+    pregunta: `Durante una visita domiciliaria de seguimiento a un estudiante de 10 años con ausentismo reiterado, el psicólogo escolar y la orientadora del centro observan que la vivienda presenta condiciones de hacinamiento severo, que hay varios niños menores sin supervisión adulta visible y que la madre, al atenderlos, tiene un moretón reciente en la cara. Al preguntarle discretamente cómo está, la madre dice que "está bien" y que "se dio un golpe". Mientras hablan, el niño estudiante del centro jala la mano del psicólogo y le susurra: "el papá le pega a mi mamá y a veces también a nosotros". La madre, al escuchar esto, le llama la atención al niño en tono elevado y le dice que "no invente". La visita domiciliaria no fue planificada para este propósito y el psicólogo no llevaba ningún instrumento de registro. ¿Cuál debe ser la actuación del psicólogo escolar a partir de este momento?`,
+    opciones: [
+      "No intervenir en el contexto del hogar ya que la visita fue para atender el ausentismo y actuar sobre lo observado sin instrumentos formales podría comprometer la validez de cualquier proceso posterior; registrar las observaciones al regresar al centro y planificar una intervención formal para la semana siguiente.",
+      "Concluir la visita con normalidad para no generar tensión en el hogar, regresar al centro educativo de inmediato, documentar detalladamente todo lo observado y la revelación del niño, activar la Ruta Crítica institucional con el equipo de gestión, reportar al CONANI los indicadores de violencia intrafamiliar que afectan tanto a la madre como a los menores del hogar, y coordinar con servicios de protección social.",
+      "Confrontar a la madre en el mismo momento de la visita sobre los indicadores de violencia observados, instándola a salir del hogar con sus hijos ese mismo día para garantizar su seguridad inmediata.",
+      "Remitir el caso a la trabajadora social del distrito para que sea ella quien realice la evaluación formal del hogar, ya que la visita domiciliaria del psicólogo escolar no tiene competencia para activar protocolos de protección."
+    ],
+    respuestaCorrecta: 1,
+    explicacion: `Los indicadores observados durante la visita (moretón reciente en la madre, revelación espontánea del niño sobre violencia y reacción de la madre) constituyen indicadores de violencia intrafamiliar que activan la Ruta Crítica, independientemente del propósito original de la visita y de la ausencia de instrumentos formales. La falta de instrumentos no exime la obligación de documentar y reportar. Confrontar a la madre en el hogar puede poner en riesgo su seguridad y la de los niños. El regreso al centro y la documentación inmediata son el primer paso correcto, seguido de la activación del protocolo y el reporte al CONANI.`,
+    fundamentoNormativo: {
+      documento: "Guía de Ruta Crítica para la Prevención y Atención de la Violencia / Ley 136-03 / Manual Operativo de los Centros de Orientación y Psicología (2015)",
+      capitulo: "Ruta Crítica – Violencia Intrafamiliar; Indicadores de Maltrato Observados en Visita Domiciliaria",
+      apartado: "Obligación de reporte ante indicadores de violencia independientemente del contexto de detección; Procedimiento de documentación retrospectiva; Protección de la integridad del proceso en el hogar; Art. 52-53 Ley 136-03 – Denuncia obligatoria",
+      justificacion: "La Ruta Crítica y la Ley 136-03 establecen que la obligación de reporte se activa ante cualquier indicador de violencia, sin importar el contexto en que se detecte ni la disponibilidad previa de instrumentos formales. La documentación posterior y el reporte al CONANI son obligatorios."
+    },
+    nivelDificultad: "Alta",
+    competenciaEvaluada: "Identificación de indicadores de violencia en visita domiciliaria, activación de Ruta Crítica fuera del contexto planificado y protección de la integridad del proceso"
+  },
+  {
+    id: 707,
+    categoria: "Salud Mental Escolar – Ansiedad / Intervención Individual / Derivación / Familia",
+    pregunta: `Una estudiante de 11 años de 4to grado de una escuela básica del Gran Santo Domingo es referida al psicólogo escolar por su maestra porque "llora sin razón aparente, no quiere salir al recreo, le tiemblan las manos cuando va a hablar en clase y ha vomitado dos veces esta semana antes de entrar a la escuela". Al entrevistarla, la niña describe un miedo intenso y constante a "hacerlo mal", a que sus compañeros se rían de ella y a que sus padres se decepcionen. Relata que en casa practica las lecciones varias horas al día porque teme reprobar. La madre, al ser citada, dice que "la niña siempre ha sido así, muy sensible, y que eso es bueno porque la hace responsable". El padre no asiste a la citación. La maestra ha comenzado a excusarla de las participaciones orales para "no estresarla más". ¿Cuál es la actuación correcta del psicólogo escolar en este caso?`,
+    opciones: [
+      "Validar la estrategia de la maestra de excusarla de las participaciones orales y orientar a la madre para que reduzca el tiempo de estudio en casa, ya que la reducción de demandas es la respuesta más inmediata para aliviar la ansiedad.",
+      "Iniciar un proceso de acompañamiento psicológico individual en el ámbito escolar, orientar a la maestra sobre que la evitación de las participaciones orales refuerza la ansiedad en lugar de reducirla, trabajar con la familia para que comprendan la diferencia entre responsabilidad y ansiedad disfuncional, gestionar la referencia a un especialista en salud mental infantil dado el nivel de afectación funcional, y coordinar adaptaciones metodológicas graduales con el equipo docente.",
+      "Solicitar a los padres que la niña sea evaluada por un neurólogo antes de realizar cualquier intervención psicológica escolar, ya que los síntomas físicos como el temblor y el vómito requieren descarte médico previo.",
+      "Aplicar un programa grupal de manejo de ansiedad con todo el grupo de 4to grado, incorporando a la niña en ese contexto para que no se sienta señalada con una intervención individual."
+    ],
+    respuestaCorrecta: 1,
+    explicacion: `Los lineamientos establecen que el psicólogo escolar puede iniciar el acompañamiento psicológico individual ante indicadores de ansiedad funcional, sin necesidad de evaluación médica previa. La evitación de las participaciones, aunque bien intencionada, es una práctica que refuerza la ansiedad según los fundamentos del abordaje de la ansiedad escolar recogidos en los lineamientos. La orientación a docentes y la familia son funciones del psicólogo. El nivel de afectación funcional (vómitos, temblores, evitación social) justifica la referencia a especialista en paralelo al acompañamiento escolar. La intervención grupal no sustituye la atención individual cuando hay afectación funcional significativa.`,
+    fundamentoNormativo: {
+      documento: "Lineamientos del Proceso de Orientación y Psicología (Actualización 2023-2024) / Manual Operativo de los Centros de Orientación y Psicología (2015)",
+      capitulo: "Intervención en Salud Mental Escolar – Ansiedad; Orientación a Docentes y Familias; Proceso de Derivación",
+      apartado: "Funciones del psicólogo ante ansiedad con afectación funcional; Orientación a docentes sobre el refuerzo inadvertido de la evitación; Trabajo con familias sobre ansiedad vs. responsabilidad; Criterios para derivación simultánea al acompañamiento escolar",
+      justificacion: "Los lineamientos 2023-2024 establecen el acompañamiento psicológico escolar como primera respuesta ante ansiedad con afectación funcional, la orientación al equipo docente sobre el manejo adecuado, y la derivación simultánea cuando el nivel de afectación lo requiere."
+    },
+    nivelDificultad: "Alta",
+    competenciaEvaluada: "Intervención ante ansiedad escolar, orientación a docentes sobre manejo inadecuado y gestión simultánea de acompañamiento y derivación"
+  },
+  {
+    id: 708,
+    categoria: "Ética Profesional – Manejo de Expedientes / Confidencialidad / Solicitud Institucional",
+    pregunta: `El psicólogo escolar de un centro educativo del norte del país recibe una solicitud formal firmada por el Director Regional de Educación, requiriendo el acceso completo a los expedientes psicológicos de cuatro estudiantes que han sido identificados en un proceso disciplinario regional por participar en actos de vandalismo fuera del centro escolar. La solicitud indica que los expedientes son necesarios para "tomar decisiones sobre la continuidad de la matrícula de estos estudiantes". Los cuatro estudiantes tienen entre 14 y 16 años y sus familias no han sido notificadas de esta solicitud. El psicólogo no tiene certeza de que esta solicitud cumpla con los requisitos normativos para el acceso a expedientes. ¿Cómo debe proceder?`,
+    opciones: [
+      "Entregar los expedientes solicitados de forma inmediata dado que la solicitud proviene de la máxima autoridad regional, lo que constituye respaldo institucional suficiente para el acceso.",
+      "Explicar respetuosamente a la Dirección Regional que los expedientes psicológicos están protegidos por normas de confidencialidad que establecen requisitos específicos para su acceso, verificar con la instancia normativa correspondiente del MINERD si la solicitud cumple dichos requisitos, informar a las familias de los estudiantes sobre la existencia de la solicitud, y no entregar los expedientes hasta tanto se confirme el cumplimiento de los requisitos normativos, documentando todo el proceso.",
+      "Elaborar un informe resumen de cada caso con la información que considere pertinente compartir, entregarlo a la Dirección Regional como alternativa a la entrega del expediente completo, sin consultar a las familias ni verificar los requisitos normativos.",
+      "Destruir los expedientes antes de responder a la solicitud para proteger la confidencialidad de los estudiantes, ya que una vez eliminados no pueden ser entregados."
+    ],
+    respuestaCorrecta: 1,
+    explicacion: `El Manual Operativo establece que los expedientes psicológicos son documentos confidenciales con protección normativa específica. La jerarquía del solicitante no modifica los requisitos de acceso establecidos por la normativa. El psicólogo debe verificar si la solicitud cumple los requisitos formales, informar a las familias, y abstenerse de entregar hasta tener claridad normativa, documentando todo el proceso. Elaborar un resumen sin autorización o destruir expedientes son respuestas que generan responsabilidad profesional adicional.`,
+    fundamentoNormativo: {
+      documento: "Manual Operativo de los Centros de Orientación y Psicología (2015) / Lineamientos del Proceso de Orientación y Psicología (Actualización 2023-2024)",
+      capitulo: "Normas Éticas del Servicio – Confidencialidad; Manejo y Acceso a Expedientes Psicológicos",
+      apartado: "Protección de los expedientes psicológicos; Requisitos normativos para el acceso por terceros; Derechos de las familias sobre los expedientes de NNA; Obligación de documentar solicitudes de acceso y las respuestas del psicólogo",
+      justificacion: "El Manual Operativo establece que los expedientes psicológicos tienen protección de confidencialidad que no puede ser levantada por autoridad jerárquica sin el cumplimiento de requisitos normativos específicos. El psicólogo tiene la responsabilidad profesional de verificar el cumplimiento de esos requisitos antes de cualquier entrega."
+    },
+    nivelDificultad: "Alta",
+    competenciaEvaluada: "Protección de la confidencialidad de expedientes ante presión jerárquica, verificación normativa y derechos de las familias"
+  },
+  {
+    id: 709,
+    categoria: "Intervención en Crisis – Intento de Suicidio en el Centro / Protocolos / Comunidad Educativa",
+    pregunta: `A media mañana, una docente irrumpe en el consultorio del psicólogo escolar de un liceo del Distrito Nacional reportando que encontró a un estudiante de 17 años de 3ro de bachillerato en el baño del centro con cortes profundos en ambas muñecas, aparentemente autoinfligidos, con hemorragia activa. El estudiante está consciente pero muy callado. Un grupo de compañeros ya está en el pasillo y varios docentes han salido de sus aulas. La directora está ausente ese día en una actividad externa. El subdirector se encuentra en el centro. La enfermera escolar está presente. ¿Cuál debe ser la secuencia de actuación inmediata del psicólogo escolar?`,
+    opciones: [
+      "Atender emocionalmente al estudiante en el lugar donde fue encontrado, entrevistarlo para evaluar la intencionalidad del acto antes de llamar a emergencias médicas, ya que la evaluación psicológica debe preceder cualquier otra intervención para no agravarlo.",
+      "Coordinar de forma inmediata la atención médica de emergencia con la enfermera y el sistema de emergencias, acompañar al estudiante con presencia calmada sin dejarlo solo, instruir a la docente para despejar el área y proteger la privacidad del estudiante, informar al subdirector para que active el protocolo institucional y contacte a la familia, gestionar con el equipo docente el manejo de la comunidad educativa para contener el impacto, y planificar la intervención de seguimiento con el grupo y con los testigos una vez atendida la emergencia médica.",
+      "Llamar directamente a los padres del estudiante para que ellos autoricen el traslado a urgencias antes de activar el sistema de emergencias médicas, respetando el derecho de los tutores a ser los primeros en tomar decisiones sobre la atención de su hijo.",
+      "Pedir al subdirector que cierre el centro ese día y envíe a todos los estudiantes a casa para protegerlos del impacto del evento, mientras el psicólogo permanece con el estudiante afectado hasta la llegada de la familia."
+    ],
+    respuestaCorrecta: 1,
+    explicacion: `Ante una emergencia médica con hemorragia activa, la atención médica inmediata es la prioridad absoluta y no puede ser condicionada ni demorada por evaluación psicológica previa ni por autorización familiar. El psicólogo coordina la emergencia médica, protege la privacidad del estudiante, activa la cadena institucional disponible e inicia el manejo del impacto sobre la comunidad educativa. Los lineamientos establecen que en estas situaciones el psicólogo cumple un rol de coordinación de la respuesta integral, no solo de atención individual. Cerrar el centro sin protocolo específico o esperar la autorización familiar antes de la atención médica son respuestas que ponen en riesgo la vida del estudiante.`,
+    fundamentoNormativo: {
+      documento: "Lineamientos del Proceso de Orientación y Psicología (Actualización 2023-2024) / Manual Operativo de los Centros de Orientación y Psicología (2015)",
+      capitulo: "Intervención en Crisis – Emergencia de Salud Mental con Riesgo Vital; Protocolo de Intento de Suicidio en el Centro",
+      apartado: "Priorización de atención médica en emergencias con riesgo vital; Rol coordinador del psicólogo en la respuesta institucional; Manejo del impacto sobre la comunidad educativa; Activación de la cadena institucional ante ausencia de la dirección; Seguimiento post-crisis con testigos y comunidad",
+      justificacion: "Los lineamientos 2023-2024 establecen que ante una emergencia con riesgo vital, la atención médica inmediata es la primera prioridad y el psicólogo cumple un rol de coordinación integral que incluye la protección del estudiante, la activación institucional y el manejo del impacto comunitario."
+    },
+    nivelDificultad: "Alta",
+    competenciaEvaluada: "Coordinación de respuesta ante emergencia de riesgo vital, priorización de actuaciones y manejo del impacto sobre la comunidad educativa"
+  },
+  {
+    id: 710,
+    categoria: "Programa Nacional de Inducción – Funciones del Psicólogo / Rol Institucional / Derivación",
+    pregunta: `Un psicólogo escolar recién incorporado a un centro educativo del este del país a través del Programa Nacional de Inducción (PNI-ORE) detecta durante sus primeras semanas que el servicio de orientación del centro funciona exclusivamente como un espacio de sanción y control: los estudiantes son enviados al consultorio como "castigo" por mal comportamiento, el psicólogo anterior llevaba los registros de conducta para el equipo disciplinario y entregaba informes a los docentes sobre el contenido de las conversaciones individuales con los estudiantes. La comunidad educativa percibe el servicio como una extensión de la dirección disciplinaria. El nuevo psicólogo comprende que debe reorientar el servicio, pero enfrenta resistencia de los docentes que dicen "así siempre ha funcionado". ¿Cuál debe ser su estrategia de actuación para reorientar el servicio según la normativa?`,
+    opciones: [
+      "Adaptarse al modelo existente durante el primer año para ganarse la confianza del equipo docente y la dirección, e introducir cambios graduales en años posteriores para no generar resistencia institucional.",
+      "Presentar formalmente al equipo de gestión y a los docentes el marco normativo del servicio de orientación y psicología según el Manual Operativo, el PNI-ORE y los Lineamientos, explicando con claridad las funciones del psicólogo, los límites éticos del servicio, la distinción entre orientación y disciplina, y los mecanismos correctos de referencia, iniciando desde el primer momento la aplicación del modelo correcto y documentando el proceso de reorientación.",
+      "Negarse a atender a cualquier estudiante enviado por conducta hasta que los docentes comprendan el modelo correcto, como medida de presión para acelerar el cambio cultural en el centro.",
+      "Informar al Distrito Educativo de inmediato sobre las irregularidades del servicio anterior para que se apliquen sanciones al personal que participó en el modelo incorrecto, antes de iniciar cualquier proceso de reorientación."
+    ],
+    respuestaCorrecta: 1,
+    explicacion: `El PNI-ORE y el Manual Operativo establecen con claridad las funciones del psicólogo escolar, que incluyen la orientación, la prevención y el acompañamiento, diferenciándolas explícitamente del control disciplinario. El nuevo psicólogo tiene la responsabilidad de aplicar el modelo correcto desde el inicio, fundamentado en la normativa, y de orientar a la comunidad educativa sobre el funcionamiento adecuado del servicio. Adaptarse al modelo incorrecto, aunque sea temporalmente, compromete la ética profesional y el derecho de los estudiantes a un servicio de calidad. Negar la atención o escalar sin intentar la reorientación interna son respuestas desproporcionadas para el inicio del proceso.`,
+    fundamentoNormativo: {
+      documento: "Programa Nacional de Inducción a Orientadores Escolares (PNI-ORE) / Manual de los Servicios de Orientación y Psicología en los Centros Educativos / Manual Operativo de los Centros de Orientación y Psicología (2015)",
+      capitulo: "Funciones del Psicólogo Escolar; Distinción entre Orientación y Disciplina; Ética del Servicio",
+      apartado: "Funciones normativas del servicio de orientación y psicología; Prohibición de uso del servicio como instrumento de control disciplinario; Confidencialidad de las entrevistas individuales; Mecanismos correctos de referencia; Responsabilidad del psicólogo de aplicar el modelo correcto desde el inicio",
+      justificacion: "El PNI-ORE y el Manual Operativo son explícitos en la naturaleza del servicio de orientación, diferenciándolo del control disciplinario. La confidencialidad de las entrevistas individuales es un principio ético irrenunciable. El psicólogo tiene la obligación de aplicar el modelo correcto desde su incorporación, orientando a la comunidad educativa con base normativa."
+    },
+    nivelDificultad: "Alta",
+    competenciaEvaluada: "Aplicación del modelo normativo del servicio desde el inicio, reorientación institucional con base en el PNI-ORE y defensa ética del rol del psicólogo escolar"
+  },
+const bancoPreguntas = [
+  {
+    id: 711,
+    categoria: "Negligencia / Protección de NNA / Ruta Crítica / Articulación Intersectorial",
+    pregunta: `El psicólogo escolar de una escuela básica de una comunidad rural del suroeste del país atiende a un niño de 7 años de 1er grado que es referido por su maestra porque "huele mal, duerme en clase todos los días y a veces dice que no desayunó". Al entrevistarlo con técnicas apropiadas a su edad, el niño cuenta que en su casa "no siempre hay luz ni comida" y que su mamá "a veces no viene a dormir". Cuando el psicólogo revisa el expediente, encuentra que el niño llegó a la escuela con hematomas leves hace tres meses que fueron registrados por la enfermera como "caída en juego", que lleva dos trimestres con bajo rendimiento sostenido, y que la única persona que aparece como contacto de emergencia es una vecina. Al intentar contactar a la madre por teléfono durante tres días consecutivos, no hay respuesta. La vecina, al ser localizada, informa que la madre "viaja mucho" y que a veces el niño pasa días solo o con un hermano mayor de 12 años. No existe ningún reporte previo al CONANI ni ninguna gestión interinstitucional documentada. El psicólogo identifica que el director del centro conoce la situación del niño "de años" pero nunca ha activado ningún protocolo porque "la familia es así y no se puede hacer nada". ¿Cuál debe ser la actuación integral del psicólogo escolar?`,
+    opciones: [
+      "Continuar intentando contactar a la madre durante otra semana antes de activar cualquier protocolo, ya que la ausencia de contacto telefónico no es suficiente evidencia para una denuncia formal y el director del centro, que conoce mejor la comunidad, no ha considerado necesario actuar.",
+      "Documentar de forma exhaustiva todos los indicadores acumulados incluyendo los antecedentes del expediente, activar la Ruta Crítica de forma inmediata con el equipo de gestión disponible independientemente de la postura del director, reportar el caso al CONANI detallando los indicadores de negligencia, abandono y posible maltrato previo, coordinar con la trabajadora social del distrito y con los programas de protección social del Estado, y garantizar el seguimiento del niño dentro del centro mientras el proceso institucional avanza, documentando cada paso.",
+      "Hablar directamente con la vecina que cuida al niño para establecer un acuerdo informal de supervisión y alimentación mientras se localiza a la madre, gestionando donaciones de alimentos del centro como medida de apoyo inmediato.",
+      "Elevar el caso al director regional solicitando que sea él quien active el protocolo, ya que la postura del director del centro impide la actuación del psicólogo a nivel institucional y se requiere una intervención de mayor jerarquía para desbloquearlo."
+    ],
+    respuestaCorrecta: 1,
+    explicacion: `Los indicadores acumulados en este caso, incluyendo la desatención alimentaria sostenida, la ausencia parental recurrente, los hematomas registrados previamente, el bajo rendimiento sostenido y la ausencia de red de apoyo familiar, configuran un cuadro de negligencia grave que activa la Ruta Crítica de forma obligatoria e inmediata. La Ley 136-03 establece que la obligación de denuncia es personal e independiente de la postura jerárquica del director. El psicólogo no puede subordinar una obligación legal a la opinión del director ni esperar más evidencia cuando el patrón ya es suficientemente claro. La articulación con el CONANI y los programas de protección social es parte integral de la Ruta Crítica. Las soluciones informales no sustituyen el protocolo.`,
+    fundamentoNormativo: {
+      documento: "Guía de Ruta Crítica para la Prevención y Atención de la Violencia / Ley 136-03 / Lineamientos del Proceso de Orientación y Psicología (Actualización 2023-2024)",
+      capitulo: "Ruta Crítica – Negligencia y Abandono; Obligatoriedad del Reporte Independiente de la Jerarquía",
+      apartado: "Indicadores acumulados de negligencia como activadores de la Ruta Crítica; Art. 52-53 Ley 136-03 – Obligación personal de denuncia sin excepción jerárquica; Articulación con CONANI y programas de protección social; Documentación del proceso ante resistencia directiva",
+      justificacion: "La Ley 136-03 y la Ruta Crítica establecen que la obligación de denuncia es personal, directa e inmediata para cualquier persona con conocimiento de indicadores de maltrato o negligencia, sin que la postura del superior jerárquico pueda modificar dicha obligación. El patrón acumulado de indicadores activa el protocolo aunque ningún hecho aislado sea concluyente."
+    },
+    nivelDificultad: "Alta",
+    competenciaEvaluada: "Identificación de patrón acumulado de negligencia, obligatoriedad personal de la Ruta Crítica ante resistencia jerárquica y articulación intersectorial"
+  },
+  {
+    id: 712,
+    categoria: "Inclusión Educativa – Estudiante con Discapacidad Visual / Ajustes Razonables / Trabajo Docente",
+    pregunta: `Una estudiante de 14 años con diagnóstico documentado de baja visión severa se incorpora a un liceo del Cibao proveniente de otro centro donde, según el informe de traslado, contaba con materiales adaptados y asiento preferencial. Al llegar, la coordinadora académica informa al psicólogo que "el centro no tiene recursos para estudiantes especiales" y le asigna a la estudiante un pupitre al fondo del aula. Los docentes de tres materias distintos se quejan con el psicólogo porque "la estudiante no copia la pizarra, no entrega las tareas completas y distrae a los compañeros al pedirles que le lean". En la primera entrevista individual, la estudiante le cuenta al psicólogo que está avergonzada de pedir ayuda constantemente, que siente que "estorba" y que está pensando en abandonar el liceo porque "no vale la pena el esfuerzo si así va a ser todo el año". No existe ningún plan de ajustes en el centro para esta estudiante. ¿Cuál debe ser la actuación del psicólogo escolar?`,
+    opciones: [
+      "Orientar a los docentes para que tengan paciencia con la estudiante mientras la familia gestiona los materiales adaptados que usaba en el centro anterior, ya que la responsabilidad de los recursos especializados recae en la familia y no en el centro.",
+      "Diseñar e implementar de forma inmediata un plan de ajustes razonables para la estudiante que incluya reubicación en asiento preferencial, adaptación de materiales accesibles en coordinación con los docentes, orientación al cuerpo docente sobre sus responsabilidades en la educación inclusiva, acompañar emocionalmente a la estudiante para sostener su permanencia, documentar el plan en el expediente y coordinar con el equipo de inclusión del distrito para gestionar los apoyos especializados requeridos.",
+      "Solicitar a la dirección que la estudiante sea reubicada en el centro de origen donde ya contaba con los apoyos necesarios, ya que ese centro tenía mejor capacidad para atender sus necesidades y la reubicación garantizaría su bienestar.",
+      "Referir el caso exclusivamente al equipo de inclusión del distrito para que ellos diseñen el plan de ajustes, ya que la complejidad del caso supera las competencias del psicólogo escolar del centro."
+    ],
+    respuestaCorrecta: 1,
+    explicacion: `La Ordenanza 05-2024 establece que los ajustes razonables son obligatorios y no están condicionados a la disponibilidad de recursos especializados externos ni a la gestión familiar. El psicólogo escolar tiene la responsabilidad de liderar el diseño e implementación del plan de ajustes con los recursos disponibles en el centro, orientar a los docentes sobre sus responsabilidades normativas y articular con el distrito para los apoyos que excedan la capacidad institucional. Reubicar a la estudiante en otro centro sin agotar los ajustes razonables viola su derecho a la inclusión educativa. La sola derivación al distrito sin acción inmediata del psicólogo no es suficiente.`,
+    fundamentoNormativo: {
+      documento: "Ordenanza 05-2024 sobre Educación Inclusiva / Manual Operativo de los Centros de Orientación y Psicología (2015)",
+      capitulo: "Capítulo III – Ajustes Razonables Obligatorios; Responsabilidad del Centro ante Estudiantes con Discapacidad",
+      apartado: "Art. 18 – Ajustes razonables como obligación del centro, no condicionada a recursos externos; Art. 7 – Derecho a la educación inclusiva en el centro de matrícula; Rol del psicólogo en el diseño del plan de ajustes; Acompañamiento emocional para la permanencia; Coordinación con equipo de inclusión del distrito",
+      justificacion: "La Ordenanza 05-2024 es explícita en que los ajustes razonables son obligación del centro educativo y no pueden ser condicionados a la disponibilidad de recursos externos. La reubicación sin agotar los ajustes viola el derecho a la inclusión. El psicólogo lidera el proceso en el centro y articula con el distrito para apoyos adicionales."
+    },
+    nivelDificultad: "Alta",
+    competenciaEvaluada: "Liderazgo en diseño de ajustes razonables inmediatos, orientación docente sobre educación inclusiva y acompañamiento emocional para la permanencia"
+  },
+  {
+    id: 713,
+    categoria: "Consumo de Sustancias – Intervención Preventiva / Familia / Trabajo Interdisciplinario",
+    pregunta: `El psicólogo escolar de un liceo del Gran Santo Domingo es contactado por el padre de un estudiante de 16 años de 2do de bachillerato quien, muy angustiado, le muestra al psicólogo mensajes del teléfono de su hijo donde este y varios amigos del mismo liceo coordinan el consumo de marihuana los fines de semana en un área cercana al centro. El padre exige que el psicólogo identifique a todos los estudiantes involucrados en esos mensajes y que se apliquen sanciones disciplinarias inmediatas. El hijo no sabe que su padre ha leído sus mensajes ni que ha contactado al psicólogo. Al entrevistar al estudiante de forma individual días después bajo el pretexto de un seguimiento de rutina, el joven no revela nada y parece desconfiado. El psicólogo identifica que la dinámica familiar descrita por el padre en la reunión previa sugiere una relación muy tensa entre ambos y que el joven podría estar usando las sustancias como respuesta a conflictos familiares no resueltos. ¿Cuál debe ser la actuación del psicólogo escolar?`,
+    opciones: [
+      "Actuar sobre la información del padre, identificar a los estudiantes de los mensajes y reportar los nombres al equipo de gestión para que aplique el proceso disciplinario, ya que el padre tiene derecho a proteger a su hijo y la información recibida es suficiente para actuar.",
+      "Iniciar un proceso de orientación individual con el estudiante desde un enfoque motivacional sin revelarle la fuente de la preocupación, diseñar una intervención preventiva grupal sobre consumo de sustancias para el grado, orientar al padre sobre cómo fortalecer la comunicación familiar sin confrontación, articular con el equipo de gestión para que la respuesta sea preventiva y no exclusivamente punitiva, y documentar el proceso sin exponer la identidad del estudiante ni de sus amigos a acciones disciplinarias basadas únicamente en la información del padre.",
+      "Informar al estudiante de forma inmediata que su padre ha leído sus mensajes y que el psicólogo ha sido contactado, para restablecer la confianza y que el joven pueda hablar libremente sobre su situación.",
+      "Citar a los padres de todos los estudiantes nombrados en los mensajes para una reunión de familia conjunta donde se aborde el tema del consumo con todas las partes presentes simultáneamente."
+    ],
+    respuestaCorrecta: 1,
+    explicacion: `Los lineamientos establecen que el abordaje del consumo de sustancias en el ámbito escolar debe ser preventivo, no punitivo, y basado en evidencia directa con el estudiante, no en información obtenida de terceros sin su conocimiento. Actuar sobre los mensajes como fuente de identificación disciplinaria viola la privacidad de los estudiantes y puede destruir la relación de confianza necesaria para la intervención. El enfoque correcto incluye la orientación individual motivacional, la intervención preventiva grupal y el trabajo con la familia para mejorar la comunicación. La articulación con el equipo de gestión debe orientarse hacia la prevención, no la sanción inmediata basada en información indirecta.`,
+    fundamentoNormativo: {
+      documento: "Lineamientos del Proceso de Orientación y Psicología (Actualización 2023-2024) / Manual Operativo de los Centros de Orientación y Psicología (2015)",
+      capitulo: "Programas de Prevención – Consumo de Sustancias; Ética Profesional ante Información de Terceros",
+      apartado: "Enfoque preventivo y no punitivo ante consumo de sustancias; Entrevista motivacional como herramienta de intervención individual; Trabajo con familias en situaciones de consumo adolescente; Manejo ético de información recibida de terceros sobre NNA",
+      justificacion: "Los lineamientos 2023-2024 establecen el enfoque preventivo como marco de intervención ante el consumo de sustancias y la entrevista motivacional como herramienta principal con el estudiante. El manejo ético de la información recibida de terceros protege la relación de confianza indispensable para la intervención efectiva."
+    },
+    nivelDificultad: "Alta",
+    competenciaEvaluada: "Intervención preventiva ante consumo, manejo ético de información de terceros y trabajo con familias en conflicto"
+  },
+  {
+    id: 714,
+    categoria: "Orientación Vocacional – Toma de Decisiones / Presión Familiar / Permanencia",
+    pregunta: `Una estudiante de 17 años que cursa el último año de bachillerato en un liceo del este del país acude al psicólogo escolar mostrándose muy angustiada. Explica que desde siempre ha querido estudiar medicina, que tiene un expediente académico excelente y que había sido preseleccionada en el programa de becas universitarias del MINERD. Sin embargo, su padre acaba de informarle que "en esta familia las mujeres no van a la universidad lejos de casa" y que lo que corresponde es que aprenda un oficio o que se case. La madre no contradice al padre. La estudiante dice que siente que "su vida está siendo decidida por otros" y que si no puede estudiar medicina "no sabe qué hará". Al explorar más, el psicólogo identifica signos de angustia significativa, llanto contenido y una frase que genera preocupación: "a veces pienso que para qué tanto esfuerzo si todo va a terminar igual". ¿Cuál debe ser la actuación del psicólogo escolar?`,
+    opciones: [
+      "Citar a los padres de forma inmediata para convencerlos de que permitan a su hija continuar sus estudios universitarios, presentando argumentos sobre las ventajas educativas, ya que el conflicto vocacional es el eje del problema y resolverlo beneficiará directamente la salud emocional de la estudiante.",
+      "Realizar una valoración cuidadosa del riesgo emocional implícito en la frase de la estudiante, garantizar su seguridad emocional inmediata, continuar el proceso de orientación vocacional documentando sus aspiraciones y opciones disponibles, orientar a la familia con un enfoque de diálogo respetuoso sobre el derecho de la joven a decidir su proyecto de vida, y articular con el programa de becas del MINERD para que la estudiante conozca el proceso y pueda gestionar su participación con la información necesaria.",
+      "Indicarle a la estudiante que ella tiene 17 años y que legalmente puede tomar sus propias decisiones educativas, instándola a confrontar a sus padres con esa información durante esa misma semana.",
+      "Registrar el caso como conflicto familiar de orientación vocacional y programar el seguimiento para el siguiente trimestre, dando tiempo a que la situación familiar se resuelva de forma natural antes de una intervención del psicólogo."
+    ],
+    respuestaCorrecta: 1,
+    explicacion: `La frase "a veces pienso que para qué tanto esfuerzo si todo va a terminar igual" en el contexto de angustia significativa obliga al psicólogo a realizar una valoración de riesgo emocional antes de cualquier otra intervención. La orientación vocacional continúa en paralelo pero no puede ignorar la señal de alerta. El trabajo con la familia debe ser de acompañamiento y diálogo, no de confrontación. El psicólogo debe informar a la estudiante sobre sus opciones reales, incluyendo el programa de becas, para que pueda tomar decisiones informadas. Aplazar la intervención o reducirla a la mediación familiar sin valorar el riesgo emocional es profesionalmente inadecuado.`,
+    fundamentoNormativo: {
+      documento: "Lineamientos del Proceso de Orientación y Psicología (Actualización 2023-2024) / Manual Operativo de los Centros de Orientación y Psicología (2015) / Planificación Anual Unidad de Orientación y Psicología",
+      capitulo: "Orientación Vocacional – Proyecto de Vida; Valoración de Riesgo Emocional; Trabajo con Familias",
+      apartado: "Detección de señales de riesgo emocional durante el proceso vocacional; Priorización del abordaje de salud mental ante señales de alerta; Orientación familiar desde el respeto al proyecto de vida del estudiante; Articulación con programas de becas y oportunidades educativas",
+      justificacion: "Los lineamientos establecen que la orientación vocacional incluye el abordaje del proyecto de vida con enfoque de derechos y que cualquier señal de riesgo emocional detectada durante el proceso debe ser valorada y atendida con prioridad. El trabajo con familias se orienta desde el respeto a la autonomía del estudiante."
+    },
+    nivelDificultad: "Alta",
+    competenciaEvaluada: "Detección de riesgo emocional en contexto vocacional, orientación familiar con enfoque de derechos y articulación con programas institucionales"
+  },
+  {
+    id: 715,
+    categoria: "Protección Infantil – Explotación Laboral / Ley 136-03 / Ruta Crítica / Permanencia Escolar",
+    pregunta: `El psicólogo escolar de una escuela básica del suroeste del país identifica que un niño de 11 años de 4to grado lleva tres semanas llegando al centro con el uniforme sucio, los ojos enrojecidos, dormido en clase y con las manos lastimadas. Al entrevistar al niño con estrategias adecuadas a su edad, este cuenta que desde que su padre "se fue", su tío lo lleva todos los días de madrugada a trabajar en la construcción "para ayudar en la casa" y que regresa muy tarde por la noche. Dice que a veces no hace las tareas porque "llega muy cansado y sin luz". La madre, al ser citada, confirma la situación y dice que "no hay de otra" porque el tío les paga el alquiler a cambio del trabajo del niño. Agrega que el niño "está bien, no le pegan" y pide que "no se compliquen las cosas porque si el tío se molesta nos quedamos en la calle". El director del centro indica al psicólogo que "en estas comunidades es normal" y que no se debe intervenir porque "se va a enojar la familia y el niño dejará de venir". ¿Cuál debe ser la actuación del psicólogo escolar?`,
+    opciones: [
+      "Respetar el criterio del director del centro y el contexto socioeconómico de la familia, registrar el caso con seguimiento mensual y gestionar apoyo alimentario del centro para el niño como medida de compensación.",
+      "Documentar detalladamente los indicadores de trabajo infantil y sus consecuencias sobre la salud y la escolaridad del niño, activar la Ruta Crítica de forma inmediata reportando al CONANI y al Ministerio de Trabajo según los indicadores de explotación laboral infantil, articular con programas de protección social para que la familia reciba apoyo económico alternativo, y garantizar el seguimiento del niño en el centro educativo durante todo el proceso, independientemente de la postura del director.",
+      "Hablar directamente con el tío para convencerlo de que reduzca las horas de trabajo del niño a solo las tardes, de modo que pueda seguir asistiendo a la escuela sin que la familia pierda el ingreso económico que depende de esa situación.",
+      "Orientar a la madre para que gestione de forma independiente una denuncia ante el CONANI, ya que ella es la tutora legal y corresponde a ella iniciar el proceso de protección de su hijo."
+    ],
+    respuestaCorrecta: 1,
+    explicacion: `La Ley 136-03 prohíbe explícitamente el trabajo infantil que interfiere con la escolaridad y que somete al NNA a condiciones perjudiciales para su salud y desarrollo. Los indicadores descritos configuran explotación laboral infantil, que es una forma de maltrato que activa la Ruta Crítica y la obligación de reporte al CONANI. La normalización cultural señalada por el director no modifica la obligación legal. El psicólogo no puede delegar en la madre una denuncia cuando esta está en condición de vulnerabilidad y dependencia del victimario. La articulación con programas de protección social es parte de la respuesta integral para que la familia tenga alternativas económicas.`,
+    fundamentoNormativo: {
+      documento: "Ley 136-03 / Guía de Ruta Crítica para la Prevención y Atención de la Violencia / Lineamientos del Proceso de Orientación y Psicología (Actualización 2023-2024)",
+      capitulo: "Protección contra la Explotación Laboral Infantil; Ruta Crítica ante Formas de Maltrato; Articulación Intersectorial",
+      apartado: "Art. 40 Ley 136-03 – Prohibición del trabajo infantil perjudicial; Art. 52-53 – Obligación de denuncia; Indicadores de explotación laboral en el contexto escolar; Articulación con programas de protección social como parte de la respuesta integral; Independencia del psicólogo ante postura normalizadora del director",
+      justificacion: "La Ley 136-03 prohíbe el trabajo infantil que afecta la escolaridad y la salud del NNA, clasificándolo como una forma de maltrato que activa la obligación de denuncia. El psicólogo tiene la obligación personal de reportar al CONANI sin que la postura del director o la vulnerabilidad de la familia modifiquen esa obligación."
+    },
+    nivelDificultad: "Alta",
+    competenciaEvaluada: "Identificación de explotación laboral infantil, obligatoriedad de la Ruta Crítica ante normalización cultural y articulación intersectorial para protección integral"
+  },
+  {
+    id: 716,
+    categoria: "Salud Mental Escolar – Duelo Complicado / Intervención Individual / Familia / Derivación",
+    pregunta: `Tres meses después del fallecimiento repentino de su madre en un accidente, una estudiante de 15 años de 2do de bachillerato de un liceo del norte del país es referida al psicólogo escolar por su tutora porque "ya no rinde igual, se aísla, y la semana pasada fue encontrada llorando sola en el baño durante el recreo". Al entrevistarla, la joven expresa que siente que "el tiempo se detuvo el día que murió su mamá", que no puede concentrarse en nada, que tiene pesadillas frecuentes, que evita pasar por los lugares que recuerdan a su madre, y que ha desarrollado un miedo intenso a que "le pase algo a su papá o a sus hermanos". Reporta que en casa "nadie habla del tema" y que su padre "no quiere que llore porque dice que hay que ser fuertes". La joven no reporta ideación suicida activa, pero dice que "a veces quisiera dormirse y no despertar para no sentir más". El psicólogo identifica que han pasado tres meses y que la intensidad de los síntomas no ha disminuido sino que se ha incrementado. ¿Cuál es la actuación profesionalmente adecuada?`,
+    opciones: [
+      "Continuar el acompañamiento individual semanal dentro del centro educativo durante otros tres meses antes de considerar la derivación, ya que el duelo por la pérdida de un progenitor es un proceso que requiere tiempo y la estudiante está funcionando en el ámbito escolar.",
+      "Valorar con atención la frase sobre querer dormirse y no despertar como indicador de posible riesgo emocional, iniciar el acompañamiento psicológico de duelo en el ámbito escolar, gestionar la derivación urgente a especialista en salud mental dado el perfil de duelo complicado con incremento de síntomas, orientar al padre sobre la importancia de un espacio familiar de expresión del duelo y su rol en la recuperación de su hija, y documentar el proceso completo con el plan de intervención y seguimiento.",
+      "Informar al padre de forma inmediata que su hija necesita hospitalización psiquiátrica urgente dado el tiempo transcurrido y la intensidad de los síntomas, para que la familia gestione el ingreso ese mismo día.",
+      "Organizar un grupo de duelo con todos los estudiantes del liceo que hayan perdido a un familiar en el último año, incorporando a la estudiante en ese espacio colectivo como primera y principal estrategia de intervención."
+    ],
+    respuestaCorrecta: 1,
+    explicacion: `Los lineamientos establecen que cuando los síntomas de duelo se intensifican en lugar de disminuir pasados tres meses y la persona experimenta evitación, pesadillas, miedo patológico y expresiones de deseo de no existir, se configura un perfil de duelo complicado que requiere derivación especializada en paralelo al acompañamiento escolar. La frase "quisiera dormirse y no despertar" debe ser valorada como señal de riesgo aunque no sea ideación suicida estructurada. El trabajo con el padre es indispensable para modificar el ambiente familiar que inhibe la expresión del duelo. La hospitalización inmediata sin evaluación gradual es desproporcionada. El grupo de duelo no sustituye la atención individual en este nivel de afectación.`,
+    fundamentoNormativo: {
+      documento: "Lineamientos del Proceso de Orientación y Psicología (Actualización 2023-2024) / Manual Operativo de los Centros de Orientación y Psicología (2015)",
+      capitulo: "Intervención en Salud Mental – Duelo; Protocolo de Derivación Especializada; Valoración de Riesgo Emocional",
+      apartado: "Indicadores de duelo complicado que activan la derivación especializada; Valoración de expresiones de deseo de no existir como señal de riesgo; Trabajo con la familia para favorecer el proceso de duelo; Articulación entre acompañamiento escolar y atención especializada",
+      justificacion: "Los lineamientos 2023-2024 establecen los criterios para identificar duelo complicado que requiere derivación especializada, incluyendo el incremento de síntomas pasados tres meses. El acompañamiento escolar y la derivación son procesos paralelos y complementarios, no excluyentes."
+    },
+    nivelDificultad: "Alta",
+    competenciaEvaluada: "Identificación de duelo complicado, valoración de riesgo en expresiones ambiguas y gestión simultánea de acompañamiento escolar y derivación"
+  },
+  {
+    id: 717,
+    categoria: "Educación Inclusiva – TEA / Familia / Trabajo Docente / Ajustes Razonables",
+    pregunta: `Un estudiante de 10 años con diagnóstico de Trastorno del Espectro Autista nivel 1 se ha incorporado por primera vez a un aula regular de 4to grado en una escuela del Cibao. Durante las primeras semanas, el estudiante presenta crisis de angustia ante los ruidos fuertes del recreo, dificultades para trabajar en grupo y repetición de frases fuera de contexto cuando está estresado. La maestra, aunque con buena voluntad, no tiene experiencia con TEA y ha comenzado a excluir al estudiante de las actividades grupales "para que no se angustie". El padre, en la primera reunión con el psicólogo, se muestra muy desconfiado y dice que en la escuela anterior "siempre le decían que su hijo molestaba" y que viene con la guardia alta. La madre no puede asistir a las reuniones porque trabaja doble turno. El coordinador académico sugiere que el estudiante asista solo medio día "mientras se adapta", como medida provisional. ¿Cuál es la actuación integral del psicólogo escolar?`,
+    opciones: [
+      "Aceptar la propuesta del coordinador académico de medio día como medida provisional razonable, ya que reduce el nivel de estrés del estudiante mientras el psicólogo diseña el plan de ajustes, y programar la revisión de esa medida para el próximo trimestre.",
+      "Rechazar la medida de medio día como restricción no fundamentada en la normativa, diseñar un plan de ajustes razonables específicos para el perfil TEA del estudiante que incluya estrategias sensoriales, de comunicación y de participación en actividades grupales, orientar a la maestra con herramientas concretas de acompañamiento, construir una relación de confianza con el padre desde el reconocimiento de sus experiencias previas, coordinar con el equipo de inclusión del distrito para apoyos adicionales, y documentar el plan en el expediente con revisiones periódicas.",
+      "Solicitar a la familia que contrate una asistente personal para el estudiante que lo acompañe durante la jornada completa, ya que el centro no cuenta con los recursos humanos necesarios para atender sus necesidades de forma adecuada.",
+      "Esperar cuatro semanas para observar la evolución del estudiante en el aula antes de diseñar el plan de ajustes, ya que algunos estudiantes con TEA nivel 1 logran adaptarse solos con el tiempo y una intervención temprana podría estigmatizarlo innecesariamente."
+    ],
+    respuestaCorrecta: 1,
+    explicacion: `La Ordenanza 05-2024 establece que ninguna medida de restricción de la jornada escolar puede ser aplicada como estrategia de adaptación para estudiantes con discapacidad sin fundamento evaluativo y sin proceso formal. Los ajustes razonables son la respuesta normativa ante las barreras descritas y deben diseñarse e implementarse de inmediato. La orientación concreta a la maestra es parte del rol del psicólogo. El trabajo con el padre requiere un enfoque que repare la desconfianza generada por experiencias previas. La coordinación con el distrito para apoyos especializados es necesaria dado el perfil del caso.`,
+    fundamentoNormativo: {
+      documento: "Ordenanza 05-2024 sobre Educación Inclusiva / Manual Operativo de los Centros de Orientación y Psicología (2015)",
+      capitulo: "Ajustes Razonables para Estudiantes con TEA; Restricciones No Fundamentadas como Vulneración de Derechos",
+      apartado: "Art. 18 – Ajustes razonables ante barreras al aprendizaje; Art. 20 – Prohibición de restricciones de jornada sin proceso formal; Orientación docente como función del psicólogo; Trabajo con familias con historial de experiencias negativas; Coordinación con equipo de inclusión del distrito",
+      justificacion: "La Ordenanza 05-2024 prohíbe las restricciones de jornada no fundamentadas y establece los ajustes razonables como la respuesta obligatoria ante barreras al aprendizaje de estudiantes con discapacidad. El psicólogo lidera el proceso con el docente y articula con el distrito para apoyos adicionales."
+    },
+    nivelDificultad: "Alta",
+    competenciaEvaluada: "Rechazo fundamentado de medidas restrictivas, diseño de ajustes razonables para TEA y trabajo con familias con desconfianza institucional"
+  },
+  {
+    id: 718,
+    categoria: "Ética Profesional – Doble Rol / Conflicto de Interés / Manejo de Casos",
+    pregunta: `El psicólogo escolar de un liceo del Distrito Nacional recibe la referencia de un estudiante de 16 años que presenta signos de aislamiento y bajo rendimiento desde hace dos meses. Al revisar el expediente, identifica que ese estudiante es hijo de una colega docente del mismo centro con quien el psicólogo mantiene una relación de amistad cercana. La docente-madre se acerca al psicólogo en la sala de maestros y le dice que está muy preocupada por su hijo, que ya sabe que fue referido y que le pide "como amiga" que le cuente todo lo que el joven le diga en las sesiones. Además, le comenta que ella misma ha notado que su hijo "tiene una relación rara con un estudiante mayor" y le pide al psicólogo que investigue esa relación en las sesiones y le informe. Esa misma tarde, el estudiante llega al consultorio y, antes de comenzar, le dice al psicólogo: "mi mamá me dijo que todo lo que yo le diga usted se lo va a contar a ella, y por eso no voy a hablar nada". ¿Cómo debe actuar el psicólogo escolar?`,
+    opciones: [
+      "Tranquilizar al estudiante diciéndole que efectivamente comparte información con su madre solo lo que considera conveniente, para generar confianza y que la sesión pueda avanzar sin tensión.",
+      "Explicar con claridad al estudiante los límites reales de la confidencialidad aplicables a su caso sin hacer promesas que no pueda cumplir, clarificar con la docente-madre de forma respetuosa pero firme que el proceso de atención de su hijo tiene normas éticas que no pueden ser modificadas por la relación de amistad, abstenerse de investigar la relación del estudiante según el encargo de la madre ya que eso comprometería la alianza terapéutica, y documentar ambas situaciones en el expediente como parte del manejo ético del caso.",
+      "Transferir el caso al orientador del centro para evitar el conflicto de interés generado por la amistad con la madre, ya que cualquier intervención del psicólogo en este caso estará comprometida por esa relación previa.",
+      "Acceder al pedido de la madre de forma parcial, compartiéndole únicamente los aspectos generales de las sesiones sin detalles, como equilibrio entre la relación de amistad y las normas éticas del servicio."
+    ],
+    respuestaCorrecta: 1,
+    explicacion: `El Manual Operativo y los lineamientos establecen que la confidencialidad del proceso de orientación no puede ser modificada por relaciones personales del psicólogo con la familia del estudiante. El conflicto de interés debe ser manejado explicitando los límites éticos con la madre-colega, no evitándolos ni cediendo parcialmente. El psicólogo no puede asumir encargos de investigación que comprometan la alianza terapéutica. La transparencia con el estudiante sobre los límites reales de la confidencialidad es la base de la relación de ayuda. La transferencia del caso puede evaluarse si el conflicto de interés es insuperable, pero no es la primera respuesta; primero deben establecerse los límites con claridad.`,
+    fundamentoNormativo: {
+      documento: "Manual Operativo de los Centros de Orientación y Psicología (2015) / Lineamientos del Proceso de Orientación y Psicología (Actualización 2023-2024)",
+      capitulo: "Normas Éticas del Servicio – Conflicto de Interés; Confidencialidad; Manejo de Relaciones Duales",
+      apartado: "Prohibición de modificar la confidencialidad por relaciones personales con la familia; Manejo explícito del conflicto de interés; Límites del psicólogo ante encargos que comprometen la alianza terapéutica; Transparencia con el estudiante sobre los límites reales de la confidencialidad",
+      justificacion: "El Manual Operativo establece normas éticas que prohíben que las relaciones personales del psicólogo modifiquen las condiciones de confidencialidad del proceso. El manejo correcto implica establecer límites claros con todas las partes y documentar el proceso."
+    },
+    nivelDificultad: "Alta",
+    competenciaEvaluada: "Manejo ético de conflicto de interés por relación dual, protección de la confidencialidad ante presión de familiar-colega y transparencia con el estudiante"
+  },
+  {
+    id: 719,
+    categoria: "Prevención del Abandono Escolar – Embarazo Adolescente / Trabajo Interdisciplinario / Permanencia",
+    pregunta: `El psicólogo escolar de una escuela básica del norte del país detecta que una estudiante de 13 años de 6to grado ha comenzado a faltar con frecuencia y que cuando asiste, se muestra muy callada y evita la educación física. Al entrevistarla de forma individual, la estudiante, con mucha dificultad, le confía que está embarazada de aproximadamente cinco meses, que nadie en su familia lo sabe todavía y que tiene mucho miedo. Cuando el psicólogo le pregunta sobre el padre del bebé, la estudiante baja la cabeza y dice "es alguien grande, no es de aquí". Al explorar más cuidadosamente, la estudiante revela que el padre del bebé es un hombre de aproximadamente 35 años que "la cortejó" durante meses y que ahora "desapareció". La estudiante pide al psicólogo que no le diga nada a su mamá "porque la va a castigar". ¿Cuál debe ser la actuación del psicólogo escolar?`,
+    opciones: [
+      "Respetar la confidencialidad solicitada por la estudiante y orientarla para que sea ella quien le diga a su madre en los próximos días, acompañándola en ese proceso de revelación familiar antes de activar cualquier protocolo.",
+      "Identificar que el embarazo de una niña de 13 años por parte de un adulto de 35 años constituye una situación de abuso sexual que activa de forma obligatoria la Ruta Crítica y la denuncia al CONANI independientemente del pedido de confidencialidad, garantizar el acompañamiento emocional inmediato de la estudiante, informar a la familia con apoyo del equipo de gestión y con un enfoque que minimice el riesgo de victimización secundaria, y diseñar un plan de permanencia escolar con ajustes que le permitan continuar sus estudios durante y después del embarazo.",
+      "Contactar directamente a la policía para que localice al hombre de 35 años, ya que se trata de un delito y el psicólogo tiene la obligación de denunciar directamente ante las autoridades penales antes de informar al CONANI.",
+      "Esperar a que la estudiante le dé autorización explícita para informar a su familia, ya que forzar la revelación antes de que ella esté lista podría traumatizarla más y comprometer su confianza en el psicólogo y en la institución educativa."
+    ],
+    respuestaCorrecta: 1,
+    explicacion: `El embarazo de una niña de 13 años por parte de un hombre adulto constituye abuso sexual sin ninguna posibilidad de consentimiento según la Ley 136-03. Esta situación activa de forma inmediata y obligatoria la Ruta Crítica y la denuncia al CONANI, sin que el pedido de confidencialidad de la víctima pueda detener el proceso. La familia debe ser informada con un enfoque que proteja a la niña de victimización secundaria. El psicólogo debe también garantizar la permanencia escolar de la estudiante durante y después del embarazo, articulando los apoyos necesarios con el equipo de gestión y el distrito.`,
+    fundamentoNormativo: {
+      documento: "Ley 136-03 / Guía de Ruta Crítica para la Prevención y Atención de la Violencia / Lineamientos del Proceso de Orientación y Psicología (Actualización 2023-2024)",
+      capitulo: "Abuso Sexual – Embarazo de NNA por Adulto; Ruta Crítica Obligatoria; Permanencia Escolar",
+      apartado: "Art. 408 Código Penal y Art. 52-53 Ley 136-03 – Embarazo en menor de 15 años como indicador de abuso sexual; Obligatoriedad del reporte al CONANI sin consentimiento de la víctima; Informar a la familia con enfoque de protección; Protocolo de permanencia escolar durante el embarazo",
+      justificacion: "La Ley 136-03 establece que el embarazo de una niña menor de 15 años producto de una relación con un adulto es indicador de abuso sexual que activa la obligación inmediata de denuncia al CONANI. El pedido de confidencialidad de la víctima no modifica esta obligación legal."
+    },
+    nivelDificultad: "Alta",
+    competenciaEvaluada: "Identificación de abuso sexual en embarazo adolescente con adulto, obligatoriedad de la Ruta Crítica y protección de la permanencia escolar"
+  },
+  {
+    id: 720,
+    categoria: "Gestión Institucional – Planificación Anual / Seguimiento / Liderazgo del Servicio",
+    pregunta: `Al finalizar el primer trimestre del año escolar, el psicólogo de una escuela básica del Gran Santo Domingo revisa los datos de su planificación anual y detecta las siguientes situaciones simultáneas: ha atendido individualmente 47 casos referidos por docentes, pero solo ha podido implementar el 20% de los talleres preventivos planificados; el registro de seguimiento de 12 casos activos está incompleto porque "no hay tiempo"; tres familias citadas nunca asistieron y no hay registro de las gestiones de recontacto; y los expedientes de 8 estudiantes del año anterior que fueron cerrados no tienen nota de cierre documentada. El director del centro le dice al psicólogo que "está haciendo un gran trabajo porque atiende muchos casos". El psicólogo siente que el volumen de atención individual está consumiendo todo el tiempo del servicio y que la función preventiva y el seguimiento están quedando fuera. ¿Cuál es la actuación correcta del psicólogo escolar ante esta situación?`,
+    opciones: [
+      "Continuar con el modelo actual ya que el director lo valida y el alto número de atenciones individuales demuestra que el servicio es muy necesario en el centro, registrando los pendientes como metas para el siguiente trimestre.",
+      "Realizar un análisis técnico del funcionamiento del servicio usando los datos del trimestre como evidencia, presentar al equipo de gestión una propuesta de reorganización que equilibre la atención individual con la función preventiva, establecer criterios de priorización y referencia para el manejo de casos, completar la documentación pendiente de expedientes activos y cerrados, y diseñar un plan de gestión de familias no respondientes, documentando el proceso de reorientación del servicio con respaldo en el Manual Operativo y la Planificación Anual.",
+      "Solicitar al director que asigne un docente como asistente del servicio de orientación para que gestione la documentación y el contacto con familias, liberando al psicólogo para enfocarse exclusivamente en la atención individual de los casos más graves.",
+      "Reducir el número de sesiones individuales de seguimiento de los casos activos a una por mes para liberar tiempo para los talleres preventivos, sin informar al equipo de gestión del cambio en la frecuencia de atención."
+    ],
+    respuestaCorrecta: 1,
+    explicacion: `El Manual Operativo y la Planificación Anual de la Unidad de Orientación y Psicología establecen que el servicio debe funcionar con equilibrio entre la atención individual, la función preventiva y el seguimiento documentado. La concentración exclusiva en la atención reactiva, aunque validada informalmente por el director, no representa un servicio de calidad según la normativa. El psicólogo tiene la responsabilidad de analizar su práctica con datos propios, proponer ajustes técnicos fundamentados y mantener la documentación al día. Los expedientes incompletos y sin cierre documentado representan una deficiencia técnica que debe ser corregida de forma inmediata y sistemática.`,
+    fundamentoNormativo: {
+      documento: "Manual Operativo de los Centros de Orientación y Psicología (2015) / Planificación Anual Unidad de Orientación y Psicología / Lineamientos del Proceso de Orientación y Psicología (Actualización 2023-2024)",
+      capitulo: "Gestión del Servicio de Orientación y Psicología; Equilibrio entre Función Preventiva y Atención Individual; Documentación y Seguimiento de Casos",
+      apartado: "Estructura del servicio con equilibrio preventivo-reactivo; Obligatoriedad de documentación completa de expedientes; Cierre documentado de casos; Gestión de familias no respondientes; Uso de datos propios para la autoevaluación y mejora del servicio",
+      justificacion: "El Manual Operativo y la Planificación Anual establecen que el servicio de orientación y psicología tiene funciones preventivas y de seguimiento que son tan obligatorias como la atención individual. La documentación incompleta de expedientes y la ausencia de nota de cierre representan incumplimientos técnicos que el psicólogo debe corregir de forma sistemática."
+    },
+    nivelDificultad: "Alta",
+    competenciaEvaluada: "Autoevaluación del servicio con base en datos propios, equilibrio entre función preventiva y atención individual, y gestión de la documentación obligatoria"
+  }
     
 ];
 
