@@ -8524,7 +8524,887 @@ const bancoPrimaria = [
         ],
         respuestaCorrecta: 1,
         explicacion: "Base Legal: Diseño Curricular Dominicano (Naturaleza de las Competencias). Es un mito común creer que las competencias eliminan el contenido. No hay pensamiento crítico ni saber hacer sin un sustrato de conocimientos conceptuales sólidos. El cambio radica en que el concepto no es el fin último a memorizar, sino la herramienta (mediador) para actuar eficazmente."
-    }
+    },
+  {
+    id: 651,
+    categoria: "Alfabetización Inicial",
+    grado: "1er grado de Primaria",
+    pregunta: "Durante el mes de noviembre, un docente de 1er grado nota que tres de sus estudiantes aún se encuentran en una etapa presilábica de escritura, mientras el resto del grupo ha avanzado a niveles silábicos y alfabéticos. Ante esta situación, ¿cuál es la decisión pedagógica más adecuada según el enfoque de la Política Nacional de Alfabetización Inicial?",
+    opciones: [
+      "Derivar inmediatamente a los estudiantes al Espacio de Apoyo para que la especialista asuma la enseñanza de la lectura y escritura, ya que presentan un evidente retraso en su desarrollo.",
+      "Asignarles cuadernillos de caligrafía y repetición de vocales de forma aislada para que refuercen la motricidad fina antes de integrarlos a las actividades de escritura del grupo.",
+      "Integrar a los estudiantes en actividades de escritura y lectura con textos de circulación social, modelando el proceso, utilizando el nombre propio y fomentando la escritura espontánea sin penalizar el error.",
+      "Eximir a los estudiantes de las actividades de producción escrita para evitar la frustración, esperando a que alcancen la madurez neurológica necesaria en el segundo cuatrimestre."
+    ],
+    respuestaCorrecta: 2,
+    explicacion: "La alfabetización inicial concibe al sujeto como activo en la construcción del conocimiento. El enfoque oficial prohíbe la fragmentación (planas, sílabas aisladas) y promueve la inmersión en la cultura escrita mediante textos reales y significativos, respetando los niveles de conceptualización y utilizando el error como indicador de aprendizaje.",
+    fundamentoNormativo: {
+      documento: "Ordenanza 01-2023 (Política Nacional de Alfabetización Inicial)",
+      seccion: "Enfoque Pedagógico de la Alfabetización",
+      criterio: "Uso de textos en contextos sociales y respeto a los niveles de conceptualización",
+      justificacion: "Se establece que la enseñanza debe partir de situaciones comunicativas reales, desechando métodos mecanicistas y respetando los ritmos de aprendizaje."
+    },
+    competenciaEvaluada: "Toma de decisiones pedagógicas y aplicación de estrategias de alfabetización inicial.",
+    nivelDificultad: "Alta"
+  },
+  {
+    id: 652,
+    categoria: "Evaluación de los Aprendizajes",
+    grado: "3er grado de Primaria",
+    pregunta: "Al finalizar un proyecto sobre 'Mi comunidad', la docente debe asentar las calificaciones en el registro anecdótico y en el informe de aprendizaje. Un estudiante ha demostrado comprensión oral de los conceptos geográficos y participa activamente, pero sus producciones escritas presentan omisiones que no le permiten alcanzar plenamente el indicador de logro evaluado. ¿Cuál es la actuación correcta del docente?",
+    opciones: [
+      "Calificar con 'I' (Iniciado) en el indicador, ya que la producción escrita es el medio oficial e indispensable para evidenciar el logro de las competencias específicas.",
+      "Calificar con 'EP' (En Proceso) y diseñar un plan de apoyo y retroalimentación que diversifique las formas de evaluación, permitiendo al estudiante evidenciar el logro mediante exposiciones u otros medios.",
+      "Calificar con 'L' (Logrado) para proteger la autoestima del estudiante, dado que demostró oralmente que maneja el contenido, aunque no pueda plasmarlo en papel.",
+      "Promediar las calificaciones de participación oral (Logrado) y producción escrita (Iniciado) para obtener una calificación intermedia justa y asentar 'EP'."
+    ],
+    respuestaCorrecta: 1,
+    explicacion: "La evaluación en el Nivel Primario es criterial y formativa. El estado 'En Proceso' (EP) indica que el estudiante está en la ruta de alcanzar el indicador pero requiere andamiaje. Promediar o regalar la calificación invalida la naturaleza formativa, y calificar como 'I' ignorando sus fortalezas orales contradice los principios del DUA integrados en la evaluación.",
+    fundamentoNormativo: {
+      documento: "Ordenanza 04-2023 (Sistema de Evaluación de los Aprendizajes)",
+      seccion: "Escala de Valoración y Evaluación Formativa",
+      criterio: "Uso de la escala cualitativa (L, EP, I) y diseño de estrategias de recuperación",
+      justificacion: "La ordenanza estipula que la evaluación debe ser continua e inclusiva, obligando al docente a ofrecer estrategias de apoyo (retroalimentación) cuando un indicador se encuentra en proceso."
+    },
+    competenciaEvaluada: "Interpretación de indicadores de logro y uso ético de la evaluación formativa.",
+    nivelDificultad: "Alta"
+  },
+  {
+    id: 653,
+    categoria: "Educación Inclusiva y DUA",
+    grado: "4to grado de Primaria",
+    pregunta: "En un aula regular, un estudiante con diagnóstico de TDAH presenta severas dificultades para mantener la atención durante las lecturas prolongadas requeridas en el área de Lengua Española. Según las normativas de Educación Inclusiva, ¿cuál es la medida pedagógica apropiada que debe implementar el docente?",
+    opciones: [
+      "Solicitar a la dirección que el estudiante asista solo media jornada escolar para evitar disrupciones en el desarrollo de la secuencia didáctica del resto del grupo.",
+      "Reducir las expectativas de logro del estudiante, eximiéndolo de las competencias de comprensión lectora compleja y evaluando solo la copia de textos cortos.",
+      "Aplicar Ajustes Razonables fragmentando los textos, incorporando organizadores gráficos, permitiendo pausas activas y utilizando formatos multimodales (audiolibros) para evaluar la misma competencia.",
+      "Condicionar la participación del estudiante en las clases de lectura a que asista acompañado de un tutor sombra costeado por la familia, garantizando el orden del aula."
+    ],
+    respuestaCorrecta: 2,
+    explicacion: "El Diseño Universal para el Aprendizaje (DUA) y los Ajustes Razonables buscan eliminar barreras para el aprendizaje sin disminuir las expectativas de la competencia. Proporcionar múltiples formas de representación (audiolibros, organizadores) y de implicación (pausas activas) es un mandato normativo para estudiantes con TDAH.",
+    fundamentoNormativo: {
+      documento: "Ordenanza 05-2024 (Educación Inclusiva)",
+      seccion: "Diseño Universal para el Aprendizaje y Ajustes Razonables",
+      criterio: "Provisión de apoyos pedagógicos sin exclusión ni disminución de expectativas",
+      justificacion: "Establece la obligatoriedad de realizar ajustes razonables en la metodología, los materiales y la evaluación para garantizar el acceso, permanencia y aprendizaje de los estudiantes con necesidades específicas."
+    },
+    competenciaEvaluada: "Aplicación de ajustes razonables y principios del DUA en la planificación y evaluación.",
+    nivelDificultad: "Alta"
+  },
+  {
+    id: 654,
+    categoria: "Espacios de Apoyo / Trabajo Colaborativo",
+    grado: "2do grado de Primaria",
+    pregunta: "El equipo de gestión y la docente de aula regular deciden referir a un estudiante al Espacio de Apoyo a los Aprendizajes por presentar barreras significativas en el razonamiento lógico-matemático. ¿Cuál debe ser la dinámica de trabajo entre la docente regular y el especialista del Espacio de Apoyo?",
+    opciones: [
+      "La docente regular transfiere la responsabilidad de la calificación de Matemática al especialista, quien diseñará un currículo paralelo exclusivo para el estudiante.",
+      "Ambos docentes co-planifican: la docente de aula realiza las adecuaciones en su plan diario y el especialista brinda intervenciones psicopedagógicas específicas, evaluando conjuntamente los progresos.",
+      "El especialista del Espacio de Apoyo retira al estudiante del aula regular durante todas las horas de Matemática para evitar que se atrase más en relación con sus compañeros.",
+      "La docente regular envía las tareas inacabadas al Espacio de Apoyo para que el especialista funcione como un tutor de reforzamiento escolar en horario extendido."
+    ],
+    respuestaCorrecta: 1,
+    explicacion: "Los Espacios de Apoyo no son aulas de segregación ni centros de tutoría para hacer tareas. Su función es ofrecer apoyo psicopedagógico especializado en coordinación estrecha y co-planificación con el docente titular, manteniendo al estudiante en su entorno natural (aula regular) el mayor tiempo posible y evaluando de forma conjunta.",
+    fundamentoNormativo: {
+      documento: "Orientaciones para Espacios de Apoyo del MINERD y Ordenanza 05-2024",
+      seccion: "Funciones y Articulación del Espacio de Apoyo",
+      criterio: "Trabajo colaborativo y corresponsabilidad en el proceso educativo",
+      justificacion: "La normativa dicta que el docente de aula es el responsable principal del estudiante, pero trabaja de manera articulada con el especialista para diseñar y ejecutar los apoyos requeridos."
+    },
+    competenciaEvaluada: "Gestión de apoyos pedagógicos y articulación colaborativa entre docentes.",
+    nivelDificultad: "Alta"
+  },
+  {
+    id: 655,
+    categoria: "Gestión del Aula y Convivencia Escolar",
+    grado: "5to grado de Primaria",
+    pregunta: "Durante el recreo, dos estudiantes de 5to grado se enfrascan en una pelea física. Al intervenir, el docente observa que uno de los estudiantes tiene un golpe en el rostro. Siguiendo las Normas del Sistema Educativo Dominicano para la Convivencia Armoniosa y la Ley 136-03, ¿qué procedimiento de actuación es el legal y éticamente correcto?",
+    opciones: [
+      "Suspender a ambos estudiantes por 3 días para dar el ejemplo al resto del centro educativo, asegurando así un ambiente de disciplina rígida.",
+      "Ignorar el incidente si ambos estudiantes se piden disculpas y se dan la mano, ya que son conflictos típicos de la preadolescencia que se resuelven entre pares.",
+      "Garantizar la atención médica inmediata, separar a los estudiantes sin violencia, reportar al equipo de gestión/orientación, informar a las familias y aplicar medidas de reparación y diálogo.",
+      "Retener a los estudiantes en el aula durante todo el mes en los horarios de recreo como medida correctiva para evitar futuras agresiones físicas."
+    ],
+    respuestaCorrecta: 2,
+    explicacion: "La Ley 136-03 (Código para la Protección de NNA) y las Normas de Convivencia prohíben las medidas punitivas, denigrantes o que violen el derecho a la educación (como suspensiones arbitrarias o encierros). Se debe priorizar la integridad física, la comunicación con las familias, el debido proceso y la aplicación de prácticas restaurativas a través de Orientación y Psicología.",
+    fundamentoNormativo: {
+      documento: "Normas del Sistema Educativo Dominicano para la Convivencia Armoniosa",
+      seccion: "Procedimientos ante Faltas Graves y Medidas Educativas",
+      criterio: "Atención integral, debido proceso y enfoque restaurativo",
+      justificacion: "Se prohíbe la expulsión o medidas que vulneren derechos. Se exige un abordaje pedagógico, disciplinario y formativo, garantizando la intervención de los equipos multidisciplinarios."
+    },
+    competenciaEvaluada: "Manejo de conflictos, protección integral y aplicación de normativas de convivencia.",
+    nivelDificultad: "Alta"
+  },
+  {
+    id: 656,
+    categoria: "Planificación por Competencias",
+    grado: "6to grado de Primaria",
+    pregunta: "Un docente está planificando una Unidad de Aprendizaje en Ciencias de la Naturaleza. Al seleccionar las Competencias Específicas del grado, se da cuenta de que los estudiantes tienen un bajo dominio de los contenidos conceptuales previos. ¿Cómo debe proceder el docente para mantener el enfoque de la Adecuación Curricular 2023?",
+    opciones: [
+      "Abandonar temporalmente la enseñanza por competencias y dedicar el primer mes exclusivamente al dictado y memorización de los conceptos base requeridos.",
+      "Diseñar situaciones de aprendizaje donde los contenidos conceptuales previos y nuevos se movilicen como medios (no como fines) para resolver problemas del contexto, evaluando las competencias específicas.",
+      "Avanzar con la planificación tal como está en el diseño curricular para cumplir con el cronograma, ya que no es responsabilidad del docente de 6to grado subsanar las deficiencias de grados anteriores.",
+      "Sustituir los indicadores de logro de 6to grado por los de 5to grado en el registro de evaluación oficial para evitar altos índices de reprobación."
+    ],
+    respuestaCorrecta: 1,
+    explicacion: "En el currículo dominicano, los contenidos (conceptuales, procedimentales y actitudinales) son mediadores para el desarrollo de competencias. No se enseñan de forma aislada o memorística. El docente debe partir del nivel real de los estudiantes y utilizar situaciones de aprendizaje contextualizadas para movilizar los saberes, sin alterar los indicadores de evaluación oficiales del grado.",
+    fundamentoNormativo: {
+      documento: "Bases de la Revisión y Actualización Curricular / Adecuación Curricular 2023",
+      seccion: "Estrategias de Planificación y Concepto de Competencia",
+      criterio: "Los contenidos como mediadores de aprendizajes significativos",
+      justificacion: "Las normativas establecen que la competencia es la capacidad de actuar de manera eficaz y autónoma en contextos diversos, integrando conceptos, procedimientos y actitudes, proscribiendo el enfoque enciclopedista."
+    },
+    competenciaEvaluada: "Diseño de situaciones de aprendizaje y articulación de elementos curriculares bajo el enfoque por competencias.",
+    nivelDificultad: "Alta"
+  },
+  {
+    id: 657,
+    categoria: "Atención a la Diversidad / Discapacidad Intelectual",
+    grado: "3er grado de Primaria",
+    pregunta: "Una estudiante con Discapacidad Intelectual leve está integrada en el aula. En la clase de Matemática, el grupo está resolviendo problemas de multiplicación de dos dígitos. Según los lineamientos de Adecuaciones Curriculares, ¿qué acción docente garantiza el aprendizaje de la estudiante?",
+    opciones: [
+      "Exigirle que resuelva los mismos problemas que sus compañeros para no discriminarla, ofreciéndole únicamente más tiempo para entregar el examen.",
+      "Asignarle dibujos para colorear mientras los demás trabajan en la multiplicación, garantizando que esté tranquila y no se sienta presionada.",
+      "Realizar una adecuación curricular significativa: utilizar material concreto (bloques lógicos), simplificar el problema a sumas iteradas simples o multiplicaciones de un dígito, alineado a su Plan de Apoyo Individualizado (PAI).",
+      "Solicitar a la familia que le enseñen las tablas de multiplicar en casa, ya que el docente de aula regular no tiene formación en Educación Especial."
+    ],
+    respuestaCorrecta: 2,
+    explicacion: "Cuando un estudiante tiene una discapacidad cognitiva comprobada, se requieren Adecuaciones Curriculares (que pueden ser significativas). Esto implica modificar el nivel de complejidad del contenido y la evaluación, utilizando materiales concretos y garantizando una participación activa y significativa basada en su PAI, sin relegarla a actividades sin propósito académico (colorear).",
+    fundamentoNormativo: {
+      documento: "Ordenanza 05-2024 y Lineamientos de Atención a la Diversidad",
+      seccion: "Adecuaciones Curriculares Individualizadas",
+      criterio: "Modificación de indicadores y contenidos según el perfil de apoyo",
+      justificacion: "Se establece el derecho a recibir una educación pertinente mediante adecuaciones metodológicas, de contenido y evaluación (Plan de Apoyo Individualizado - PAI) elaboradas de forma conjunta."
+    },
+    competenciaEvaluada: "Implementación de adecuaciones curriculares significativas para estudiantes con discapacidad.",
+    nivelDificultad: "Alta"
+  },
+  {
+    id: 658,
+    categoria: "Ética Profesional y Protección de NNA",
+    grado: "1er a 6to grado de Primaria",
+    pregunta: "Un docente de nivel primario nota reiteradamente que una estudiante llega a la escuela con signos de desnutrición, falta de higiene severa y, en ocasiones, moretones en los brazos. Al preguntarle, la niña se muestra evasiva y temerosa. ¿Cuál es el deber insoslayable del docente según el Código de Ética y la Ley 136-03?",
+    opciones: [
+      "Confrontar directamente al padre, madre o tutor a la salida de la escuela para exigirle explicaciones y amenazarlo con ir a la policía.",
+      "Comprar alimentos para la niña y proporcionarle útiles de aseo personal de forma discreta, manteniendo el secreto para no causar problemas a la familia.",
+      "Registrar objetivamente las observaciones, activar de inmediato el protocolo de prevención comunicando el caso a la unidad de Orientación y Psicología y a la Dirección para la debida notificación a las autoridades competentes (CONANI/Ministerio Público).",
+      "Evitar involucrarse en asuntos familiares, ya que el rol del docente se limita exclusivamente al ámbito académico y de alfabetización dentro del aula."
+    ],
+    respuestaCorrecta: 2,
+    explicacion: "La Ley 136-03 establece la obligación de denuncia (Sistema de Protección). El docente, como garante de derechos y servidor público, incurre en negligencia si calla. El protocolo exige no confrontar al agresor para no poner en mayor riesgo a la víctima, sino canalizar la situación institucionalmente a través de Orientación/Dirección hacia las autoridades.",
+    fundamentoNormativo: {
+      documento: "Ley 136-03 (Código para la Protección de NNA) y Orden Departamental 22-2023",
+      seccion: "Sistema de Protección y Deber de Denuncia",
+      criterio: "Obligación de denunciar vulneración de derechos ante autoridades competentes",
+      justificacion: "La legislación nacional obliga a todo profesional de la educación a reportar cualquier sospecha de abuso, maltrato o negligencia contra un menor, estableciendo sanciones por omisión."
+    },
+    competenciaEvaluada: "Aplicación de protocolos de protección integral de la infancia y ética docente.",
+    nivelDificultad: "Alta"
+  },
+  {
+    id: 659,
+    categoria: "Didáctica de las Ciencias Sociales / Pensamiento Crítico",
+    grado: "4to grado de Primaria",
+    pregunta: "Para desarrollar la competencia específica de 'Análisis del entorno geográfico y social', un docente de 4to grado desea abordar el tema de la migración campo-ciudad en la República Dominicana. ¿Cuál estrategia metodológica es la más coherente con el currículo por competencias?",
+    opciones: [
+      "Realizar un dictado extenso sobre las causas y consecuencias de la migración y evaluar mediante un examen de selección múltiple sobre fechas y estadísticas.",
+      "Asignar como tarea que los estudiantes busquen en el diccionario la palabra 'migración' y la copien 10 veces en su cuaderno para mejorar la caligrafía.",
+      "Presentar el relato de una familia local que se mudó a la ciudad, promover un debate guiado sobre los motivos (educación, salud, trabajo) y solicitar a los estudiantes que propongan mejoras para la vida en el campo.",
+      "Proyectar un documental sobre la migración en Europa durante el siglo XIX para garantizar que los estudiantes adquieran una cultura general globalizada."
+    ],
+    respuestaCorrecta: 2,
+    explicacion: "El currículo dominicano exige partir del contexto inmediato y significativo del estudiante (situación de aprendizaje). El análisis de un caso cercano (relato local) fomenta el pensamiento crítico y la propuesta de soluciones, movilizando conceptos sociales reales frente a la simple memorización o descontextualización (opciones A y D).",
+    fundamentoNormativo: {
+      documento: "Adecuación Curricular 2023",
+      seccion: "Estrategias de Enseñanza y Aprendizaje",
+      criterio: "Aprendizaje Basado en Casos y Problemas del Contexto",
+      justificacion: "Establece que las Ciencias Sociales deben promover la criticidad, la identidad y la ciudadanía activa a través del análisis de problemáticas del contexto histórico y geográfico dominicano."
+    },
+    competenciaEvaluada: "Selección de estrategias didácticas activas para el desarrollo del pensamiento crítico.",
+    nivelDificultad: "Alta"
+  },
+  {
+    id: 660,
+    categoria: "Evaluación Diagnóstica",
+    grado: "1er grado de Primaria",
+    pregunta: "Durante las primeras tres semanas del año escolar, el docente de 1er grado debe aplicar la evaluación diagnóstica. ¿Cuál es el propósito fundamental de este proceso según el Sistema de Evaluación de los Aprendizajes vigente?",
+    opciones: [
+      "Calificar a los estudiantes con notas numéricas preliminares para agruparlos en 'avanzados', 'regulares' y 'rezagados', ubicándolos en diferentes filas dentro del aula.",
+      "Identificar los saberes previos, los estilos de aprendizaje, las fortalezas y las posibles barreras, con el fin de adecuar la planificación curricular a las necesidades reales del grupo.",
+      "Cumplir con un requisito burocrático del Ministerio de Educación enviando las evidencias al distrito, para luego comenzar a impartir el programa oficial sin modificaciones.",
+      "Determinar qué estudiantes no tienen el nivel de madurez para estar en 1er grado y solicitar a la dirección que los devuelva al Nivel Inicial."
+    ],
+    respuestaCorrecta: 1,
+    explicacion: "La evaluación diagnóstica en el MINERD no tiene fines sumativos, punitivos ni de segregación. Su objetivo es estrictamente pedagógico: conocer el punto de partida bio-psico-social y cognitivo del estudiante para que el docente tome decisiones oportunas (ajustes a la planificación, estrategias diferenciadas). La retrogradación de grado es ilegal.",
+    fundamentoNormativo: {
+      documento: "Ordenanza 04-2023 (Sistema de Evaluación de los Aprendizajes)",
+      seccion: "Tipos de Evaluación (Diagnóstica)",
+      criterio: "Función de la evaluación al inicio de los procesos educativos",
+      justificacion: "Se define la evaluación diagnóstica como un proceso continuo y sistemático al inicio del año o tema, que no lleva calificación sumativa, diseñado para adaptar las intervenciones pedagógicas a la diversidad del aula."
+    },
+    competenciaEvaluada: "Comprensión y aplicación de la función de la evaluación diagnóstica para la toma de decisiones curriculares.",
+    nivelDificultad: "Alta"
+  },
+  {
+    id: 661,
+    categoria: "Comprensión Lectora y Evaluación",
+    grado: "4to grado de Primaria",
+    pregunta: "Durante la evaluación de una unidad sobre 'La Fábula', el docente desea comprobar si los estudiantes han alcanzado el indicador de logro relacionado con la comprensión inferencial. ¿Cuál de las siguientes actividades evaluativas es la correcta según el enfoque por competencias?",
+    opciones: [
+      "Solicitar a los estudiantes que subrayen con color rojo los nombres de todos los personajes y con azul los escenarios donde ocurre la historia.",
+      "Pedir a los estudiantes que copien textualmente la moraleja de la fábula en sus cuadernos asegurando una correcta ortografía.",
+      "Plantear preguntas donde los estudiantes deban deducir las motivaciones no explícitas de los personajes y explicar cómo esas acciones llevaron al desenlace, utilizando pistas del texto.",
+      "Aplicar una prueba escrita de selección múltiple donde se evalúe exclusivamente la memorización de la biografía del autor de la fábula."
+    ],
+    respuestaCorrecta: 2,
+    explicacion: "La comprensión inferencial exige que el estudiante trascienda la información literal (explícita) y construya significados a partir de pistas en el texto y sus saberes previos. Las opciones A y B evalúan niveles literales o motricidad/ortografía, mientras que la D es puramente memorística y desvinculada de la competencia de comprensión textual.",
+    fundamentoNormativo: {
+      documento: "Adecuación Curricular 2023",
+      seccion: "Área de Lengua Española - Competencias Específicas",
+      criterio: "Desarrollo de la comprensión literal, inferencial y crítica",
+      justificacion: "El currículo establece que la lectura debe ser un proceso de construcción de significado, donde la inferencia es fundamental para el desarrollo del pensamiento crítico y la competencia comunicativa."
+    },
+    competenciaEvaluada: "Diseño de instrumentos y actividades para la evaluación formativa de la comprensión lectora inferencial.",
+    nivelDificultad: "Alta"
+  },
+  {
+    id: 662,
+    categoria: "Espacios de Apoyo / Dificultades Específicas de Aprendizaje",
+    grado: "3er grado de Primaria",
+    pregunta: "Un estudiante de 3er grado presenta inversiones frecuentes de letras (b/d, p/q) y una lectura silabeada muy lenta, lo que afecta su comprensión. El equipo de gestión sospecha de una Dificultad Específica del Aprendizaje (Dislexia). ¿Cuál es la ruta de acción articulada entre el docente regular y el especialista del Espacio de Apoyo?",
+    opciones: [
+      "El docente de aula suspende la evaluación de lectura del estudiante y espera a que el especialista del Espacio de Apoyo lo diagnostique médicamente para poder actuar.",
+      "El docente regular y el especialista diseñan un Plan de Apoyo que incluye estrategias multisensoriales, fomento de la conciencia fonológica y tiempo extendido en las evaluaciones, manteniendo al estudiante integrado.",
+      "El especialista del Espacio de Apoyo retira al estudiante permanentemente de las clases de Lengua Española, ya que el currículo regular es inaccesible para él.",
+      "Se califica al estudiante con 'I' (Iniciado) en todos los indicadores de lectura hasta que supere la dificultad motriz, sin realizar modificaciones en la metodología de enseñanza."
+    ],
+    respuestaCorrecta: 1,
+    explicacion: "Las Dificultades Específicas de Aprendizaje (DEA) requieren intervenciones psicopedagógicas (no médicas) centradas en la estimulación de rutas de acceso al léxico (multisensorial, fonológica). La Ordenanza 05-2024 prohíbe la segregación; el trabajo debe ser colaborativo (docente-especialista) aplicando ajustes razonables como el tiempo extendido o la evaluación oral.",
+    fundamentoNormativo: {
+      documento: "Ordenanza 05-2024 y Orientaciones para Espacios de Apoyo",
+      seccion: "Atención a Estudiantes con Dificultades Específicas de Aprendizaje (DEA)",
+      criterio: "Implementación de apoyos psicopedagógicos inclusivos",
+      justificacion: "Los Espacios de Apoyo promueven la inclusión temporal o intermitente de apoyos, priorizando siempre que el aprendizaje y la evaluación con ajustes razonables ocurran dentro del aula regular."
+    },
+    competenciaEvaluada: "Toma de decisiones pedagógicas frente a Dificultades Específicas del Aprendizaje mediante el trabajo colaborativo.",
+    nivelDificultad: "Alta"
+  },
+  {
+    id: 663,
+    categoria: "Matemática / Resolución de Problemas",
+    grado: "2do grado de Primaria",
+    pregunta: "Para introducir la suma con reagrupación (llevando) en 2do grado, una docente busca movilizar la competencia de 'Resolución de Problemas'. ¿Qué estrategia metodológica es la más adecuada según las Bases de la Adecuación Curricular?",
+    opciones: [
+      "Escribir en la pizarra la regla matemática de 'sumar las unidades y llevar a las decenas', exigiendo que los estudiantes la memoricen antes de practicar.",
+      "Diseñar una 'situación de aprendizaje' simulando un colmado en el aula, donde los estudiantes deban juntar cantidades de dinero escolar para comprar productos que exceden la decena.",
+      "Entregar una ficha impresa con 50 operaciones aritméticas descontextualizadas para desarrollar la velocidad y el cálculo mental mecánico.",
+      "Explicar el procedimiento paso a paso durante 45 minutos y luego evaluar inmediatamente a los estudiantes en la pizarra para verificar si prestaron atención."
+    ],
+    respuestaCorrecta: 1,
+    explicacion: "El currículo dominicano es constructivista y sociocrítico. El aprendizaje de la matemática debe ser significativo y partir de situaciones del contexto real del estudiante (como un colmado). El uso de material concreto y representaciones lúdicas permite construir el concepto de reagrupación de forma comprensiva, evitando el mecanicismo de las opciones A, C y D.",
+    fundamentoNormativo: {
+      documento: "Bases de la Revisión y Actualización Curricular / Adecuación 2023",
+      seccion: "Estrategias de Enseñanza y Aprendizaje",
+      criterio: "El juego y las situaciones de aprendizaje como estrategias didácticas",
+      justificacion: "Se prioriza el aprendizaje basado en la resolución de problemas cotidianos, el uso de material concreto y la matematización del entorno del estudiante."
+    },
+    competenciaEvaluada: "Diseño de estrategias metodológicas activas y contextualizadas para el área de Matemática.",
+    nivelDificultad: "Alta"
+  },
+  {
+    id: 664,
+    categoria: "Evaluación Formativa / Retroalimentación",
+    grado: "5to grado de Primaria",
+    pregunta: "Un estudiante de 5to grado entrega el primer borrador de un artículo expositivo. El texto contiene información valiosa, pero carece de una estructura lógica (introducción, desarrollo, conclusión). ¿Cuál es la forma normativamente correcta de ofrecer retroalimentación formativa?",
+    opciones: [
+      "Devolver el texto con las correcciones estructurales hechas en bolígrafo rojo por el docente, pidiendo al estudiante que pase el texto a limpio.",
+      "Calificar el borrador con una nota baja para que el estudiante comprenda la gravedad de su error y se esfuerce más en la versión final.",
+      "Elogiar el esfuerzo del estudiante diciendo '¡Muy buen trabajo!' sin señalar las deficiencias, para proteger su motivación intrínseca.",
+      "Resaltar las ideas valiosas del texto y realizar preguntas orientadoras (ej. '¿Qué información crees que debería ir al principio para atrapar al lector?'), devolviendo el borrador para su revisión."
+    ],
+    respuestaCorrecta: 3,
+    explicacion: "La evaluación formativa exige que la retroalimentación sea descriptiva, reflexiva y prospectiva. Corregir todo en rojo (A) anula la autonomía; penalizar un borrador (B) contradice la evaluación procesual; y elogiar sin guía (C) no genera aprendizaje. Las preguntas orientadoras obligan al estudiante a activar su metacognición y reconstruir su texto.",
+    fundamentoNormativo: {
+      documento: "Ordenanza 04-2023 (Sistema de Evaluación de los Aprendizajes)",
+      seccion: "Evaluación Formativa y Retroalimentación",
+      criterio: "Uso de la retroalimentación como andamiaje para el aprendizaje",
+      justificacion: "La ordenanza define la retroalimentación como un proceso dialógico que permite al estudiante identificar sus aciertos y aspectos a mejorar, siendo protagonista de la regulación de su propio aprendizaje."
+    },
+    competenciaEvaluada: "Aplicación de estrategias de retroalimentación efectiva en procesos de producción escrita.",
+    nivelDificultad: "Alta"
+  },
+  {
+    id: 665,
+    categoria: "Educación Inclusiva / TEA",
+    grado: "1er grado de Primaria",
+    pregunta: "En un aula de 1er grado, un estudiante con Trastorno del Espectro Autista (TEA) Nivel 1 experimenta crisis de ansiedad, tapándose los oídos y llorando cuando se realizan cambios abruptos de actividad o durante actos cívicos ruidosos. ¿Qué ajuste razonable es imperativo aplicar?",
+    opciones: [
+      "Obligar al estudiante a permanecer en los actos cívicos sin protección para que se 'desensibilice' y se adapte al mundo real.",
+      "Reportar las crisis como 'indisciplina' en el registro anecdótico y solicitar a la familia que lo mantenga en casa durante los días de actividades ruidosas.",
+      "Anticipar los cambios de rutina mediante una agenda visual (pictogramas) en su butaca y permitir el uso de auriculares canceladores de ruido o la retirada a un espacio de calma cuando la sobrecarga sensorial lo requiera.",
+      "Eximirlo de todas las competencias de Ciencias Sociales relacionadas con los símbolos patrios, ya que no puede asistir a los actos cívicos."
+    ],
+    respuestaCorrecta: 2,
+    explicacion: "Los estudiantes con TEA frecuentemente presentan desórdenes de procesamiento sensorial y necesidad de predictibilidad. Obligarlos a soportar el ruido es maltrato; excluirlos vulnera su derecho a la educación. Los ajustes razonables (agendas visuales, auriculares, espacios de calma) eliminan la barrera del entorno sin disminuir la expectativa académica.",
+    fundamentoNormativo: {
+      documento: "Ordenanza 05-2024 (Educación Inclusiva)",
+      seccion: "Ajustes Razonables y Apoyos Individualizados",
+      criterio: "Modificación del entorno y provisión de apoyos materiales/organizativos",
+      justificacion: "Garantiza el derecho a apoyos específicos que respondan a las características sensoriales y de neurodesarrollo del estudiantado, asegurando su confort y participación."
+    },
+    competenciaEvaluada: "Implementación de ajustes razonables en el entorno y las rutinas para estudiantes neurodivergentes.",
+    nivelDificultad: "Alta"
+  },
+  {
+    id: 666,
+    categoria: "Convivencia Escolar / Prevención de Acoso",
+    grado: "6to grado de Primaria",
+    pregunta: "El docente titular nota que un grupo de tres estudiantes de 6to grado emite constantemente burlas crueles sobre el aspecto físico de una compañera, quien se muestra retraída y ha bajado su rendimiento. Según las Normas de Convivencia, ¿cuál es el proceder inicial obligatorio?",
+    opciones: [
+      "Ignorar la situación asumiendo que los niños a esa edad deben aprender a defenderse por sí mismos para fortalecer su carácter.",
+      "Obligar a los tres agresores a pedir disculpas públicas frente a toda el aula para que sientan vergüenza y no lo vuelvan a hacer.",
+      "Intervenir de inmediato para detener las burlas, documentar las incidencias, notificar al Departamento de Orientación y Psicología para activar el protocolo de acoso escolar e informar a las familias.",
+      "Expulsar a los tres estudiantes involucrados de manera definitiva del centro educativo para garantizar un ambiente seguro para la víctima."
+    ],
+    respuestaCorrecta: 2,
+    explicacion: "El acoso escolar (bullying) es una falta tipificada que exige intervención inmediata. Las disculpas públicas forzadas (B) victimizan y humillan; la expulsión (D) viola el derecho a la educación de los agresores menores de edad. El protocolo correcto exige frenar la acción, proteger a la víctima, documentar e involucrar al equipo multidisciplinario para aplicar medidas restaurativas y socioeducativas.",
+    fundamentoNormativo: {
+      documento: "Normas del Sistema Educativo Dominicano para la Convivencia Armoniosa",
+      seccion: "Clasificación de Faltas y Protocolo de Actuación ante Acoso",
+      criterio: "Intervención inmediata, protección y debido proceso",
+      justificacion: "Establece los pasos obligatorios ante el acoso escolar: detección, comunicación a Orientación y Psicología, protección de la víctima, entrevista con familias y aplicación de medidas educativas, prohibiendo prácticas humillantes."
+    },
+    competenciaEvaluada: "Aplicación de protocolos de convivencia escolar y abordaje temprano del acoso.",
+    nivelDificultad: "Alta"
+  },
+  {
+    id: 667,
+    categoria: "Planificación por Competencias",
+    grado: "4to grado de Primaria",
+    pregunta: "Al planificar el tema de 'La hidrósfera y la contaminación del agua', el docente debe articular las Competencias Específicas de Ciencias de la Naturaleza con las Competencias Fundamentales. ¿De qué manera se evidencia correctamente esta articulación en el diseño de las actividades?",
+    opciones: [
+      "Mencionando la 'Competencia Ambiental y de la Salud' en el encabezado de la planificación, aunque la evaluación consista solo en definir qué es la hidrósfera.",
+      "Diseñando un proyecto de aula donde los estudiantes investiguen las fuentes de agua de su comunidad, propongan una campaña de concientización y asuman compromisos para su cuidado.",
+      "Asignando una tarea de investigación sobre los ríos más largos del mundo para que los estudiantes adquieran cultura general.",
+      "Realizando un examen sorpresa sobre los estados del agua para garantizar la Competencia de Pensamiento Lógico, Creativo y Crítico."
+    ],
+    respuestaCorrecta: 1,
+    explicacion: "En el currículo dominicano, las Competencias Fundamentales son transversales y deben movilizarse a través de las Competencias Específicas. No basta con declararlas en papel (opción A). Deben evidenciarse en la acción (saber actuar) mediante metodologías activas (como un proyecto) que integren conceptos, procedimientos y actitudes hacia la resolución de un problema real (opción B).",
+    fundamentoNormativo: {
+      documento: "Bases de la Revisión y Actualización Curricular",
+      seccion: "Articulación de las Competencias Fundamentales y Específicas",
+      criterio: "Transversalidad y coherencia metodológica",
+      justificacion: "Las Competencias Fundamentales expresan las intenciones educativas de mayor relevancia y se desarrollan de manera transversal a través de situaciones de aprendizaje significativas en todas las áreas curriculares."
+    },
+    competenciaEvaluada: "Articulación coherente entre competencias fundamentales, específicas y actividades de aprendizaje.",
+    nivelDificultad: "Alta"
+  },
+  {
+    id: 668,
+    categoria: "Ciencias de la Naturaleza / Indagación Científica",
+    grado: "5to grado de Primaria",
+    pregunta: "La Adecuación Curricular 2023 en Ciencias de la Naturaleza enfatiza la competencia de 'Resolución de problemas científicos y tecnológicos'. Si un docente desea desarrollar esta competencia al enseñar los circuitos eléctricos, ¿cuál es la intervención pedagógica adecuada?",
+    opciones: [
+      "Dictar a los estudiantes las definiciones de circuito en serie y en paralelo para que las copien íntegramente en sus cuadernos.",
+      "Mostrar una lámina de un circuito eléctrico y pedir a los estudiantes que calquen el dibujo en sus mascotas y lo coloreen.",
+      "Proveer baterías, cables y bombillas a pequeños grupos y retarlos a lograr que la bombilla encienda, registrando sus intentos, fallos y conclusiones (hipótesis y comprobación).",
+      "Proyectar un video explicativo de 40 minutos sobre cómo funcionan los circuitos sin permitir preguntas o interacción, para asegurar que escuchen a un experto."
+    ],
+    respuestaCorrecta: 2,
+    explicacion: "El área de Ciencias de la Naturaleza se basa en la indagación, la observación y el método científico adaptado al nivel. Proveer materiales y un desafío (reto) permite a los estudiantes construir el conocimiento a través del ensayo, el error y la formulación de hipótesis, lo cual desarrolla genuinamente la competencia científica, superando la transmisión pasiva de información.",
+    fundamentoNormativo: {
+      documento: "Adecuación Curricular 2023",
+      seccion: "Área de Ciencias de la Naturaleza - Enfoque del Área",
+      criterio: "Alfabetización científica y tecnológica a través de la indagación",
+      justificacion: "El currículo establece que las ciencias se aprenden haciendo ciencias, promoviendo la experimentación, el trabajo colaborativo y la construcción activa del conocimiento mediante la indagación."
+    },
+    competenciaEvaluada: "Diseño de estrategias basadas en la indagación para el desarrollo de competencias científicas.",
+    nivelDificultad: "Alta"
+  },
+  {
+    id: 669,
+    categoria: "Alfabetización Inicial / Producción Escrita",
+    grado: "2do grado de Primaria",
+    pregunta: "Al revisar las producciones escritas (un cuento corto) de sus estudiantes de 2do grado, la docente nota que varios de ellos presentan 'hiposegmentación' (escriben varias palabras juntas sin espacios, ej: 'elperrocorre'). Según la Política Nacional de Alfabetización Inicial, ¿qué intervención docente es pertinente?",
+    opciones: [
+      "Arrancar la hoja de la mascota y ordenarles que escriban el cuento nuevamente de forma correcta, como castigo por su descuido.",
+      "Bajar puntos en la calificación final del período porque a estas alturas del 2do grado los estudiantes ya no deberían cometer errores básicos de segmentación.",
+      "Realizar ejercicios de revisión guiada: leer la oración en voz alta dando palmadas por cada palabra, y pedir al estudiante que cuente las palmadas para identificar dónde deben ir los espacios.",
+      "Ignorar el error completamente porque corregir la escritura puede traumatizar al estudiante y frenar su proceso de libre expresión."
+    ],
+    respuestaCorrecta: 2,
+    explicacion: "La hiposegmentación es una etapa evolutiva normal en el proceso de adquisición de la escritura. El docente no debe castigar ni ignorar el error, sino utilizarlo como oportunidad de aprendizaje. Las estrategias fonológicas (como las palmadas por palabra) ayudan al estudiante a tomar conciencia léxica (separación de palabras) y a autorregular su propia escritura (revisión de borradores).",
+    fundamentoNormativo: {
+      documento: "Ordenanza 01-2023 (Política Nacional de Alfabetización Inicial)",
+      seccion: "Procesos de Producción Escrita y Revisión",
+      criterio: "Intervención docente constructiva y uso de estrategias de conciencia fonológica y léxica",
+      justificacion: "Plantea que el error es un indicador del nivel de conceptualización del estudiante, y el docente debe proveer andamiajes (como separar auditivamente las palabras) para que el niño alcance la escritura convencional."
+    },
+    competenciaEvaluada: "Análisis de producciones escritas e intervención pedagógica ante errores constructivos de segmentación.",
+    nivelDificultad: "Alta"
+  },
+  {
+    id: 670,
+    categoria: "Ética Docente y Participación Familiar",
+    grado: "1er a 6to grado de Primaria",
+    pregunta: "Al finalizar el primer período de evaluación, una madre se presenta en la escuela visiblemente alterada y le grita a la docente frente a otros padres en el pasillo, exigiendo saber por qué su hijo tiene 'EP' (En Proceso) en matemáticas. ¿Cuál es el proceder ético y profesional que debe asumir la docente?",
+    opciones: [
+      "Responder con el mismo tono de voz para imponer autoridad y dejar claro quién es la profesional dentro del centro educativo.",
+      "Invitar a la madre a pasar a un espacio privado, mantener la calma, aplicar la escucha activa y mostrarle el portafolio de evidencias del estudiante junto a la rúbrica de evaluación para explicar el proceso objetivamente.",
+      "Modificar inmediatamente la calificación de 'EP' a 'L' (Logrado) en el registro oficial para evitar un conflicto mayor que pueda perjudicar la imagen del centro.",
+      "Negarse rotundamente a conversar con la madre y llamar a la seguridad escolar para que la expulse del recinto por falta de respeto."
+    ],
+    respuestaCorrecta: 1,
+    explicacion: "El Código de Ética y los Estándares de Desempeño exigen que el docente demuestre inteligencia emocional, respete a las familias y garantice la transparencia de la evaluación. Discutir en público, alterar actas (falta grave) o negar la información son acciones inaceptables. El docente debe desescalar el conflicto, privatizar la conversación y basar sus argumentos en evidencias pedagógicas (portafolio/rúbrica).",
+    fundamentoNormativo: {
+      documento: "Orden Departamental 22-2023 (Código de Ética) y Estándares de Desempeño Docente",
+      seccion: "Relación con las Familias y Transparencia en la Evaluación",
+      criterio: "Manejo profesional de conflictos y rendición de cuentas basada en evidencias",
+      justificacion: "Se requiere del docente una actitud de respeto, empatía y comunicación asertiva con las familias, utilizando los instrumentos de evaluación oficiales para justificar los niveles de logro de manera objetiva y transparente."
+    },
+    competenciaEvaluada: "Manejo ético de las relaciones con las familias, resolución de conflictos y sustentación de la evaluación.",
+    nivelDificultad: "Alta"
+  },
+  {
+    id: 671,
+    categoria: "Espacios de Apoyo / Trabajo Colaborativo",
+    grado: "3er grado de Primaria",
+    pregunta: "En un centro educativo del Distrito 0707, la orientadora escolar, como parte del programa de inducción, se encuentra estructurando el horario y la dinámica del Espacio de Apoyo a los Aprendizajes. Un docente de 3er grado le envía a cinco estudiantes argumentando que 'tienen mala conducta y no prestan atención', solicitando que el Espacio de Apoyo asuma su escolaridad diaria hasta que mejoren su comportamiento. ¿Cuál es la respuesta técnica y normativa correcta que debe ofrecer la orientadora?",
+    opciones: [
+      "Aceptar a los cinco estudiantes en el Espacio de Apoyo durante toda la jornada escolar, diseñando un plan de modificación de conducta basado en castigos y recompensas hasta que estén listos para volver al aula.",
+      "Aclarar al docente que el Espacio de Apoyo tiene una naturaleza psicopedagógica para intervenir barreras específicas del aprendizaje, no disciplinaria. En su lugar, proponer una co-evaluación en el aula regular para identificar posibles barreras metodológicas y diseñar estrategias de DUA y convivencia de manera conjunta.",
+      "Rechazar a los estudiantes y enviar un reporte de indisciplina directamente al Distrito Educativo, ya que la gestión del comportamiento es responsabilidad exclusiva del docente titular y no compete al equipo de Orientación y Psicología.",
+      "Asignar a los estudiantes al Espacio de Apoyo, pero solo durante las horas de recreo y educación física, utilizándolo como un espacio de aislamiento reflexivo para que comprendan las consecuencias de su mala conducta."
+    ],
+    respuestaCorrecta: 1,
+    explicacion: "Los Espacios de Apoyo no son aulas de castigo, aislamiento ni segregación para estudiantes con dificultades conductuales. Según las Orientaciones del MINERD, su propósito es ofrecer apoyo psicopedagógico frente a barreras de aprendizaje específicas, promoviendo el trabajo colaborativo (co-enseñanza) con el docente titular para que el estudiante permanezca y participe en su aula regular aplicando el DUA.",
+    fundamentoNormativo: {
+      documento: "Orientaciones para los Espacios de Apoyo a los Aprendizajes y Ordenanza 05-2024",
+      seccion: "Naturaleza y Funciones de los Espacios de Apoyo",
+      criterio: "Prohibición de uso del Espacio de Apoyo con fines disciplinarios o de exclusión",
+      justificacion: "Se establece claramente que los Espacios de Apoyo brindan respuestas pedagógicas a las Necesidades Específicas de Apoyo Educativo (NEAE) y no deben utilizarse para segregar por problemas de conducta."
+    },
+    competenciaEvaluada: "Gestión de los Espacios de Apoyo y articulación docente-orientador basada en el enfoque inclusivo.",
+    nivelDificultad: "Alta"
+  },
+  {
+    id: 672,
+    categoria: "Planificación por Competencias / Situación de Aprendizaje",
+    grado: "5to grado de Primaria",
+    pregunta: "El equipo docente de 5to grado de la Regional 07 está diseñando una unidad didáctica integral. Al revisar la Adecuación Curricular 2023, constatan que deben articular las áreas de Ciencias de la Naturaleza (cambio climático) y Lengua Española (el artículo expositivo). ¿Cuál es la estrategia de planificación más coherente con el enfoque por competencias para lograr un aprendizaje profundo y articulado?",
+    opciones: [
+      "Dividir el horario estrictamente: impartir los conceptos climáticos el lunes mediante copiado de pizarra, y el martes enseñar las reglas gramaticales del artículo expositivo utilizando ejemplos genéricos de libros de texto.",
+      "Diseñar un 'Eje Temático' donde los estudiantes primero memoricen un glosario de términos ambientales y luego realicen un examen escrito de respuestas cortas para evaluar ambas áreas por separado.",
+      "Formular una Situación de Aprendizaje basada en un problema ambiental de la comunidad local. A partir de ella, estructurar un Proyecto de Aula donde la investigación de las causas del cambio climático (Ciencias) sirva como insumo real para planificar, redactar y publicar artículos expositivos (Lengua Española) dirigidos a la comunidad.",
+      "Solicitar a los estudiantes que recorten noticias sobre el clima en los periódicos y las peguen en una cartulina, calificando esta actividad con una 'L' (Logrado) en los indicadores de logro de ambas asignaturas simultáneamente."
+    ],
+    respuestaCorrecta: 2,
+    explicacion: "El currículo dominicano promueve la integración de las áreas a través de estrategias como el Aprendizaje Basado en Proyectos (ABP) y las Situaciones de Aprendizaje. Articular Ciencias y Lengua Española significa usar los contenidos conceptuales (cambio climático, estructura del texto expositivo) como mediadores para desarrollar competencias comunicativas y científicas en un contexto real y significativo (publicar para la comunidad).",
+    fundamentoNormativo: {
+      documento: "Bases de la Adecuación Curricular 2023",
+      seccion: "Estrategias de Articulación de las Áreas Curriculares",
+      criterio: "Uso de proyectos de aula y situaciones de aprendizaje contextualizadas",
+      justificacion: "Se mandata la integración de los saberes superando la fragmentación disciplinar, permitiendo que el estudiante movilice conocimientos de diferentes áreas para resolver un problema o crear un producto."
+    },
+    competenciaEvaluada: "Diseño de planificaciones articuladas interdisciplinarmente mediante metodologías activas.",
+    nivelDificultad: "Alta"
+  },
+  {
+    id: 673,
+    categoria: "Evaluación de los Aprendizajes / Escala Cualitativa",
+    grado: "2do grado de Primaria",
+    pregunta: "Al finalizar el primer período académico, un docente de 2do grado asienta las evaluaciones en el registro escolar. Observa que una estudiante tiene 'I' (Iniciado) en la mayoría de los indicadores de logro correspondientes a la competencia de Resolución de Problemas Matemáticos. Ante este escenario, ¿cuál es el mandato normativo que debe seguir el docente?",
+    opciones: [
+      "Mantener la calificación y sugerir formalmente a la dirección que la estudiante repita el 2do grado al finalizar el año, argumentando que no posee las habilidades cognitivas necesarias para avanzar.",
+      "Ignorar el nivel 'I' y colocar 'EP' (En Proceso) por lástima, para no desmotivar a la estudiante y evitar cuestionamientos por parte de las autoridades distritales.",
+      "Registrar la calificación real ('I') e inmediatamente diseñar e implementar un Plan de Apoyo Pedagógico (recuperación) con estrategias diferenciadas, informando a la familia y al equipo de gestión para dar seguimiento durante el siguiente período.",
+      "Exigir a la familia que inscriba a la estudiante en tutorías privadas fuera de la escuela como condición obligatoria para permitirle continuar asistiendo a las clases de matemáticas."
+    ],
+    respuestaCorrecta: 2,
+    explicacion: "La evaluación en el Sistema Educativo Dominicano es formativa y continua. La calificación 'I' (Iniciado) no es un sello de fracaso, sino una alerta temprana. La normativa obliga al docente a intervenir pedagógicamente mediante un Plan de Apoyo/Recuperación durante el año escolar, involucrando a la familia, sin recurrir a falsificación de notas (B) ni a condicionamientos ilegales (D).",
+    fundamentoNormativo: {
+      documento: "Ordenanza 04-2023 (Sistema de Evaluación de los Aprendizajes)",
+      seccion: "Estrategias de Apoyo y Recuperación Pedagógica",
+      criterio: "Obligatoriedad de planes de apoyo oportunos frente al rezago",
+      justificacion: "Establece que cuando un estudiante no alcanza los indicadores previstos (Iniciado), el centro educativo debe implementar estrategias de intervención pedagógica inmediata y continua, evitando esperar al final del año escolar."
+    },
+    competenciaEvaluada: "Interpretación ética de los resultados de evaluación y diseño de intervenciones de recuperación.",
+    nivelDificultad: "Alta"
+  },
+  {
+    id: 674,
+    categoria: "Alfabetización Inicial / Conciencia Fonológica y Léxica",
+    grado: "1er grado de Primaria",
+    pregunta: "Durante una extensa secuencia didáctica sobre los 'Nombres Propios', un docente de 1er grado identifica que la mayoría de sus estudiantes se encuentra en una etapa de conceptualización silábico-alfabética (asignan valor sonoro a algunas letras, pero omiten otras en una misma palabra). ¿Qué intervención pedagógica es la más efectiva y apegada a la Política de Alfabetización Inicial?",
+    opciones: [
+      "Abandonar el trabajo con textos y nombres propios, regresando a la enseñanza exclusiva del abecedario en orden estricto (A, B, C...) hasta que lo reciten de memoria sin equivocaciones.",
+      "Entregar planas intensivas de sílabas trabadas y compuestas (pra, pre, pri / bra, bre, bri) para forzar la maduración neurológica de la escritura convencional.",
+      "Promover situaciones donde los estudiantes escriban de manera espontánea (por ejemplo, listas de asistencia o carteles del aula) e interactúen con el docente como 'escriba', formulando preguntas de reflexión metalingüística (¿Qué letras nos faltan aquí para que diga 'Camila'?).",
+      "Corregir todas las producciones escritas de los estudiantes con un lápiz rojo, obligándoles a borrar y copiar la palabra correcta de la pizarra sin mayor explicación."
+    ],
+    respuestaCorrecta: 2,
+    explicacion: "La transición de la etapa silábica a la alfabética requiere conflicto cognitivo mediado por el docente. Las planas mecánicas y la memorización aislada del abecedario están proscritas por la Política de Alfabetización. La mediación (docente como escriba) y la reflexión sobre el sistema de escritura (preguntas metalingüísticas sobre textos reales) son las estrategias que garantizan la apropiación de la lectoescritura.",
+    fundamentoNormativo: {
+      documento: "Ordenanza 01-2023 (Política Nacional de Alfabetización Inicial)",
+      seccion: "Estrategias de Enseñanza de la Lectura y la Escritura",
+      criterio: "Intervención docente basada en el socioconstructivismo y la reflexión",
+      justificacion: "El enfoque demanda que los estudiantes participen en prácticas sociales del lenguaje. El docente debe problematizar las hipótesis infantiles sobre la escritura mediante la lectura compartida y la escritura mediada."
+    },
+    competenciaEvaluada: "Aplicación de estrategias constructivistas frente a los distintos niveles de apropiación del sistema de escritura.",
+    nivelDificultad: "Alta"
+  },
+  {
+    id: 675,
+    categoria: "Educación Inclusiva / Ajustes Razonables (Discapacidad Visual)",
+    grado: "4to grado de Primaria",
+    pregunta: "Una estudiante de 4to grado presenta 'Baja Visión' diagnosticada, lo que le dificulta acceder a la información escrita en la pizarra y en los libros de texto regulares, generándole frustración y rezago. Como parte del Plan de Apoyo Individualizado (PAI), ¿qué Ajustes Razonables de acceso al currículo debe implementar el docente de aula?",
+    opciones: [
+      "Ubicar a la estudiante preferencialmente cerca de la pizarra, utilizar macrotipos (fuentes ampliadas), aumentar el contraste en los materiales impresos, verbalizar todo lo que se escribe en la pizarra y permitirle grabar las clases explicativas.",
+      "Disminuir la dificultad de los contenidos de 4to grado y evaluarla con los indicadores de 1er grado, ya que su baja visión le impide desarrollar un pensamiento abstracto de un nivel superior.",
+      "Delegar toda la responsabilidad de enseñanza a un compañero 'tutor' que tenga buena visión, para que le dicte todas las clases y le lea los libros durante el año escolar, liberando al docente de esa carga.",
+      "Solicitar a la dirección que exija a la familia la compra de una máquina Braille; hasta que no la adquieran, la estudiante solo será evaluada mediante participación oral."
+    ],
+    respuestaCorrecta: 1,
+    explicacion: "La Baja Visión requiere 'Ajustes Razonables de Acceso' (modificación del entorno, materiales y vías de comunicación), no necesariamente ajustes curriculares significativos (bajar el nivel del contenido). Usar macrotipos, ubicar estratégicamente, usar alto contraste y verbalizar la pizarra garantizan el acceso a la información cumpliendo los principios del Diseño Universal para el Aprendizaje (DUA).",
+    fundamentoNormativo: {
+      documento: "Ordenanza 05-2024 y Diseño Universal para el Aprendizaje (DUA)",
+      seccion: "Ajustes Razonables y Medidas de Accesibilidad",
+      criterio: "Provisión de formatos múltiples de representación visual y auditiva",
+      justificacion: "Establece el derecho a recibir formatos accesibles y la obligación del centro de modificar el entorno físico y metodológico para eliminar las barreras de aprendizaje derivadas de una condición sensorial."
+    },
+    competenciaEvaluada: "Diseño e implementación de ajustes razonables de acceso para estudiantes con discapacidad sensorial.",
+    nivelDificultad: "Alta"
+  },
+  {
+    id: 676,
+    categoria: "Convivencia Escolar / Cultura de Paz y Disciplina Positiva",
+    grado: "6to grado de Primaria",
+    pregunta: "Un docente de 6to grado enfrenta un clima de aula tenso: los estudiantes se interrumpen constantemente, se levantan sin permiso y utilizan un vocabulario inapropiado, impidiendo el desarrollo de las secuencias didácticas. Conforme a las Normas del Sistema Educativo Dominicano para la Convivencia Armoniosa, ¿cuál es el abordaje pedagógico inicial correcto para esta problemática amplia?",
+    opciones: [
+      "Amenazar a todo el grupo con restar 10 puntos de la calificación final de cada estudiante y suspender los recreos durante un mes completo como medida de castigo ejemplarizante.",
+      "Ignorar las disrupciones y continuar dictando la clase, asumiendo que los estudiantes que realmente quieren aprender prestarán atención, dejando a los demás a su suerte.",
+      "Detener temporalmente el avance del programa de contenidos para realizar círculos de diálogo restaurativo, analizando las causas del clima de aula y construyendo colectivamente Acuerdos de Convivencia con compromisos y consecuencias lógicas claras.",
+      "Remitir un listado con los nombres de todos los estudiantes del curso al Ministerio Público de Niños, Niñas y Adolescentes, alegando ingobernabilidad del salón de clases."
+    ],
+    respuestaCorrecta: 3,
+    explicacion: "La disciplina punitiva, las sanciones colectivas, la restricción de derechos (quitar recreos) o la disminución de calificaciones por conducta son acciones ilegales según las normativas dominicanas. La solución debe ser formativa: aplicar prácticas restaurativas (círculos de diálogo) y co-construir normas de aula (Acuerdos de Convivencia) fomenta la autorregulación, la responsabilidad y una genuina Cultura de Paz.",
+    fundamentoNormativo: {
+      documento: "Normas del Sistema Educativo Dominicano para la Convivencia Armoniosa",
+      seccion: "Estrategias Preventivas y de Intervención Formativa",
+      criterio: "Uso de prácticas restaurativas y construcción colectiva de normas de aula",
+      justificacion: "Promueve la disciplina positiva y prohíbe el uso de la evaluación académica como instrumento de castigo conductual, exigiendo un abordaje pedagógico del conflicto escolar."
+    },
+    competenciaEvaluada: "Gestión de un clima de aula positivo mediante prácticas restaurativas y disciplina formativa.",
+    nivelDificultad: "Alta"
+  },
+  {
+    id: 677,
+    categoria: "Matemáticas / Modelización y Representación",
+    grado: "3er grado de Primaria",
+    pregunta: "En 3er grado, la docente va a introducir el concepto de fracción como 'parte de un todo' (1/2, 1/4). Para asegurar que los estudiantes desarrollen la competencia de Pensamiento Lógico, Creativo y Crítico y no solo mecanicen la escritura de números fraccionarios, ¿qué secuencia didáctica plantea el enfoque oficial de la Adecuación Curricular?",
+    opciones: [
+      "Escribir directamente en la pizarra: 'Numerador indica las partes que se toman y el Denominador las partes en que se divide el entero', exigiendo que lo repitan en voz alta.",
+      "Partir de un problema real (ej. repartir de manera equitativa frutas reales o de plástico entre los miembros de un grupo), transitar al uso de material concreto estructurado (regletas o bloques), luego pasar a la representación gráfica (dibujos) y finalmente a la simbólica (números).",
+      "Asignar una plana en el cuaderno donde los estudiantes deban copiar el número '1/2' repetidas veces hasta llenar la hoja para desarrollar la caligrafía matemática.",
+      "Proyectar un video donde un profesor extranjero explica las fracciones algebraicas complejas, para que los niños se vayan adaptando al rigor del Nivel Secundario."
+    ],
+    respuestaCorrecta: 2,
+    explicacion: "El aprendizaje de la Matemática en el Nivel Primario sigue el enfoque CPA (Concreto - Pictórico/Gráfico - Abstracto/Simbólico). Introducir un concepto abstracto (fracciones) únicamente de forma verbal o simbólica genera dificultades severas de aprendizaje. Partir de la manipulación concreta para resolver un problema cotidiano garantiza la comprensión profunda del concepto antes de llegar a la notación numérica.",
+    fundamentoNormativo: {
+      documento: "Adecuación Curricular 2023",
+      seccion: "Área de Matemática - Estrategias de Enseñanza",
+      criterio: "Progresión de representaciones: de lo concreto a lo abstracto",
+      justificacion: "Indica que la matemática debe enseñarse modelando situaciones de la vida real, utilizando recursos manipulativos que permitan a los estudiantes construir gradualmente el sentido de las operaciones y los números."
+    },
+    competenciaEvaluada: "Aplicación de la secuencia didáctica Concreto-Pictórico-Abstracto (CPA) en la enseñanza matemática.",
+    nivelDificultad: "Alta"
+  },
+  {
+    id: 678,
+    categoria: "Ciencias Sociales / Pensamiento Histórico",
+    grado: "4to grado de Primaria",
+    pregunta: "Al abordar el proceso de la Independencia Nacional Dominicana, el docente busca desarrollar la competencia específica que requiere que los estudiantes 'identifiquen el pasado histórico y su relación con el presente'. ¿Qué actividad promueve este nivel de pensamiento sociocrítico, alejándose del memorismo tradicional?",
+    opciones: [
+      "Realizar un dictado extenso sobre las batallas del 27 de febrero, exigiendo a los estudiantes que memoricen la fecha exacta y los nombres completos de todos los próceres.",
+      "Organizar un certamen donde los estudiantes reciten la biografía de Juan Pablo Duarte sin cometer ningún error de dicción, premiando a quien hable más rápido.",
+      "Analizar de forma guiada fragmentos sencillos del Juramento Trinitario (como fuente primaria) y organizar un debate o juego de roles donde los estudiantes comparen los ideales de libertad de esa época con los derechos ciudadanos en la actualidad.",
+      "Evaluar a los estudiantes mediante una prueba de 'Falso o Verdadero' que contenga únicamente preguntas sobre los años en que nacieron los padres de la Patria."
+    ],
+    respuestaCorrecta: 3,
+    explicacion: "El área de Ciencias Sociales en la actual Adecuación Curricular rechaza el enfoque enciclopedista e historicista puro (nombres y fechas aisladas). El objetivo es formar sujetos críticos. Analizar documentos (adaptados) y hacer conexiones entre el pasado y el presente (juegos de rol, debates) desarrolla verdaderamente el 'pensamiento histórico' y la competencia de ciudadanía responsable.",
+    fundamentoNormativo: {
+      documento: "Adecuación Curricular 2023",
+      seccion: "Área de Ciencias Sociales - Enfoque Curricular",
+      criterio: "Construcción de la ciudadanía y análisis de continuidad y cambio",
+      justificacion: "Se fundamenta en la formación ético-ciudadana, donde la historia no es letra muerta, sino un medio para entender el presente, fomentando el análisis crítico y la valoración de la identidad nacional."
+    },
+    competenciaEvaluada: "Diseño de actividades para el desarrollo del pensamiento crítico-histórico en Ciencias Sociales.",
+    nivelDificultad: "Alta"
+  },
+  {
+    id: 679,
+    categoria: "Evaluación Formativa / Rúbricas de Evaluación",
+    grado: "5to grado de Primaria",
+    pregunta: "Para el cierre de un Proyecto de Ciencias, los estudiantes de 5to grado deberán presentar un experimento frente a la comunidad educativa. El docente ha diseñado una rúbrica analítica detallada para evaluar la competencia de 'Comunicación Científica'. Según los principios de la Evaluación Formativa del MINERD, ¿cuál es el uso metodológicamente correcto de este instrumento?",
+    opciones: [
+      "Mantener la rúbrica en secreto y utilizarla únicamente durante el evento final para sorprender a los estudiantes y obtener una calificación más objetiva sin sesgos.",
+      "Entregar la rúbrica a la dirección del centro como mero requisito administrativo, pero calificar a los estudiantes basándose en su impresión general y esfuerzo el día del evento.",
+      "Compartir, analizar y explicar la rúbrica a los estudiantes desde el inicio del proyecto, utilizándola como guía de trabajo durante las fases de preparación para promover la autoevaluación y la mejora continua.",
+      "Usar la rúbrica exclusivamente para calificar negativamente a los grupos que no trajeron los materiales, registrando el cero de forma automática en el sistema."
+    ],
+    respuestaCorrecta: 3,
+    explicacion: "La rúbrica no es solo un instrumento de calificación sumativa, es fundamentalmente una herramienta de aprendizaje y andamiaje. Transparentar los criterios de evaluación desde el inicio permite a los estudiantes comprender las expectativas, regular su propio esfuerzo, y practicar la autoevaluación y co-evaluación, pilares del modelo formativo dominicano.",
+    fundamentoNormativo: {
+      documento: "Ordenanza 04-2023 (Sistema de Evaluación de los Aprendizajes)",
+      seccion: "Instrumentos de Evaluación y Transparencia",
+      criterio: "Uso de la rúbrica para la autorregulación de los aprendizajes",
+      justificacion: "La evaluación debe ser transparente, participativa y formativa. El estudiante tiene derecho a conocer previamente los criterios con los que será evaluado para orientar su propio proceso de aprendizaje."
+    },
+    competenciaEvaluada: "Uso transparente y formativo de los instrumentos de evaluación (rúbricas).",
+    nivelDificultad: "Alta"
+  },
+  {
+    id: 680,
+    categoria: "Atención a la Diversidad / Prevención del Rezago y la Exclusión",
+    grado: "1er grado de Primaria",
+    pregunta: "En una comunidad rural vulnerable, una docente de 1er grado tiene un estudiante que falta frecuentemente a clases (ausentismo crónico) porque debe cuidar a sus hermanos menores. Su nivel de alfabetización es muy inicial respecto al grupo. Ante este caso amplio y multifactorial, ¿qué actuación docente salvaguarda el derecho a la educación integral?",
+    opciones: [
+      "Dar de baja al estudiante en el registro escolar por inasistencia prolongada, asumiendo que la familia no está interesada en su educación y cediendo el cupo a otro niño.",
+      "Acumular las tareas y enviarlas a la casa al final del mes, advirtiendo a la familia que, si el niño no las trae resueltas, no será promovido al siguiente grado.",
+      "Notificar inmediatamente al equipo de gestión/orientación para indagar las causas (visita domiciliaria preventiva), diseñar un plan de apoyo curricular flexible para los días que asiste, y articular con instancias de protección si hay vulneración de derechos.",
+      "Ignorar sus ausencias y limitarse a ponerle un 'EP' (En Proceso) permanente en las calificaciones, dejando que apruebe por edad sin importar que no aprenda a leer."
+    ],
+    respuestaCorrecta: 3,
+    explicacion: "El ausentismo crónico y el trabajo infantil (cuidado de hermanos) constituyen vulneraciones de derechos. La expulsión o 'dar de baja' es una práctica ilegal. El rol docente trasciende lo pedagógico: debe reportar la situación para activar la red de protección escolar (Orientación, visitas domiciliarias), mientras provee apoyos flexibles para garantizar el aprendizaje inclusivo sin promover una promoción automática irresponsable.",
+    fundamentoNormativo: {
+      documento: "Ley 136-03 y Lineamientos de Atención a la Diversidad del MINERD",
+      seccion: "Garantía del Derecho a la Educación y Retención Escolar",
+      criterio: "Prevención del abandono escolar y articulación interinstitucional",
+      justificacion: "El Estado y sus agentes (docentes/escuelas) deben garantizar la permanencia escolar, interviniendo activamente frente a situaciones sociales o familiares que obstaculicen el acceso continuo a la educación, priorizando el interés superior del niño."
+    },
+    competenciaEvaluada: "Identificación de factores de riesgo escolar, prevención del abandono y garantía del derecho a la educación.",
+    nivelDificultad: "Alta"
+  },
+  {
+    id: 681,
+    categoria: "Educación Inclusiva / Altas Capacidades",
+    grado: "4to grado de Primaria",
+    pregunta: "En una escuela de Jornada Escolar Extendida, un estudiante de 4to grado completa todas las actividades de resolución de problemas matemáticos complejos en los primeros 10 o 15 minutos de la clase, mostrando una precisión del 100%. Durante el resto del período (que dura 45 minutos), el estudiante se muestra impaciente, interrumpe a sus compañeros que aún trabajan con material concreto o se aísla a dibujar. Ante esta situación amplia de potencial Alta Capacidad intelectual, ¿cuál es la respuesta pedagógica correcta según la Ordenanza 05-2024?",
+    opciones: [
+      "Asignarle el doble de operaciones matemáticas del mismo nivel de complejidad para mantenerlo ocupado durante todo el período y evitar que altere el orden del aula.",
+      "Nombrarlo de forma permanente como 'monitor' o 'ayudante' para que les explique y les resuelva los problemas a los compañeros rezagados, liberando de esta carga al docente titular.",
+      "Implementar una estrategia de enriquecimiento curricular dentro del aula regular, diseñando desafíos de mayor complejidad cognitiva, de investigación o de aplicación tecnológica, alineados con su Plan de Apoyo Individualizado (PAI).",
+      "Solicitar al equipo de gestión la promoción automática e inmediata del estudiante al 6to grado de Primaria de manera administrativa, sin pasar por una evaluación psicopedagógica exhaustiva."
+    ],
+    respuestaCorrecta: 2,
+    explicacion: "Para los estudiantes con Altas Capacidades, la normativa dominicana establece la estrategia de enriquecimiento curricular y la profundización de los contenidos dentro de su propio entorno inclusivo. Aumentar la cantidad de tareas repetitivas (opción A) genera frustración; usarlo permanentemente de monitor (opción B) vulnera su derecho a seguir aprendiendo a su ritmo; y la aceleración o promoción anticipada (opción D) requiere un protocolo riguroso de evaluación psicopedagógica y aprobación distrital, nunca de forma automática.",
+    fundamentoNormativo: {
+      documento: "Ordenanza 05-2024 (Educación Inclusiva) y Lineamientos de Atención a la Diversidad",
+      seccion: "Atención Educativa a Estudiantes con Altas Capacidades",
+      criterio: "Enriquecimiento curricular y diseño de planes de apoyo individualizados",
+      justificacion: "La normativa dictamina que se deben ofrecer respuestas educativas diferenciadas a través de adaptaciones curriculares por enriquecimiento o ampliación vertical de los contenidos, evitando el estancamiento cognitivo del estudiante."
+    },
+    competenciaEvaluada: "Diseño de estrategias de enriquecimiento curricular para la atención a estudiantes con altas capacidades bajo un enfoque inclusivo.",
+    nivelDificultad: "Alta"
+  },
+  {
+    id: 682,
+    categoria: "Alfabetización Inicial / Comprensión Lectora",
+    grado: "2do grado de Primaria",
+    pregunta: "Durante una evaluación formativa de lectura fluida en 2do grado de Primaria, el docente utiliza un texto narrativo breve. Un estudiante realiza la decodificación de manera sumamente veloz y con una entonación aceptable; sin embargo, al retirarle el texto y plantearle preguntas literales e inferenciales sencillas (como '¿Por qué se marchó el personaje principal?'), el niño es incapaz de responder o inventa datos ajenos a la lectura. Basado en la Política Nacional de Alfabetización Inicial, ¿qué enfoque de intervención debe priorizar el docente?",
+    opciones: [
+      "Continuar aplicando pruebas cronometradas de velocidad lectora (palabras por minuto) diariamente, asumiendo que la velocidad eventualmente generará la comprensión de forma automática.",
+      "Desplazar el foco de la decodificación mecánica hacia la enseñanza explícita de estrategias de comprensión lectora, tales como el monitoreo cognitivo, las predicciones guiadas, el uso de organizadores gráficos y el diálogo reflexivo sobre el texto antes, durante y después de la lectura.",
+      "Remitir al estudiante inmediatamente al Espacio de Apoyo bajo la sospecha de un trastorno del lenguaje expresivo, ya que su capacidad de lectura oral no coincide con su nivel de lenguaje comprensivo.",
+      "Sustituir la lectura de textos reales por el copiado de enunciados largos y el dictado de palabras sueltas para que el estudiante fije la estructura de las frases en su memoria a largo plazo."
+    ],
+    respuestaCorrecta: 1,
+    explicacion: "La Política Nacional de Alfabetización Inicial postula que saber leer no es simplemente decodificar o emitir sonidos de forma fluida (lectura mecánica), sino construir activamente el significado del texto. Cuando un estudiante presenta fluidez pero nula comprensión, el docente debe intervenir enseñando estrategias metacognitivas y de andamiaje textual, evitando enfoques fragmentados (planas, dictados) o derivaciones apresuradas sin intervención áulica previa.",
+    fundamentoNormativo: {
+      documento: "Ordenanza 01-2023 (Política Nacional de Alfabetización Inicial)",
+      seccion: "Comprensión Lectora en el Primer Ciclo de Primaria",
+      criterio: "Desarrollo de la lectura comprensiva frente a la decodificación mecánica",
+      justificacion: "Establece que la alfabetización es un proceso integral e interactivo donde la prioridad absoluta es el desarrollo de las competencias comunicativas y el procesamiento crítico de la información escrita, desestimando la memorización o repetición descontextualizada."
+    },
+    competenciaEvaluada: "Identificación de necesidades de comprensión lectora y diseño de intervenciones didácticas de andamiaje cognitivo.",
+    nivelDificultad: "Alta"
+  },
+  {
+    id: 683,
+    categoria: "Evaluación de los Aprendizajes / Promoción y Rezago",
+    grado: "6to grado de Primaria",
+    pregunta: "Al cierre del tercer período de evaluación en 6to grado de Primaria, un estudiante presenta una situación académica crítica: ha obtenido la valoración de 'Iniciado' (I) en tres de los indicadores esenciales de la competencia específica de 'Resolución de Problemas' en Matemática y en dos indicadores de 'Producción Escrita' en Lengua Española. Conforme al Sistema de Evaluación de los Aprendizajes de la República Dominicana, ¿cuál es el procedimiento normativo obligatorio que debe ejecutar el docente?",
+    opciones: [
+      "Declarar al estudiante automáticamente reprobado en el grado debido a la cantidad de indicadores en estado 'Iniciado', notificando a la familia que no tiene derecho a participar en el proceso de recuperación final.",
+      "Promover al estudiante al Nivel Secundario asignándole una calificación de 'Logrado' (L) por concepto de 'promoción social', con la intención de evitar la sobreedad y proteger sus indicadores socioemocionales.",
+      "Diseñar, registrar y ejecutar de forma obligatoria un Plan de Recuperación Pedagógica Intensiva específico para esos indicadores rezagados durante el período fijado por el calendario escolar, evaluando posteriormente mediante instrumentos diversificados si el estudiante logra la transición a 'En Proceso' o 'Logrado'.",
+      "Aplicar una única prueba escrita sumativa tradicional de 50 preguntas que abarque todo el programa del año; si el estudiante la reprueba, se le mantendrá en el mismo grado sin más oportunidades."
+    ],
+    respuestaCorrecta: 2,
+    explicacion: "La Ordenanza 04-2023 establece que ningún estudiante de Primaria puede ser reprobado o abandonado a su suerte sin que el centro educativo agote formalmente los períodos y planes de recuperación pedagógica intensiva. El docente debe estructurar un plan enfocado de forma precisa en los indicadores que están en 'Iniciado' y evaluarlos de manera diversificada para determinar su promoción legítima, prohibiendo tanto la reprobación arbitraria como la promoción automática sin evidencias de aprendizaje.",
+    fundamentoNormativo: {
+      documento: "Ordenanza 04-2023 (Sistema de Evaluación de los Aprendizajes)",
+      seccion: "Procesos de Recuperación Pedagógica y Condiciones de Promoción",
+      criterio: "Derecho a la recuperación continua y diversificación de las técnicas de evaluación",
+      justificacion: "Dispone que las escuelas deben garantizar espacios de andamiaje y tutorías a los estudiantes que muestren dificultades acumuladas, evaluando sus progresos respecto a los indicadores específicos antes de emitir un dictamen final de permanencia en el grado."
+    },
+    competenciaEvaluada: "Gestión normativa de los procesos de recuperación pedagógica y toma de decisiones de promoción basadas en criterios oficiales.",
+    nivelDificultad: "Alta"
+  },
+  {
+    id: 684,
+    categoria: "Convivencia Escolar / Entornos Digitales y Protección",
+    grado: "5to grado de Primaria",
+    pregunta: "Una docente de 5to grado de Primaria descubre, durante el transcurso de la jornada escolar, que un grupo sustancial de estudiantes del aula ha creado un grupo de mensajería digital fuera del horario escolar. En dicho espacio virtual, comparten imágenes editadas (memes) de carácter denigrante y ofensivo sobre el aspecto físico y el origen social de una estudiante del curso. La estudiante afectada se encuentra llorando en el baño y manifiesta no querer regresar a la escuela. ¿Cuál es el curso de acción institucional correcto y prioritario según las Normas de Convivencia Armoniosa?",
+    opciones: [
+      "Archivar el caso argumentando que, al haberse originado el grupo virtual fuera del horario y del recinto escolar, el centro educativo carece de jurisdicción legal para intervenir en las conductas digitales privadas de los estudiantes.",
+      "Confiscar de manera indefinida los teléfonos móviles de todos los implicados y prohibir el uso de cualquier tecnología dentro de la escuela, eximiendo a las familias de la discusión para evitar fricciones comunitarias.",
+      "Contener emocionalmente a la estudiante afectada, reportar la situación de forma inmediata a la dirección y al equipo de Orientación y Psicología, citar formalmente a las familias de los estudiantes involucrados (tanto agresores como víctima) para levantar un acta y aplicar medidas educativas de carácter restaurativo y de concienciación digital.",
+      "Exponer públicamente los nombres de los estudiantes agresores durante el acto cívico de la mañana para que reciban la sanción moral de la comunidad escolar y sirva como desincentivo general."
+    ],
+    respuestaCorrecta: 2,
+    explicacion: "Las Normas de Convivencia Armoniosa del MINERD establecen que cualquier situación que altere significativamente el bienestar socioemocional de un estudiante y afecte su permanencia escolar debe ser abordada por la escuela, aun si se origina digitalmente. El protocolo impone la intervención del equipo multidisciplinario, el trabajo obligatorio con los padres, madres o tutores, y el diseño de medidas socioeducativas y restaurativas, prohibiendo las humillaciones públicas o la inacción por razones de horario.",
+    fundamentoNormativo: {
+      documento: "Normas del Sistema Educativo Dominicano para la Convivencia Armoniosa",
+      seccion: "Abordaje del Ciberacoso y Faltas Graves contra la Integridad Moral",
+      criterio: "Corresponsabilidad de la escuela y aplicación de medidas formativas restaurativas",
+      justificacion: "La normativa obliga al personal docente y administrativo a intervenir ante cualquier manifestación de acoso (físico, verbal o digital) que vulnere los derechos de los niños, niñas y adolescentes, vinculando a las familias en la resolución formativa del conflicto."
+    },
+    competenciaEvaluada: "Aplicación de protocolos de convivencia escolar frente a situaciones complejas de ciberacoso y protección de NNA.",
+    nivelDificultad: "Alta"
+  },
+  {
+    id: 685,
+    categoria: "Matemática / Resolución de Problemas (Geometría)",
+    grado: "5to grado de Primaria",
+    pregunta: "En la planificación del bloque de Geometría para 5to grado de Primaria, el docente identifica un indicador de logro que evalúa la 'capacidad de calcular el perímetro y el área de superficies poligonales regulares en situaciones del contexto'. Para evitar la memorización mecánica de fórmulas descontextualizadas ($P = n \times l$, $A = \frac{P \times a}{2}$), ¿cuál situación de aprendizaje resulta metodológicamente idónea bajo el enfoque curricular vigente?",
+    opciones: [
+      "Escribir las fórmulas en cartulinas grandes, pegarlas en las paredes del aula y exigir que los estudiantes las copien en sus cuadernos y las reciten al inicio de cada clase durante dos semanas.",
+      "Plantear un problema real de la escuela: calcular la cantidad de metros de malla ciclónica necesarios para cercar el huerto escolar de forma pentagonal y la cantidad de abono orgánico requerido para cubrir toda su superficie, guiando a los estudiantes a deducir los conceptos mediante la medición directa con cinta métrica.",
+      "Asignar como tarea que los estudiantes busquen en internet la definición de 'apotema' y resuelvan una guía impresa de 30 ejercicios numéricos abstractos sin vinculación con objetos reales.",
+      "Eximir de la evaluación del área a los estudiantes que presenten dificultades de cálculo, permitiéndoles únicamente medir el perímetro con una regla para no complicar su proceso de aprendizaje."
+    ],
+    respuestaCorrecta: 1,
+    explicacion: "La Adecuación Curricular 2023 promueve la modelización y la matematización de la realidad. Enfrentar a los estudiantes a un problema real de su entorno (como el huerto escolar) les exige movilizar los conceptos procedimentales de medición, comprender la diferencia cualitativa entre longitud (perímetro) y superficie (área) y construir el pensamiento lógico antes de la formalización simbólica de las fórmulas abstractas.",
+    fundamentoNormativo: {
+      documento: "Adecuación Curricular 2023",
+      seccion: "Área de Matemática - Competencia de Resolución de Problemas",
+      criterio: "Uso del entorno inmediato para la construcción de conceptos geométricos",
+      justificacion: "Establece que el aprendizaje de la geometría y las magnitudes debe cimentarse en la exploración del espacio, la estimación y la resolución de situaciones prácticas del contexto comunitario o escolar."
+    },
+    competenciaEvaluada: "Diseño de situaciones de aprendizaje contextualizadas para el desarrollo de competencias del pensamiento lógico-matemático.",
+    nivelDificultad: "Alta"
+  },
+  {
+    id: 686,
+    categoria: "Espacios de Apoyo / Detección y Referimiento",
+    grado: "1er grado de Primaria",
+    pregunta: "Transcurridos los dos primeros meses del año escolar, una docente de 1er grado de Primaria observa que un estudiante muestra un retraso psicomotor severo, dificultades extremas para articular frases de más de dos palabras y una ausencia casi total de respuestas a los estímulos de lectoescritura, mostrando además conductas de aislamiento. La docente desea que el niño sea evaluado de manera especializada. Según la Ordenanza 05-2024 y las orientaciones para Espacios de Apoyo, ¿cuál es el procedimiento formal y secuencial correcto que debe seguir?",
+    opciones: [
+      "Redactar una nota en la libreta de comunicaciones ordenando a la madre que no vuelva a enviar al niño a la escuela hasta que traiga un diagnóstico médico definitivo emitido por un neurólogo privado.",
+      "Llevar al estudiante directamente al Espacio de Apoyo durante su hora de clases sin previo aviso y dejarlo bajo el cuidado de la especialista para que esta asuma su diagnóstico y escolarización exclusiva.",
+      "Sustentar el caso con evidencias (producciones, registro anecdótico), aplicar ajustes razonables iniciales de forma interna en el aula, consultar con el equipo de Orientación y Psicología del centro para iniciar el proceso de evaluación psicopedagógica y, si es necesario, tramitar el referimiento conjunto al Espacio de Apoyo o al CAD.",
+      "Esperar a que finalice el año escolar y calificar al estudiante con 'I' (Iniciado) en todos los campos, asumiendo que el proceso de maduración biológica corregirá las dificultades de forma natural en el siguiente grado."
+    ],
+    respuestaCorrecta: 2,
+    explicacion: "El protocolo de atención a las Necesidades Específicas de Apoyo Educativo (NEAE) en la República Dominicana exige un proceso escalonado: detección por el docente, recolección de evidencias objetivas, implementación de ajustes en el aula regular, interconsulta con Orientación y Psicología de la escuela y, a partir de ahí, la intervención articulada con el Espacio de Apoyo o el Centro de Atención a la Diversidad (CAD). No se puede excluir al estudiante ni saltarse las instancias del centro de forma unilateral.",
+    fundamentoNormativo: {
+      documento: "Ordenanza 05-2024 (Educación Inclusiva) y Orientaciones para Espacios de Apoyo",
+      seccion: "Proceso de Identificación, Evaluación Psicopedagógica y Referimiento",
+      criterio: "Actuación protocolarizada y corresponsabilidad institucional del equipo docente",
+      justificacion: "Determina de forma estricta la ruta para la solicitud de apoyos especializados, colocando al docente de aula y al orientador del centro como los primeros agentes responsables de la detección y adaptaciones iniciales."
+    },
+    competenciaEvaluada: "Aplicación de la ruta normativa e institucional para la detección, evaluación y referimiento de estudiantes con presuntas NEAE.",
+    nivelDificultad: "Alta"
+  },
+  {
+    id: 687,
+    categoria: "Ciencias Sociales / Educación Ciudadana",
+    grado: "3er grado de Primaria",
+    pregunta: "En el marco del desarrollo de la competencia específica 'Ciudadanía responsable y democrática', un docente de 3er grado de Primaria planifica una unidad sobre las instituciones gubernamentales locales y los derechos ciudadanos en el municipio. Para lograr un aprendizaje sociocrítico y evitar el dictado pasivo de las funciones del Ayuntamiento, ¿qué estrategia didáctica es la idónea según el enfoque de la Adecuación Curricular?",
+    opciones: [
+      "Organizar una simulación en el aula de una 'Asamblea Comunitaria del Ayuntamiento Infantil', donde los estudiantes identifiquen un problema real de su entorno (como la acumulación de basura o la falta de iluminación en los parques), asuman roles (Alcalde, Regidores, Ciudadanos) y propongan soluciones basadas en sus derechos y deberes.",
+      "Ordenar a los estudiantes que memoricen el organigrama completo del Ayuntamiento de su municipio y los nombres de todos los regidores actuales para evaluarlos en una prueba oral cronometrada.",
+      "Asignar la lectura individual de la Ley de Municipios en su formato legal original y solicitar un resumen escrito de 5 páginas para entregar al día siguiente.",
+      "Proyectar fotografías de los monumentos históricos de la provincia y pedir a los estudiantes que las calquen en sus cuadernos utilizando papel transparente."
+    ],
+    respuestaCorrecta: 0,
+    explicacion: "La simulación de procesos democráticos (como un ayuntamiento infantil) constituye una estrategia didáctica activa recomendada en el currículo dominicano para las Ciencias Sociales. Permite a los estudiantes del primer ciclo comprender conceptos cívicos abstractos a través de la vivencia, la argumentación y la búsqueda de soluciones a problemas comunitarios reales, logrando un aprendizaje significativo y funcional alejado de la memorización estéril de datos políticos.",
+    fundamentoNormativo: {
+      documento: "Adecuación Curricular 2023",
+      seccion: "Área de Ciencias Sociales - Enfoque Pedagógico del Primer Ciclo",
+      criterio: "Promoción de la participación democrática y el aprendizaje vivencial",
+      justificacion: "Señala que las Ciencias Sociales deben potenciar la formación de una ciudadanía crítica y participativa a través de estrategias metodológicas que recreen la vida social y democrática en el entorno escolar."
+    },
+    competenciaEvaluada: "Selección y diseño de estrategias didácticas vivenciales para el desarrollo de competencias ciudadanas en Ciencias Sociales.",
+    nivelDificultad: "Alta"
+  },
+  {
+    id: 688,
+    categoria: "Ciencias de la Naturaleza / Indagación y Sostenibilidad",
+    grado: "6to grado de Primaria",
+    pregunta: "Un docente de 6to grado de Primaria observa que los estudiantes desperdician grandes cantidades de papel y plástico durante las horas de recreo, dejando los desechos esparcidos en el patio del plantel. Con el propósito de desarrollar de manera transversal la Competencia Fundamental Ambiental y de la Salud y la competencia específica del área sobre 'Ofrecer soluciones a problemas ambientales', ¿cuál es el diseño didáctico correcto para abordar esta problemática amplia?",
+    opciones: [
+      "Establecer una jornada de castigo donde los estudiantes que tiren basura deban permanecer después de la hora de salida a limpiar todo el centro educativo de forma obligatoria.",
+      "Diseñar e implementar un Proyecto de Investigación de Aula (PIA) enfocado en la gestión de residuos sólidos en el centro, donde los estudiantes cuantifiquen la basura generada, investiguen los tiempos de degradación de los materiales, diseñen estaciones de clasificación de desechos y realicen campañas de concienciación basadas en evidencias científicas.",
+      "Dictar una conferencia magistral de dos horas sobre la historia del ecologismo global, prohibiendo la intervención de los alumnos para optimizar el tiempo de transmisión de los datos teóricos.",
+      "Suspender las clases de Ciencias de la Naturaleza del mes y sustituirlas por la visualización pasiva de documentales sobre la contaminación de los océanos en otros continentes."
+    ],
+    respuestaCorrecta: 1,
+    explicacion: "El Proyecto de Investigación de Aula (PIA) es una de las estrategias de articulación curricular y metodológica de mayor relevancia en el enfoque dominicano por competencias, especialmente en Ciencias de la Naturaleza. Al involucrar activamente a los estudiantes en la recolección de datos de su propia realidad, el análisis científico de su entorno y la propuesta de soluciones viables, se promueve el pensamiento científico, el cambio actitudinal y el aprendizaje con impacto social.",
+    fundamentoNormativo: {
+      documento: "Bases de la Adecuación Curricular 2023 y Documentos Orientadores del MINERD",
+      seccion: "Estrategias de Enseñanza-Aprendizaje: El Proyecto de Investigación de Aula",
+      criterio: "Investigación científica escolar y asunción de posturas proambientales",
+      justificacion: "El currículo determina que el estudiante debe aprender a aplicar el método de indagación científica frente a problemas socioambientales locales, generando un impacto directo en el desarrollo sostenible de su comunidad educativa."
+    },
+    competenciaEvaluada: "Diseño y gestión de Proyectos de Investigación de Aula orientados al desarrollo de competencias de indagación y cuidado ambiental.",
+    nivelDificultad: "Alta"
+  },
+  {
+    id: 689,
+    categoria: "Ética Docente / Conducta Profesional y Transparencia",
+    grado: "1er a 6to grado de Primaria",
+    pregunta: "Un grupo de madres de un centro educativo en San Francisco de Macorís se organiza para ofrecerle al docente de sus hijos un obsequio económico significativo en efectivo y el pago de un curso técnico privado, argumentando que desean manifestar su gratitud por las atenciones brindadas. Al mismo tiempo, solicitan de manera sutil que el docente 'considere con flexibilidad' las bajas calificaciones de sus hijos en los reportes del registro del próximo período. Según la Orden Departamental 22-2023 sobre Ética y Conducta Profesional, ¿cuál es el comportamiento imperativo del docente?",
+    opciones: [
+      "Aceptar el dinero y el curso privado discretamente, asumiendo que es un incentivo justo a su labor pedagógica y modificando las calificaciones de los niños en el registro como muestra de reciprocidad y cortesía.",
+      "Rechazar categóricamente el beneficio económico y los favores formativos propuestos, explicar de forma asertiva a las familias que la evaluación se rige estrictamente por indicadores de logro objetivos y reportar de inmediato el intento de condicionamiento a la Dirección del centro educativo.",
+      "Aceptar el obsequio material para no ofender la cultura local y la generosidad de las familias, pero mantener las calificaciones bajas de los estudiantes sin realizar los cambios prometidos.",
+      "Sugerir a las madres que entreguen el dinero en forma de materiales de lujo para la remodelación del aula del docente, evitando así el rastro de dinero en efectivo y eludiendo las normativas del Ministerio."
+    ],
+    respuestaCorrecta: 1,
+    explicacion: "La Orden Departamental 22-2023 y el Código de Ética de la Carrera Docente prohíben de forma absoluta la recepción de beneficios económicos, dádivas, regalos valiosos o favores personales que comprometan la objetividad, la transparencia y la honestidad de la función pública docente, de manera especial cuando se pretende coaccionar o alterar el proceso criterial de evaluación de los aprendizajes, lo cual constituye una falta grave pasible de sanción disciplinaria.",
+    fundamentoNormativo: {
+      documento: "Orden Departamental 22-2023 (Código de Ética y Conducta Profesional del MINERD)",
+      seccion: "De los Conflictos de Interés, Prohibiciones y Régimen de Integridad",
+      criterio: "Prohibición absoluta de recibir dádivas o prebendas a cambio de favores académicos",
+      justificacion: "Establece que el personal docente debe actuar bajo los principios de integridad, probidad y transparencia, teniendo estrictamente prohibido aceptar compensaciones externas que alteren la objetividad de sus funciones evaluativas y del registro escolar."
+    },
+    competenciaEvaluada: "Resolución de dilemas éticos profesionales y aplicación del régimen de integridad del servidor público docente.",
+    nivelDificultad: "Alta"
+  },
+  {
+    id: 690,
+    categoria: "Alfabetización Inicial / Niveles de Conceptualización de la Escritura",
+    grado: "1er grado de Primaria",
+    pregunta: "Al inicio del segundo cuatrimestre en 1er grado de Primaria, el docente realiza un análisis de las escrituras espontáneas del grupo. Nota que un estudiante realiza grafismos continuos y pseudoletras alineadas de izquierda a derecha, exigiendo que para que diga una palabra debe haber un mínimo de tres caracteres distintos (aplicando las hipótesis de cantidad mínima y variedad interna). El niño afirma con convicción que allí dice 'Mariposa'. Según el enfoque oficial de alfabetización, ¿en qué nivel de conceptualización se encuentra el estudiante y qué estrategia de mediación es la normativamente adecuada?",
+    opciones: [
+      "Se encuentra en el nivel Alfabético. Se debe proceder a enseñarle el uso correcto de las reglas ortográficas complejas ($b/v$, $c/s/z$) mediante el dictado de textos formales extensos.",
+      "Se encuentra en el nivel Silábico. La estrategia idónea es obligarlo a repetir las sílabas aisladas de la palabra ($ma-ri-po-sa$) en la pizarra hasta que memorice la combinación convencional de las letras.",
+      "Se encuentra en el nivel Presilábico. La estrategia de mediación consiste en confrontar sus hipótesis promoviendo la lectura de textos reales, el uso de letras móviles para armar su nombre y palabras cortas, y la comparación de escrituras con sus compañeros para generar conflicto cognitivo.",
+      "Se encuentra en un estado de Rezago Cognitivo Irreversible. Debe ser excluido del proceso regular de alfabetización de 1er grado y remitido de forma definitiva a un centro de educación especial."
+    ],
+    respuestaCorrecta: 2,
+    explicacion: "El estudiante demuestra de forma clara características del nivel Presilábico, donde aún no establece una correspondencia entre los sonidos de la lengua oral y las grafías de la lengua escrita, pero ya maneja criterios de legibilidad (cantidad y variedad). El enfoque constructivista de la Ordenanza 01-2023 prescribe que la mediación docente debe respetar esta hipótesis evolutiva y plantear situaciones retadoras (letras móviles, textos de circulación social) que desestabilicen su pensamiento presilábico para avanzar al nivel silábico, proscribiendo los castigos o las visiones mecanicistas de las opciones B y D.",
+    fundamentoNormativo: {
+      documento: "Ordenanza 01-2023 e Indicadores de Desarrollo de la Alfabetización Inicial del MINERD",
+      seccion: "Niveles de Conceptualización de la Lengua Escrita y Enfoque Didáctico",
+      criterio: "Reconocimiento de las hipótesis infantiles e intervención mediadora constructivista",
+      justificacion: "La Política Nacional de Alfabetización exige que los docentes identifiquen con precisión científica el nivel psicogenético del estudiante (presilábico, silábico, silábico-alfabético, alfabético) para diseñar situaciones de aprendizaje personalizadas que movilicen la reflexión metalingüística real."
+    },
+    competenciaEvaluada: "Diagnóstico psicogenético de la escritura e implementación de estrategias de mediación didáctica socioconstructivista.",
+    nivelDificultad: "Alta"
+  }
     
 ];
     
