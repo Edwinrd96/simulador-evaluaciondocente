@@ -10260,6 +10260,1476 @@ const bancoPreguntas = [
     },
     nivelDificultad: "Alta",
     competenciaEvaluada: "Autoevaluación del servicio con base en datos propios, equilibrio entre función preventiva y atención individual, y gestión de la documentación obligatoria"
+  },
+  {
+    id: 721,
+    categoria: "Protección Infantil - Intervención en Crisis",
+    pregunta: "Un estudiante de 4to grado de Primaria llega al centro con marcas de quemaduras de cigarrillos en el antebrazo. Al ser consultado, se muestra aterrorizado y suplica que no llamen a su madre porque 'ella no sabe que el padrastro le hace eso'. Ante la revelación de una situación de abuso físico por parte de una figura externa a los padres biológicos dentro del hogar, ¿cuál es la acción prioritaria bajo la Ruta Crítica?",
+    opciones: [
+      "Realizar una visita domiciliaria inmediata con la madre para confrontar al padrastro y exigirle que abandone el hogar, evitando así tener que involucrar a la justicia y proteger la estabilidad emocional del niño.",
+      "Notificar de forma inmediata al Ministerio Público de Niños, Niñas y Adolescentes y/o CONANI, resguardando al estudiante en el centro hasta que las autoridades tomen posesión del caso, sin alertar al agresor ni a la madre antes de la intervención judicial.",
+      "Documentar el caso en el registro anecdótico y esperar a que el niño acumule más evidencias o marcas antes de realizar la denuncia, para asegurarse de que el Ministerio Público no desestime el caso por falta de pruebas.",
+      "Citar al padrastro al centro educativo para una entrevista de conciliación familiar, con el objetivo de llegar a un acuerdo de no agresión y resolver el conflicto de forma privada dentro de la comunidad escolar."
+    ],
+    respuestaCorrecta: 1,
+    explicacion: "En casos de abuso físico, la prioridad es la seguridad del menor. La normativa es tajante: está prohibido realizar cualquier tipo de conciliación, mediación o confrontación con el agresor por parte del personal escolar. La denuncia ante el Ministerio Público o CONANI es obligatoria e inmediata al momento de conocer el hecho, ya que el personal escolar no tiene funciones periciales ni de investigación penal.",
+    fundamentoNormativo: {
+      documento: "Guía de Ruta Crítica para la Prevención y Atención de la Violencia",
+      capitulo: "Protocolo de atención ante abuso físico",
+      apartado: "Acciones inmediatas del personal escolar",
+      justificacion: "La Ruta Crítica establece que el personal docente y administrativo es garante de derechos. La notificación a las autoridades competentes es un mandato legal (Ley 136-03) y técnico que debe ejecutarse sin dilación para prevenir la revictimización y el aumento del riesgo vital."
+    },
+    nivelDificultad: "Alta",
+    competenciaEvaluada: "Aplicación de protocolos de protección infantil y actuación ante riesgo inminente."
+  },
+  {
+    id: 722,
+    categoria: "Inclusión Educativa - Ajustes Razonables",
+    pregunta: "Un estudiante con Trastorno del Espectro Autista (TEA) en 5to de Secundaria requiere el uso de una computadora portátil para realizar sus producciones escritas debido a sus dificultades de motricidad fina, según indica su Evaluación Psicopedagógica (EIP). El docente de Lengua Española se niega, alegando que 'el currículo exige caligrafía legible para mejorar la motricidad'. ¿Qué directriz debe emitir la Unidad de Orientación y Psicología?",
+    opciones: [
+      "Instruir al docente a que exija el trabajo a mano, pero permitiendo que el estudiante lo entregue una semana después que sus compañeros para compensar su lentitud.",
+      "Solicitar al estudiante que practique caligrafía en casa como tarea extra para que pueda cumplir con el requisito del docente sin alterar el programa.",
+      "Orientar al docente sobre el derecho a los ajustes de acceso (uso de herramientas tecnológicas) y el principio de equidad, explicando que la competencia a evaluar es la producción escrita y no la destreza motriz, por lo que el ajuste es obligatorio.",
+      "Sugerir que el estudiante sea evaluado solo oralmente, eliminando el requisito de producción escrita para evitar la confrontación con el docente."
+    ],
+    respuestaCorrecta: 2,
+    explicacion: "El ajuste razonable de acceso (uso de ordenador/laptop) elimina la barrera física sin disminuir la exigencia académica. Obligar al estudiante a esforzarse en una habilidad (caligrafía) que está limitada por su neurodivergencia, a costa de su rendimiento en la competencia de producción escrita, es una barrera discriminatoria. La escuela debe garantizar las herramientas necesarias para la equidad.",
+    fundamentoNormativo: {
+      documento: "Ordenanza 05-2024 sobre Educación Inclusiva",
+      capitulo: "Ajustes razonables y apoyos de acceso",
+      apartado: "Uso de tecnologías de asistencia",
+      justificacion: "La normativa estipula que los centros educativos deben facilitar los apoyos de acceso necesarios (tecnológicos, físicos o comunicacionales) para que el estudiante pueda demostrar sus competencias. El docente debe adaptar el medio de entrega sin que esto invalide la evaluación de la competencia curricular."
+    },
+    nivelDificultad: "Media",
+    competenciaEvaluada: "Asesoramiento psicopedagógico y gestión de ajustes razonables."
+  },
+  {
+    id: 723,
+    categoria: "Salud Mental - Prevención del Abandono",
+    pregunta: "Una adolescente de 16 años, excelente estudiante, ha comenzado a faltar a clase los martes y jueves, se muestra desaliñada, con ojeras profundas y su rendimiento académico ha caído drásticamente. Tras una entrevista con la psicóloga, la joven revela que debe cuidar a sus hermanos menores porque su madre trabaja en doble turno para pagar las deudas del hogar. ¿Cómo debe intervenir el equipo de psicología?",
+    opciones: [
+      "Remitir el caso a la dirección para que sea expulsada por inasistencia recurrente, según lo establecido en el reglamento de disciplina escolar.",
+      "Diseñar un plan de apoyo socioemocional y articular con los docentes para la flexibilización de tareas, además de canalizar el caso con el área de Bienestar Estudiantil y redes locales de protección para buscar alternativas de cuidado infantil para los hermanos.",
+      "Indicar a la adolescente que debe organizar mejor su tiempo para no afectar sus estudios, ya que la responsabilidad de los hermanos es un asunto familiar y no escolar.",
+      "Sugerirle que abandone el centro y se inscriba en un programa de educación acelerada para adultos, ya que su situación actual le impide cumplir con el horario regular."
+    ],
+    respuestaCorrecta: 1,
+    explicacion: "El rol del psicólogo escolar ante el riesgo de abandono por factores socioeconómicos es actuar como enlace y articulador de recursos. El abandono escolar no es una falta disciplinaria, sino una vulneración de derechos que debe atenderse con medidas de apoyo (flexibilidad académica, redes de protección, asistencia social) que permitan la permanencia del estudiante.",
+    fundamentoNormativo: {
+      documento: "Lineamientos del Proceso de Orientación y Psicología",
+      capitulo: "Prevención de la deserción escolar",
+      apartado: "Estrategias de retención y acompañamiento",
+      justificacion: "El centro educativo tiene el mandato de garantizar la permanencia escolar. Ante barreras económicas y familiares, la unidad debe activar las redes de apoyo (internas y externas) y realizar ajustes curriculares temporales, evitando a toda costa la exclusión o deserción."
+    },
+    nivelDificultad: "Media",
+    competenciaEvaluada: "Gestión de la permanencia escolar y apoyo en situaciones de vulnerabilidad socioeconómica."
+  },
+  {
+    id: 724,
+    categoria: "Ética Profesional - Confidencialidad",
+    pregunta: "Un grupo de docentes acude a la oficina del psicólogo escolar exigiendo saber qué problema tiene un estudiante de 3er año que 'se ve raro y no habla'. Insisten en que, para poder trabajar con él, 'necesitan saber si tiene un trauma, si es bipolar o si su familia es disfuncional'. ¿Cuál es la respuesta ética correcta?",
+    opciones: [
+      "Compartir detalles sobre los traumas familiares y el diagnóstico, porque los docentes necesitan esa información para tratar al estudiante adecuadamente.",
+      "Explicar que la información clínica es confidencial, pero proporcionar a los docentes una guía de estrategias pedagógicas, pautas de manejo de aula y conductas esperadas, sin divulgar el historial íntimo del estudiante.",
+      "Entregarles el informe psicológico completo para que los docentes entiendan el contexto y no cometan errores con el estudiante.",
+      "Decirles que el estudiante es 'bipolar' para que entiendan sus cambios de humor, evitando que se molesten con el estudiante por su comportamiento."
+    ],
+    respuestaCorrecta: 1,
+    explicacion: "La confidencialidad es un pilar ético. El docente no necesita el diagnóstico clínico ni los detalles de la vida privada de la familia para enseñar. La información debe ser 'traducida' a orientaciones pedagógicas: qué hacer frente a crisis, cómo motivar, qué fortalezas tiene, etc. Divulgar diagnósticos o secretos familiares viola el secreto profesional y estigmatiza al estudiante.",
+    fundamentoNormativo: {
+      documento: "Manual Operativo de los Centros de Orientación y Psicología",
+      capitulo: "Ética y manejo de información",
+      apartado: "Límites de la confidencialidad",
+      justificacion: "El manual es explícito: la información del expediente es restringida. El psicólogo debe realizar una labor de síntesis y orientación, compartiendo únicamente la información necesaria para el abordaje pedagógico del estudiante, protegiendo su derecho a la intimidad."
+    },
+    nivelDificultad: "Media",
+    competenciaEvaluada: "Manejo ético de la confidencialidad y asesoramiento docente."
+  },
+  {
+    id: 725,
+    categoria: "Convivencia Escolar - Cultura de Paz",
+    pregunta: "En una sección de 2do de Secundaria, dos estudiantes han iniciado una dinámica de 'apodos' ofensivos que ha escalado a empujones durante el recreo. No hay lesiones, pero el clima en el aula está tenso. El Comité de Convivencia del centro decide que la única forma de resolver esto es suspendiendo a ambos por 5 días para que 'aprendan la lección'. Como psicólogo, ¿cuál es su propuesta desde la cultura de paz?",
+    opciones: [
+      "Aceptar la sanción de suspensión, ya que los empujones son una falta grave que debe castigarse severamente para dar ejemplo al resto del grupo.",
+      "Proponer un proceso de mediación escolar y justicia restaurativa, donde ambos estudiantes analicen el impacto de su conducta, asuman compromisos de reparación y se restaure la convivencia sin necesidad de sacarlos del centro educativo.",
+      "Cambiar a ambos estudiantes de aula de forma definitiva para que no vuelvan a verse y evitar así futuros incidentes.",
+      "Pedir a los padres que vengan al centro y que ellos mismos decidan el castigo para sus hijos frente a la dirección."
+    ],
+    respuestaCorrecta: 1,
+    explicacion: "La cultura de paz en las escuelas dominicanas promueve la justicia restaurativa sobre la punitiva. Las suspensiones automáticas son medidas expulsivas que no resuelven el conflicto de fondo y aumentan el riesgo de deserción o reincidencia. La mediación y el compromiso de reparación restauran los vínculos y educan en la resolución pacífica de conflictos.",
+    fundamentoNormativo: {
+      documento: "Normas del Sistema Educativo Dominicano para la Convivencia Armoniosa",
+      capitulo: "Mecanismos de resolución de conflictos",
+      apartado: "Justicia Restaurativa y Mediación",
+      justificacion: "Las Normas establecen que el abordaje de las faltas debe tener un carácter formativo. La mediación es el procedimiento adecuado para conflictos interpersonales, buscando reparar el daño y transformar la conducta, siempre prefiriendo medidas formativas sobre las suspensivas."
+    },
+    nivelDificultad: "Media",
+    competenciaEvaluada: "Promoción de la cultura de paz y resolución de conflictos."
+  },
+  {
+    id: 726,
+    categoria: "Inclusión Educativa - Altas Capacidades",
+    pregunta: "Un estudiante de 6to de Primaria demuestra un nivel de conocimiento en matemáticas que supera el programa de su grado, terminando las actividades en minutos. La maestra de aula le asigna que ayude a los estudiantes que tienen dificultades en matemáticas. ¿Qué implica esto según la normativa de inclusión?",
+    opciones: [
+      "Es una práctica excelente que desarrolla el liderazgo y el sentido de solidaridad del estudiante con sus pares menos aventajados.",
+      "Es una forma de negligencia pedagógica. Se le debe ofrecer enriquecimiento curricular (proyectos de investigación, problemas complejos, estudio profundo de temas de su interés) en lugar de usarlo como 'monitor' o 'ayudante docente'.",
+      "Es el ajuste razonable ideal, ya que permite que el estudiante se mantenga ocupado mientras el maestro atiende al resto de la clase.",
+      "El estudiante debería ser evaluado para ver si puede entrar a la universidad, ignorando el resto de las asignaturas que le aburren."
+    ],
+    respuestaCorrecta: 1,
+    explicacion: "La inclusión de estudiantes con Altas Capacidades requiere satisfacer su necesidad de estimulación cognitiva. Usarlos como 'monitores' para enseñar a otros no es un ajuste curricular para ellos, sino una función administrativa/docente que no los desafía intelectualmente y puede llevarlos a la desmotivación o al aislamiento social.",
+    fundamentoNormativo: {
+      documento: "Ordenanza 05-2024 sobre Educación Inclusiva",
+      capitulo: "Apoyo a estudiantes con altas capacidades",
+      apartado: "Enriquecimiento y flexibilización curricular",
+      justificacion: "La normativa exige que se ofrezcan experiencias de aprendizaje diferenciadas que mantengan el desafío cognitivo del estudiante. El trabajo de monitoría no cumple con este requisito normativo de atención a la diversidad."
+    },
+    nivelDificultad: "Alta",
+    competenciaEvaluada: "Atención a la diversidad y necesidades educativas específicas."
+  },
+  {
+    id: 727,
+    categoria: "Salud Mental - Riesgo Suicida",
+    pregunta: "Un estudiante publica un mensaje críptico en redes sociales sobre 'querer dejar de sufrir'. El psicólogo escolar lo cita a su oficina para una entrevista. El estudiante, al ser cuestionado, responde: '¿Usted está espiando mis redes? Eso es mi vida privada, no se meta'. Ante esta resistencia, ¿cuál es el proceder protocolar?",
+    opciones: [
+      "Pedir disculpas por haber revisado sus redes y cerrar el caso, respetando su derecho a la privacidad según lo que el joven exige.",
+      "Mantener la calma, explicarle que como psicólogo su función es velar por su bienestar ante cualquier señal de riesgo, insistir en la escucha activa y la contención, y contactar inmediatamente a la familia por precaución ante el riesgo detectado.",
+      "Amenazar al estudiante con llamar a la policía si no confiesa que está planeando un suicidio, para asegurarse de que no mienta.",
+      "Comunicar a sus compañeros de aula que el estudiante está en riesgo para que lo cuiden entre ellos, sin hablar con la familia para no causar alarma."
+    ],
+    respuestaCorrecta: 1,
+    explicacion: "El riesgo suicida rompe cualquier frontera de privacidad. La respuesta defensiva ('no se meta') es esperable. El psicólogo no debe desistir, pero tampoco confrontar agresivamente. Se debe priorizar la protección de la vida mediante el contacto con la familia y la derivación a especialistas, manteniendo el vínculo terapéutico-escolar pero asegurando la supervisión externa.",
+    fundamentoNormativo: {
+      documento: "Lineamientos del Proceso de Orientación y Psicología (Actualización 2023-2024)",
+      capitulo: "Protocolo de Intervención ante ideación suicida",
+      apartado: "Límites de la confidencialidad y actuación frente al riesgo",
+      justificacion: "Los lineamientos dictan que ante riesgo vital (suicidio, autolesión), el derecho a la vida prima sobre la privacidad del estudiante. Es obligatorio involucrar a la familia y derivar a instancias de salud mental, independientemente de la negativa del estudiante."
+    },
+    nivelDificultad: "Alta",
+    competenciaEvaluada: "Manejo de intervención en crisis y protección de la vida."
+  },
+  {
+    id: 728,
+    categoria: "Trabajo Interdisciplinario - Referencia",
+    pregunta: "Un médico pediatra envía una nota al centro escolar solicitando que 'el estudiante sea sentado en la primera fila para mejorar su atención'. El psicólogo del centro observa que el niño, además de su problema de atención, presenta dificultades para integrarse socialmente. ¿Qué debe hacer el psicólogo?",
+    opciones: [
+      "Cambiar al niño de asiento inmediatamente, ya que es una orden médica que debe cumplirse sin cuestionar.",
+      "Hacer el cambio de asiento como medida de acceso, pero además realizar una Evaluación Psicopedagógica (EIP) para identificar las causas subyacentes de sus dificultades sociales y coordinar un plan de apoyo integral que involucre tanto al médico como a los docentes.",
+      "Ignorar la nota del pediatra, ya que los médicos no tienen autoridad dentro del centro educativo para dictar dónde se sientan los estudiantes.",
+      "Solicitar a los padres que cambien de médico, porque quien debe evaluar el asiento es el psicólogo escolar."
+    ],
+    respuestaCorrecta: 1,
+    explicacion: "La respuesta integra el cumplimiento de una indicación médica (ajuste de acceso) con la competencia propia de la unidad (evaluación integral). Un solo ajuste de asiento puede ser insuficiente. La intervención interdisciplinaria permite abordar al estudiante de forma completa, colaborando con el pediatra y los docentes para un plan de apoyo efectivo.",
+    fundamentoNormativo: {
+      documento: "Manual Operativo de los Centros de Orientación y Psicología",
+      capitulo: "Coordinación Interdisciplinaria",
+      apartado: "Articulación con especialistas externos",
+      justificacion: "La normativa promueve la colaboración con especialistas externos para un abordaje integral del estudiante, manteniendo la autonomía de la unidad de psicología para realizar sus evaluaciones y planes de apoyo escolar."
+    },
+    nivelDificultad: "Media",
+    competenciaEvaluada: "Trabajo interdisciplinario y enfoque integral del estudiante."
+  },
+  {
+    id: 729,
+    categoria: "Gestión Institucional - Cultura de Paz",
+    pregunta: "La dirección del centro escolar solicita al psicólogo que redacte un nuevo 'Reglamento Interno' donde se prohíba estrictamente el uso de lenguaje coloquial, apodos y cualquier forma de contacto físico (incluso abrazos entre amigos) en el recinto. ¿Cuál debe ser la orientación del profesional?",
+    opciones: [
+      "Redactar el reglamento tal cual, ya que la disciplina férrea es la mejor forma de garantizar una paz absoluta en el centro educativo.",
+      "Asesorar a la dirección explicando que la normativa vigente de Convivencia Armoniosa prioriza el diálogo, el enfoque formativo y la construcción de vínculos positivos, por lo que reglamentos excesivamente punitivos o restrictivos de la socialización natural son contraproducentes.",
+      "Redactar el reglamento pero añadir una cláusula que permita a los maestros aplicar castigos físicos leves si los estudiantes incumplen las prohibiciones.",
+      "Ignorar la petición y no redactar nada, esperando que la dirección olvide la solicitud para no entrar en conflicto con ellos."
+    ],
+    respuestaCorrecta: 1,
+    explicacion: "El rol del psicólogo es asesorar técnicamente a la gestión para que las normas institucionales estén alineadas con la política educativa nacional. Las normativas de Convivencia Armoniosa del MINERD promueven una cultura de paz basada en la comunicación y el respeto, no en la supresión de la socialización adolescente, que es parte del desarrollo humano.",
+    fundamentoNormativo: {
+      documento: "Normas del Sistema Educativo Dominicano para la Convivencia Armoniosa",
+      capitulo: "Principios de Convivencia",
+      apartado: "Promoción de relaciones positivas",
+      justificacion: "La política de Convivencia Armoniosa del MINERD busca que los centros sean espacios de encuentro y aprendizaje. Las normativas de gestión deben promover un clima positivo y formativo, evitando caer en autoritarismos que limiten la sana convivencia."
+    },
+    nivelDificultad: "Media",
+    competenciaEvaluada: "Asesoramiento institucional y alineación normativa."
+  },
+  {
+    id: 730,
+    categoria: "Protección Infantil - Negligencia",
+    pregunta: "Una madre, con evidentes problemas de consumo de alcohol, olvida con frecuencia recoger a su hija de 7 años al finalizar la tanda extendida. La niña permanece sola en la puerta del centro hasta altas horas de la tarde. ¿Cuál es el procedimiento protocolar?",
+    opciones: [
+      "Esperar a que la madre llegue sin importar la hora, ya que es su responsabilidad y no la del centro.",
+      "Tras la segunda o tercera vez, activar el protocolo de protección, notificando al Distrito Educativo, CONANI o Ministerio Público ante el riesgo evidente de abandono o negligencia, y asegurar el cuidado de la menor hasta que llegue una autoridad competente o tutor responsable.",
+      "Regañar severamente a la madre frente a otros padres para avergonzarla y que así cambie su conducta.",
+      "Dejar a la niña con el personal de limpieza del centro para que se la lleven a su casa y luego la madre la busque allí."
+    ],
+    respuestaCorrecta: 1,
+    explicacion: "La reiteración en la falta de búsqueda de una menor de edad es una forma de negligencia y abandono. Ante el riesgo, el centro escolar no puede simplemente esperar. Se deben agotar los contactos de emergencia, pero si la situación persiste, se vuelve un caso de protección que requiere la intervención de las autoridades (CONANI/Min. Público).",
+    fundamentoNormativo: {
+      documento: "Ley 136-03",
+      capitulo: "Protección especial",
+      apartado: "Abandono y negligencia",
+      justificacion: "La Ley 136-03 establece que los centros escolares deben proteger a los NNA. El abandono reiterado en la puerta del centro es una señal de alerta de negligencia que exige la intervención de las autoridades de protección."
+    },
+    nivelDificultad: "Alta",
+    competenciaEvaluada: "Manejo de negligencia y actuación en situaciones de riesgo para el menor."
+  },
+  {
+    "id": 731,
+    "categoria": "Protección Infantil y Ruta Crítica",
+    "pregunta": "Durante una entrevista individual, una estudiante de 4to de Primaria revela al psicólogo escolar que está siendo víctima de tocamientos inapropiados por parte de su padrastro. Según la normativa vigente del sistema educativo dominicano, ¿cuál es la acción inmediata que debe ejecutar el psicólogo escolar?",
+    "opciones": [
+      "Realizar una investigación exhaustiva en la comunidad para verificar la veracidad del testimonio antes de alarmar a las autoridades.",
+      "Citar inmediatamente a la madre y al padrastro para confrontarlos y exigirles que detengan el abuso bajo amenaza de denuncia.",
+      "Brindar contención emocional, informar a la dirección del centro y activar la Ruta Crítica para denunciar el caso de manera confidencial ante el Ministerio Público o CONANI.",
+      "Referir el caso a un psicólogo clínico externo para que este determine si hubo abuso y realice la denuncia correspondiente."
+    ],
+    "respuestaCorrecta": 2,
+    "explicacion": "Ante la revelación de un abuso sexual, el personal docente y administrativo tiene la obligación legal de denunciar (Ley 136-03). La actuación correcta del psicólogo es contener al estudiante, evitar la revictimización o interrogatorios, informar al director para el respaldo institucional y activar la Ruta Crítica contactando a las autoridades competentes (Ministerio Público/CONANI/Línea Vida).",
+    "fundamentoNormativo": {
+      "documento": "Guía de Ruta Crítica para la Prevención y Atención de la Violencia en los Centros Educativos",
+      "capitulo": "Ruta de Actuación ante el Abuso Sexual",
+      "apartado": "Pasos para la atención de casos",
+      "justificacion": "Establece la obligatoriedad de la denuncia ante las autoridades de protección (CONANI, Ministerio Público) y prohíbe la confrontación directa con el presunto agresor para proteger la integridad de la víctima."
+    },
+    "competenciaEvaluada": "Referente institucional de protección y activación de protocolos.",
+    "nivelDificultad": "Alta"
+  },
+  {
+    "id": 732,
+    "categoria": "Protección Infantil y Ruta Crítica",
+    "pregunta": "Un docente de Nivel Inicial reporta a la Unidad de Orientación y Psicología que un niño de 5 años asiste frecuentemente con hematomas en la espalda y hoy presenta una quemadura sospechosa. El niño dice que 'se cayó'. ¿Qué procede realizar institucionalmente?",
+    "opciones": [
+      "Documentar el caso, levantar un acta descriptiva de las lesiones visibles junto al docente, informar a la dirección y notificar al CONANI por sospecha de abuso físico.",
+      "Llamar inmediatamente a los padres para que firmen un acuerdo de buen trato psicofamiliar en el departamento de psicología.",
+      "Desestimar el reporte docente si el niño afirma que fue un accidente, respetando la palabra del menor para evitar conflictos legales.",
+      "Solicitar al docente que interrogue profundamente al niño en el aula para obtener una confesión clara sobre quién le causó las lesiones."
+    ],
+    "respuestaCorrecta": 0,
+    "explicacion": "Las lesiones físicas incompatibles con la explicación dada por el menor son un indicador de alto riesgo de abuso físico. El protocolo exige documentación descriptiva (sin desnudar ni examinar médicamente al niño), notificación a la dirección y reporte a CONANI o al Ministerio Público, sin alertar a los posibles agresores (padres/tutores).",
+    "fundamentoNormativo": {
+      "documento": "Manual Operativo de los Centros de Orientación y Psicología / Ley 136-03",
+      "capitulo": "Prevención y Detección de Violencia",
+      "apartado": "Indicadores de abuso y negligencia",
+      "justificacion": "Obligación de reporte por sospecha de vulneración de derechos, primando el Interés Superior del Niño (Art. 12, Ley 136-03)."
+    },
+    "competenciaEvaluada": "Identificación de indicadores de vulnerabilidad y gestión de redes de apoyo externo.",
+    "nivelDificultad": "Media"
+  },
+  {
+    "id": 733,
+    "categoria": "Protección Infantil y Ruta Crítica",
+    "pregunta": "Un estudiante de 1ro de Secundaria asiste repetidamente a clases con deficiente higiene personal, sin sus útiles escolares y evidenciando signos de desnutrición severa. Los docentes reportan que se queda dormido en el aula. ¿Cuál es el procedimiento inicial más adecuado para el psicólogo escolar?",
+    "opciones": [
+      "Denunciar inmediatamente a la familia ante el Tribunal de Niños, Niñas y Adolescentes por violencia física grave.",
+      "Convocar a la familia a una entrevista para identificar las barreras socioeconómicas, brindar orientaciones parentales y coordinar apoyo con la red comunitaria.",
+      "Proveer alimentación y útiles al estudiante desde los fondos del centro educativo sin involucrar a la familia para no avergonzarlos.",
+      "Suspender al estudiante hasta que los padres garanticen su asistencia en condiciones óptimas de higiene y alimentación."
+    ],
+    "respuestaCorrecta": 1,
+    "explicacion": "Ante indicadores de negligencia, la primera acción es explorar la situación familiar para distinguir entre carencia socioeconómica extrema (que requiere apoyo y derivación a asistencia social) y negligencia intencional. La entrevista familiar es clave para trazar un plan de acompañamiento antes de medidas punitivas, a menos que haya riesgo inminente de vida.",
+    "fundamentoNormativo": {
+      "documento": "Lineamientos del Proceso de Orientación y Psicología (2023-2024)",
+      "capitulo": "Línea de Intervención: Apoyo a las Familias",
+      "apartado": "Acompañamiento a situaciones de vulnerabilidad",
+      "justificacion": "Prioriza el acompañamiento y la vinculación con redes de apoyo social comunitario para familias en situación de vulnerabilidad antes de la judicialización."
+    },
+    "competenciaEvaluada": "Orientador de familias y gestor de redes de apoyo social.",
+    "nivelDificultad": "Alta"
+  },
+  {
+    "id": 734,
+    "categoria": "Protección Infantil y Ruta Crítica",
+    "pregunta": "Durante un taller de convivencia, una estudiante de 5to de Secundaria se acerca al psicólogo escolar y le confía que su hermana menor (13 años, estudiante del mismo centro) mantiene una relación sentimental con un hombre de 28 años. ¿Cuál es la responsabilidad ineludible del psicólogo?",
+    "opciones": [
+      "Guardar absoluto secreto profesional por tratarse de una confidencia entre la estudiante de 5to y el psicólogo.",
+      "Informar de inmediato a la dirección y activar el protocolo de protección, notificando al Ministerio Público, por tratarse de un delito tipificado (seducción de menores/abuso).",
+      "Mandar a llamar a la hermana de 13 años para ofrecerle consejería sobre anticonceptivos y educación sexual integral.",
+      "Llamar al hombre de 28 años para advertirle que se aleje de la menor escolar o de lo contrario el centro tomará medidas."
+    ],
+    "respuestaCorrecta": 1,
+    "explicacion": "En la República Dominicana, cualquier relación de un adulto con un menor de edad (13 años) constituye un delito de orden público. El psicólogo escolar no puede ampararse en el secreto profesional frente a un delito contra un menor; debe activar la ruta de protección notificando a las autoridades a través de la dirección.",
+    "fundamentoNormativo": {
+      "documento": "Ley 136-03 (Código para el Sistema de Protección de los Derechos Fundamentales de Niños, Niñas y Adolescentes)",
+      "capitulo": "Derecho a la Integridad Personal",
+      "apartado": "Obligación de denunciar",
+      "justificacion": "El Código establece la obligatoriedad de denuncia para directores y personal de centros educativos al tener conocimiento de cualquier forma de abuso."
+    },
+    "competenciaEvaluada": "Aplicación de normativas de protección y límites de la confidencialidad.",
+    "nivelDificultad": "Alta"
+  },
+  {
+    "id": 735,
+    "categoria": "Protección Infantil y Ruta Crítica",
+    "pregunta": "Una estudiante acusa directamente a un docente del centro educativo de enviarle mensajes de texto con contenido sexual explícito. Al recibir esta denuncia en la Unidad de Orientación y Psicología, ¿qué paso es prioritario según el protocolo oficial?",
+    "opciones": [
+      "Reunir a la estudiante y al docente en la oficina de psicología para una mediación pacífica.",
+      "Informar inmediatamente al Director del centro para que proceda con la separación provisional del docente y notificar al Distrito Educativo y al Ministerio Público.",
+      "Analizar el teléfono de la estudiante en detalle para confirmar si ella provocó la situación antes de tomar acción.",
+      "Solicitar al docente que elimine los mensajes y pedirle que firme una carta de compromiso de no repetición."
+    ],
+    "respuestaCorrecta": 1,
+    "explicacion": "Cuando el presunto agresor es personal del centro, el protocolo exige la separación inmediata de funciones (gestión del Director y Distrito) para proteger a los estudiantes, y la notificación inmediata al Ministerio Público para la investigación legal. La mediación está terminantemente prohibida en casos de violencia o acoso sexual.",
+    "fundamentoNormativo": {
+      "documento": "Guía de Ruta Crítica para la Prevención y Atención de la Violencia",
+      "capitulo": "Abuso Sexual en el Ámbito Escolar",
+      "apartado": "Agresor miembro de la comunidad educativa",
+      "justificacion": "Establece la separación preventiva inmediata de cualquier empleado acusado de abuso y prohíbe explícitamente la mediación."
+    },
+    "competenciaEvaluada": "Coordinación de intervenciones y manejo de crisis institucionales.",
+    "nivelDificultad": "Media"
+  },
+  {
+    "id": 736,
+    "categoria": "Inclusión Educativa",
+    "pregunta": "Un estudiante de nuevo ingreso en 3ro de Primaria presenta un diagnóstico de Trastorno del Espectro Autista (TEA). El docente de aula solicita apoyo porque 'el niño no logra concentrarse en las tareas tradicionales'. Bajo la Ordenanza 05-2024, ¿cuál es el rol principal del psicólogo escolar?",
+    "opciones": [
+      "Recomendar a la familia que inscriba al estudiante en un centro de educación especial ya que el sistema regular no está preparado.",
+      "Asumir la tutoría individual del estudiante llevándolo a la oficina de psicología durante las horas de clase para que no atrase al grupo.",
+      "Asesorar al docente en la implementación del Diseño Universal para el Aprendizaje (DUA) y en la realización de ajustes razonables en su planificación.",
+      "Dictaminar médicamente cuáles son los medicamentos que el estudiante debe tomar para aumentar su concentración."
+    ],
+    "respuestaCorrecta": 2,
+    "explicacion": "El psicólogo escolar actúa como asesor psicoeducativo y promotor de inclusión. Su función no es sacar al niño del aula, sino dotar al docente de estrategias basadas en el DUA y coordinar ajustes razonables para garantizar la participación y aprendizaje del estudiante en su entorno natural.",
+    "fundamentoNormativo": {
+      "documento": "Ordenanza 05-2024 sobre Educación Inclusiva",
+      "capitulo": "Del Apoyo Psicopedagógico",
+      "apartado": "Diseño Universal para el Aprendizaje y Ajustes Razonables",
+      "justificacion": "Define el rol de los equipos de gestión y psicología en el acompañamiento a docentes para diversificar la enseñanza y garantizar el acceso pleno."
+    },
+    "competenciaEvaluada": "Promotor de inclusión y asesor psicoeducativo.",
+    "nivelDificultad": "Alta"
+  },
+  {
+    "id": 737,
+    "categoria": "Inclusión Educativa",
+    "pregunta": "En un liceo secundario, un estudiante usuario de silla de ruedas no puede acceder al laboratorio de ciencias porque se encuentra en un segundo nivel sin rampa ni ascensor. Como garante de derechos en la escuela, el profesional de psicología debe:",
+    "opciones": [
+      "Excusar al estudiante de tomar la asignatura de ciencias naturales y calificarlo con una nota promedio.",
+      "Abogar ante el equipo de gestión para reubicar el laboratorio temporalmente en el primer nivel y gestionar la construcción de rampas (ajustes de accesibilidad).",
+      "Solicitar a los compañeros de clase que carguen al estudiante por las escaleras todos los días.",
+      "Aconsejar a la familia que le enseñen ciencias en casa mediante videos de internet."
+    ],
+    "respuestaCorrecta": 1,
+    "explicacion": "Las barreras de infraestructura limitan la participación. El psicólogo, como agente de inclusión, debe articular con el equipo de gestión soluciones institucionales de accesibilidad física y logística (reubicar el espacio) en respeto al derecho a la igualdad de oportunidades (Ord. 05-2024).",
+    "fundamentoNormativo": {
+      "documento": "Ordenanza 05-2024 sobre Educación Inclusiva",
+      "capitulo": "De las Barreras para el Aprendizaje y la Participación (BAP)",
+      "apartado": "Accesibilidad Universal",
+      "justificacion": "Obliga a los centros educativos a realizar los ajustes organizativos y físicos necesarios para eliminar barreras arquitectónicas y de participación."
+    },
+    "competenciaEvaluada": "Identificación de barreras y promoción de la equidad educativa.",
+    "nivelDificultad": "Media"
+  },
+  {
+    "id": 738,
+    "categoria": "Inclusión Educativa",
+    "pregunta": "Un docente remite a una estudiante de 2do de Primaria indicando que 'no aprende a leer y parece tener discapacidad intelectual leve'. ¿Cuál es la ruta de actuación psicoeducativa correcta?",
+    "opciones": [
+      "Realizar una evaluación psicométrica rápida, emitir el diagnóstico de Discapacidad Intelectual y archivar el caso.",
+      "Llevar a cabo una evaluación psicopedagógica para identificar fortalezas y barreras, referir a evaluación neurológica/clínica externa si procede, y establecer un plan de apoyo con el docente.",
+      "Indicar al docente que la repruebe al final del año porque aún no ha alcanzado los indicadores de logro.",
+      "Obligar a los padres a pagar un tutor privado como condición para que la niña permanezca en el centro educativo."
+    ],
+    "respuestaCorrecta": 1,
+    "explicacion": "El psicólogo escolar no emite diagnósticos clínicos (como Discapacidad Intelectual). Su competencia es realizar evaluaciones psicopedagógicas para identificar cómo aprende el estudiante, referir a especialistas externos para diagnósticos clínicos si hay sospecha de trastorno, y formular un plan de intervención áulica.",
+    "fundamentoNormativo": {
+      "documento": "Manual de Servicios de Orientación y Psicología",
+      "capitulo": "Apoyo Psicopedagógico",
+      "apartado": "Evaluación Psicopedagógica y Derivación",
+      "justificacion": "Establece los límites del rol: el psicólogo escolar evalúa procesos de aprendizaje, pero deriva diagnósticos clínicos a la red de salud externa."
+    },
+    "competenciaEvaluada": "Coordinador de intervenciones psicoeducativas y manejo de derivaciones.",
+    "nivelDificultad": "Alta"
+  },
+  {
+    "id": 739,
+    "categoria": "Convivencia Escolar y Cultura de Paz",
+    "pregunta": "Se reporta a la Unidad de Orientación que un grupo de estudiantes de 4to de Secundaria ha creado un chat donde se burlan sistemáticamente de una compañera, publicando fotos editadas de ella. La estudiante afectada no quiere venir a clases. ¿Cómo debe intervenir el psicólogo escolar?",
+    "opciones": [
+      "Considerar que es un asunto externo al ocurrir en redes sociales y recomendar a la familia que acuda a la policía.",
+      "Confiscar los celulares de todos los estudiantes del curso para revisarlos y borrar las fotos.",
+      "Activar el protocolo de acoso escolar (ciberacoso), ofrecer apoyo psicoafectivo a la víctima y coordinar con el equipo de gestión la aplicación de medidas educativas y restaurativas con los agresores.",
+      "Llamar a la estudiante afectada y sugerirle que ignore los mensajes para que los acosadores se cansen."
+    ],
+    "respuestaCorrecta": 2,
+    "explicacion": "El ciberacoso entre estudiantes del mismo centro, aunque ocurra fuera de horario, impacta el clima escolar y es competencia del centro. Se debe aplicar el protocolo de acoso escolar estipulado en las Normas de Convivencia, priorizando la protección de la víctima y la intervención restaurativa/educativa de los implicados.",
+    "fundamentoNormativo": {
+      "documento": "Normas del Sistema Educativo Dominicano para la Convivencia Armoniosa",
+      "capitulo": "Faltas y Medidas Educativas",
+      "apartado": "Faltas Graves y Muy Graves (Acoso y Ciberacoso)",
+      "justificacion": "Tipifica el ciberacoso como falta muy grave y mandate la intervención del Departamento de Orientación y Psicología con un enfoque restaurativo y de protección."
+    },
+    "competenciaEvaluada": "Gestión de conflictos, acoso escolar y cultura de paz.",
+    "nivelDificultad": "Alta"
+  },
+  {
+    "id": 740,
+    "categoria": "Convivencia Escolar y Cultura de Paz",
+    "pregunta": "Dos estudiantes de 6to de Primaria tienen un altercado físico leve durante el recreo por un turno en la cancha. Ambos se muestran arrepentidos. ¿Cuál es el abordaje más pertinente según las Normas de Convivencia?",
+    "opciones": [
+      "Suspender a ambos estudiantes por una semana para sentar un precedente de cero tolerancia institucional.",
+      "Facilitar un proceso de mediación escolar y prácticas restaurativas donde ambos dialoguen, asuman responsabilidad y lleguen a un acuerdo de reparación del daño.",
+      "Enviar el caso al Tribunal de Niños, Niñas y Adolescentes porque hubo contacto físico.",
+      "Ignorar la situación ya que son cosas de niños y se reconciliaron rápidamente."
+    ],
+    "respuestaCorrecta": 1,
+    "explicacion": "Frente a conflictos leves o faltas de convivencia donde hay asunción de responsabilidad, el paradigma del MINERD es la disciplina positiva y la justicia restaurativa. La mediación permite reparar el vínculo sin recurrir a medidas punitivas extremas (como la suspensión) que deben ser el último recurso.",
+    "fundamentoNormativo": {
+      "documento": "Normas del Sistema Educativo Dominicano para la Convivencia Armoniosa",
+      "capitulo": "Estrategias de Intervención y Cultura de Paz",
+      "apartado": "Mediación y Prácticas Restaurativas",
+      "justificacion": "Promueve el uso de la mediación de pares o mediación adulta frente a conflictos interpersonales para fomentar la autorregulación y la cultura de paz."
+    },
+    "competenciaEvaluada": "Facilitador de convivencia y aplicación de justicia restaurativa.",
+    "nivelDificultad": "Media"
+  },
+  {
+    "id": 741,
+    "categoria": "Convivencia Escolar y Cultura de Paz",
+    "pregunta": "Un docente acude frustrado a Orientación y Psicología manifestando que un curso de 2do de Secundaria es 'incontrolable' y solicita que el psicólogo vaya al aula a 'imponer orden y castigar a los culpables'. ¿Cuál es la postura profesional correcta?",
+    "opciones": [
+      "Ir al aula, regañar severamente al grupo y dictar normas estrictas para complacer al docente.",
+      "Indicar al docente que el control del aula es su problema exclusivo y negarse a intervenir.",
+      "Acompañar al docente en la observación del clima áulico, identificar dinámicas grupales y codiseñar estrategias de gestión de aula basadas en la disciplina positiva.",
+      "Solicitar al director la expulsión masiva de los líderes negativos del curso."
+    ],
+    "respuestaCorrecta": 2,
+    "explicacion": "El psicólogo no es un agente punitivo ni un sustituto del docente en el control del aula. Su rol es acompañar, observar, diagnosticar la dinámica grupal y dotar al docente de herramientas de disciplina positiva e integración grupal, trabajando colaborativamente.",
+    "fundamentoNormativo": {
+      "documento": "Manual de Servicios de Orientación y Psicología",
+      "capitulo": "Línea de Intervención: Apoyo Psicopedagógico",
+      "apartado": "Acompañamiento a la Práctica Docente y Clima de Aula",
+      "justificacion": "Define el rol de asesoría del orientador/psicólogo hacia el maestro para la mejora del clima escolar y manejo de aula."
+    },
+    "competenciaEvaluada": "Asesor psicoeducativo y promotor de disciplina positiva.",
+    "nivelDificultad": "Media"
+  },
+  {
+    "id": 742,
+    "categoria": "Apoyo Psicopedagógico",
+    "pregunta": "El centro educativo recibe un informe clínico externo confirmando que un estudiante de 5to grado tiene Trastorno por Déficit de Atención e Hiperactividad (TDAH). ¿Qué acción debe liderar el psicólogo escolar tras recibir el informe?",
+    "opciones": [
+      "Guardar el informe clínico en el expediente confidencial y no informar a los docentes para evitar el etiquetamiento del estudiante.",
+      "Diseñar exclusivamente un plan de terapia cognitivo-conductual a realizarse en la oficina de psicología dos veces por semana.",
+      "Interpretar las recomendaciones del informe clínico, socializarlas con el docente de aula y diseñar en conjunto estrategias de ajustes razonables (tiempo extra, pausas activas).",
+      "Exigir a los padres que aumenten la dosis de medicación del niño antes de permitir su reingreso al aula."
+    ],
+    "respuestaCorrecta": 2,
+    "explicacion": "El rol del psicólogo escolar ante un diagnóstico clínico externo es traducir esas recomendaciones en un plan de intervención psicopedagógica y ajustes razonables en el aula, trabajando en alianza con el maestro. Dar terapia clínica en la escuela excede su rol institucional.",
+    "fundamentoNormativo": {
+      "documento": "Manual Operativo de los Centros de Orientación y Psicología",
+      "capitulo": "Apoyo a la Población Estudiantil con Necesidades Específicas de Apoyo Educativo (NEAE)",
+      "apartado": "Seguimiento a diagnósticos clínicos",
+      "justificacion": "Indica que los informes externos deben traducirse en planes de apoyo educativo individuales (PAI) elaborados junto con el docente y el equipo de gestión."
+    },
+    "competenciaEvaluada": "Coordinador de intervenciones psicoeducativas y manejo de NEAE.",
+    "nivelDificultad": "Alta"
+  },
+  {
+    "id": 743,
+    "categoria": "Apoyo Psicopedagógico",
+    "pregunta": "Durante un proceso de evaluación psicopedagógica, el psicólogo identifica en un estudiante indicadores significativos asociados a Dislexia, los cuales interfieren gravemente en su rendimiento. ¿Cuál es el paso normativo a seguir?",
+    "opciones": [
+      "Elaborar un reporte diagnosticando formalmente al estudiante con Trastorno Específico del Aprendizaje (Dislexia).",
+      "Referir el caso a un especialista externo (psicólogo clínico/neuropsicólogo) para el diagnóstico formal, mientras se aplican ajustes metodológicos inmediatos en el aula.",
+      "Separar al estudiante del aula regular para enseñarle a leer mediante métodos tradicionales de manera individual.",
+      "Comunicar a la familia que el estudiante no podrá avanzar de curso hasta que resuelva su problema de lectura."
+    ],
+    "respuestaCorrecta": 1,
+    "explicacion": "El psicólogo escolar levanta indicadores y barreras de aprendizaje (evaluación psicopedagógica), pero el diagnóstico de trastornos del neurodesarrollo (como la Dislexia) corresponde al área clínica externa. Simultáneamente, el centro debe garantizar adaptaciones curriculares y metodológicas de inmediato.",
+    "fundamentoNormativo": {
+      "documento": "Lineamientos del Proceso de Orientación y Psicología (2023-2024)",
+      "capitulo": "Atención a la Diversidad y NEAE",
+      "apartado": "Protocolo de Evaluación y Derivación",
+      "justificacion": "Delimita las competencias de diagnóstico clínico frente a la evaluación psicopedagógica de barreras."
+    },
+    "competenciaEvaluada": "Identificación de Dificultades de Aprendizaje y derivación oportuna.",
+    "nivelDificultad": "Alta"
+  },
+  {
+    "id": 744,
+    "categoria": "Apoyo Psicopedagógico",
+    "pregunta": "Un estudiante de 4to de Primaria termina sus asignaciones muy rápido, demuestra conocimientos superiores a su edad y frecuentemente se aburre, interrumpiendo a sus compañeros. Tras una evaluación, se determinan Altas Capacidades Intelectuales. ¿Qué intervención es apropiada?",
+    "opciones": [
+      "Asignarle el doble de la misma tarea para mantenerlo ocupado durante más tiempo.",
+      "Promoverlo inmediatamente tres grados por encima de su edad para que tenga un desafío académico adecuado.",
+      "Coordinar con el docente un plan de enriquecimiento curricular, ampliación de contenidos y proyectos de investigación autónomos dentro del aula.",
+      "Usarlo permanentemente como asistente del profesor para corregir exámenes y no tener que planificarle actividades."
+    ],
+    "respuestaCorrecta": 2,
+    "explicacion": "Las altas capacidades constituyen una Necesidad Específica de Apoyo Educativo (NEAE). El abordaje inicial recomendado es el enriquecimiento del currículo (profundización, proyectos complejos, creatividad), en lugar de la repetición de tareas o la aceleración extrema sin evaluación integral del desarrollo socioemocional.",
+    "fundamentoNormativo": {
+      "documento": "Ordenanza 05-2024 sobre Educación Inclusiva",
+      "capitulo": "Necesidades Específicas de Apoyo Educativo",
+      "apartado": "Estudiantes con Altas Capacidades",
+      "justificacion": "Establece el enriquecimiento curricular como la estrategia primaria de atención a la diversidad para estudiantes con talentos y altas capacidades."
+    },
+    "competenciaEvaluada": "Asesor psicoeducativo y diseño de ajustes curriculares.",
+    "nivelDificultad": "Alta"
+  },
+  {
+    "id": 745,
+    "categoria": "Salud Mental Escolar",
+    "pregunta": "Un estudiante de 3ro de Secundaria se acerca a la psicóloga llorando desconsoladamente y le confiesa: 'Ya no soporto la vida, anoche me tomé unas pastillas, pero no funcionó, hoy buscaré otra forma de desaparecer'. ¿Cuál es el protocolo de actuación inmediato?",
+    "opciones": [
+      "Mantener el secreto profesional debido a la confianza depositada, ofrecer consejería semanal y sugerirle que piense en positivo.",
+      "Darle un vaso de agua, enviarlo de regreso al aula y llamar a los padres al día siguiente para no causar pánico en el centro.",
+      "No dejar al estudiante solo en ningún momento, brindar primeros auxilios psicológicos, convocar inmediatamente a la familia al centro educativo y referir de urgencia a psiquiatría/salud mental externa.",
+      "Reprender al estudiante por tener pensamientos pecaminosos o cobardes, invitándole a ser fuerte por su familia."
+    ],
+    "respuestaCorrecta": 2,
+    "explicacion": "Ante un riesgo suicida inminente y un intento previo, la prioridad absoluta es salvaguardar la vida. El protocolo exige contención constante (no dejarlo solo), ruptura de confidencialidad para involucrar a la familia como red de apoyo, y derivación de emergencia a los servicios de salud mental del Ministerio de Salud Pública.",
+    "fundamentoNormativo": {
+      "documento": "Protocolo para el Manejo de Situaciones de Riesgo Psicosocial y Salud Mental en el Contexto Escolar",
+      "capitulo": "Prevención y Actuación ante Riesgo Suicida",
+      "apartado": "Paso a paso ante ideación/intento suicida",
+      "justificacion": "Establece como acción inmediata la contención física/emocional constante, notificación urgente a familiares y derivación médica obligatoria."
+    },
+    "competenciaEvaluada": "Intervención en crisis emocionales y manejo de riesgo suicida.",
+    "nivelDificultad": "Alta"
+  },
+  {
+    "id": 746,
+    "categoria": "Salud Mental Escolar",
+    "pregunta": "En medio de las Pruebas Nacionales, un estudiante comienza a hiperventilar, presenta taquicardia, llanto incontrolable y dice 'sentir que se va a morir'. Como psicólogo del centro evaluador, ¿qué intervención inicial corresponde?",
+    "opciones": [
+      "Retirar al estudiante del salón a un espacio tranquilo y aplicarle la técnica de Primeros Auxilios Psicológicos (escucha activa, ejercicios de respiración y conexión con el aquí y el ahora).",
+      "Llamar a una ambulancia inmediatamente sin intentar ninguna intervención verbal para no empeorar su cuadro.",
+      "Obligar al estudiante a terminar su examen porque la ansiedad es normal y los nervios no son excusa institucional.",
+      "Administrar un ansiolítico suave de la caja de primeros auxilios del centro educativo para estabilizarlo rápidamente."
+    ],
+    "respuestaCorrecta": 0,
+    "explicacion": "Frente a una crisis de ansiedad o ataque de pánico, la competencia del psicólogo escolar es brindar contención emocional a través de Primeros Auxilios Psicológicos (PAP), aislar estímulos estresantes y guiar en la regulación fisiológica (respiración). El psicólogo escolar tiene terminantemente prohibido medicar.",
+    "fundamentoNormativo": {
+      "documento": "Manual de Servicios de Orientación y Psicología",
+      "capitulo": "Apoyo Psicoafectivo",
+      "apartado": "Primeros Auxilios Psicológicos en el Contexto Escolar",
+      "justificacion": "Faculta al profesional de orientación y psicología para la aplicación de PAP ante desregulaciones emocionales en el ámbito educativo."
+    },
+    "competenciaEvaluada": "Intervención psicoafectiva y manejo de crisis de ansiedad.",
+    "nivelDificultad": "Media"
+  },
+  {
+    "id": 747,
+    "categoria": "Trabajo con Familias",
+    "pregunta": "Tras detectar indicadores de sospecha de un trastorno del neurodesarrollo en un niño de Nivel Inicial, el psicólogo cita a los padres. Durante la reunión, el padre se torna a la defensiva, niega categóricamente los hechos y acusa a la escuela de 'querer declarar loco a su hijo'. ¿Cuál es el abordaje profesional pertinente?",
+    "opciones": [
+      "Amenazar al padre con expulsar al niño si no trae un certificado médico en 15 días laborables.",
+      "Responder de forma autoritaria indicando que el psicólogo es el experto y el padre debe obedecer las directrices del MINERD.",
+      "Validar las emociones del padre desde la empatía, ofrecer psicoeducación sobre el propósito de la evaluación externa (que busca apoyar, no etiquetar) y mantener la puerta abierta al diálogo.",
+      "Ignorar al padre y citar a la madre a solas en el futuro, excluyéndolo del proceso por ser conflictivo."
+    ],
+    "respuestaCorrecta": 2,
+    "explicacion": "La negación es una etapa del duelo común ante una posible discapacidad o trastorno. El profesional debe mostrar empatía, no confrontar desde el ego o el castigo, y utilizar la entrevista familiar como herramienta de psicoeducación progresiva para fomentar la corresponsabilidad.",
+    "fundamentoNormativo": {
+      "documento": "Lineamientos del Proceso de Orientación y Psicología (2023-2024)",
+      "capitulo": "Línea de Apoyo a las Familias",
+      "apartado": "Entrevistas familiares y manejo de resistencias",
+      "justificacion": "Prioriza el enfoque de orientación familiar empática y corresponsable, respetando los tiempos procesuales de aceptación de la familia sin recurrir a la coacción."
+    },
+    "competenciaEvaluada": "Orientación familiar y manejo asertivo de resistencias.",
+    "nivelDificultad": "Alta"
+  },
+  {
+    "id": 748,
+    "categoria": "Orientación Vocacional y Proyecto de Vida",
+    "pregunta": "Una estudiante de 6to de Secundaria se muestra muy angustiada porque faltan tres meses para graduarse y no sabe qué carrera universitaria estudiar. Sus padres la presionan para que estudie Medicina. ¿Qué proceso debe facilitar el psicólogo escolar?",
+    "opciones": [
+      "Decirle que estudie Medicina temporalmente para complacer a sus padres y luego cambie si no le gusta.",
+      "Desarrollar un proceso de orientación vocacional individual aplicando cuestionarios de intereses/aptitudes, y facilitar un espacio de reflexión sobre su Proyecto de Vida.",
+      "Recomendarle que no estudie en la universidad y busque un trabajo técnico para evitar frustraciones.",
+      "Someterla a un test de coeficiente intelectual para demostrarle a los padres que no sirve para la Medicina."
+    ],
+    "respuestaCorrecta": 1,
+    "explicacion": "El rol en esta área es guiar al estudiante en el auto-conocimiento (intereses, valores, aptitudes) y la exploración del mercado laboral/formativo para que tome decisiones informadas y autónomas sobre su Proyecto de Vida, mediando también con las expectativas familiares si es necesario.",
+    "fundamentoNormativo": {
+      "documento": "Guías Oficiales de Orientación Vocacional del MINERD",
+      "capitulo": "Transición a la Vida Adulta y Educación Superior",
+      "apartado": "Acompañamiento individualizado en la toma de decisiones",
+      "justificacion": "Establece como función del departamento brindar apoyo estructurado (evaluativo y reflexivo) a los estudiantes de término para la construcción de su trayectoria académica y laboral."
+    },
+    "competenciaEvaluada": "Orientación Vocacional y apoyo al Proyecto de Vida.",
+    "nivelDificultad": "Media"
+  },
+  {
+    "id": 749,
+    "categoria": "Permanencia Escolar",
+    "pregunta": "El registro de asistencia indica que un estudiante de 2do de Secundaria lleva 10 días ausente de manera injustificada. El equipo docente notifica a la Unidad de Orientación. ¿Cuál es la ruta institucional para garantizar el derecho a la educación?",
+    "opciones": [
+      "Dar de baja al estudiante en el Sistema de Información para la Gestión Escolar (SIGERD) por abandono automático.",
+      "Contactar inmediatamente a la familia (llamada o visita domiciliaria coordinada) para indagar los motivos de inasistencia, e implementar un plan de reintegración escolar.",
+      "Esperar a que el estudiante regrese por voluntad propia y aplicarle un examen general de todos los temas perdidos.",
+      "Reprobar automáticamente al estudiante por haber superado el 20% de ausencias estipulado por el sistema."
+    ],
+    "respuestaCorrecta": 1,
+    "explicacion": "La prevención del abandono escolar es proactiva. Frente al ausentismo prolongado, se debe buscar activamente al estudiante, contactar a la familia e identificar las barreras (salud, trabajo infantil, crisis familiar) para apoyar su retorno. La deserción no debe tramitarse como una simple baja administrativa.",
+    "fundamentoNormativo": {
+      "documento": "Lineamientos del Proceso de Orientación y Psicología (2023-2024)",
+      "capitulo": "Eje de Prevención de Riesgos Psicosociales",
+      "apartado": "Prevención del Abandono y Promoción de Permanencia",
+      "justificacion": "Obliga a la Unidad de Orientación a realizar indagación de ausentismo crónico, visitas domiciliarias y articulación de estrategias de apoyo para garantizar el retorno."
+    },
+    "competenciaEvaluada": "Gestión del ausentismo y estrategias de permanencia escolar.",
+    "nivelDificultad": "Alta"
+  },
+  {
+    "id": 750,
+    "categoria": "Ética Profesional",
+    "pregunta": "Un docente solicita al psicólogo escolar leer el expediente psicopedagógico completo de una estudiante, incluyendo reportes clínicos sobre historial de abuso intrafamiliar pasados, justificando que 'necesita saber todo para entender por qué la niña se porta mal'. ¿Cómo debe proceder el psicólogo amparado en la ética?",
+    "opciones": [
+      "Entregar el expediente completo al docente porque ambos trabajan en la misma institución y no hay secretos entre colegas.",
+      "Negar la solicitud explicando el principio de confidencialidad y compartir con el docente únicamente las recomendaciones pedagógicas y de manejo áulico pertinentes.",
+      "Informar a los padres que el docente es un entrometido y sugerirles que lo denuncien en el distrito.",
+      "Permitirle leer el expediente solo dentro de la oficina de psicología, prohibiéndole tomar fotografías."
+    ],
+    "respuestaCorrecta": 1,
+    "explicacion": "El expediente es estrictamente confidencial. El psicólogo debe salvaguardar la intimidad del estudiante (sobre todo historial de trauma o diagnósticos). La información que se comparte con la comunidad educativa debe estar filtrada y limitada exclusivamente a lo que el docente necesita saber para aplicar apoyos pedagógicos en el aula (Principio de 'necesidad de saber').",
+    "fundamentoNormativo": {
+      "documento": "Orden Departamental 22-2023 sobre Ética y Conducta Profesional / Manual Operativo COP",
+      "capitulo": "Manejo de Información y Expedientes",
+      "apartado": "Confidencialidad y Secreto Profesional",
+      "justificacion": "Prohíbe la divulgación de datos sensibles, clínicos o familiares de los estudiantes al personal no autorizado, exigiendo que solo se socialicen estrategias de apoyo educativo."
+    },
+    "competenciaEvaluada": "Aplicación de principios éticos, confidencialidad y manejo de información.",
+    "nivelDificultad": "Alta"
+  },
+  {
+    "id": 751,
+    "categoria": "Protección Infantil y Ruta Crítica",
+    "pregunta": "La docente de 1ro de Primaria reporta al psicólogo que un estudiante de 6 años, previamente muy sociable, lleva dos semanas retraído, ha vuelto a orinarse en clases y recientemente dibujó figuras de adultos sin ropa realizando acciones explícitas. ¿Qué paso dicta la ruta crítica de actuación?",
+    "opciones": [
+      "Interrogar directamente al niño sobre el significado de los dibujos para estar seguros antes de actuar.",
+      "Llamar inmediatamente a ambos padres para mostrarles el dibujo y exigirles una explicación.",
+      "Informar a la dirección, documentar los indicadores observados (sin interrogar al niño) y notificar al CONANI o Ministerio Público por sospecha fundamentada de abuso sexual.",
+      "Ignorar la situación, ya que los niños de esa edad tienen mucha imaginación y los dibujos no son evidencia legal."
+    ],
+    "respuestaCorrecta": 2,
+    "explicacion": "Los cambios bruscos de comportamiento (regresión de esfínteres, aislamiento) sumados a conocimientos sexuales inapropiados para la edad (dibujos explícitos) son indicadores de alto riesgo de abuso sexual. El protocolo prohíbe interrogar a la víctima para evitar revictimización o alteración de testimonios; la función del centro es reportar la sospecha a las autoridades competentes.",
+    "fundamentoNormativo": {
+      "documento": "Guía de Ruta Crítica para la Prevención y Atención de la Violencia",
+      "capitulo": "Ruta de Actuación ante el Abuso Sexual",
+      "apartado": "Indicadores y procedimientos de notificación",
+      "justificacion": "Establece la obligatoriedad de denuncia ante la sola sospecha fundamentada por indicadores conductuales o físicos, prohibiendo la investigación paralela en el centro."
+    },
+    "competenciaEvaluada": "Detección temprana y activación de protocolos de protección sin revictimización.",
+    "nivelDificultad": "Alta"
+  },
+  {
+    "id": 752,
+    "categoria": "Protección Infantil y Ruta Crítica",
+    "pregunta": "Durante la hora de salida, el psicólogo escolar observa en el portón del centro educativo que un padre está golpeando severamente con una correa a su hijo (estudiante de 3ro de Secundaria). ¿Cuál es la intervención inmediata que exige el protocolo?",
+    "opciones": [
+      "Filmar la situación desde lejos con el celular para tener pruebas para el tribunal al día siguiente.",
+      "Acercarse para intervenir verbalmente, detener la agresión, resguardar al estudiante dentro del centro y solicitar apoyo de la Policía Escolar/Nacional para proceder con la denuncia.",
+      "No intervenir porque la disciplina física es una potestad de los padres avalada por la cultura y ocurre fuera del aula.",
+      "Citar al padre al día siguiente a la oficina de psicología para entregarle un manual sobre crianza positiva."
+    ],
+    "respuestaCorrecta": 1,
+    "explicacion": "Ante un acto de violencia física en flagrancia (incluso en el perímetro escolar), la responsabilidad institucional es salvaguardar la integridad física del menor inmediatamente. Se debe intervenir, resguardar a la víctima y utilizar las fuerzas de seguridad (Policía Escolar) para detener la vulneración, seguida de la denuncia formal.",
+    "fundamentoNormativo": {
+      "documento": "Normas del Sistema Educativo Dominicano para la Convivencia Armoniosa / Ley 136-03",
+      "capitulo": "Ruta crítica ante abuso físico",
+      "apartado": "Actuación ante flagrancia en el entorno escolar",
+      "justificacion": "El Interés Superior del Niño obliga a detener la vulneración de derechos de manera inmediata y articular con las autoridades de seguridad y protección."
+    },
+    "competenciaEvaluada": "Manejo de crisis en flagrancia y protección física del estudiante.",
+    "nivelDificultad": "Media"
+  },
+  {
+    "id": 753,
+    "categoria": "Protección Infantil y Ruta Crítica",
+    "pregunta": "Un estudiante de 6to de Primaria asiste solo dos días a la semana. Al investigar, el estudiante revela que falta porque trabaja como 'delivery' en un colmado del barrio durante las mañanas por órdenes de su tío. ¿Qué abordaje psicosocial corresponde a la escuela?",
+    "opciones": [
+      "Comprender la situación económica, justificar sus faltas y aprobarlo al final de año para no afectarlo.",
+      "Convocar al tío para informarle que el trabajo infantil está prohibido, afecta el derecho a la educación, y advertir que de no cesar se notificará a CONANI y al Ministerio de Trabajo.",
+      "Denunciar inmediatamente al dueño del colmado a la policía sin hablar con la familia.",
+      "Ofrecerle al niño que haga mandados dentro de la escuela en lugar del colmado para que al menos esté en el recinto."
+    ],
+    "respuestaCorrecta": 1,
+    "explicacion": "El trabajo infantil interfiere con el derecho a la educación y es una forma de explotación/negligencia. El abordaje inicial es la entrevista con los tutores para concientizar sobre el marco legal (Ley 136-03) y exigir la restitución del derecho a la educación, advirtiendo las consecuencias legales (reporte a CONANI) si persiste la situación.",
+    "fundamentoNormativo": {
+      "documento": "Lineamientos del Proceso de Orientación y Psicología (2023-2024)",
+      "capitulo": "Eje de Prevención de Riesgos Psicosociales",
+      "apartado": "Prevención del Trabajo Infantil",
+      "justificacion": "Instruye realizar intervenciones de sensibilización familiar y, ante la negativa de restituir el derecho, derivar al Sistema Nacional de Protección."
+    },
+    "competenciaEvaluada": "Identificación de trabajo infantil y gestión de la corresponsabilidad familiar.",
+    "nivelDificultad": "Alta"
+  },
+  {
+    "id": 754,
+    "categoria": "Protección Infantil y Ruta Crítica",
+    "pregunta": "Una estudiante de 2do de Secundaria (14 años) acude al departamento de psicología confirmando que tiene tres meses de embarazo. Indica que el padre es un vecino de 22 años y que sus padres ya lo saben y 'están de acuerdo'. Según la legislación dominicana, el psicólogo debe:",
+    "opciones": [
+      "Felicitar a la estudiante, apoyar su proceso de maternidad y archivar el caso ya que los padres están de acuerdo.",
+      "Garantizar su permanencia escolar mediante apoyo psicoafectivo y notificar el caso al Ministerio Público, ya que constituye un delito de abuso psicológico/sexual por la edad de la menor, independientemente del consentimiento de los padres.",
+      "Solicitar a la dirección que suspenda a la estudiante para que no sea un 'mal ejemplo' para las demás adolescentes.",
+      "Remitir a la estudiante a un ginecólogo y dar por concluida la intervención escolar."
+    ],
+    "respuestaCorrecta": 1,
+    "explicacion": "En República Dominicana, el consentimiento de una menor de edad (14 años) o de sus padres es irrelevante ante la ley cuando la pareja es un adulto (22 años); se tipifica como abuso/seducción de menores. La escuela tiene doble rol: garantizar que la adolescente no abandone los estudios y denunciar el delito de orden público.",
+    "fundamentoNormativo": {
+      "documento": "Ley 136-03 y Protocolo de Prevención de Embarazo en Adolescentes",
+      "capitulo": "Protección contra el Abuso / Permanencia Escolar",
+      "apartado": "Relaciones desiguales de poder y embarazo infantil",
+      "justificacion": "Garantiza el derecho a la educación de las adolescentes embarazadas (prohibiendo su expulsión) y obliga a denunciar relaciones tipificadas como abuso."
+    },
+    "competenciaEvaluada": "Aplicación de rutas legales ante embarazo adolescente y garantía de permanencia.",
+    "nivelDificultad": "Alta"
+  },
+  {
+    "id": 755,
+    "categoria": "Protección Infantil y Ruta Crítica",
+    "pregunta": "Una estudiante de 4to de Secundaria denuncia que un compañero de su misma aula la acorraló en los pasillos y la tocó en sus partes íntimas sin su consentimiento. ¿Cómo se clasifica institucionalmente este hecho y cómo debe procederse?",
+    "opciones": [
+      "Se clasifica como falta leve de indisciplina; procede una amonestación verbal al estudiante agresor.",
+      "Se clasifica como conflicto de pares; procede una mediación en el departamento de psicología para que se pidan disculpas.",
+      "Se clasifica como Violencia Sexual entre pares (Falta Muy Grave); procede activar la ruta crítica, separar a los estudiantes, brindar contención a la víctima, informar a las familias y derivar al Ministerio Público de NNA.",
+      "Se clasifica como acoso escolar (Bullying); procede suspender al agresor por un día y organizar una charla sobre el respeto."
+    ],
+    "respuestaCorrecta": 2,
+    "explicacion": "Los tocamientos no consentidos no son 'bullying' ni simples conflictos, constituyen Violencia Sexual. Como ocurre entre menores, intervienen las autoridades del Tribunal de Niños, Niñas y Adolescentes. En el centro, se tipifica como Falta Muy Grave, prohibiendo estrictamente la mediación o careo entre víctima y agresor.",
+    "fundamentoNormativo": {
+      "documento": "Normas del Sistema Educativo Dominicano para la Convivencia Armoniosa",
+      "capitulo": "Faltas Muy Graves",
+      "apartado": "Violencia Sexual y Acoso",
+      "justificacion": "Clasifica el acoso sexual y los tocamientos indebidos como faltas muy graves que ameritan medidas protectoras y derivación al sistema judicial juvenil."
+    },
+    "competenciaEvaluada": "Clasificación de faltas y activación de protocolo por violencia sexual entre estudiantes.",
+    "nivelDificultad": "Alta"
+  },
+  {
+    "id": 756,
+    "categoria": "Inclusión Educativa",
+    "pregunta": "Un estudiante de 1ro de Secundaria presenta baja visión diagnosticada. El docente argumenta que no puede enseñarle porque los libros de texto tienen letras muy pequeñas. ¿Qué estrategia basada en el DUA debe recomendar el psicólogo escolar?",
+    "opciones": [
+      "Eximir al estudiante de realizar las lecturas y calificarlo solo por asistencia.",
+      "Asesorar al docente en la implementación de ajustes razonables de acceso: ubicación preferencial en primera fila, uso de macrotipos (letras grandes) y provisión de materiales en formato de audio.",
+      "Recomendar a la familia que le compren lentes más fuertes o que busquen una escuela para ciegos.",
+      "Asignarle a un compañero de aula la responsabilidad total de leerle en voz alta durante todo el año escolar."
+    ],
+    "respuestaCorrecta": 1,
+    "explicacion": "La baja visión representa una barrera de acceso. Las estrategias inclusivas exigen ajustes razonables en la presentación de la información (macrotipos, contrastes, audios, ubicación). Eximir al estudiante o delegar la enseñanza a un compañero vulnera su derecho al aprendizaje.",
+    "fundamentoNormativo": {
+      "documento": "Ordenanza 05-2024 sobre Educación Inclusiva",
+      "capitulo": "Ajustes Razonables",
+      "apartado": "Estrategias de acceso a la información",
+      "justificacion": "Instruye la adaptación de los formatos y medios de enseñanza para garantizar la participación en igualdad de condiciones de los estudiantes con discapacidad visual."
+    },
+    "competenciaEvaluada": "Diseño de ajustes razonables para discapacidad sensorial.",
+    "nivelDificultad": "Media"
+  },
+  {
+    "id": 757,
+    "categoria": "Inclusión Educativa",
+    "pregunta": "Un estudiante de 4to de Primaria con Discapacidad Intelectual Leve no logra alcanzar los mismos indicadores de logro en matemáticas que el resto de su clase. ¿Cuál es el procedimiento normativo para su evaluación académica?",
+    "opciones": [
+      "Reprobarlo automáticamente al final del año escolar porque el sistema exige igualdad para todos.",
+      "Elaborar un Plan de Apoyo Individualizado (PAI) con ajustes significativos en los indicadores de logro y evaluarlo en función de sus propios progresos respecto a ese plan, no en comparación con el grupo estándar.",
+      "Regalarle la calificación mínima aprobatoria por lástima, para que no se frustre.",
+      "Sustituir la clase de matemáticas por manualidades en el departamento de orientación."
+    ],
+    "respuestaCorrecta": 1,
+    "explicacion": "Para estudiantes con NEAE asociadas a discapacidad que requieren ajustes significativos, la evaluación debe basarse en las metas establecidas en su Plan de Apoyo Individualizado (PAI). La promoción o retención depende de su progreso individual frente a esas metas ajustadas, garantizando equidad.",
+    "fundamentoNormativo": {
+      "documento": "Ordenanza 05-2024 sobre Educación Inclusiva",
+      "capitulo": "Evaluación de los Aprendizajes de Estudiantes con NEAE",
+      "apartado": "Criterios de evaluación y promoción",
+      "justificacion": "Estipula que la evaluación de estudiantes con ajustes curriculares significativos se realizará con base en los indicadores de logro adaptados en su PAI."
+    },
+    "competenciaEvaluada": "Asesoramiento en evaluación diferenciada y formulación del PAI.",
+    "nivelDificultad": "Alta"
+  },
+  {
+    "id": 758,
+    "categoria": "Inclusión Educativa",
+    "pregunta": "El director de un centro educativo público rechaza la inscripción de un niño con Síndrome de Down en el Nivel Inicial, justificando a la madre que 'la escuela no cuenta con maestros de educación especial y el niño no avanzará'. Como psicólogo del centro, ¿qué acción ética y normativa le corresponde asumir?",
+    "opciones": [
+      "Respaldar al director, ya que es preferible evitarle al niño un ambiente donde no será bien atendido.",
+      "Abogar por los derechos del niño, informando a la dirección que la Ordenanza 05-2024 prohíbe negar el cupo por discapacidad, y comprometerse a acompañar al docente en el proceso de inclusión.",
+      "Ofrecerse a dar clases particulares al niño fuera del horario escolar para compensar el rechazo.",
+      "Decirle a la madre en secreto que demande al director, pero sin intervenir institucionalmente."
+    ],
+    "respuestaCorrecta": 1,
+    "explicacion": "El rechazo de admisión por motivos de discapacidad es un acto de discriminación ilegal en la RD. El psicólogo escolar es un garante de derechos y promotor de inclusión, debiendo asesorar a la dirección sobre la normativa (Ord. 05-2024) y asumir el compromiso del apoyo psicopedagógico necesario.",
+    "fundamentoNormativo": {
+      "documento": "Ordenanza 05-2024 sobre Educación Inclusiva",
+      "capitulo": "Del Acceso y Permanencia",
+      "apartado": "Prohibición de exclusión por discapacidad",
+      "justificacion": "Establece el derecho fundamental a la educación en entornos regulares y prohíbe categóricamente a los centros educativos negar la matriculación a estudiantes con discapacidad."
+    },
+    "competenciaEvaluada": "Defensoría de derechos inclusivos y prevención de prácticas discriminatorias institucionales.",
+    "nivelDificultad": "Alta"
+  },
+  {
+    "id": 759,
+    "categoria": "Convivencia Escolar y Cultura de Paz",
+    "pregunta": "Un docente envía a la oficina de psicología a un estudiante de 1ro de Secundaria con una nota que exige su suspensión inmediata por tres días debido a que 'olvidó el cuaderno de ciencias por segunda vez'. Según las Normas de Convivencia, ¿cómo debe proceder el psicólogo?",
+    "opciones": [
+      "Acoger la solicitud del docente y suspender al estudiante para mantener la autoridad del maestro.",
+      "Explicar al docente que olvidar un material es una falta leve, la cual se aborda con diálogo y amonestación verbal en el aula, estando prohibida la suspensión por este motivo.",
+      "Llamar a los padres y multarlos por no revisar la mochila del estudiante.",
+      "Ignorar al docente y enviar al estudiante de regreso a jugar al patio escolar."
+    ],
+    "respuestaCorrecta": 1,
+    "explicacion": "Las faltas leves (como olvido de materiales o llegadas tardías menores) no conllevan medidas punitivas excluyentes como la suspensión, sino medidas educativas (diálogo, acuerdos, amonestación). El psicólogo debe asesorar al docente sobre la correcta aplicación y proporcionalidad del régimen disciplinario.",
+    "fundamentoNormativo": {
+      "documento": "Normas del Sistema Educativo Dominicano para la Convivencia Armoniosa",
+      "capitulo": "Clasificación de las Faltas",
+      "apartado": "Faltas Leves y sus Medidas Educativas",
+      "justificacion": "Define claramente el olvido de materiales como falta leve y prohíbe el uso de la suspensión como medida correctiva para este nivel de faltas."
+    },
+    "competenciaEvaluada": "Asesoramiento en tipificación de faltas y proporcionalidad de medidas disciplinarias.",
+    "nivelDificultad": "Media"
+  },
+  {
+    "id": 760,
+    "categoria": "Convivencia Escolar y Cultura de Paz",
+    "pregunta": "Durante un conflicto en el recreo, dos estudiantes de 5to de Secundaria rompen intencionalmente una ventana del laboratorio. Admiten su culpa. ¿Qué medida con enfoque restaurativo debe promover el equipo de gestión y psicología?",
+    "opciones": [
+      "Expulsarlos definitivamente del sistema educativo para sentar un ejemplo drástico.",
+      "Denunciarlos a la policía para que los arresten por vandalismo a la propiedad pública.",
+      "Aplicar una medida educativa por falta grave, que incluya el diálogo reflexivo, la reposición del cristal por parte de la familia y trabajo de servicio comunitario en el ornato de la escuela.",
+      "Hacerlos pedir perdón públicamente frente a toda la escuela durante el acto cívico a modo de escarmiento."
+    ],
+    "respuestaCorrecta": 2,
+    "explicacion": "El daño intencional a la propiedad es una falta grave. El enfoque restaurativo del MINERD busca que el estudiante asuma responsabilidad, repare el daño material (reponer la ventana) y restaure el vínculo con la comunidad (servicio comunitario), evitando castigos humillantes (escarmiento público) o expulsiones injustificadas.",
+    "fundamentoNormativo": {
+      "documento": "Normas del Sistema Educativo Dominicano para la Convivencia Armoniosa",
+      "capitulo": "Faltas Graves",
+      "apartado": "Medidas Educativas y Disciplinarias de Enfoque Restaurativo",
+      "justificacion": "Prioriza las acciones de reparación del daño causado y el servicio a la comunidad educativa como medidas ante faltas graves contra el patrimonio escolar."
+    },
+    "competenciaEvaluada": "Aplicación de justicia restaurativa ante daños al patrimonio escolar.",
+    "nivelDificultad": "Media"
+  },
+  {
+    "id": 761,
+    "categoria": "Convivencia Escolar y Cultura de Paz",
+    "pregunta": "Se identifica que un grupo de alumnas de 2do de Secundaria ha iniciado un rumor malicioso sobre una compañera, aislándola socialmente durante el recreo. ¿Cuál es la estrategia psicoeducativa más efectiva para abordar esta dinámica grupal?",
+    "opciones": [
+      "Suspender a las líderes del grupo indefinidamente sin darles oportunidad de réplica.",
+      "Implementar Círculos de Diálogo Restaurativo con el grupo para reflexionar sobre la empatía, el impacto de los rumores y reconstruir las relaciones interpersonales, asegurando protección a la víctima.",
+      "Interrogar a cada alumna en la oficina grabando la conversación para descubrir quién inventó el rumor.",
+      "Cambiar de sección a la víctima para que las demás no la molesten, sin intervenir con el grupo agresor."
+    ],
+    "respuestaCorrecta": 1,
+    "explicacion": "El acoso relacional (exclusión, rumores) requiere un abordaje de la dinámica grupal. Los círculos restaurativos son la herramienta principal promovida por el MINERD para generar empatía, responsabilidad colectiva y resolución pacífica, a diferencia del enfoque meramente punitivo o de evasión (cambiar a la víctima).",
+    "fundamentoNormativo": {
+      "documento": "Guía de Diseño e Implementación de Círculos de Diálogo Restaurativo en el Contexto Escolar",
+      "capitulo": "Resolución de Conflictos",
+      "apartado": "Círculos para la reparación de daños relacionales",
+      "justificacion": "Fundamenta el uso de metodologías de diálogo estructurado para abordar daños emocionales o exclusión grupal promoviendo la empatía."
+    },
+    "competenciaEvaluada": "Gestión de conflictos mediante prácticas restaurativas y grupales.",
+    "nivelDificultad": "Alta"
+  },
+  {
+    "id": 762,
+    "categoria": "Apoyo Psicopedagógico",
+    "pregunta": "Un docente reporta que un estudiante diagnosticado con TDAH se levanta constantemente de su asiento y no logra mantenerse sentado toda la jornada académica. ¿Qué ajuste razonable, coordinado por el psicólogo, es el más funcional para el aula?",
+    "opciones": [
+      "Asignarle 'roles motores' funcionales dentro del aula (borrar la pizarra, repartir materiales) y establecer pausas activas para canalizar su necesidad de movimiento.",
+      "Aislarlo en una butaca mirando hacia la pared al final del salón para evitar que distraiga a los demás.",
+      "Retirarle el recreo todos los días hasta que aprenda a quedarse quieto en su asiento.",
+      "Solicitar al docente que lo envíe a la oficina de psicología cada vez que se levante."
+    ],
+    "respuestaCorrecta": 0,
+    "explicacion": "El TDAH requiere adaptaciones metodológicas que respeten el neurodesarrollo del estudiante. Canalizar el movimiento a través de pausas activas o responsabilidades (roles motores) facilita la autorregulación. Los castigos convencionales (quitar recreo, aislar) agravan la sintomatología y atentan contra sus derechos.",
+    "fundamentoNormativo": {
+      "documento": "Lineamientos para la Atención a la Diversidad / Manual Operativo COP",
+      "capitulo": "Ajustes Razonables para Trastornos del Neurodesarrollo",
+      "apartado": "Estrategias para el TDAH en el aula",
+      "justificacion": "Recomienda explícitamente el uso de pausas activas, canalización motora positiva y modificación del entorno físico en lugar de estrategias punitivas."
+    },
+    "competenciaEvaluada": "Diseño de estrategias áulicas (ajustes metodológicos) para estudiantes con TDAH.",
+    "nivelDificultad": "Alta"
+  },
+  {
+    "id": 763,
+    "categoria": "Apoyo Psicopedagógico",
+    "pregunta": "Durante un levantamiento en 3ro de Primaria, el psicólogo observa que un estudiante invierte las letras (p por q, b por d), presenta lectura silábica lenta y omitiendo palabras. ¿Qué acciones articuladas debe seguir?",
+    "opciones": [
+      "Realizar una evaluación psicopedagógica enfocada en lectura, orientar al docente en el uso de metodologías multisensoriales fonológicas y referir a evaluación clínica para descartar Dislexia.",
+      "Diagnosticarlo oficialmente con Dislexia, informarle a los padres y sacarlo del aula durante las horas de lengua española.",
+      "Obligar al niño a hacer planas de caligrafía diarias en la oficina de psicología para corregir su mala escritura.",
+      "Dictaminar que el niño es vago y recomendar a la familia mano dura con las tareas en casa."
+    ],
+    "respuestaCorrecta": 0,
+    "explicacion": "El psicólogo escolar evalúa procesos (evaluación psicopedagógica) e interviene en el entorno escolar (estrategias multisensoriales con el docente), pero reconoce el límite de su competencia derivando al área clínica externa (neuropsicología) para el diagnóstico confirmatorio de un Trastorno Específico del Aprendizaje.",
+    "fundamentoNormativo": {
+      "documento": "Manual de Servicios de Orientación y Psicología",
+      "capitulo": "Atención a Dificultades Específicas del Aprendizaje (DEA)",
+      "apartado": "Ruta de Evaluación e Intervención Psicopedagógica",
+      "justificacion": "Define el límite entre la evaluación psicopedagógica de procesos de lectoescritura y el diagnóstico clínico formal, exigiendo el trabajo coordinado con docentes."
+    },
+    "competenciaEvaluada": "Abordaje de Dificultades Específicas del Aprendizaje (DEA) y derivación especializada.",
+    "nivelDificultad": "Alta"
+  },
+  {
+    "id": 764,
+    "categoria": "Apoyo Psicopedagógico",
+    "pregunta": "Una estudiante de excelencia académica en 4to de Secundaria sufre una caída drástica en sus calificaciones durante el último mes. Al investigar, el psicólogo escolar confirma que la abuela materna, con quien vivía la estudiante, falleció recientemente. ¿Cuál es el rol del psicólogo frente al ámbito académico?",
+    "opciones": [
+      "Aplicar una prueba de inteligencia inmediata porque la pérdida pudo haber afectado su capacidad cognitiva.",
+      "Asesorar a los docentes sobre el impacto del duelo en las funciones cognitivas (atención/memoria), solicitando flexibilización temporal en las fechas de entrega y evaluaciones.",
+      "Informar a la estudiante que los problemas familiares deben dejarse en casa y exigirle que recupere sus notas.",
+      "Asignarle medicamentos para concentrarse y estudiar mejor durante este período de crisis."
+    ],
+    "respuestaCorrecta": 1,
+    "explicacion": "El duelo es un factor psicosocial que impacta transitoriamente el aprendizaje (barrera socioemocional). El psicólogo debe servir de mediador, sensibilizando al equipo docente para que provea ajustes organizativos (flexibilidad académica) mientras la estudiante transita su proceso de duelo, además de brindar apoyo psicoafectivo.",
+    "fundamentoNormativo": {
+      "documento": "Lineamientos del Proceso de Orientación y Psicología (2023-2024)",
+      "capitulo": "Línea de Intervención: Apoyo Psicoafectivo",
+      "apartado": "Intervención en situaciones de crisis y duelo",
+      "justificacion": "Promueve la flexibilización de las demandas académicas y el apoyo empático como estrategia del centro educativo ante pérdidas o traumas de estudiantes."
+    },
+    "competenciaEvaluada": "Mediación pedagógica ante barreras socioemocionales y duelo.",
+    "nivelDificultad": "Media"
+  },
+  {
+    "id": 765,
+    "categoria": "Salud Mental Escolar",
+    "pregunta": "Un docente de Educación Física nota que una estudiante de 2do de Secundaria usa suéteres de mangas largas pese al intenso calor. Al pedirle que se arremangue por precaución, observa múltiples cortes recientes y cicatrices en ambos antebrazos (autolesiones). ¿Qué procede realizar desde la Unidad de Psicología?",
+    "opciones": [
+      "Revisar frente a toda la clase los brazos de la estudiante para dar una lección sobre la importancia del cuidado del cuerpo.",
+      "Realizar una entrevista clínica profunda, diagnosticar Trastorno Límite de la Personalidad e iniciar psicoterapia en la escuela.",
+      "Realizar una entrevista empática de contención (sin juzgar), evaluar indicadores de riesgo suicida, convocar urgentemente a los padres para notificarles y derivar al servicio clínico de salud mental externo.",
+      "Suspender a la estudiante temporalmente porque ese comportamiento puede ser copiado por otros alumnos."
+    ],
+    "respuestaCorrecta": 2,
+    "explicacion": "Las autolesiones no suicidas (cutting) son un indicador grave de malestar emocional. El abordaje requiere privacidad, contención sin estigmatización, evaluación de letalidad, involucramiento inmediato de los tutores legales y la derivación obligatoria al sistema de salud mental (psicología clínica/psiquiatría), ya que excede el nivel escolar.",
+    "fundamentoNormativo": {
+      "documento": "Protocolo para el Manejo de Situaciones de Riesgo Psicosocial y Salud Mental",
+      "capitulo": "Atención a Comportamientos Autolesivos",
+      "apartado": "Ruta de derivación a servicios de salud mental",
+      "justificacion": "Establece la obligatoriedad de notificación a familias y referimiento clínico externo, prohibiendo la estigmatización o el aislamiento escolar del estudiante afectado."
+    },
+    "competenciaEvaluada": "Identificación, contención y derivación ante conductas autolesivas.",
+    "nivelDificultad": "Alta"
+  },
+  {
+    "id": 766,
+    "categoria": "Salud Mental Escolar",
+    "pregunta": "Durante una presentación final de ciencias, un estudiante se bloquea, empieza a temblar, respira de forma entrecortada y llora diciendo 'no puedo respirar, sácame de aquí'. Como psicólogo escolar presente en el pasillo, ¿cuál es su intervención en el momento exacto de la crisis?",
+    "opciones": [
+      "Acercarse, retirar al estudiante a un ambiente seguro y privado, e iniciar Primeros Auxilios Psicológicos (validación emocional, ejercicios de respiración diafragmática).",
+      "Gritarle desde el fondo del aula '¡Tú puedes, respira hondo y termina tu exposición!' para motivarlo.",
+      "Sugerir al docente que le ponga un cero por falta de preparación técnica en dominio escénico.",
+      "Acostar al estudiante en el piso del aula y llamar a emergencias 911 sin dirigirle la palabra."
+    ],
+    "respuestaCorrecta": 0,
+    "explicacion": "La sintomatología describe un ataque de pánico o crisis de ansiedad aguda. La intervención inmediata idónea en el nivel primario (escuela) es apartar al estudiante del factor estresor y de la exposición pública, aplicando Primeros Auxilios Psicológicos para estabilizar sus constantes fisiológicas y emocionales.",
+    "fundamentoNormativo": {
+      "documento": "Manual Operativo de los Centros de Orientación y Psicología",
+      "capitulo": "Apoyo Psicoafectivo",
+      "apartado": "Aplicación de Primeros Auxilios Psicológicos",
+      "justificacion": "Faculta y orienta al profesional a utilizar los PAP ante episodios de crisis emocionales agudas o desregulaciones fisiológicas por estrés en el entorno escolar."
+    },
+    "competenciaEvaluada": "Aplicación técnica de Primeros Auxilios Psicológicos (PAP) en crisis de ansiedad.",
+    "nivelDificultad": "Media"
+  },
+  {
+    "id": 767,
+    "categoria": "Trabajo con Familias",
+    "pregunta": "Un estudiante de 1ro de Primaria presenta rezago severo en lectoescritura. La Unidad de Orientación y Psicología ha enviado tres citaciones escritas a los padres, quienes no han asistido. ¿Qué paso normativo debe dar el profesional para cumplir con la corresponsabilidad familiar?",
+    "opciones": [
+      "Declarar a la familia como negligente e interponer de inmediato una demanda ante el Tribunal de NNA.",
+      "Suspender al estudiante hasta que los padres se dignen a presentarse en la dirección.",
+      "Realizar un contacto telefónico alternativo o coordinar una visita domiciliaria de acercamiento para identificar posibles barreras sistémicas (horarios laborales, analfabetismo) que impidan la asistencia.",
+      "Archivar el caso y enfocarse solo en el trabajo dentro del aula, ignorando a la familia."
+    ],
+    "respuestaCorrecta": 2,
+    "explicacion": "Antes de judicializar por negligencia, el centro educativo debe agotar todas las vías amigables y comprensivas. La inasistencia puede deberse a barreras laborales, de salud o desconocimiento. La visita domiciliaria o el contacto directo permiten diagnosticar estas barreras e integrar a la familia desde la empatía.",
+    "fundamentoNormativo": {
+      "documento": "Lineamientos del Proceso de Orientación y Psicología (2023-2024)",
+      "capitulo": "Línea de Apoyo a las Familias",
+      "apartado": "Visitas domiciliarias y acercamiento comunitario",
+      "justificacion": "Establece la visita domiciliaria y el contacto alternativo como estrategias prioritarias para restablecer el vínculo escuela-familia ante la inasistencia a citaciones regulares."
+    },
+    "competenciaEvaluada": "Gestión de la corresponsabilidad y abordaje de barreras de participación familiar.",
+    "nivelDificultad": "Alta"
+  },
+  {
+    "id": 768,
+    "categoria": "Orientación Vocacional y Proyecto de Vida",
+    "pregunta": "Un estudiante de 6to de Secundaria que sobresale en diseño y artes visuales desea estudiar Diseño Gráfico Digital. Sin embargo, su familia le exige estudiar Ingeniería Civil porque 'el arte no deja dinero'. El estudiante acude frustrado. ¿Qué abordaje vocacional es el adecuado?",
+    "opciones": [
+      "Darle la razón a la familia, indicando que en el país la ingeniería tiene mayor empleabilidad tradicional.",
+      "Facilitar un proceso reflexivo sobre su proyecto de vida, proveer información objetiva del mercado laboral de carreras creativas e invitar a la familia a un diálogo mediado sobre aptitudes y expectativas.",
+      "Aconsejarle que se rebele contra sus padres y estudie diseño en secreto.",
+      "Realizar un test de inteligencia matemática para obligarlo a convencerse de que no sirve para la ingeniería."
+    ],
+    "respuestaCorrecta": 1,
+    "explicacion": "La orientación vocacional busca la autodeterminación informada. El psicólogo no decide por el estudiante ni impone la visión paterna; actúa como mediador facilitando información objetiva del campo laboral y ayudando a la familia a comprender la importancia de alinear la elección profesional con los talentos e intereses del estudiante.",
+    "fundamentoNormativo": {
+      "documento": "Guías Oficiales de Orientación Vocacional del MINERD",
+      "capitulo": "Acompañamiento a la Toma de Decisiones",
+      "apartado": "El rol de la familia en la elección vocacional",
+      "justificacion": "Propone la intervención del psicólogo escolar como mediador de información objetiva entre las presiones o expectativas familiares y el proyecto de vida autónomo del estudiante."
+    },
+    "competenciaEvaluada": "Mediación vocacional y empoderamiento del Proyecto de Vida frente a expectativas externas.",
+    "nivelDificultad": "Media"
+  },
+  {
+    "id": 769,
+    "categoria": "Permanencia Escolar",
+    "pregunta": "Un estudiante de 15 años se encuentra cursando el 5to grado de Nivel Primario debido a repitencias históricas e ingresos tardíos. El estudiante manifiesta profunda vergüenza por ser mucho mayor que sus compañeros y amenaza con desertar. ¿Qué estrategia previene el abandono escolar en este caso?",
+    "opciones": [
+      "Convencerlo de que abandone la escuela diurna y busque un trabajo, ya que es muy mayor para estar con niños.",
+      "Ignorar su comentario y exigirle que se concentre en sus estudios primarios.",
+      "Evaluar su perfil académico y socioemocional, y coordinar con la dirección su inclusión en un programa de nivelación o aceleración de aprendizajes (como Espacios de Enriquecimiento o programas para sobreedad).",
+      "Promoverlo ilegalmente directamente a 1ro de Secundaria para que alcance a los jóvenes de su edad."
+    ],
+    "respuestaCorrecta": 2,
+    "explicacion": "La sobreedad (rezago escolar significativo) es una de las principales causas de deserción debido al factor socioemocional (vergüenza, desconexión con pares). El MINERD contempla estrategias institucionales de nivelación y aceleración para estudiantes con sobreedad, buscando certificar aprendizajes y ubicarlos en niveles más acordes a su etapa de desarrollo.",
+    "fundamentoNormativo": {
+      "documento": "Lineamientos del Proceso de Orientación y Psicología (2023-2024)",
+      "capitulo": "Eje de Prevención de Riesgos Psicosociales",
+      "apartado": "Prevención del Abandono y Estrategias ante la Sobreedad",
+      "justificacion": "Prioriza la identificación temprana de sobreedad y la articulación de respuestas curriculares flexibles (programas de nivelación) para evitar la deserción."
+    },
+    "competenciaEvaluada": "Prevención de deserción escolar por sobreedad y gestión de opciones curriculares.",
+    "nivelDificultad": "Alta"
+  },
+  {
+    "id": 770,
+    "categoria": "Ética Profesional",
+    "pregunta": "La directora del centro educativo solicita al psicólogo escolar que asuma la psicoterapia profunda semanal de una estudiante diagnosticada con depresión mayor, argumentando que la familia no tiene recursos para pagar un psicólogo clínico privado. ¿Cómo debe responder el profesional amparado en la ética?",
+    "opciones": [
+      "Aceptar la solicitud por solidaridad con la familia, asumiendo el caso clínico dentro del horario escolar.",
+      "Negarse asertivamente, explicando a la dirección que la intervención clínica excede su rol institucional; proceder a realizar solo el acompañamiento psicoeducativo y derivar a centros de salud pública gratuitos.",
+      "Ignorar a la directora y enviar un memorando al Distrito Educativo quejándose de abuso de autoridad.",
+      "Indicar medicamentos antidepresivos a la estudiante para evitar las terapias y ayudar a la familia."
+    ],
+    "respuestaCorrecta": 1,
+    "explicacion": "El psicólogo escolar no hace clínica (terapia profunda). Asumir intervenciones para las que no se tiene el rol ni el encuadre (setting escolar vs. clínico) es una falta ética grave por extralimitación de funciones. La respuesta ética es mantener el acompañamiento psicoafectivo de primer nivel y gestionar la derivación a la red de salud pública.",
+    "fundamentoNormativo": {
+      "documento": "Orden Departamental 22-2023 sobre Ética Profesional / Manual de Servicios de O&P",
+      "capitulo": "Rol y Perfil del Profesional de Orientación y Psicología",
+      "apartado": "Límites de la intervención psicoeducativa",
+      "justificacion": "Prohíbe explícitamente el ejercicio de la psicología clínica dentro del contexto escolar, estableciendo la obligación de derivar los casos psicopatológicos al Sistema Nacional de Salud."
+    },
+    "competenciaEvaluada": "Delimitación ética del rol profesional y evitación de la práctica clínica escolar.",
+    "nivelDificultad": "Alta"
+  },
+  {
+    "id": 771,
+    "categoria": "Protección Infantil y Ruta Crítica",
+    "pregunta": "El docente de 3ro de Primaria reporta que un estudiante asiste reiteradamente con fuerte dolor de muelas por caries profundas no tratadas, higiene deficiente y ropa sucia. Al contactar a la madre, esta indica que trabaja mucho y deja al niño al cuidado de un vecino anciano. ¿Qué acción prioritaria corresponde al psicólogo escolar?",
+    "opciones": [
+      "Someter a la madre de inmediato a la justicia por abandono y retirar al niño del centro educativo.",
+      "Comprender la situación económica, brindar ropa al niño desde el centro y no molestar más a la madre para que no pierda su empleo.",
+      "Realizar una entrevista de orientación con la madre para concientizar sobre el riesgo de salud, explorar redes de apoyo familiar y advertir que la omisión de cuidados médicos es negligencia notificable a CONANI.",
+      "Diagnosticar a la madre con negligencia parental severa y enviar el reporte directamente a un juez."
+    ],
+    "respuestaCorrecta": 2,
+    "explicacion": "El descuido severo de la salud (caries profundas, mala higiene) constituye negligencia. El abordaje inicial del centro es orientar a la familia, buscar soluciones conjuntas (redes de apoyo) y establecer compromisos claros. Si la familia se niega a restituir los derechos de salud y cuidado del menor, entonces se activa la denuncia a las autoridades de protección.",
+    "fundamentoNormativo": {
+      "documento": "Lineamientos del Proceso de Orientación y Psicología (2023-2024)",
+      "capitulo": "Prevención y Atención a Situaciones de Vulnerabilidad",
+      "apartado": "Abordaje de la Negligencia Familiar",
+      "justificacion": "Prioriza la intervención psicoeducativa y la búsqueda de redes de apoyo familiar antes de la judicialización, salvo en casos de riesgo inminente de vida."
+    },
+    "competenciaEvaluada": "Detección de negligencia y gestión de la corresponsabilidad familiar.",
+    "nivelDificultad": "Alta"
+  },
+  {
+    "id": 772,
+    "categoria": "Protección Infantil y Ruta Crítica",
+    "pregunta": "Un estudiante de 5to de Primaria llega al centro educativo con un ojo morado y rasguños en el rostro. Al preguntarle qué sucedió, el niño responde temblando que su padrastro lo golpeó porque rompió un vaso de vidrio. ¿Cuál es el paso dictado por el protocolo de prevención de violencia?",
+    "opciones": [
+      "Llamar al padrastro para que ofrezca su versión de los hechos y confrontarlo con el niño en la oficina.",
+      "Brindar contención emocional al estudiante, informar de inmediato al director y notificar el caso al Ministerio Público o Línea Vida, evitando alertar al agresor.",
+      "Aplicar hielo en el ojo del niño, enviarlo al aula y esperar a ver si vuelve a suceder para estar seguros de que es un patrón.",
+      "Aconsejar al niño que sea más cuidadoso en casa para no hacer enojar a su padrastro."
+    ],
+    "respuestaCorrecta": 1,
+    "explicacion": "Ante la revelación directa de abuso físico con lesiones evidentes, el centro educativo está obligado a activar la ruta crítica de protección (denuncia). Contactar al presunto agresor está terminantemente prohibido porque pone a la víctima en grave riesgo de represalias.",
+    "fundamentoNormativo": {
+      "documento": "Guía de Ruta Crítica para la Prevención y Atención de la Violencia",
+      "capitulo": "Ruta de Actuación ante Abuso Físico",
+      "apartado": "Pasos para el reporte y derivación",
+      "justificacion": "Establece la denuncia obligatoria ante el Ministerio Público o CONANI y prohíbe la mediación o confrontación con los agresores intrafamiliares."
+    },
+    "competenciaEvaluada": "Activación de la Ruta Crítica y protección de la integridad física del menor.",
+    "nivelDificultad": "Media"
+  },
+  {
+    "id": 773,
+    "categoria": "Protección Infantil y Ruta Crítica",
+    "pregunta": "Una madre acude a buscar a su hijo de 1ro de Secundaria. El psicólogo nota que ella tiene moretones recientes en los brazos y el rostro. La madre se echa a llorar y confiesa que su esposo la maltrata físicamente, situación que el estudiante presencia constantemente. ¿Cuál es la responsabilidad del psicólogo escolar?",
+    "opciones": [
+      "Indicarle que los problemas de pareja no son competencia de la escuela y pedirle que se retire.",
+      "Llamar al esposo para mediar en el conflicto matrimonial y pedirle que no peleen frente al niño.",
+      "Brindar primeros auxilios psicológicos a la madre, orientarla sobre las rutas de denuncia (Ministerio de la Mujer), y establecer un plan de seguimiento para monitorear el impacto emocional en el estudiante.",
+      "Retener al niño en el centro educativo y prohibirle a la madre que se lo lleve a su casa."
+    ],
+    "respuestaCorrecta": 2,
+    "explicacion": "La violencia de género e intrafamiliar afecta directamente al estudiante (víctima indirecta). La escuela no hace terapia de pareja ni mediación (lo cual está contraindicado en violencia), pero sí debe orientar a la víctima adulta hacia las instituciones de ayuda (Ministerio de la Mujer) y resguardar psicoafectivamente al menor.",
+    "fundamentoNormativo": {
+      "documento": "Guía de Ruta Crítica para la Prevención y Atención de la Violencia",
+      "capitulo": "Violencia Intrafamiliar y de Género",
+      "apartado": "Rol del centro educativo ante violencia intrafamiliar",
+      "justificacion": "Mandata la orientación y derivación de las víctimas a las redes de apoyo institucional y el seguimiento continuo al bienestar del estudiante."
+    },
+    "competenciaEvaluada": "Orientación ante violencia intrafamiliar y protección de víctimas indirectas.",
+    "nivelDificultad": "Alta"
+  },
+  {
+    "id": 774,
+    "categoria": "Protección Infantil y Ruta Crítica",
+    "pregunta": "Durante el proceso de inscripción en 1ro de Primaria, una madre informa que no tiene el acta de nacimiento de su hijo por problemas legales. La directora decide rechazar la inscripción. Como garante de derechos, ¿qué debe recomendar el psicólogo escolar a la dirección?",
+    "opciones": [
+      "Apoyar a la directora, ya que las normativas exigen identidad legal para registrar las calificaciones en el SIGERD.",
+      "Advertir que la falta de documentación no puede ser motivo para negar el derecho a la educación, recomendando inscribir al niño y acompañar a la familia en el proceso de declaración tardía.",
+      "Cobrar una multa a la familia y usar ese dinero para gestionar los papeles del niño.",
+      "Inscribir al niño con un nombre inventado hasta que la madre consiga los documentos oficiales."
+    ],
+    "respuestaCorrecta": 1,
+    "explicacion": "La Ley 136-03 y las normativas del MINERD establecen que la falta de documentación de identidad (acta de nacimiento) no es un impedimento para acceder al derecho fundamental a la educación. La escuela inscribe al menor y el equipo de gestión y psicología apoya a la familia en las gestiones de registro civil.",
+    "fundamentoNormativo": {
+      "documento": "Ley 136-03 (Código para el Sistema de Protección de los NNA)",
+      "capitulo": "Derecho a la Educación / Derecho a la Identidad",
+      "apartado": "Acceso al sistema educativo",
+      "justificacion": "Prohíbe a los centros educativos negar la inscripción por ausencia de documentos de identidad, obligando al Estado a garantizar la escolarización y orientar la regularización."
+    },
+    "competenciaEvaluada": "Garantía de derechos fundamentales y acceso a la educación.",
+    "nivelDificultad": "Media"
+  },
+  {
+    "id": 775,
+    "categoria": "Protección Infantil y Ruta Crítica",
+    "pregunta": "Docentes reportan que el conserje del centro educativo busca constantemente la oportunidad de quedarse a solas con las niñas de 2do de Primaria en los baños y les regala dulces. Aunque no hay reportes de tocamientos, la situación genera alta sospecha. ¿Qué medida preventiva se debe activar?",
+    "opciones": [
+      "Esperar a que una niña reporte un abuso real para tener pruebas antes de tomar alguna medida.",
+      "Notificar inmediatamente a la dirección para separar preventivamente al empleado de las áreas infantiles e iniciar una investigación notificando al Distrito Educativo y autoridades competentes.",
+      "Reunir a las niñas y pedirles que sean ellas quienes le digan al conserje que no lo quieren cerca.",
+      "Despedir al conserje de manera informal sin dejar un registro escrito del motivo."
+    ],
+    "respuestaCorrecta": 1,
+    "explicacion": "Las conductas de 'grooming' (preparación para el abuso) por parte del personal del centro requieren intervención preventiva inmediata. No se espera a que ocurra el daño; se informa a la dirección para la separación cautelar de funciones (protección) y se notifica al Distrito para los fines legales e investigativos.",
+    "fundamentoNormativo": {
+      "documento": "Manual Operativo de los Centros de Orientación y Psicología",
+      "capitulo": "Prevención de Riesgos y Protección Estudiantil",
+      "apartado": "Agresores en el entorno escolar",
+      "justificacion": "Establece el principio de precaución y la separación inmediata de funciones de cualquier personal del centro ante sospechas fundamentadas de riesgo contra los menores."
+    },
+    "competenciaEvaluada": "Prevención del abuso sexual en el entorno escolar y medidas cautelares.",
+    "nivelDificultad": "Media"
+  },
+  {
+    "id": 776,
+    "categoria": "Inclusión Educativa",
+    "pregunta": "Un estudiante de 3ro de Primaria diagnosticado con Trastorno del Espectro Autista (Nivel 1) entra en crisis y se tapa los oídos llorando durante las clases de Educación Física debido al uso de un silbato fuerte por el profesor. ¿Qué ajuste razonable debe coordinar el psicólogo?",
+    "opciones": [
+      "Eximir al estudiante de tomar la materia de Educación Física por el resto del año.",
+      "Obligar al niño a soportar el ruido progresivamente para que se adapte al mundo real.",
+      "Asesorar al docente para sustituir el silbato por señales visuales (banderines) y permitir al estudiante el uso de audífonos canceladores de ruido.",
+      "Indicar a los padres que la escuela no está equipada para niños con autismo."
+    ],
+    "respuestaCorrecta": 2,
+    "explicacion": "La hipersensibilidad auditiva es común en el TEA. El ajuste razonable no implica excluir al estudiante (quitarle la materia), sino modificar el entorno (señales visuales) y proporcionar apoyos técnicos (audífonos) para garantizar su participación plena (DUA).",
+    "fundamentoNormativo": {
+      "documento": "Ordenanza 05-2024 sobre Educación Inclusiva",
+      "capitulo": "Ajustes Razonables",
+      "apartado": "Ajustes de Acceso al Entorno y la Información",
+      "justificacion": "Mandata la eliminación de barreras sensoriales y la flexibilización de los medios e instrumentos utilizados por el docente para incluir a estudiantes con TEA."
+    },
+    "competenciaEvaluada": "Diseño de ajustes razonables de acceso y manejo de hipersensibilidad sensorial.",
+    "nivelDificultad": "Alta"
+  },
+  {
+    "id": 777,
+    "categoria": "Inclusión Educativa",
+    "pregunta": "En 1ro de Secundaria, un estudiante con parálisis cerebral leve que afecta su motricidad fina no logra terminar las evaluaciones escritas en el tiempo establecido, aunque comprende todos los contenidos. El docente afirma que no puede darle más tiempo porque sería injusto. ¿Qué intervención es normativa?",
+    "opciones": [
+      "Darle la razón al docente porque el sistema de evaluación debe ser igual y estandarizado para todos.",
+      "Orientar al docente sobre el Diseño Universal para el Aprendizaje (DUA), recomendando diversificar los medios de evaluación (exámenes orales, uso de computadora o tiempo extendido).",
+      "Recomendar que el estudiante repita el curso hasta que mejore su rapidez motora.",
+      "Hacerle los exámenes en la oficina de psicología dictándole las respuestas correctas."
+    ],
+    "respuestaCorrecta": 1,
+    "explicacion": "La equidad no significa evaluar a todos exactamente igual, sino dar a cada quien lo que necesita para demostrar su aprendizaje. El DUA (Múltiples formas de acción y expresión) y la normativa inclusiva avalan el tiempo extendido y los formatos alternativos (oral/digital) como ajustes obligatorios ante discapacidades motoras.",
+    "fundamentoNormativo": {
+      "documento": "Ordenanza 05-2024 sobre Educación Inclusiva",
+      "capitulo": "Evaluación de los Aprendizajes",
+      "apartado": "Flexibilidad y Diversificación de la Evaluación",
+      "justificacion": "Establece el derecho a recibir adaptaciones en los tiempos, espacios y formatos de las pruebas de evaluación para estudiantes con discapacidad motora."
+    },
+    "competenciaEvaluada": "Asesoramiento en evaluación diversificada bajo los principios del DUA.",
+    "nivelDificultad": "Media"
+  },
+  {
+    "id": 778,
+    "categoria": "Inclusión Educativa",
+    "pregunta": "Un centro educativo recibe a una estudiante con discapacidad intelectual moderada. La maestra titular se siente abrumada y le dice al psicólogo que no sabe qué enseñarle. ¿Cuál es el rol del psicólogo como articulador de la inclusión?",
+    "opciones": [
+      "Asumir la enseñanza de la estudiante enseñándole colores y formas exclusivamente en el departamento de psicología.",
+      "Informar a la familia que el centro no tiene capacidad y derivarla a una escuela especial.",
+      "Acompañar a la docente en la evaluación de competencias de la estudiante y apoyarla en el diseño de un Plan de Apoyo Individualizado (PAI), articulando con el Centro Nacional de Recursos para la Inclusión (CENAREC) si se requiere apoyo especializado.",
+      "Exigirle a la maestra que investigue en internet cómo dar clases a niños especiales porque es su obligación laboral."
+    ],
+    "respuestaCorrecta": 2,
+    "explicacion": "El psicólogo escolar no sustituye al maestro, pero tampoco lo abandona. Su rol es el acompañamiento psicoeducativo: ayudar a perfilar las fortalezas del estudiante, orientar en la construcción del PAI y conectar al centro con las redes institucionales de apoyo especializado (CENAREC, Equipos Distritales de Inclusión).",
+    "fundamentoNormativo": {
+      "documento": "Manual de Servicios de Orientación y Psicología / Ordenanza 05-2024",
+      "capitulo": "Acompañamiento a la Práctica Docente en Inclusión",
+      "apartado": "Articulación de apoyos y formulación del PAI",
+      "justificacion": "Define la responsabilidad de Orientación y Psicología en el diseño colaborativo del PAI y la coordinación con redes externas de educación especial para fortalecer la práctica docente."
+    },
+    "competenciaEvaluada": "Gestión de redes de apoyo inclusivo y acompañamiento al docente en el PAI.",
+    "nivelDificultad": "Alta"
+  },
+  {
+    "id": 779,
+    "categoria": "Convivencia Escolar y Cultura de Paz",
+    "pregunta": "Un estudiante de 2do de Secundaria interrumpe constantemente la clase haciendo chistes y ruidos, buscando la atención del grupo. El profesor lo ha sacado del aula varias veces, pero la conducta empeora. Desde el enfoque de la Disciplina Positiva, ¿qué recomendación debe dar el psicólogo al docente?",
+    "opciones": [
+      "Incrementar los castigos y suspenderlo directamente, ya que la expulsión del aula no está funcionando.",
+      "Ignorar al estudiante completamente durante toda la semana para extinguir la conducta de búsqueda de atención.",
+      "Identificar que el estudiante busca pertenencia y liderazgo; orientar al docente para asignarle roles positivos de responsabilidad en la clase que canalicen su necesidad de destacar.",
+      "Etiquetar al estudiante frente al grupo como 'el payaso del salón' para que le dé vergüenza y se detenga."
+    ],
+    "respuestaCorrecta": 2,
+    "explicacion": "La Disciplina Positiva entiende que detrás del mal comportamiento hay una meta equivocada (en este caso, búsqueda de atención/poder). La expulsión del aula excluye y refuerza el problema. La estrategia adecuada es redirigir esa energía hacia un liderazgo positivo (roles de responsabilidad), satisfaciendo su necesidad de pertenecer de forma constructiva.",
+    "fundamentoNormativo": {
+      "documento": "Manual de Servicios de Orientación y Psicología / Guía de Disciplina Positiva",
+      "capitulo": "Convivencia y Clima Escolar",
+      "apartado": "Abordaje de la disrupción áulica y necesidades no cubiertas",
+      "justificacion": "Promueve estrategias proactivas y formativas centradas en las fortalezas del estudiante frente al uso de medidas punitivas tradicionales."
+    },
+    "competenciaEvaluada": "Asesoramiento en estrategias de Disciplina Positiva y manejo de aula.",
+    "nivelDificultad": "Alta"
+  },
+  {
+    "id": 780,
+    "categoria": "Convivencia Escolar y Cultura de Paz",
+    "pregunta": "Dos estudiantes de 4to de Secundaria tienen un fuerte altercado verbal en el pasillo por la distribución del trabajo en un proyecto de ciencias. Ambos están molestos, pero expresan que quieren resolverlo para no afectar su calificación. ¿Cuál es el procedimiento más indicado?",
+    "opciones": [
+      "Facilitar una sesión de Mediación Escolar donde ambos puedan expresar sus necesidades, escucharse empáticamente y construir acuerdos equitativos.",
+      "Obligarlos a darse un abrazo frente a todos y decirse que se perdonan de inmediato.",
+      "Dividir el grupo y prohibirles que vuelvan a hablarse o trabajar juntos en lo que resta del año escolar.",
+      "Levantar un acta de falta muy grave y enviarlos al Tribunal de Niños, Niñas y Adolescentes."
+    ],
+    "respuestaCorrecta": 0,
+    "explicacion": "Ante un conflicto interpersonal donde las partes tienen disposición de resolución, la Mediación Escolar es la herramienta de primera línea. Permite gestionar el conflicto de manera pacífica, fomentando el diálogo, la empatía y la resolución constructiva sin recurrir a medidas disciplinarias desproporcionadas.",
+    "fundamentoNormativo": {
+      "documento": "Normas del Sistema Educativo Dominicano para la Convivencia Armoniosa",
+      "capitulo": "Estrategias de Cultura de Paz",
+      "apartado": "Mediación de Conflictos Escolares",
+      "justificacion": "Establece la mediación como mecanismo principal para la resolución de conflictos interpersonales leves entre pares, fortaleciendo la autonomía moral."
+    },
+    "competenciaEvaluada": "Aplicación de técnicas de Mediación Escolar en conflictos entre pares.",
+    "nivelDificultad": "Media"
+  },
+  {
+    "id": 781,
+    "categoria": "Convivencia Escolar y Cultura de Paz",
+    "pregunta": "Un grupo de estudiantes pone apodos despectivos a un compañero por su apariencia física diariamente, esconden su mochila y lo empujan en los pasillos. El estudiante afectado ya no quiere ir al centro. ¿Cómo se tipifica esta situación y cuál es el rol del psicólogo?",
+    "opciones": [
+      "Conflicto entre pares; se debe hacer una charla general sobre la amistad.",
+      "Falta Leve; se debe llamar la atención verbalmente a los agresores en el aula.",
+      "Acoso Escolar (Bullying) y Falta Muy Grave; activar el protocolo de protección a la víctima, intervenir con los agresores (medidas restaurativas/disciplinarias) y trabajar con los observadores (grupo).",
+      "Indisciplina de rutina; se debe castigar a los culpables quitándoles el recreo una semana."
+    ],
+    "respuestaCorrecta": 2,
+    "explicacion": "La agresión sistemática, intencional y con desequilibrio de poder es Acoso Escolar (Bullying). Constituye una Falta Muy Grave. El psicólogo no solo aplica castigos, sino que articula el protocolo integral: protección urgente a la víctima, responsabilidad para los agresores y desensibilización del grupo espectador.",
+    "fundamentoNormativo": {
+      "documento": "Normas del Sistema Educativo Dominicano para la Convivencia Armoniosa",
+      "capitulo": "Faltas Muy Graves y Protocolos",
+      "apartado": "Prevención y Actuación ante el Acoso Escolar (Bullying)",
+      "justificacion": "Tipifica claramente el acoso escolar como falta muy grave y exige una intervención integral que involucra a la víctima, los agresores y el grupo de pares."
+    },
+    "competenciaEvaluada": "Identificación de acoso escolar e implementación de protocolo integral.",
+    "nivelDificultad": "Alta"
+  },
+  {
+    "id": 782,
+    "categoria": "Apoyo Psicopedagógico",
+    "pregunta": "Una maestra de 2do de Primaria refiere a un niño que confunde la izquierda y la derecha, tiene dificultades para organizar su escritura en el cuaderno (escribe fuera de los márgenes) y se tropieza constantemente. ¿Hacia qué área debe orientar el psicólogo la evaluación psicopedagógica inicial?",
+    "opciones": [
+      "Inteligencia general y coeficiente intelectual (CI).",
+      "Desarrollo perceptivo-motor, esquema corporal y estructuración espacial.",
+      "Conflictos psicoanalíticos reprimidos en la infancia.",
+      "Trastorno del Espectro Autista."
+    ],
+    "respuestaCorrecta": 1,
+    "explicacion": "Los indicadores (confusión izquierda/derecha, desorganización en el espacio gráfico, torpeza motora) apuntan a inmadurez en las áreas perceptivo-motoras y de estructuración espacial. La evaluación psicopedagógica escolar debe centrarse en estas bases pre-requisitas para el aprendizaje de la lectoescritura antes de suponer un déficit cognitivo o trastorno clínico.",
+    "fundamentoNormativo": {
+      "documento": "Lineamientos del Proceso de Orientación y Psicología (2023-2024)",
+      "capitulo": "Apoyo Psicopedagógico",
+      "apartado": "Evaluación de procesos cognitivos y perceptivos basales",
+      "justificacion": "Focaliza la evaluación psicopedagógica en el nivel primario hacia las competencias fundantes del aprendizaje (lateralidad, psicomotricidad, percepción)."
+    },
+    "competenciaEvaluada": "Identificación de indicadores de inmadurez perceptivo-motora y estructuración espacial.",
+    "nivelDificultad": "Media"
+  },
+  {
+    "id": 783,
+    "categoria": "Apoyo Psicopedagógico",
+    "pregunta": "Una estudiante de 5to de Primaria lee libros de nivel secundario, tiene un vocabulario muy sofisticado, corrige frecuentemente a la maestra y se rehúsa a hacer tareas repetitivas porque le parecen 'aburridas y sin sentido'. ¿Qué acción es pertinente desde la Unidad de Psicología?",
+    "opciones": [
+      "Amonestar a la estudiante por faltarle el respeto a la autoridad de la maestra.",
+      "Derivar a psiquiatría por posible Trastorno Negativista Desafiante.",
+      "Iniciar una evaluación para identificar posibles Altas Capacidades y proponer a la maestra estrategias de enriquecimiento y compactación curricular.",
+      "Ignorar la situación, asumiendo que es una etapa de rebeldía pasajera."
+    ],
+    "respuestaCorrecta": 2,
+    "explicacion": "El aburrimiento ante tareas repetitivas, el lenguaje avanzado y la corrección a adultos son indicadores clásicos de Altas Capacidades Intelectuales (talento/superdotación). El psicólogo debe evaluar esta NEAE y orientar a la docente en enriquecimiento curricular, para ofrecerle retos cognitivos adecuados.",
+    "fundamentoNormativo": {
+      "documento": "Ordenanza 05-2024 sobre Educación Inclusiva",
+      "capitulo": "Atención a Estudiantes con Necesidades Específicas de Apoyo Educativo",
+      "apartado": "Altas Capacidades: Identificación y Enriquecimiento",
+      "justificacion": "Establece las Altas Capacidades como una NEAE que requiere de identificación temprana y ajustes de enriquecimiento para evitar la desmotivación y el bajo rendimiento."
+    },
+    "competenciaEvaluada": "Identificación y abordaje psicopedagógico de estudiantes con Altas Capacidades.",
+    "nivelDificultad": "Alta"
+  },
+  {
+    "id": 784,
+    "categoria": "Apoyo Psicopedagógico",
+    "pregunta": "Un estudiante de 3ro de Secundaria se reintegra al centro educativo tras haber estado hospitalizado durante 45 días por una cirugía mayor. Al regresar, está abrumado por la cantidad de exámenes y tareas acumuladas, lo que le está generando ansiedad aguda. ¿Qué medida institucional debe facilitar el psicólogo?",
+    "opciones": [
+      "Aplicar todos los exámenes el mismo día para que salga rápidamente del problema.",
+      "Informarle que lamentablemente deberá repetir el año escolar por el exceso de inasistencias.",
+      "Articular con el equipo docente y de gestión un Plan de Nivelación Pedagógica transitorio, flexibilizando fechas y priorizando indicadores de logro fundamentales, junto con apoyo psicoafectivo.",
+      "Pedir a los compañeros de clase que le hagan las tareas y le den las respuestas de los exámenes."
+    ],
+    "respuestaCorrecta": 2,
+    "explicacion": "La enfermedad prolongada es una barrera para el aprendizaje. El psicólogo escolar es el mediador que coordina con la dirección y los docentes los ajustes organizativos y temporales (Plan de Nivelación/Tutoría). Castigarlo con repitencia o sobrecarga evalúa su condición de salud y no su potencial académico.",
+    "fundamentoNormativo": {
+      "documento": "Manual de Servicios de Orientación y Psicología",
+      "capitulo": "Apoyo Psicopedagógico y Acompañamiento Estudiantil",
+      "apartado": "Estrategias de reintegración y apoyo ante enfermedad prolongada",
+      "justificacion": "Obliga a los centros educativos a implementar medidas de flexibilización y tutoría institucional para garantizar el derecho a la educación de estudiantes convalecientes."
+    },
+    "competenciaEvaluada": "Gestión de ajustes académicos organizativos ante vulnerabilidad por salud.",
+    "nivelDificultad": "Media"
+  },
+  {
+    "id": 785,
+    "categoria": "Salud Mental Escolar",
+    "pregunta": "Un estudiante de 6to grado que solía ser muy participativo, lleva tres semanas durmiendo en el aula, ha perdido peso, llora sin motivo aparente y comenta a sus amigos que 'nada tiene sentido'. ¿Cuál es el accionar ético y procedimental del psicólogo escolar?",
+    "opciones": [
+      "Asumir que es una rabieta de preadolescente y aconsejar a los docentes que lo dejen dormir.",
+      "Realizar una evaluación de riesgo para explorar ideación suicida, convocar urgentemente a la familia para psicoeducarlos sobre signos de depresión, y derivar a psicología clínica/psiquiatría externa.",
+      "Diagnosticar depresión clínica e iniciar psicoterapia profunda en la escuela dos veces por semana.",
+      "Sugerir a los padres que lo lleven a la iglesia porque es un problema espiritual."
+    ],
+    "respuestaCorrecta": 1,
+    "explicacion": "Los síntomas (aislamiento, anhedonia, pérdida de peso, ideación pasiva) son indicadores clínicos de depresión. El rol escolar es la detección temprana, evaluación inicial de riesgo (prevención suicida), contención e involucramiento familiar para la derivación obligatoria al sistema de salud mental.",
+    "fundamentoNormativo": {
+      "documento": "Protocolo para el Manejo de Situaciones de Riesgo Psicosocial y Salud Mental",
+      "capitulo": "Detección y Abordaje de la Depresión Infantil y Adolescente",
+      "apartado": "Intervención inicial y derivación",
+      "justificacion": "Establece la obligatoriedad de la escuela en la detección, notificación a tutores y derivación externa ante sintomatología depresiva, prohibiendo la terapia clínica en el centro."
+    },
+    "competenciaEvaluada": "Detección de sintomatología depresiva y gestión de derivación a salud mental.",
+    "nivelDificultad": "Alta"
+  },
+  {
+    "id": 786,
+    "categoria": "Salud Mental Escolar",
+    "pregunta": "Una profesora muy querida del centro educativo fallece trágicamente en un accidente de tránsito. Al día siguiente, la comunidad estudiantil está en shock y varios estudiantes de su curso tutor lloran desconsoladamente. ¿Qué intervención grupal debe liderar el Departamento de Orientación y Psicología?",
+    "opciones": [
+      "Suspender las clases por un mes para que todos olviden el suceso.",
+      "Obligar a todos a asistir a clases normales sin mencionar el tema para mantener la mente ocupada.",
+      "Coordinar una intervención en crisis (postvención), facilitando espacios grupales seguros para la expresión emocional, elaboración de murales o rituales de despedida, e identificar estudiantes que requieran apoyo individualizado.",
+      "Mandar a todos los estudiantes llorosos a sus casas inmediatamente."
+    ],
+    "respuestaCorrecta": 2,
+    "explicacion": "Ante una pérdida comunitaria traumática, se aplica la intervención en crisis o postvención. Ignorar el dolor (silencio) empeora el trauma. Las estrategias grupales (círculos de escucha, rituales simbólicos de despedida) validan el dolor y cohesionan a la comunidad, permitiendo detectar vulnerabilidades individuales.",
+    "fundamentoNormativo": {
+      "documento": "Protocolo de Apoyo Psicoafectivo en Situaciones de Emergencias y Desastres",
+      "capitulo": "Intervención Post-Crisis y Duelo en la Comunidad Escolar",
+      "apartado": "Estrategias de contención grupal e institucional",
+      "justificacion": "Fundamenta la realización de actividades de expresión simbólica y acompañamiento psicoafectivo grupal tras la pérdida de un miembro de la comunidad."
+    },
+    "competenciaEvaluada": "Gestión de duelo colectivo y aplicación de postvención escolar.",
+    "nivelDificultad": "Media"
+  },
+  {
+    "id": 787,
+    "categoria": "Trabajo con Familias",
+    "pregunta": "Los padres de un estudiante de 2do de Primaria con problemas conductuales severos son citados. Durante la entrevista, adoptan una actitud hostil, culpan a la maestra de tener 'manía' contra su hijo y aseguran que en casa él se porta perfecto. ¿Qué técnica de entrevista debe emplear el psicólogo?",
+    "opciones": [
+      "Confrontarlos duramente, exigiendo respeto y mostrándoles el registro anecdótico para probar que su hijo es el problema.",
+      "Aplicar escucha activa, validar su perspectiva ('entiendo su preocupación'), y redirigir el diálogo hacia las conductas específicas observadas en el aula para establecer acuerdos colaborativos, sin buscar culpables.",
+      "Dar por terminada la reunión de inmediato y expulsar al estudiante.",
+      "Darles la razón y amonestar a la maestra delante de los padres para calmarlos."
+    ],
+    "respuestaCorrecta": 1,
+    "explicacion": "La hostilidad parental a menudo enmascara miedo o frustración. La confrontación rompe el vínculo. La técnica adecuada es la empatía y la redirección: validar la emoción del padre, pero centrar la discusión objetivamente en la conducta del niño en el contexto escolar, buscando soluciones conjuntas.",
+    "fundamentoNormativo": {
+      "documento": "Lineamientos del Proceso de Orientación y Psicología (2023-2024)",
+      "capitulo": "Línea de Intervención: Apoyo a las Familias",
+      "apartado": "Técnicas de mediación y entrevista asertiva",
+      "justificacion": "Promueve el uso de la comunicación asertiva, la empatía y la desescalada de conflictos para convertir a la familia en aliados del proceso educativo."
+    },
+    "competenciaEvaluada": "Manejo asertivo de la entrevista familiar ante resistencia y hostilidad.",
+    "nivelDificultad": "Alta"
+  },
+  {
+    "id": 788,
+    "categoria": "Orientación Vocacional y Proyecto de Vida",
+    "pregunta": "En un liceo con salida Técnico-Profesional, los estudiantes de 3ro de Secundaria deben elegir la especialidad que cursarán el próximo año (Ej. Informática, Contabilidad, Enfermería). Un estudiante está muy indeciso y ansioso. ¿Qué proceso debe facilitar la Unidad de Orientación?",
+    "opciones": [
+      "Asignarle la especialidad con menos estudiantes para equilibrar las secciones del centro.",
+      "Elegir por él basándose en sus calificaciones matemáticas, enviándolo a Contabilidad.",
+      "Aplicar un programa de exploración vocacional (intereses, aptitudes, ferias técnicas, visitas a talleres) que le permita reflexionar sobre su Proyecto de Vida y tomar una decisión autónoma.",
+      "Decirle que lo decida tirando una moneda porque al final todas las carreras son iguales."
+    ],
+    "respuestaCorrecta": 2,
+    "explicacion": "La elección de la modalidad en el nivel secundario es un hito vocacional clave. El psicólogo no impone ni asigna cupos por conveniencia administrativa. Diseña y ejecuta intervenciones vocacionales (tests, exploración laboral) para fomentar el autoconocimiento y la toma de decisiones informada del adolescente.",
+    "fundamentoNormativo": {
+      "documento": "Guías Oficiales de Orientación Vocacional del MINERD",
+      "capitulo": "Transición en el Nivel Secundario",
+      "apartado": "Acompañamiento para la elección de modalidad o salida técnica",
+      "justificacion": "Establece la obligatoriedad de implementar programas de acompañamiento vocacional previo a las transiciones de ciclo o elección de salidas técnicas."
+    },
+    "competenciaEvaluada": "Diseño y aplicación de programas de exploración vocacional en transiciones escolares.",
+    "nivelDificultad": "Media"
+  },
+  {
+    "id": 789,
+    "categoria": "Permanencia Escolar",
+    "pregunta": "Una estudiante de 3ro de Secundaria notifica al departamento de psicología que está embarazada de 4 meses. Llorando, manifiesta que se siente avergonzada y cree que debe abandonar la escuela porque los maestros la miran mal y se cansa mucho. ¿Qué intervención garantiza su permanencia?",
+    "opciones": [
+      "Recomendarle que se retire este año escolar y vuelva el próximo cuando nazca el bebé para evitar el estrés.",
+      "Coordinar con la dirección su traslado obligatorio a un centro nocturno o escuela de adultos.",
+      "Brindar contención emocional, garantizar su derecho a continuar en su curso regular y coordinar con los docentes la flexibilización de horarios para asistencia a chequeos prenatales.",
+      "Aplicarle el reglamento disciplinario por conducta inmoral y suspenderla temporalmente."
+    ],
+    "respuestaCorrecta": 2,
+    "explicacion": "El embarazo adolescente es una causa principal de deserción escolar. Las políticas dominicanas prohíben la expulsión, estigmatización o el traslado forzoso a educación de adultos. El psicólogo es el garante de su permanencia mediante apoyo psicoafectivo y ajustes organizativos (permisos médicos, flexibilización).",
+    "fundamentoNormativo": {
+      "documento": "Lineamientos para la Prevención de Embarazos en Adolescentes y Permanencia Escolar",
+      "capitulo": "Garantía de Derechos y Retención",
+      "apartado": "Derecho a la educación de madres adolescentes",
+      "justificacion": "Garantiza la permanencia de la adolescente en su entorno regular, exigiendo al centro proporcionar los apoyos y flexibilizaciones necesarias durante el embarazo y la lactancia."
+    },
+    "competenciaEvaluada": "Prevención del abandono escolar y aplicación de políticas de inclusión para embarazadas.",
+    "nivelDificultad": "Alta"
+  },
+  {
+    "id": 790,
+    "categoria": "Ética Profesional",
+    "pregunta": "Al inicio del año escolar, el director solicita al psicólogo que aplique un test de inteligencia a todos los estudiantes de nuevo ingreso para organizarlos en dos aulas: la sección A para los 'inteligentes' y la sección B para los de 'aprendizaje lento'. ¿Cómo debe responder éticamente el profesional de la conducta?",
+    "opciones": [
+      "Aplicar las pruebas como solicita el director, ya que este es su jefe directo y debe obedecer.",
+      "Negarse a hacerlo justificando que las pruebas de inteligencia son muy caras y toman mucho tiempo.",
+      "Explicar al director, basándose en la ética y en la Ordenanza 05-2024, que las pruebas psicométricas no se utilizan para segregar, y que el agrupamiento debe ser heterogéneo y equitativo.",
+      "Recomendar al director que él mismo haga las pruebas si tanto le interesa organizarlos así."
+    ],
+    "respuestaCorrecta": 2,
+    "explicacion": "El uso de instrumentos psicológicos para etiquetar, discriminar o segregar estudiantes viola principios éticos fundamentales y las políticas de inclusión del MINERD. El agrupamiento por 'niveles de inteligencia' es una práctica excluyente prohibida. El psicólogo debe asesorar institucionalmente sobre la heterogeneidad y el uso ético de las pruebas.",
+    "fundamentoNormativo": {
+      "documento": "Orden Departamental 22-2023 sobre Ética Profesional / Ordenanza 05-2024",
+      "capitulo": "Uso de Instrumentos de Evaluación / Organización Escolar Inclusiva",
+      "apartado": "Uso ético de los resultados de evaluación psicopedagógica",
+      "justificacion": "Prohíbe el uso de instrumentos de evaluación con fines de clasificación discriminatoria y mandata la distribución heterogénea en las aulas para fomentar la equidad y el aprendizaje entre pares."
+    },
+    "competenciaEvaluada": "Uso ético de instrumentos de evaluación y promoción de la organización inclusiva.",
+    "nivelDificultad": "Alta"
   }
     
 ];
