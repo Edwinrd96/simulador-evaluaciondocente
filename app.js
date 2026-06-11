@@ -421,7 +421,7 @@ function saveUsuarios(data) {
 
 /** Verificar acceso — retorna info del usuario o null */
 function resolverUsuario(key) {
-  if (key === 'edwinrd01') return { ...ADMIN, esAdmin: true, bancos: Object.keys(BANCOS_CFG) };
+  if (key === 'edwinrd') return { ...ADMIN, esAdmin: true, bancos: Object.keys(BANCOS_CFG) };
   const usuarios = getUsuarios();
   if (usuarios[key]) return { ...usuarios[key], esAdmin: false };
   return null;
