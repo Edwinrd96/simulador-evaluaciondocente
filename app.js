@@ -163,7 +163,7 @@ const GH_CONFIG = {
 
 /**
  * Mapeo: clave de banco → nombre del archivo .js en el repo
- * y nombre de la variable const que contiene el array.
+ * y nombre de la variable const que contiene el array.S
  */
 const GH_BANCOS_MAP = {
   psicologo:          { file: 'preguntas.js',                      varName: 'bancoPreguntas'          },
