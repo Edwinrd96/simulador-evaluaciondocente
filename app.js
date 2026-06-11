@@ -116,11 +116,13 @@ const MENSAJES_ALIENTO = [
 
 const STORAGE_KEYS = {
   POOL:    'minerd_pool_v3',
-  SESSION: 'minerd_session_v3',
+  SESSION: 'minerd_ses_v4',   // prefijo — se guarda como SESSION_bancoClave
   RESULTS: 'minerd_results_v3',
   EXTRA:   'minerd_extra_v1',
-  USERS:   'minerd_users_v2'      // usuarios dinámicos gestionados por admin
+  USERS:   'minerd_users_v2'
 };
+
+function _sesKey(rol, usuario) { return `${STORAGE_KEYS.SESSION}_${usuario}_${rol}`; }
 
 const TTL = {
   POOL:    21 * 24 * 3600 * 1000,
@@ -149,17 +151,27 @@ function sDel(key) { try { localStorage.removeItem(key); } catch (e) {} }
    Todo dispositivo que abra el simulador tendrá los datos.
 ════════════════════════════════════════════════════════════ */
 
-/**
- * CONFIGURACIÓN — solo debes cambiar el token.
- * El repo ya es el del simulador: Edwinrd96/simulador-evaluaciondocente
- * Token: genera uno en GitHub → Settings → Developer settings →
- *        Personal access tokens → Tokens (classic) → permiso "repo"
- */
+/* ════════════════════════════════════════════════════════════
+   SECCIÓN 2B: GITHUB SYNC — Escritura directa al código
+   El token NO se guarda en el código fuente.
+   Edwin lo ingresa una vez desde el panel admin y queda
+   almacenado en localStorage solo en su dispositivo.
+════════════════════════════════════════════════════════════ */
+
 const GH_CONFIG = {
   owner: 'Edwinrd96',
-  repo:  'simulador-evaluaciondocente',
-  token: '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'  // ← pon tu token aquí
+  repo:  'simulador-evaluaciondocente'
+  // token: se lee de localStorage — nunca en el código
 };
+
+/** Obtener token desde localStorage (solo dispositivo de Edwin) */
+function ghGetToken() {
+  try { return localStorage.getItem('__gh_tok__') || ''; } catch(e) { return ''; }
+}
+/** Guardar token en localStorage */
+function ghSetToken(t) {
+  try { localStorage.setItem('__gh_tok__', t.trim()); } catch(e) {}
+}
 
 /**
  * Mapeo: clave de banco → nombre del archivo .js en el repo
@@ -176,7 +188,8 @@ const GH_BANCOS_MAP = {
 
 /** ¿Está configurado el token? */
 function ghConfigurado() {
-  return GH_CONFIG.token && !GH_CONFIG.token.startsWith('ghp_XXXXX');
+  const t = ghGetToken();
+  return t.length > 10;
 }
 
 /** Mostrar badge de sincronización (esquina inferior derecha) */
@@ -218,7 +231,7 @@ async function ghReadFile(filename) {
   const url = `https://api.github.com/repos/${GH_CONFIG.owner}/${GH_CONFIG.repo}/contents/${filename}`;
   const r = await fetch(url, {
     headers: {
-      Authorization: `token ${GH_CONFIG.token}`,
+      Authorization: `token ${ghGetToken()}`,
       Accept: 'application/vnd.github.v3+json'
     }
   });
@@ -240,7 +253,7 @@ async function ghWriteFile(filename, newContent, sha, commitMsg) {
   const r = await fetch(url, {
     method: 'PUT',
     headers: {
-      Authorization: `token ${GH_CONFIG.token}`,
+      Authorization: `token ${ghGetToken()}`,
       Accept: 'application/vnd.github.v3+json',
       'Content-Type': 'application/json'
     },
@@ -333,7 +346,7 @@ async function ghPushUsuarios(data) {
     const r = await fetch(url, {
       method: 'PUT',
       headers: {
-        Authorization: `token ${GH_CONFIG.token}`,
+        Authorization: `token ${ghGetToken()}`,
         Accept: 'application/vnd.github.v3+json',
         'Content-Type': 'application/json'
       },
@@ -421,7 +434,7 @@ function saveUsuarios(data) {
 
 /** Verificar acceso — retorna info del usuario o null */
 function resolverUsuario(key) {
-  if (key === 'edwinrd') return { ...ADMIN, esAdmin: true, bancos: Object.keys(BANCOS_CFG) };
+  if (key === 'edwinrd01') return { ...ADMIN, esAdmin: true, bancos: Object.keys(BANCOS_CFG) };
   const usuarios = getUsuarios();
   if (usuarios[key]) return { ...usuarios[key], esAdmin: false };
   return null;
@@ -666,19 +679,35 @@ function verificarAcceso() {
 }
 
 function _continueLogin(key) {
-  const ses = sLoad(STORAGE_KEYS.SESSION);
-  if (ses && ses.usuario === key && ses.rolActual && BANCOS_CFG[ses.rolActual]) {
+  // Buscar sesiones activas en CUALQUIER banco para este usuario
+  const sesionesActivas = Object.keys(BANCOS_CFG).map(rol => {
+    const ses = sLoad(_sesKey(rol, key));
+    if (ses && ses.usuario === key && BANCOS_CFG[ses.rolActual]) return ses;
+    return null;
+  }).filter(Boolean);
+
+  if (sesionesActivas.length > 0) {
+    // Mostrar la más reciente (la que más preguntas respondidas tiene)
+    const ses = sesionesActivas.sort((a, b) =>
+      Object.keys(b.respuestas || {}).length - Object.keys(a.respuestas || {}).length
+    )[0];
     const cfg  = BANCOS_CFG[ses.rolActual];
     const resp = Object.keys(ses.respuestas || {}).length;
+    const total = ses.preguntas || '?';
+    const restantes = total - resp;
     modal({
       ico: '🔔', icoClass: 'shake',
       title: '¿Continuar donde lo dejaste?',
-      msg: `Tienes la <strong>${cfg.titulo}</strong> en progreso.<br>
-            Pregunta <strong>${(ses.idx || 0) + 1}</strong> — ${resp} respuestas guardadas.<br>
-            Sesión válida por 24 horas.`,
+      msg: `Tienes <strong>${cfg.titulo}</strong> (${cfg.subtitulo.split('—')[0].trim()}) en progreso.<br>
+            📍 Pregunta <strong>${(ses.idx || 0) + 1} de ${total}</strong><br>
+            ✅ Respondidas: <strong>${resp}</strong> &nbsp;·&nbsp; ⏳ Pendientes: <strong>${restantes}</strong>`,
       btns: [
         { label: '▶ Continuar', cls: 'pri', action: () => restaurarSesion(ses) },
-        { label: '🏠 Ir al inicio', cls: 'sec', action() { sDel(STORAGE_KEYS.SESSION); mostrarPerfil(); } }
+        { label: '🏠 Ir al inicio', cls: 'sec', action() {
+          // Limpiar esa sesión específica
+          sDel(_sesKey(ses.rolActual, key));
+          mostrarPerfil();
+        }}
       ]
     });
   } else {
@@ -806,6 +835,7 @@ function mostrarPerfil() {
 
     const card = document.createElement('div');
     card.className = 'eval-card';
+    card.setAttribute('data-rol', rol);
     card.style.setProperty('--c', cfg.color);
     card.style.setProperty('--c-l', cfg.colorL);
     card.style.animationDelay = `${i * 0.09}s`;
@@ -828,7 +858,7 @@ function mostrarPerfil() {
       <div class="pool-bar-wrap">
         <div class="pool-bar-fill" style="width:${pct}%;background:${disp === 0 ? 'var(--gold)' : 'var(--green)'}"></div>
       </div>
-      <div style="font-size:.66rem;color:var(--muted);margin-top:2px">${usados} practicadas · ${pct}% del ciclo</div>`;
+      <div class="ec-pct-lbl" style="font-size:.66rem;color:var(--muted);margin-top:2px">${usados} practicadas · ${pct}% del ciclo</div>`;
     card.onclick = () => abrirStart(rol);
     grid.appendChild(card);
   });
@@ -836,15 +866,35 @@ function mostrarPerfil() {
   ocultarHdrQuiz();
   show('profile-screen');
 
-  // Refresco del pool en vivo cada 5 seg
+  // Refresco suave del pool — solo actualiza los contadores, sin re-renderizar todo
   clearInterval(window._poolRefreshTimer);
   window._poolRefreshTimer = setInterval(() => {
-    if (!document.getElementById('profile-screen').classList.contains('hidden')) {
-      estado.pool = sLoad(STORAGE_KEYS.POOL) || estado.pool;
-      mostrarPerfil();
-    } else {
-      clearInterval(window._poolRefreshTimer);
-    }
+    const ps = document.getElementById('profile-screen');
+    if (!ps || ps.classList.contains('hidden')) { clearInterval(window._poolRefreshTimer); return; }
+    const poolFresh = sLoad(STORAGE_KEYS.POOL);
+    if (!poolFresh) return;
+    estado.pool = poolFresh;
+    // Actualizar solo los contadores de cada tarjeta sin reconstruir el DOM
+    estado.bancosActivos.forEach(rol => {
+      const cfg = BANCOS_CFG[rol];
+      if (!cfg) return;
+      const banco = cfg.banco ? cfg.banco() : [];
+      const total = banco.length;
+      const usados = estado.pool[rol]?.ids?.length || 0;
+      const disp = Math.max(0, total - usados);
+      const pct  = total > 0 ? Math.round((usados / total) * 100) : 0;
+      // Buscar el card por su rol — las tarjetas tienen data-rol
+      const card = document.querySelector(`[data-rol="${rol}"]`);
+      if (!card) return;
+      const poolEl = card.querySelector('.ec-pool');
+      const barEl  = card.querySelector('.pool-bar-fill');
+      const pctEl  = card.querySelector('.ec-pct-lbl');
+      if (poolEl) poolEl.innerHTML = disp > 0
+        ? `<span class="pdot"></span><strong>${disp}</strong> disponibles sin repetir · <span style="color:var(--muted)">banco: ${total}</span>`
+        : `<span class="pdot pdot-done"></span><span style="color:var(--gold-d);font-weight:800">Ciclo completo — reiniciando</span> · <span style="color:var(--muted)">banco: ${total}</span>`;
+      if (barEl)  barEl.style.width = `${pct}%`;
+      if (pctEl)  pctEl.textContent = `${usados} practicadas · ${pct}% del ciclo`;
+    });
   }, 5000);
 }
 
@@ -882,6 +932,22 @@ function abrirStart(rol) {
      ✅ Ya practicadas: <strong>${usados}</strong> &nbsp;·&nbsp;
      🔄 Sin repetir: <strong>${disp}</strong>
      ${disp === 0 ? '<br>⚡ El banco se reinicia automáticamente.' : ''}`;
+
+  // Si hay sesión activa en este banco, ofrecer continuar
+  const ses = sLoad(_sesKey(rol, estado.usuario));
+  const btnCont = document.getElementById('st-continue-btn');
+  if (ses && ses.usuario === estado.usuario) {
+    const resp = Object.keys(ses.respuestas || {}).length;
+    const restantes = (ses.preguntas || 0) - resp;
+    if (btnCont) {
+      btnCont.classList.remove('hidden');
+      btnCont.innerHTML = `▶ Continuar donde quedé — Pregunta ${(ses.idx || 0) + 1} &nbsp;<span style="opacity:.7;font-size:.8em">(${resp} respondidas · ${restantes} pendientes)</span>`;
+      btnCont.onclick = () => restaurarSesion(ses);
+    }
+  } else {
+    if (btnCont) btnCont.classList.add('hidden');
+  }
+
   show('start-screen');
 }
 
@@ -899,7 +965,19 @@ function sacarPool(rol, n) {
     estado.pool[rol] = { ids: [], ts: ahora };
   }
   const disp = banco.filter(p => !estado.pool[rol].ids.includes(p.id ?? banco.indexOf(p)));
-  const sel = [...disp].sort(() => Math.random() - 0.5).slice(0, Math.min(n, disp.length));
+
+  // Priorizar preguntas de mayor complejidad
+  // nivelDificultad: 'Alta' > 'Media' > 'Baja' > sin nivel
+  const peso = { 'Alta': 3, 'Media': 2, 'Baja': 1 };
+  const altas  = disp.filter(p => (p.nivelDificultad || '') === 'Alta');
+  const medias = disp.filter(p => (p.nivelDificultad || '') === 'Media');
+  const bajas  = disp.filter(p => !p.nivelDificultad || p.nivelDificultad === 'Baja');
+
+  // Shuffle cada grupo, luego concatenar: Alta primero, luego Media, luego Baja
+  const shuffle = arr => [...arr].sort(() => Math.random() - 0.5);
+  const ordenadas = [...shuffle(altas), ...shuffle(medias), ...shuffle(bajas)];
+  const sel = ordenadas.slice(0, Math.min(n, ordenadas.length));
+
   sel.forEach(p => {
     const id = p.id ?? banco.indexOf(p);
     if (!estado.pool[rol].ids.includes(id)) estado.pool[rol].ids.push(id);
@@ -928,7 +1006,8 @@ function mezclar(p) {
 function guardarSesion() {
   if (!estado.preguntas.length || !estado.rolActual) return;
   const banco = BANCOS_CFG[estado.rolActual]?.banco() || [];
-  sSave(STORAGE_KEYS.SESSION, {
+  const sesKey = _sesKey(estado.rolActual, estado.usuario);
+  sSave(sesKey, {
     usuario: estado.usuario,
     rolActual: estado.rolActual,
     tiempoR: estado.tiempoR,
@@ -982,7 +1061,7 @@ function iniciarExamen() {
   estado.idx       = 0;
   estado.respuestas = {};
   estado.tiempoR   = cfg.tiempo;
-  sDel(STORAGE_KEYS.SESSION);
+  sDel(_sesKey(estado.rolActual, estado.usuario));
   show('quiz-screen');
   mostrarHdrQuiz();
   startTimer();
@@ -1171,7 +1250,7 @@ document.addEventListener('visibilitychange', () => {
 
 function finalizarExamen() {
   clearInterval(estado.timer);
-  sDel(STORAGE_KEYS.SESSION);
+  sDel(_sesKey(estado.rolActual, estado.usuario));
   ocultarHdrQuiz();
   show('result-screen');
 
@@ -1486,8 +1565,28 @@ function renderTabStats(panel, results) {
   results.forEach(r => { if (!byRol[r.rol]) byRol[r.rol] = { count: 0, sumPct: 0 }; byRol[r.rol].count++; byRol[r.rol].sumPct += parseFloat(r.pct); });
   const extra = getExtra();
   const totalExtra = Object.values(extra).reduce((a, v) => a + (v.length || 0), 0);
+  const tokenActual = ghGetToken();
+  const tokenOk = ghConfigurado();
 
   panel.innerHTML = `
+    <!-- ── CONFIGURACIÓN GITHUB ── -->
+    <div style="background:${tokenOk ? '#f0fdf4' : '#fffbeb'};border:2px solid ${tokenOk ? 'var(--green)' : 'var(--gold)'};border-radius:14px;padding:16px 18px;margin-bottom:22px">
+      <div style="display:flex;align-items:center;gap:9px;margin-bottom:10px">
+        <span style="font-size:1.2rem">${tokenOk ? '✅' : '⚙️'}</span>
+        <div>
+          <div style="font-weight:900;font-size:.9rem;color:var(--text)">GitHub — Sincronización de preguntas</div>
+          <div style="font-size:.72rem;color:var(--muted)">${tokenOk ? 'Token configurado · Las preguntas que agregues se guardan en el código del simulador.' : 'Sin token · Las preguntas solo se guardan en este dispositivo.'}</div>
+        </div>
+      </div>
+      <div style="display:flex;gap:8px;align-items:center">
+        <input type="password" id="gh-tok-inp" placeholder="Pega tu token ghp_..." 
+          style="flex:1;padding:9px 13px;border:2px solid var(--border);border-radius:9px;font-family:'Nunito',sans-serif;font-size:.83rem"
+          value="${tokenActual ? '•'.repeat(16) : ''}">
+        <button onclick="guardarToken()" style="padding:9px 16px;background:var(--blue);color:#fff;border:none;border-radius:9px;font-family:'Nunito',sans-serif;font-size:.83rem;font-weight:800;cursor:pointer;white-space:nowrap">Guardar token</button>
+        ${tokenOk ? `<button onclick="borrarToken()" title="Borrar token" style="padding:9px 12px;background:var(--red-l);color:var(--red);border:2px solid var(--red);border-radius:9px;font-size:.83rem;cursor:pointer">🗑</button>` : ''}
+      </div>
+      <div id="gh-tok-fb" style="font-size:.76rem;margin-top:7px;font-weight:800"></div>
+    </div>
     <h3>📊 Estadísticas del Sistema</h3>
     <div class="a-stat-row">
       <div class="a-stat"><div class="n">${tot}</div><div class="l">Exámenes completados</div></div>
@@ -1508,6 +1607,24 @@ function renderTabStats(panel, results) {
       ${Object.keys(byRol).length === 0 ? '<p style="color:var(--muted);font-size:.85rem">Sin datos aún.</p>' : ''}
     </div>
     ${_renderGraficoUsuarios(results)}`;
+}
+
+function guardarToken() {
+  const inp = document.getElementById('gh-tok-inp');
+  const fb  = document.getElementById('gh-tok-fb');
+  if (!inp) return;
+  const val = inp.value.trim();
+  if (!val || val.includes('•')) { fb.textContent = '⚠️ Pega el token real (empieza con ghp_).'; fb.style.color = 'var(--red)'; return; }
+  ghSetToken(val);
+  fb.textContent = '✅ Token guardado en este dispositivo. ¡Ahora las preguntas se sincronizarán con GitHub!';
+  fb.style.color = 'var(--green)';
+  inp.value = '•'.repeat(16);
+}
+
+function borrarToken() {
+  ghSetToken('');
+  const results = loadResults();
+  renderTabStats(document.getElementById('apanel'), results);
 }
 
 function _renderGraficoUsuarios(results) {
@@ -2107,17 +2224,20 @@ function importarJSON() {
   let raw     = document.getElementById('imp-json').value.trim();
   if (!raw) { fb.textContent = '❌ El campo JSON está vacío.'; fb.style.color = 'var(--red)'; return; }
 
+  // Limpiar: quitar posible coma final antes de } o ]
+  const limpio = raw
+    .replace(/,(\s*[\}\]])/g, '$1')   // coma trailing antes de } o ]
+    .replace(/^\s*,/, '')             // coma al principio
+    .trim();
+
   let parsed;
   try {
-    const jsonLike = raw
-      .replace(/^\s*(\w+)\s*:/gm, '"$1":')
-      .replace(/,\s*\n?\s*\}/g, '}')
-      .replace(/,\s*\n?\s*\]/g, ']');
-    parsed = JSON.parse(jsonLike);
+    parsed = JSON.parse(limpio);
   } catch (e) {
-    try { parsed = JSON.parse(raw); } catch (e2) {
-      fb.textContent = '❌ JSON inválido: ' + e2.message; fb.style.color = 'var(--red)'; return;
-    }
+    fb.innerHTML = `❌ JSON inválido: <code style="font-size:.8rem">${e.message}</code><br>
+      <span style="font-size:.78rem;color:var(--muted)">Asegúrate de pegar el objeto completo desde <code>{</code> hasta <code>}</code>, o el arreglo desde <code>[</code> hasta <code>]</code>.</span>`;
+    fb.style.color = 'var(--red)';
+    return;
   }
 
   const items = Array.isArray(parsed) ? parsed : [parsed];
@@ -2126,23 +2246,29 @@ function importarJSON() {
   const requeridos = ['pregunta', 'opciones', 'respuestaCorrecta'];
   const invalidas  = items.filter(p => !requeridos.every(k => k in p));
   if (invalidas.length) {
-    fb.textContent = `❌ ${invalidas.length} pregunta(s) sin campos requeridos (pregunta, opciones, respuestaCorrecta).`;
+    fb.textContent = `❌ ${invalidas.length} pregunta(s) sin los campos requeridos: pregunta, opciones, respuestaCorrecta.`;
     fb.style.color = 'var(--red)'; return;
   }
 
   const extra = getExtra();
   if (!extra[banco]) extra[banco] = [];
-  const limpias = items.map(p => ({
-    pregunta: String(p.pregunta),
-    categoria: p.categoria || p.subcategoria || 'General',
-    opciones: p.opciones.map(String),
-    respuestaCorrecta: Number(p.respuestaCorrecta),
-    explicacion: p.explicacion || (p.fundamentoNormativo?.justificacion) || '',
-    ...(p.nivelDificultad ? { nivelDificultad: p.nivelDificultad } : {}),
-    ...(p.competenciaEvaluada ? { competenciaEvaluada: p.competenciaEvaluada } : {})
-  }));
+
+  // Preservar TODOS los campos del formato oficial
+  const limpias = items.map(p => {
+    const obj = {
+      pregunta:          String(p.pregunta),
+      categoria:         p.categoria || p.subcategoria || 'General',
+      opciones:          p.opciones.map(String),
+      respuestaCorrecta: Number(p.respuestaCorrecta),
+      explicacion:       p.explicacion || p.fundamentoNormativo?.justificacion || ''
+    };
+    if (p.nivelDificultad)    obj.nivelDificultad    = p.nivelDificultad;
+    if (p.competenciaEvaluada) obj.competenciaEvaluada = p.competenciaEvaluada;
+    if (p.fundamentoNormativo) obj.fundamentoNormativo = p.fundamentoNormativo;
+    return obj;
+  });
+
   extra[banco].push(...limpias);
-  // Marcar como pendiente para subir al repo
   _pendienteGH = { bancoKey: banco, preguntas: limpias };
   saveExtra(extra);
   fb.textContent = `✅ ${limpias.length} pregunta(s) importada(s) al banco "${BANCO_LABELS[banco]}".`;
