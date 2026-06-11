@@ -142,6 +142,221 @@ function sLoad(key) {
 function sDel(key) { try { localStorage.removeItem(key); } catch (e) {} }
 
 /* ════════════════════════════════════════════════════════════
+   SECCIÓN 2B: GITHUB SYNC — Escritura directa al código
+   Cuando Edwin agrega preguntas o usuarios, se escriben
+   DIRECTAMENTE en los archivos .js del repositorio del
+   simulador. GitHub Pages los publica automáticamente.
+   Todo dispositivo que abra el simulador tendrá los datos.
+════════════════════════════════════════════════════════════ */
+
+/**
+ * CONFIGURACIÓN — solo debes cambiar el token.
+ * El repo ya es el del simulador: Edwinrd96/simulador-evaluaciondocente
+ * Token: genera uno en GitHub → Settings → Developer settings →
+ *        Personal access tokens → Tokens (classic) → permiso "repo"
+ */
+const GH_CONFIG = {
+  owner: 'Edwinrd96',
+  repo:  'simulador-evaluaciondocente',
+  token: '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'  // ← pon tu token aquí
+};
+
+/**
+ * Mapeo: clave de banco → nombre del archivo .js en el repo
+ * y nombre de la variable const que contiene el array.
+ */
+const GH_BANCOS_MAP = {
+  psicologo:          { file: 'preguntas.js',                      varName: 'bancoPreguntas'          },
+  psicologoExterno:   { file: 'preguntasdelformulariosexternos.js', varName: 'bancoFormularios'        },
+  primaria:           { file: 'preguntasprimaria.js',               varName: 'bancoPrimaria'           },
+  rimariaFiltrada:    { file: 'preguntasfiltradas.js',              varName: 'bancoFiltrado'           },
+  tecnicoDistrital:   { file: 'tecnicodistrital.js',                varName: 'bancoTecnicoDistrital'   },
+  tecnicoProfesional: { file: 'tecnicoprofesional.js',              varName: 'bancoTecnicoProfesional' }
+};
+
+/** ¿Está configurado el token? */
+function ghConfigurado() {
+  return GH_CONFIG.token && !GH_CONFIG.token.startsWith('ghp_XXXXX');
+}
+
+/** Mostrar badge de sincronización (esquina inferior derecha) */
+function ghShowSync(msg, estado) {
+  // estado: 'working' | 'ok' | 'error'
+  let el = document.getElementById('gh-sync-badge');
+  if (!el) {
+    el = document.createElement('div');
+    el.id = 'gh-sync-badge';
+    el.style.cssText = [
+      'position:fixed;bottom:16px;right:16px;z-index:9999',
+      'padding:10px 16px;border-radius:11px;font-size:.78rem;font-weight:800',
+      'display:flex;align-items:center;gap:8px',
+      'box-shadow:0 4px 18px rgba(0,0,0,.28);transition:opacity .5s;opacity:0'
+    ].join(';');
+    document.body.appendChild(el);
+  }
+  const styles = {
+    working: 'background:#1e293b;color:#fff',
+    ok:      'background:#14532d;color:#dcfce7',
+    error:   'background:#7f1d1d;color:#fee2e2'
+  };
+  const icons = { working: '🔄', ok: '✅', error: '❌' };
+  el.style.cssText = el.style.cssText.replace(/background:[^;]+;color:[^;]+/, styles[estado] || styles.working);
+  el.style.background = estado === 'ok' ? '#14532d' : estado === 'error' ? '#7f1d1d' : '#1e293b';
+  el.style.color      = estado === 'ok' ? '#dcfce7' : estado === 'error' ? '#fee2e2' : '#fff';
+  el.style.opacity    = '1';
+  el.innerHTML = `<span style="font-size:1rem">${icons[estado] || '🔄'}</span><span>${msg}</span>`;
+  clearTimeout(el._hideTimer);
+  if (estado !== 'working') {
+    el._hideTimer = setTimeout(() => { el.style.opacity = '0'; }, 3500);
+  }
+}
+
+/* ── Funciones base de la API de GitHub ─────────────────── */
+
+/** Leer un archivo del repo. Devuelve { content (texto), sha } */
+async function ghReadFile(filename) {
+  const url = `https://api.github.com/repos/${GH_CONFIG.owner}/${GH_CONFIG.repo}/contents/${filename}`;
+  const r = await fetch(url, {
+    headers: {
+      Authorization: `token ${GH_CONFIG.token}`,
+      Accept: 'application/vnd.github.v3+json'
+    }
+  });
+  if (!r.ok) throw new Error(`GitHub no pudo leer ${filename}: ${r.status}`);
+  const json = await r.json();
+  // El contenido viene en base64 con saltos de línea — los quitamos antes de decodificar
+  const content = decodeURIComponent(escape(atob(json.content.replace(/\n/g, ''))));
+  return { content, sha: json.sha };
+}
+
+/** Escribir/actualizar un archivo en el repo */
+async function ghWriteFile(filename, newContent, sha, commitMsg) {
+  const url = `https://api.github.com/repos/${GH_CONFIG.owner}/${GH_CONFIG.repo}/contents/${filename}`;
+  const body = {
+    message: commitMsg || `admin: actualizar ${filename}`,
+    content: btoa(unescape(encodeURIComponent(newContent))),
+    sha
+  };
+  const r = await fetch(url, {
+    method: 'PUT',
+    headers: {
+      Authorization: `token ${GH_CONFIG.token}`,
+      Accept: 'application/vnd.github.v3+json',
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(body)
+  });
+  if (!r.ok) {
+    const err = await r.json().catch(() => ({}));
+    throw new Error(err.message || `Error ${r.status} al escribir ${filename}`);
+  }
+  return true;
+}
+
+/* ── Escribir preguntas directamente en el .js del banco ── */
+
+/**
+ * Agrega una o varias preguntas nuevas al archivo .js del banco correspondiente.
+ * Lee el archivo actual, extrae el array, agrega las preguntas, reconstruye
+ * el archivo y lo sube al repo. GitHub Pages lo publica en ~1 minuto.
+ *
+ * @param {string} bancoKey  - clave del banco (ej: 'tecnicoDistrital')
+ * @param {Array}  nuevas    - array de objetos pregunta a agregar
+ */
+async function ghAgregarPreguntas(bancoKey, nuevas) {
+  if (!ghConfigurado()) return false;
+  const map = GH_BANCOS_MAP[bancoKey];
+  if (!map) throw new Error(`Banco desconocido: ${bancoKey}`);
+
+  ghShowSync(`Guardando en ${map.file}…`, 'working');
+
+  // 1. Leer el archivo actual
+  const { content, sha } = await ghReadFile(map.file);
+
+  // 2. Extraer el array existente del JS
+  //    El archivo tiene la forma: const varName = [ ... ];
+  //    Usamos una regex para encontrar el cierre del array y agregar antes.
+  const arrayStart = content.indexOf('[');
+  const arrayEnd   = content.lastIndexOf(']');
+  if (arrayStart === -1 || arrayEnd === -1) throw new Error(`No se encontró el array en ${map.file}`);
+
+  let arrayStr = content.slice(arrayStart + 1, arrayEnd).trimEnd();
+  // Si el array ya tiene elementos, asegurarse de que termina en coma
+  if (arrayStr.trim() && !arrayStr.trimEnd().endsWith(',')) {
+    arrayStr = arrayStr.trimEnd() + ',';
+  }
+
+  // 3. Calcular el próximo id (el mayor existente + 1)
+  const existingIds = [...content.matchAll(/"id":\s*(\d+)/g)].map(m => parseInt(m[1]));
+  let nextId = existingIds.length > 0 ? Math.max(...existingIds) + 1 : 1;
+
+  // 4. Serializar las nuevas preguntas con indentación limpia
+  const nuevasStr = nuevas.map(p => {
+    const obj = { id: nextId++, ...p };
+    return '  ' + JSON.stringify(obj, null, 2).replace(/\n/g, '\n  ');
+  }).join(',\n  ');
+
+  // 5. Reconstruir el archivo completo
+  const header  = content.slice(0, arrayStart + 1);           // "const bancoX = ["
+  const footer  = content.slice(arrayEnd);                    // "];"
+  const newFile = `${header}\n  ${arrayStr}\n  ${nuevasStr}\n${footer}`;
+
+  // 6. Subir al repo
+  await ghWriteFile(map.file, newFile, sha,
+    `admin: +${nuevas.length} pregunta(s) en ${bancoKey}`);
+
+  ghShowSync(`✓ ${nuevas.length} pregunta(s) guardadas en ${map.file}`, 'ok');
+  return true;
+}
+
+/* ── Usuarios: guardados en app.js directamente ─────────── */
+
+/**
+ * Estrategia para usuarios: se guardan en localStorage como siempre,
+ * MÁS se sincronizan como un bloque JSON en un pequeño archivo
+ * "data/usuarios_extra.json" dentro del mismo repo del simulador.
+ * Al cargar, fusionarBanco ya los usa. No tocamos app.js para usuarios
+ * porque cambiar código JS es más delicado; el JSON es más seguro.
+ */
+async function ghPushUsuarios(data) {
+  if (!ghConfigurado()) return;
+  ghShowSync('Guardando usuarios…', 'working');
+  try {
+    let sha = null;
+    try { const f = await ghReadFile('data/usuarios_extra.json'); sha = f.sha; } catch(e) {}
+    const url = `https://api.github.com/repos/${GH_CONFIG.owner}/${GH_CONFIG.repo}/contents/data/usuarios_extra.json`;
+    const body = {
+      message: 'admin: actualizar usuarios',
+      content: btoa(unescape(encodeURIComponent(JSON.stringify(data, null, 2))))
+    };
+    if (sha) body.sha = sha;
+    const r = await fetch(url, {
+      method: 'PUT',
+      headers: {
+        Authorization: `token ${GH_CONFIG.token}`,
+        Accept: 'application/vnd.github.v3+json',
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(body)
+    });
+    if (r.ok) ghShowSync('Usuarios guardados ✓', 'ok');
+    else      ghShowSync('Error al guardar usuarios', 'error');
+  } catch(e) { ghShowSync('Error: ' + e.message, 'error'); }
+}
+
+async function ghPullUsuarios() {
+  if (!ghConfigurado()) return;
+  try {
+    const { content } = await ghReadFile('data/usuarios_extra.json');
+    const data = JSON.parse(content);
+    if (data) sSave(STORAGE_KEYS.USERS, data, 0);
+  } catch(e) { /* archivo aún no existe */ }
+}
+
+// No se necesita ghPullExtra: las preguntas ya están en los .js del repo
+async function ghPullExtra() { /* no-op: las preguntas están en el código */ }
+
+/* ════════════════════════════════════════════════════════════
    SECCIÓN 3: GESTIÓN DINÁMICA DE USUARIOS
    Usuarios guardados en localStorage, admin puede CRUD completo
 ════════════════════════════════════════════════════════════ */
@@ -166,11 +381,11 @@ const USUARIOS_DEFAULT = {
     bancos: ['tecnicoProfesional'],
     sub: 'Docente Técnico Profesional — EDD 2025-2026'
   },
-  olga: {
-    nombre: 'Olga',
+  tecnico: {
+    nombre: 'Técnico Distrital',
     av: '🏛️',
     bancos: ['tecnicoDistrital'],
-    sub: 'Técnica Distrital — EDD 2025-2026'
+    sub: 'Técnico/a Distrital — EDD 2025-2026'
   }
 };
 
@@ -189,22 +404,24 @@ function getUsuarios() {
 
 /** Guardar cambios de usuarios dinámicos (no toca los defaults) */
 function saveUsuarios(data) {
-  // Solo guardamos los que NO son defaults o que fueron modificados
   const soloGuardados = {};
   Object.entries(data).forEach(([k, v]) => {
     const isDefault = USUARIOS_DEFAULT[k];
-    // Si es default pero fue modificado (bancos distintos), guardarlo igual
     if (!isDefault || JSON.stringify(isDefault.bancos) !== JSON.stringify(v.bancos) ||
         isDefault.nombre !== v.nombre || isDefault.av !== v.av) {
       soloGuardados[k] = v;
     }
   });
   sSave(STORAGE_KEYS.USERS, soloGuardados, 0);
+  if (ghConfigurado()) {
+    ghShowSync('Guardando usuarios…', false);
+    ghPushUsuarios(soloGuardados).then(() => ghShowSync('Usuarios sincronizados ✓', true));
+  }
 }
 
 /** Verificar acceso — retorna info del usuario o null */
 function resolverUsuario(key) {
-  if (key === 'edwin') return { ...ADMIN, esAdmin: true, bancos: Object.keys(BANCOS_CFG) };
+  if (key === 'edwinrd01') return { ...ADMIN, esAdmin: true, bancos: Object.keys(BANCOS_CFG) };
   const usuarios = getUsuarios();
   if (usuarios[key]) return { ...usuarios[key], esAdmin: false };
   return null;
@@ -215,7 +432,29 @@ function resolverUsuario(key) {
 ════════════════════════════════════════════════════════════ */
 
 function getExtra() { return sLoad(STORAGE_KEYS.EXTRA) || {}; }
-function saveExtra(data) { sSave(STORAGE_KEYS.EXTRA, data, 0); }
+
+/**
+ * Guarda preguntas extra:
+ * - En localStorage (disponible inmediatamente en este dispositivo)
+ * - En el archivo .js del repo en GitHub (disponible en todos los dispositivos
+ *   tras ~1 min cuando GitHub Pages se actualice)
+ *
+ * IMPORTANTE: ghAgregarPreguntas recibe solo las preguntas NUEVAS que se acaban
+ * de agregar, no todo el objeto extra. Por eso usamos _pendienteGH para
+ * pasar las nuevas desde guardarPregunta/importarJSON.
+ */
+let _pendienteGH = null;  // { bancoKey, preguntas[] } — las recién guardadas
+
+function saveExtra(data) {
+  sSave(STORAGE_KEYS.EXTRA, data, 0);
+  if (ghConfigurado() && _pendienteGH) {
+    const { bancoKey, preguntas } = _pendienteGH;
+    _pendienteGH = null;
+    ghAgregarPreguntas(bancoKey, preguntas).catch(e => {
+      ghShowSync('Error al guardar en GitHub: ' + e.message, 'error');
+    });
+  }
+}
 
 function fusionarBanco(rol, base) {
   const extra = getExtra();
@@ -292,26 +531,119 @@ function modalAct(i) {
 function closeModal() { document.getElementById('modal-bg').classList.add('hidden'); }
 
 /* ════════════════════════════════════════════════════════════
-   SECCIÓN 8: ACCESO / LOGIN
+   SECCIÓN 8: ACCESO / LOGIN — Flujo por cargo
+   Paso 1: seleccionar cargo (Técnico / Docente / Psicólogo)
+   Paso 2: si no es Técnico, escribir nombre de usuario
 ════════════════════════════════════════════════════════════ */
 
-function verificarAcceso() {
-  const inp = document.getElementById('ac-inp');
-  const err = document.getElementById('ac-err');
-  const key = norm(inp.value);
-  err.textContent = ''; inp.classList.remove('err');
+/**
+ * CARGOS definidos:
+ *  tecnico   → acceso directo con key 'tecnico' (sin nombre)
+ *  docente   → pide nombre; bancos: primaria, rimariaFiltrada, tecnicoProfesional
+ *  psicologo → pide nombre; bancos: psicologo, psicologoExterno
+ *
+ * Los Técnicos Distritales usan el cargo "Técnico".
+ * Los Docentes de carrera técnica (Técnico Profesional) usan "Docente".
+ */
+const CARGOS = {
+  tecnico:   { label: 'Técnico Distrital', emoji: '🏛️', desc: 'Acceso directo — banco Técnico Distrital', direct: true  },
+  docente:   { label: 'Docente',           emoji: '📚', desc: 'Primaria y Técnico Profesional',           direct: false },
+  psicologo: { label: 'Psicólogo/a',       emoji: '🧠', desc: 'Psicología Escolar',                      direct: false }
+};
 
-  if (!key) { errInput(inp, err, 'Por favor escribe tu nombre.'); return; }
+let _cargoSeleccionado = null;
+
+/** Renderizar los botones de cargo en la pantalla de acceso */
+function renderCargos() {
+  const cont = document.getElementById('ac-cargo-btns');
+  if (!cont) return;
+  cont.innerHTML = Object.entries(CARGOS).map(([key, c]) => `
+    <button class="cargo-btn" id="cbtn-${key}" onclick="seleccionarCargo('${key}')">
+      <span class="cargo-ico">${c.emoji}</span>
+      <span class="cargo-lbl">${c.label}</span>
+      <span class="cargo-desc">${c.desc}</span>
+    </button>`).join('');
+}
+
+/** El usuario selecciona su cargo */
+function seleccionarCargo(key) {
+  _cargoSeleccionado = key;
+  // Marcar visualmente el botón seleccionado
+  document.querySelectorAll('.cargo-btn').forEach(b => b.classList.remove('selected'));
+  const btn = document.getElementById(`cbtn-${key}`);
+  if (btn) btn.classList.add('selected');
+
+  const cargo = CARGOS[key];
+  const paso2 = document.getElementById('ac-paso2');
+  const err   = document.getElementById('ac-err');
+  if (err) err.textContent = '';
+
+  if (cargo.direct) {
+    // Técnico: mostrar botón de acceder directo, ocultar campo nombre
+    paso2.innerHTML = `
+      <div class="cargo-direct-msg">
+        <span style="font-size:1.5rem">🏛️</span>
+        <span>Acceso como <strong>Técnico Distrital</strong></span>
+      </div>
+      <button class="btn-go" onclick="verificarAcceso()">Acceder al Simulador →</button>`;
+  } else {
+    // Docente / Psicólogo: mostrar campo de nombre
+    paso2.innerHTML = `
+      <label class="ac-label" for="ac-inp">Tu nombre de acceso</label>
+      <input type="text" id="ac-inp" class="ac-input"
+        placeholder="Escribe tu nombre registrado..."
+        autocomplete="off" spellcheck="false"
+        onkeydown="if(event.key==='Enter') verificarAcceso()">
+      <div class="ac-err" id="ac-err"></div>
+      <button class="btn-go" onclick="verificarAcceso()">Acceder al Simulador →</button>`;
+    setTimeout(() => { const i = document.getElementById('ac-inp'); if (i) i.focus(); }, 80);
+  }
+}
+
+/** Ejecutar el acceso según cargo seleccionado */
+function verificarAcceso() {
+  const err = document.getElementById('ac-err');
+  if (err) { err.textContent = ''; }
+
+  if (!_cargoSeleccionado) {
+    // No seleccionó cargo — resaltar la sección
+    const cont = document.getElementById('ac-cargo-btns');
+    if (cont) { cont.style.animation = 'none'; cont.offsetHeight; cont.style.animation = 'inpShk .35s ease'; }
+    if (err) err.textContent = 'Selecciona tu cargo primero.';
+    return;
+  }
+
+  const cargo = CARGOS[_cargoSeleccionado];
+  let key;
+
+  if (cargo.direct) {
+    // Técnico: key fija
+    key = 'tecnico';
+  } else {
+    // Docente / Psicólogo: normalizar nombre escrito
+    const inp = document.getElementById('ac-inp');
+    if (!inp || !inp.value.trim()) {
+      if (err) { err.textContent = 'Por favor escribe tu nombre.'; }
+      if (inp) { inp.classList.add('err'); setTimeout(() => inp.classList.remove('err'), 600); }
+      return;
+    }
+    key = norm(inp.value);
+  }
 
   const info = resolverUsuario(key);
   if (!info) {
+    const msg = cargo.direct
+      ? 'El acceso técnico no está configurado. Contacta al administrador.'
+      : `El nombre <strong>"${document.getElementById('ac-inp')?.value.trim() || key}"</strong> no está registrado. Verifica o contacta al administrador.`;
     modal({
       ico: '🚫', icoClass: 'alert',
       title: 'Acceso denegado',
-      msg: `El nombre <strong>"${inp.value.trim()}"</strong> no está registrado. Verifica que escribiste correctamente o contacta al administrador.`,
-      btns: [{ label: 'Intentar de nuevo', cls: 'pri', action() { inp.value = ''; inp.focus(); } }]
+      msg,
+      btns: [{ label: 'Intentar de nuevo', cls: 'pri', action() {
+        const i = document.getElementById('ac-inp'); if (i) { i.value = ''; i.focus(); }
+      }}]
     });
-    errInput(inp, err, 'Nombre no encontrado.');
+    if (err) err.textContent = 'Acceso no encontrado.';
     return;
   }
 
@@ -322,10 +654,21 @@ function verificarAcceso() {
   const savedPool = sLoad(STORAGE_KEYS.POOL);
   if (savedPool) estado.pool = savedPool;
 
-  // Verificar sesión activa guardada
+  if (ghConfigurado()) {
+    ghShowSync('Sincronizando datos…', false);
+    Promise.all([ghPullUsuarios(), ghPullExtra()]).then(() => {
+      ghShowSync('Datos actualizados ✓', true);
+      _continueLogin(key);
+    });
+  } else {
+    _continueLogin(key);
+  }
+}
+
+function _continueLogin(key) {
   const ses = sLoad(STORAGE_KEYS.SESSION);
   if (ses && ses.usuario === key && ses.rolActual && BANCOS_CFG[ses.rolActual]) {
-    const cfg = BANCOS_CFG[ses.rolActual];
+    const cfg  = BANCOS_CFG[ses.rolActual];
     const resp = Object.keys(ses.respuestas || {}).length;
     modal({
       ico: '🔔', icoClass: 'shake',
@@ -344,15 +687,58 @@ function verificarAcceso() {
 }
 
 function errInput(inp, err, msg) {
-  err.textContent = msg;
-  inp.classList.add('err');
-  setTimeout(() => inp.classList.remove('err'), 600);
+  if (err) err.textContent = msg;
+  if (inp) { inp.classList.add('err'); setTimeout(() => inp.classList.remove('err'), 600); }
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-  const inp = document.getElementById('ac-inp');
-  if (inp) inp.addEventListener('keydown', e => { if (e.key === 'Enter') verificarAcceso(); });
+  renderCargos();
 });
+
+/** Mostrar/ocultar el panel de acceso admin */
+function toggleAdminAccess() {
+  const panel = document.getElementById('ac-admin-panel');
+  if (!panel) return;
+  panel.classList.toggle('hidden');
+  if (!panel.classList.contains('hidden')) {
+    setTimeout(() => { const i = document.getElementById('ac-admin-inp'); if (i) i.focus(); }, 60);
+  }
+}
+
+/** Entrar como administrador con la clave edwinrd01 */
+function accederAdmin() {
+  const inp = document.getElementById('ac-admin-inp');
+  const err = document.getElementById('ac-err');
+  if (!inp) return;
+  const clave = inp.value.trim();
+  if (!clave) { if (err) err.textContent = 'Escribe la clave.'; return; }
+
+  const info = resolverUsuario(norm(clave));
+  if (!info || !info.esAdmin) {
+    if (err) err.textContent = 'Clave incorrecta.';
+    inp.classList.add('err');
+    inp.value = '';
+    setTimeout(() => inp.classList.remove('err'), 600);
+    return;
+  }
+
+  estado.usuario      = norm(clave);
+  estado.esAdmin      = true;
+  estado.bancosActivos = Object.keys(BANCOS_CFG);
+
+  const savedPool = sLoad(STORAGE_KEYS.POOL);
+  if (savedPool) estado.pool = savedPool;
+
+  if (ghConfigurado()) {
+    ghShowSync('Sincronizando datos…', false);
+    Promise.all([ghPullUsuarios(), ghPullExtra()]).then(() => {
+      ghShowSync('Datos actualizados ✓', true);
+      _continueLogin(norm(clave));
+    });
+  } else {
+    _continueLogin(norm(clave));
+  }
+}
 
 /* ════════════════════════════════════════════════════════════
    SECCIÓN 9: PERFIL DEL USUARIO
@@ -1150,6 +1536,20 @@ function _renderGraficoUsuarios(results) {
   return `<h3 style="margin-bottom:12px">Rendimiento por usuario</h3>${rows}`;
 }
 
+/**
+ * Actualiza solo el grid de usuarios sin re-renderizar todo el tab,
+ * evitando el parpadeo al crear/editar/eliminar usuarios.
+ */
+function _actualizarUsersGrid() {
+  const grid = document.getElementById('users-grid');
+  if (!grid) { adminTab('users', null); return; }
+  const usuarios = getUsuarios();
+  const results  = loadResults();
+  grid.innerHTML = Object.entries(usuarios)
+    .map(([key, info]) => _renderUserCard(key, info, results))
+    .join('');
+}
+
 /* ── TAB: GESTIÓN DE USUARIOS ──────────────────────────── */
 function renderTabUsers(panel, results) {
   const usuarios = getUsuarios();
@@ -1273,7 +1673,7 @@ function crearUsuario() {
   usuarios[key] = { nombre, av, sub: sub || 'Usuario — EDD 2025-2026', bancos: [] };
   saveUsuarios(usuarios);
   closeModal();
-  adminTab('users', null);
+  _actualizarUsersGrid();
 }
 
 function abrirModalEditarUsuario(key) {
@@ -1337,7 +1737,7 @@ function guardarEdicionUsuario(key) {
   usuarios[key].av     = av;
   saveUsuarios(usuarios);
   closeModal();
-  adminTab('users', null);
+  _actualizarUsersGrid();
 }
 
 function abrirModalAsignarBancos(key) {
@@ -1389,7 +1789,7 @@ function guardarBancosUsuario(key) {
   usuarios[key].bancos = seleccionados;
   saveUsuarios(usuarios);
   closeModal();
-  adminTab('users', null);
+  _actualizarUsersGrid();
 }
 
 function confirmarEliminarUsuario(key) {
@@ -1405,7 +1805,7 @@ function confirmarEliminarUsuario(key) {
           const u = getUsuarios();
           delete u[key];
           saveUsuarios(u);
-          adminTab('users', null);
+          _actualizarUsersGrid();
         }
       },
       { label: 'Cancelar', cls: 'sec', action: null }
@@ -1511,6 +1911,50 @@ function filtrarBanco(q) {
 ════════════════════════════════════════════════════════════ */
 
 let efOpciones = 4, efCorrecta = -1, _editando = null;
+
+/**
+ * Actualiza solo la sección de lista de preguntas guardadas en el editor,
+ * sin re-renderizar el formulario (evita el parpadeo incomodo).
+ */
+function _actualizarEditorList() {
+  const listEl = document.getElementById('editor-list');
+  if (!listEl) { renderEditor(); return; }
+  const extra  = getExtra();
+  const letras = ['A', 'B', 'C', 'D', 'E', 'F'];
+  const total  = Object.values(extra).reduce((a, v) => a + (v.length || 0), 0);
+  // Actualizar contador del título
+  const tit = listEl.previousElementSibling;
+  if (tit) tit.innerHTML = `📋 Preguntas agregadas (${total} total)`;
+
+  listEl.innerHTML = Object.entries(BANCO_LABELS).map(([rolKey, label]) => {
+    const items = extra[rolKey] || [];
+    if (!items.length) return '';
+    return `
+      <details open style="margin-bottom:12px;background:var(--bg);border-radius:11px;border:1.5px solid var(--border);overflow:hidden">
+        <summary style="padding:12px 15px;cursor:pointer;font-weight:800;font-size:.85rem;color:var(--blue);list-style:none;display:flex;justify-content:space-between;align-items:center">
+          ${label} <span style="color:var(--muted);font-weight:600;font-size:.76rem">${items.length} preguntas nuevas</span>
+        </summary>
+        <div style="padding:10px 13px 14px">
+          ${items.map((p, i) => `
+            <div class="q-adm">
+              <div class="q-adm-num">
+                Nueva #${i + 1} · ${p.categoria || 'General'}
+                <span style="background:#dcfce7;color:#15803d;font-size:.6rem;padding:2px 7px;border-radius:99px;margin-left:6px;font-weight:800">NUEVA</span>
+              </div>
+              <div class="q-adm-txt">${p.pregunta}</div>
+              <div class="q-adm-opts">
+                ${p.opciones.map((o, j) => `<div class="q-opt${j === p.respuestaCorrecta ? ' corr' : ''}">${letras[j]}) ${clean(o)}${j === p.respuestaCorrecta ? ' ✅' : ''}</div>`).join('')}
+              </div>
+              <div class="rev-exp" style="margin-top:8px"><strong>Justificación:</strong> ${p.explicacion || '—'}</div>
+              <div style="display:flex;gap:8px;margin-top:8px">
+                <button onclick="editarPreguntaExtra('${rolKey}',${i})" style="padding:5px 13px;border:1.5px solid var(--blue);background:var(--blue-l);color:var(--blue);border-radius:7px;font-size:.75rem;font-weight:800;cursor:pointer">✏️ Editar</button>
+                <button onclick="eliminarPreguntaExtra('${rolKey}',${i})" style="padding:5px 13px;border:1.5px solid var(--red);background:var(--red-l);color:var(--red);border-radius:7px;font-size:.75rem;font-weight:800;cursor:pointer">🗑 Eliminar</button>
+              </div>
+            </div>`).join('')}
+        </div>
+      </details>`;
+  }).filter(Boolean).join('') || '<p style="color:var(--muted);font-size:.83rem;padding:10px">Aún no has agregado preguntas.</p>';
+}
 
 function renderEditor() {
   const panel = document.getElementById('apanel');
@@ -1698,11 +2142,13 @@ function importarJSON() {
     ...(p.competenciaEvaluada ? { competenciaEvaluada: p.competenciaEvaluada } : {})
   }));
   extra[banco].push(...limpias);
+  // Marcar como pendiente para subir al repo
+  _pendienteGH = { bancoKey: banco, preguntas: limpias };
   saveExtra(extra);
   fb.textContent = `✅ ${limpias.length} pregunta(s) importada(s) al banco "${BANCO_LABELS[banco]}".`;
   fb.style.color = 'var(--green)';
   document.getElementById('imp-json').value = '';
-  setTimeout(() => renderEditor(), 1200);
+  setTimeout(() => _actualizarEditorList(), 1200);
 }
 
 function guardarPregunta() {
@@ -1733,13 +2179,16 @@ function guardarPregunta() {
     extra[banco][_editando.idx] = nueva;
     _editando = null;
     fb.textContent = '✅ Pregunta actualizada correctamente.';
+    // Edición: no se agrega al código, solo se actualiza en localStorage
   } else {
     extra[banco].push(nueva);
     fb.textContent = `✅ Pregunta agregada al banco "${BANCO_LABELS[banco]}".`;
+    // Marcar pregunta nueva para que saveExtra la suba al repo
+    _pendienteGH = { bancoKey: banco, preguntas: [nueva] };
   }
   fb.style.color = 'var(--green)';
   saveExtra(extra);
-  setTimeout(() => { limpiarFormulario(); renderEditor(); }, 1000);
+  setTimeout(() => { limpiarFormulario(); _actualizarEditorList(); }, 900);
 }
 
 function limpiarFormulario() {
@@ -1804,7 +2253,7 @@ function eliminarPreguntaExtra(rolKey, i) {
           const extra = getExtra();
           if (extra[rolKey]) extra[rolKey].splice(i, 1);
           saveExtra(extra);
-          renderEditor();
+          _actualizarEditorList();
         }
       },
       { label: 'Cancelar', cls: 'sec', action: null }

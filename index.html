@@ -95,6 +95,21 @@ body{font-family:'Nunito',sans-serif;background:var(--bg);color:var(--text);min-
 .ac-input:focus{border-color:var(--blue);background:#fff;box-shadow:0 0 0 4px rgba(0,56,118,.08)}
 .ac-input.err{border-color:var(--red);background:var(--red-l);animation:inpShk .35s ease}
 .ac-err{color:var(--red);font-size:.78rem;min-height:18px;margin-bottom:10px;font-weight:800;text-align:center}
+
+/* ══ CARGO BUTTONS ══ */
+.cargo-btn{
+  width:100%;display:flex;align-items:center;gap:14px;
+  padding:13px 16px;border-radius:13px;
+  border:2px solid var(--border);background:var(--bg);
+  cursor:pointer;transition:all .2s;text-align:left;
+  font-family:'Nunito',sans-serif;
+}
+.cargo-btn:hover{border-color:var(--blue);background:#f0f7ff;transform:translateX(3px)}
+.cargo-btn.selected{border-color:var(--blue)!important;background:var(--blue-l)!important;box-shadow:0 0 0 3px rgba(0,56,118,.12)}
+.cargo-ico{font-size:1.6rem;flex-shrink:0;line-height:1}
+.cargo-lbl{font-size:.95rem;font-weight:900;color:var(--text);display:block;line-height:1.2}
+.cargo-desc{font-size:.72rem;color:var(--muted);display:block;margin-top:2px}
+.cargo-direct-msg{display:flex;align-items:center;gap:10px;background:var(--green-l);border:2px solid var(--green);border-radius:11px;padding:12px 16px;font-size:.88rem;font-weight:700;color:#14532d;margin-bottom:14px}
 .btn-go{width:100%;padding:15px;border:none;border-radius:12px;background:linear-gradient(135deg,var(--blue),var(--blue2));color:#fff;font-family:'Nunito',sans-serif;font-size:1rem;font-weight:900;cursor:pointer;transition:all .2s;box-shadow:0 4px 18px rgba(0,56,118,.32);letter-spacing:.01em}
 .btn-go:hover{transform:translateY(-2px);box-shadow:0 8px 26px rgba(0,56,118,.38)}
 .btn-go:active{transform:translateY(0)}
@@ -418,10 +433,22 @@ select.ef-input{resize:none;cursor:pointer}
       <p>Plataforma de preparación para la Evaluación de Desempeño Docente del MINERD</p>
     </div>
     <div class="ac-body">
-      <label class="ac-label" for="ac-inp">Nombre de acceso</label>
-      <input type="text" id="ac-inp" class="ac-input" placeholder="Escribe tu nombre..." autocomplete="off" spellcheck="false">
+      <!-- PASO 1: Seleccionar cargo -->
+      <label class="ac-label">Selecciona tu cargo</label>
+      <div id="ac-cargo-btns" style="display:flex;flex-direction:column;gap:10px;margin-bottom:18px"></div>
+      <!-- PASO 2: Nombre (solo Docente/Psicólogo) o botón directo (Técnico) -->
+      <div id="ac-paso2"></div>
       <div class="ac-err" id="ac-err"></div>
-      <button class="btn-go" onclick="verificarAcceso()">Acceder al Simulador →</button>
+      <!-- Acceso admin discreto -->
+      <div style="text-align:center;margin-top:18px">
+        <button onclick="toggleAdminAccess()" style="background:none;border:none;color:var(--border);font-size:.68rem;cursor:pointer;font-family:'Nunito',sans-serif;padding:4px 8px;border-radius:6px;transition:color .2s" onmouseover="this.style.color='var(--muted)'" onmouseout="this.style.color='var(--border)'">⚙</button>
+      </div>
+      <div id="ac-admin-panel" class="hidden" style="margin-top:10px;background:var(--bg);border:2px solid var(--border);border-radius:12px;padding:16px">
+        <label class="ac-label" style="margin-bottom:8px;display:block">Clave de administrador</label>
+        <input type="password" id="ac-admin-inp" class="ac-input" placeholder="••••••••" autocomplete="off"
+          onkeydown="if(event.key==='Enter') accederAdmin()">
+        <button class="btn-go" style="margin-top:8px" onclick="accederAdmin()">Entrar como administrador →</button>
+      </div>
     </div>
   </div>
 </div>
@@ -548,7 +575,7 @@ select.ef-input{resize:none;cursor:pointer}
       <div class="admin-av">🛡️</div>
       <div class="admin-txt">
         <h2>Panel Administrador — Edwin</h2>
-        <p>Vista completa del sistema EDD 2025-2026 · Gestión total de usuarios y bancos</p>
+        <p>Vista completa del sistema EDD 2025-2026 · Solo edwinrd01 puede modificar el sistema</p>
       </div>
     </div>
     <div class="admin-tabs">
