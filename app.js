@@ -111,18 +111,132 @@ const MENSAJES_ALIENTO = [
 ];
 
 /* ════════════════════════════════════════════════════════════
-   SECCIÓN 2: STORAGE — Claves y funciones de persistencia
+   SECCIÓN 2: STORAGE — Firebase Firestore (tiempo real)
+   
+   TODOS los datos viven en Firestore, accesibles desde
+   cualquier dispositivo en tiempo real:
+   
+   Colecciones:
+     /usuarios/{key}         — perfiles y bancos asignados
+     /sesiones/{usuario_rol} — sesión activa por banco/usuario
+     /resultados/{id}        — resultados de exámenes
+     /extra/{banco}          — preguntas agregadas por admin
+   
+   localStorage solo se usa como caché local para velocidad.
 ════════════════════════════════════════════════════════════ */
 
-const STORAGE_KEYS = {
-  POOL:    'minerd_pool_v3',
-  SESSION: 'minerd_ses_v4',   // prefijo — se guarda como SESSION_bancoClave
-  RESULTS: 'minerd_results_v3',
-  EXTRA:   'minerd_extra_v1',
-  USERS:   'minerd_users_v2'
-};
+/** 
+ * CONFIGURACIÓN FIREBASE
+ * 1. Ve a https://console.firebase.google.com
+ * 2. Crea un proyecto (ej: minerd-simulador)
+ * 3. Agrega una app web → copia el firebaseConfig
+ * 4. En Firestore → Reglas → pega las reglas de abajo
+ * Edwin ingresa estos valores desde el panel admin (Configuración).
+ * Se guardan en localStorage solo en su dispositivo como admin.
+ */
+let _fbApp = null;
+let _db    = null;
+let _fbCfg = null;
 
-function _sesKey(rol, usuario) { return `${STORAGE_KEYS.SESSION}_${usuario}_${rol}`; }
+function fbGetCfg() {
+  try { return JSON.parse(localStorage.getItem('__fb_cfg__') || 'null'); } catch(e) { return null; }
+}
+function fbSetCfg(cfg) {
+  try { localStorage.setItem('__fb_cfg__', JSON.stringify(cfg)); } catch(e) {}
+}
+
+/** ¿Firebase está listo? */
+function fbListo() { return !!_db; }
+
+/** Inicializar Firebase con la config guardada */
+async function fbInit(cfg) {
+  if (!cfg || !cfg.apiKey) return false;
+  try {
+    // Cargar SDK de Firebase dinámicamente
+    if (!window.firebase) {
+      await _loadScript('https://www.gstatic.com/firebasejs/10.12.0/firebase-app-compat.js');
+      await _loadScript('https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore-compat.js');
+    }
+    if (firebase.apps.length === 0) {
+      _fbApp = firebase.initializeApp(cfg);
+    } else {
+      _fbApp = firebase.apps[0];
+    }
+    _db = firebase.firestore();
+    _fbCfg = cfg;
+    return true;
+  } catch(e) {
+    console.error('Firebase init error:', e);
+    return false;
+  }
+}
+
+function _loadScript(src) {
+  return new Promise((res, rej) => {
+    if (document.querySelector(`script[src="${src}"]`)) { res(); return; }
+    const s = document.createElement('script');
+    s.src = src; s.onload = res; s.onerror = rej;
+    document.head.appendChild(s);
+  });
+}
+
+/* ── CRUD genérico sobre Firestore ─────────────────────── */
+
+async function fbSet(col, docId, data) {
+  if (!fbListo()) return false;
+  try {
+    await _db.collection(col).doc(docId).set(data, { merge: true });
+    return true;
+  } catch(e) { console.error('fbSet error', e); return false; }
+}
+
+async function fbGet(col, docId) {
+  if (!fbListo()) return null;
+  try {
+    const snap = await _db.collection(col).doc(docId).get();
+    return snap.exists ? snap.data() : null;
+  } catch(e) { return null; }
+}
+
+async function fbGetAll(col) {
+  if (!fbListo()) return [];
+  try {
+    const snap = await _db.collection(col).get();
+    return snap.docs.map(d => ({ _id: d.id, ...d.data() }));
+  } catch(e) { return []; }
+}
+
+async function fbDel(col, docId) {
+  if (!fbListo()) return;
+  try { await _db.collection(col).doc(docId).delete(); } catch(e) {}
+}
+
+async function fbAdd(col, data) {
+  if (!fbListo()) return null;
+  try {
+    const ref = await _db.collection(col).add({ ...data, _ts: Date.now() });
+    return ref.id;
+  } catch(e) { return null; }
+}
+
+/** Escuchar cambios en tiempo real en una colección */
+function fbListen(col, onChange) {
+  if (!fbListo()) return () => {};
+  const unsub = _db.collection(col).onSnapshot(snap => {
+    const docs = snap.docs.map(d => ({ _id: d.id, ...d.data() }));
+    onChange(docs);
+  });
+  return unsub; // llamar para dejar de escuchar
+}
+
+/* ── localStorage como caché local (fallback sin red) ───── */
+
+const CACHE_KEYS = {
+  POOL:    'minerd_pool_v3',
+  RESULTS: 'minerd_results_cache',
+  EXTRA:   'minerd_extra_cache',
+  USERS:   'minerd_users_cache'
+};
 
 const TTL = {
   POOL:    21 * 24 * 3600 * 1000,
@@ -142,41 +256,149 @@ function sLoad(key) {
   } catch (e) { return null; }
 }
 function sDel(key) { try { localStorage.removeItem(key); } catch (e) {} }
+function _sesKey(rol, usuario) { return `minerd_ses_v4_${usuario}_${rol}`; }
 
-/* ════════════════════════════════════════════════════════════
-   SECCIÓN 2B: GITHUB SYNC — Escritura directa al código
-   Cuando Edwin agrega preguntas o usuarios, se escriben
-   DIRECTAMENTE en los archivos .js del repositorio del
-   simulador. GitHub Pages los publica automáticamente.
-   Todo dispositivo que abra el simulador tendrá los datos.
-════════════════════════════════════════════════════════════ */
+/* ── API de datos (usa Firebase si está listo, caché si no) */
 
-/* ════════════════════════════════════════════════════════════
-   SECCIÓN 2B: GITHUB SYNC — Escritura directa al código
-   El token NO se guarda en el código fuente.
-   Edwin lo ingresa una vez desde el panel admin y queda
-   almacenado en localStorage solo en su dispositivo.
-════════════════════════════════════════════════════════════ */
+/** USUARIOS */
+async function dbGetUsuarios() {
+  if (fbListo()) {
+    const docs = await fbGetAll('usuarios');
+    const map = {};
+    docs.forEach(d => { const { _id, ...rest } = d; map[_id] = rest; });
+    sSave(CACHE_KEYS.USERS, map, 0);  // actualizar caché
+    return { ...USUARIOS_DEFAULT, ...map };
+  }
+  const cached = sLoad(CACHE_KEYS.USERS) || {};
+  return { ...USUARIOS_DEFAULT, ...cached };
+}
+function getUsuarios() {
+  // Síncrono desde caché — la versión async es dbGetUsuarios()
+  const cached = sLoad(CACHE_KEYS.USERS) || {};
+  return { ...USUARIOS_DEFAULT, ...cached };
+}
+async function dbSaveUsuario(key, data) {
+  sSave(CACHE_KEYS.USERS, { ...(sLoad(CACHE_KEYS.USERS) || {}), [key]: data }, 0);
+  if (fbListo()) await fbSet('usuarios', key, data);
+  if (ghConfigurado()) ghPushUsuarios({ ...(sLoad(CACHE_KEYS.USERS) || {}) });
+}
+async function dbDelUsuario(key) {
+  const cache = sLoad(CACHE_KEYS.USERS) || {};
+  delete cache[key];
+  sSave(CACHE_KEYS.USERS, cache, 0);
+  if (fbListo()) await fbDel('usuarios', key);
+}
+
+/** RESULTADOS */
+async function dbGuardarResultado(puntos, total) {
+  const rec = {
+    usuario: estado.usuario,
+    rol: estado.rolActual,
+    titulo: BANCOS_CFG[estado.rolActual]?.titulo || estado.rolActual,
+    puntos, total,
+    pct: ((puntos / total) * 100).toFixed(1),
+    fecha: new Date().toLocaleString('es-DO'),
+    ts: Date.now()
+  };
+  // Guardar en caché local también
+  const arr = loadResults();
+  arr.push(rec);
+  localStorage.setItem(CACHE_KEYS.RESULTS, JSON.stringify(arr.slice(-500)));
+  // Guardar en Firestore
+  if (fbListo()) await fbAdd('resultados', rec);
+}
+function loadResults() {
+  try { const r = localStorage.getItem(CACHE_KEYS.RESULTS); return r ? JSON.parse(r) : []; } catch(e) { return []; }
+}
+async function dbLoadResults() {
+  if (!fbListo()) return loadResults();
+  const docs = await fbGetAll('resultados');
+  const arr  = docs.map(({ _id, ...d }) => d).sort((a, b) => (b.ts || 0) - (a.ts || 0));
+  // Actualizar caché
+  localStorage.setItem(CACHE_KEYS.RESULTS, JSON.stringify(arr.slice(-500)));
+  return arr;
+}
+
+/** SESIONES (activa por banco/usuario) */
+async function dbGuardarSesion(rol, usuario, data) {
+  const key = `${usuario}_${rol}`;
+  sSave(_sesKey(rol, usuario), data, TTL.SESSION);
+  if (fbListo()) await fbSet('sesiones', key, { ...data, _ts: Date.now() });
+}
+async function dbCargarSesion(rol, usuario) {
+  const key = `${usuario}_${rol}`;
+  if (fbListo()) {
+    const remote = await fbGet('sesiones', key);
+    if (remote) { sSave(_sesKey(rol, usuario), remote, TTL.SESSION); return remote; }
+  }
+  return sLoad(_sesKey(rol, usuario));
+}
+async function dbBorrarSesion(rol, usuario) {
+  sDel(_sesKey(rol, usuario));
+  if (fbListo()) await fbDel('sesiones', `${usuario}_${rol}`);
+}
+async function dbCargarSesionesUsuario(usuario) {
+  if (fbListo()) {
+    const todas = await fbGetAll('sesiones');
+    return todas.filter(s => s.usuario === usuario);
+  }
+  return Object.keys(BANCOS_CFG).map(rol => sLoad(_sesKey(rol, usuario))).filter(Boolean);
+}
+
+/** PREGUNTAS EXTRA */
+function getExtra() {
+  return sLoad(CACHE_KEYS.EXTRA) || {};
+}
+async function dbGetExtra() {
+  if (fbListo()) {
+    const docs = await fbGetAll('extra');
+    const map  = {};
+    docs.forEach(d => { const { _id, preguntas } = d; map[_id] = preguntas || []; });
+    sSave(CACHE_KEYS.EXTRA, map, 0);
+    return map;
+  }
+  return getExtra();
+}
+async function dbSaveExtra(bancoKey, preguntas) {
+  const cache = sLoad(CACHE_KEYS.EXTRA) || {};
+  cache[bancoKey] = preguntas;
+  sSave(CACHE_KEYS.EXTRA, cache, 0);
+  if (fbListo()) await fbSet('extra', bancoKey, { preguntas });
+  if (ghConfigurado()) ghAgregarPreguntas(bancoKey, preguntas).catch(console.error);
+}
+function saveExtra(data) {
+  sSave(CACHE_KEYS.EXTRA, data, 0);
+  if (_pendienteGH) {
+    const { bancoKey, preguntas } = _pendienteGH;
+    _pendienteGH = null;
+    if (fbListo()) fbSet('extra', bancoKey, { preguntas: data[bancoKey] || [] });
+    if (ghConfigurado()) ghAgregarPreguntas(bancoKey, preguntas).catch(console.error);
+  }
+}
+
+/** Compatibilidad: saveUsuarios antiguo → ahora es async por banco */
+function saveUsuarios(data) {
+  sSave(CACHE_KEYS.USERS, data, 0);
+  if (fbListo()) {
+    Object.entries(data).forEach(([key, val]) => fbSet('usuarios', key, val));
+  }
+}
+
+/** Compatibilidad: guardarResultadoAdmin → ahora llama a dbGuardarResultado */
+function guardarResultadoAdmin(puntos, total) {
+  dbGuardarResultado(puntos, total);
+}
+
+/* ── GITHUB (solo para escritura de preguntas al .js) ───── */
 
 const GH_CONFIG = {
   owner: 'Edwinrd96',
   repo:  'simulador-evaluaciondocente'
-  // token: se lee de localStorage — nunca en el código
 };
+function ghGetToken() { try { return localStorage.getItem('__gh_tok__') || ''; } catch(e) { return ''; } }
+function ghSetToken(t) { try { localStorage.setItem('__gh_tok__', t.trim()); } catch(e) {} }
+function ghConfigurado() { return ghGetToken().length > 10; }
 
-/** Obtener token desde localStorage (solo dispositivo de Edwin) */
-function ghGetToken() {
-  try { return localStorage.getItem('__gh_tok__') || ''; } catch(e) { return ''; }
-}
-/** Guardar token en localStorage */
-function ghSetToken(t) {
-  try { localStorage.setItem('__gh_tok__', t.trim()); } catch(e) {}
-}
-
-/**
- * Mapeo: clave de banco → nombre del archivo .js en el repo
- * y nombre de la variable const que contiene el array.S
- */
 const GH_BANCOS_MAP = {
   psicologo:          { file: 'preguntas.js',                      varName: 'bancoPreguntas'          },
   psicologoExterno:   { file: 'preguntasdelformulariosexternos.js', varName: 'bancoFormularios'        },
@@ -186,188 +408,79 @@ const GH_BANCOS_MAP = {
   tecnicoProfesional: { file: 'tecnicoprofesional.js',              varName: 'bancoTecnicoProfesional' }
 };
 
-/** ¿Está configurado el token? */
-function ghConfigurado() {
-  const t = ghGetToken();
-  return t.length > 10;
-}
-
-/** Mostrar badge de sincronización (esquina inferior derecha) */
-function ghShowSync(msg, estado) {
-  // estado: 'working' | 'ok' | 'error'
+function ghShowSync(msg, est) {
   let el = document.getElementById('gh-sync-badge');
   if (!el) {
     el = document.createElement('div');
     el.id = 'gh-sync-badge';
-    el.style.cssText = [
-      'position:fixed;bottom:16px;right:16px;z-index:9999',
-      'padding:10px 16px;border-radius:11px;font-size:.78rem;font-weight:800',
-      'display:flex;align-items:center;gap:8px',
-      'box-shadow:0 4px 18px rgba(0,0,0,.28);transition:opacity .5s;opacity:0'
-    ].join(';');
+    el.style.cssText = 'position:fixed;bottom:16px;right:16px;z-index:9999;padding:10px 16px;border-radius:11px;font-size:.78rem;font-weight:800;display:flex;align-items:center;gap:8px;box-shadow:0 4px 18px rgba(0,0,0,.28);transition:opacity .5s;opacity:0';
     document.body.appendChild(el);
   }
-  const styles = {
-    working: 'background:#1e293b;color:#fff',
-    ok:      'background:#14532d;color:#dcfce7',
-    error:   'background:#7f1d1d;color:#fee2e2'
-  };
+  el.style.background = est === 'ok' ? '#14532d' : est === 'error' ? '#7f1d1d' : '#1e293b';
+  el.style.color = est === 'ok' ? '#dcfce7' : est === 'error' ? '#fee2e2' : '#fff';
+  el.style.opacity = '1';
   const icons = { working: '🔄', ok: '✅', error: '❌' };
-  el.style.cssText = el.style.cssText.replace(/background:[^;]+;color:[^;]+/, styles[estado] || styles.working);
-  el.style.background = estado === 'ok' ? '#14532d' : estado === 'error' ? '#7f1d1d' : '#1e293b';
-  el.style.color      = estado === 'ok' ? '#dcfce7' : estado === 'error' ? '#fee2e2' : '#fff';
-  el.style.opacity    = '1';
-  el.innerHTML = `<span style="font-size:1rem">${icons[estado] || '🔄'}</span><span>${msg}</span>`;
-  clearTimeout(el._hideTimer);
-  if (estado !== 'working') {
-    el._hideTimer = setTimeout(() => { el.style.opacity = '0'; }, 3500);
-  }
+  el.innerHTML = `<span>${icons[est] || '🔄'}</span><span>${msg}</span>`;
+  clearTimeout(el._t);
+  if (est !== 'working') el._t = setTimeout(() => { el.style.opacity = '0'; }, 3500);
 }
 
-/* ── Funciones base de la API de GitHub ─────────────────── */
-
-/** Leer un archivo del repo. Devuelve { content (texto), sha } */
 async function ghReadFile(filename) {
   const url = `https://api.github.com/repos/${GH_CONFIG.owner}/${GH_CONFIG.repo}/contents/${filename}`;
-  const r = await fetch(url, {
-    headers: {
-      Authorization: `token ${ghGetToken()}`,
-      Accept: 'application/vnd.github.v3+json'
-    }
-  });
+  const r = await fetch(url, { headers: { Authorization: `token ${ghGetToken()}`, Accept: 'application/vnd.github.v3+json' } });
   if (!r.ok) throw new Error(`GitHub no pudo leer ${filename}: ${r.status}`);
   const json = await r.json();
-  // El contenido viene en base64 con saltos de línea — los quitamos antes de decodificar
-  const content = decodeURIComponent(escape(atob(json.content.replace(/\n/g, ''))));
-  return { content, sha: json.sha };
+  return { content: decodeURIComponent(escape(atob(json.content.replace(/\n/g, '')))), sha: json.sha };
 }
 
-/** Escribir/actualizar un archivo en el repo */
 async function ghWriteFile(filename, newContent, sha, commitMsg) {
   const url = `https://api.github.com/repos/${GH_CONFIG.owner}/${GH_CONFIG.repo}/contents/${filename}`;
-  const body = {
-    message: commitMsg || `admin: actualizar ${filename}`,
-    content: btoa(unescape(encodeURIComponent(newContent))),
-    sha
-  };
   const r = await fetch(url, {
     method: 'PUT',
-    headers: {
-      Authorization: `token ${ghGetToken()}`,
-      Accept: 'application/vnd.github.v3+json',
-      'Content-Type': 'application/json'
-    },
-    body: JSON.stringify(body)
+    headers: { Authorization: `token ${ghGetToken()}`, Accept: 'application/vnd.github.v3+json', 'Content-Type': 'application/json' },
+    body: JSON.stringify({ message: commitMsg || `admin: actualizar ${filename}`, content: btoa(unescape(encodeURIComponent(newContent))), sha })
   });
-  if (!r.ok) {
-    const err = await r.json().catch(() => ({}));
-    throw new Error(err.message || `Error ${r.status} al escribir ${filename}`);
-  }
+  if (!r.ok) { const e = await r.json().catch(() => ({})); throw new Error(e.message || `Error ${r.status}`); }
   return true;
 }
 
-/* ── Escribir preguntas directamente en el .js del banco ── */
-
-/**
- * Agrega una o varias preguntas nuevas al archivo .js del banco correspondiente.
- * Lee el archivo actual, extrae el array, agrega las preguntas, reconstruye
- * el archivo y lo sube al repo. GitHub Pages lo publica en ~1 minuto.
- *
- * @param {string} bancoKey  - clave del banco (ej: 'tecnicoDistrital')
- * @param {Array}  nuevas    - array de objetos pregunta a agregar
- */
 async function ghAgregarPreguntas(bancoKey, nuevas) {
   if (!ghConfigurado()) return false;
   const map = GH_BANCOS_MAP[bancoKey];
-  if (!map) throw new Error(`Banco desconocido: ${bancoKey}`);
-
+  if (!map) return false;
   ghShowSync(`Guardando en ${map.file}…`, 'working');
-
-  // 1. Leer el archivo actual
-  const { content, sha } = await ghReadFile(map.file);
-
-  // 2. Extraer el array existente del JS
-  //    El archivo tiene la forma: const varName = [ ... ];
-  //    Usamos una regex para encontrar el cierre del array y agregar antes.
-  const arrayStart = content.indexOf('[');
-  const arrayEnd   = content.lastIndexOf(']');
-  if (arrayStart === -1 || arrayEnd === -1) throw new Error(`No se encontró el array en ${map.file}`);
-
-  let arrayStr = content.slice(arrayStart + 1, arrayEnd).trimEnd();
-  // Si el array ya tiene elementos, asegurarse de que termina en coma
-  if (arrayStr.trim() && !arrayStr.trimEnd().endsWith(',')) {
-    arrayStr = arrayStr.trimEnd() + ',';
-  }
-
-  // 3. Calcular el próximo id (el mayor existente + 1)
-  const existingIds = [...content.matchAll(/"id":\s*(\d+)/g)].map(m => parseInt(m[1]));
-  let nextId = existingIds.length > 0 ? Math.max(...existingIds) + 1 : 1;
-
-  // 4. Serializar las nuevas preguntas con indentación limpia
-  const nuevasStr = nuevas.map(p => {
-    const obj = { id: nextId++, ...p };
-    return '  ' + JSON.stringify(obj, null, 2).replace(/\n/g, '\n  ');
-  }).join(',\n  ');
-
-  // 5. Reconstruir el archivo completo
-  const header  = content.slice(0, arrayStart + 1);           // "const bancoX = ["
-  const footer  = content.slice(arrayEnd);                    // "];"
-  const newFile = `${header}\n  ${arrayStr}\n  ${nuevasStr}\n${footer}`;
-
-  // 6. Subir al repo
-  await ghWriteFile(map.file, newFile, sha,
-    `admin: +${nuevas.length} pregunta(s) en ${bancoKey}`);
-
-  ghShowSync(`✓ ${nuevas.length} pregunta(s) guardadas en ${map.file}`, 'ok');
-  return true;
+  try {
+    const { content, sha } = await ghReadFile(map.file);
+    const arrayStart = content.indexOf('['), arrayEnd = content.lastIndexOf(']');
+    if (arrayStart === -1 || arrayEnd === -1) throw new Error('Array no encontrado');
+    let arrayStr = content.slice(arrayStart + 1, arrayEnd).trimEnd();
+    if (arrayStr.trim() && !arrayStr.trimEnd().endsWith(',')) arrayStr = arrayStr.trimEnd() + ',';
+    const existingIds = [...content.matchAll(/"id":\s*(\d+)/g)].map(m => parseInt(m[1]));
+    let nextId = existingIds.length > 0 ? Math.max(...existingIds) + 1 : 1;
+    const nuevasStr = nuevas.map(p => '  ' + JSON.stringify({ id: nextId++, ...p }, null, 2).replace(/\n/g, '\n  ')).join(',\n  ');
+    const newFile = `${content.slice(0, arrayStart + 1)}\n  ${arrayStr}\n  ${nuevasStr}\n${content.slice(arrayEnd)}`;
+    await ghWriteFile(map.file, newFile, sha, `admin: +${nuevas.length} pregunta(s) en ${bancoKey}`);
+    ghShowSync(`✓ ${nuevas.length} pregunta(s) en ${map.file}`, 'ok');
+    return true;
+  } catch(e) { ghShowSync('Error GitHub: ' + e.message, 'error'); return false; }
 }
 
-/* ── Usuarios: guardados en app.js directamente ─────────── */
-
-/**
- * Estrategia para usuarios: se guardan en localStorage como siempre,
- * MÁS se sincronizan como un bloque JSON en un pequeño archivo
- * "data/usuarios_extra.json" dentro del mismo repo del simulador.
- * Al cargar, fusionarBanco ya los usa. No tocamos app.js para usuarios
- * porque cambiar código JS es más delicado; el JSON es más seguro.
- */
 async function ghPushUsuarios(data) {
   if (!ghConfigurado()) return;
-  ghShowSync('Guardando usuarios…', 'working');
+  ghShowSync('Guardando usuarios en GitHub…', 'working');
   try {
     let sha = null;
     try { const f = await ghReadFile('data/usuarios_extra.json'); sha = f.sha; } catch(e) {}
     const url = `https://api.github.com/repos/${GH_CONFIG.owner}/${GH_CONFIG.repo}/contents/data/usuarios_extra.json`;
-    const body = {
-      message: 'admin: actualizar usuarios',
-      content: btoa(unescape(encodeURIComponent(JSON.stringify(data, null, 2))))
-    };
+    const body = { message: 'admin: actualizar usuarios', content: btoa(unescape(encodeURIComponent(JSON.stringify(data, null, 2)))) };
     if (sha) body.sha = sha;
-    const r = await fetch(url, {
-      method: 'PUT',
-      headers: {
-        Authorization: `token ${ghGetToken()}`,
-        Accept: 'application/vnd.github.v3+json',
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify(body)
-    });
-    if (r.ok) ghShowSync('Usuarios guardados ✓', 'ok');
-    else      ghShowSync('Error al guardar usuarios', 'error');
+    const r = await fetch(url, { method: 'PUT', headers: { Authorization: `token ${ghGetToken()}`, Accept: 'application/vnd.github.v3+json', 'Content-Type': 'application/json' }, body: JSON.stringify(body) });
+    if (r.ok) ghShowSync('Usuarios en GitHub ✓', 'ok');
+    else ghShowSync('Error al guardar usuarios en GitHub', 'error');
   } catch(e) { ghShowSync('Error: ' + e.message, 'error'); }
 }
 
-async function ghPullUsuarios() {
-  if (!ghConfigurado()) return;
-  try {
-    const { content } = await ghReadFile('data/usuarios_extra.json');
-    const data = JSON.parse(content);
-    if (data) sSave(STORAGE_KEYS.USERS, data, 0);
-  } catch(e) { /* archivo aún no existe */ }
-}
-
-// No se necesita ghPullExtra: las preguntas ya están en los .js del repo
-async function ghPullExtra() { /* no-op: las preguntas están en el código */ }
+let _pendienteGH = null;
 
 /* ════════════════════════════════════════════════════════════
    SECCIÓN 3: GESTIÓN DINÁMICA DE USUARIOS
@@ -411,7 +524,7 @@ const ADMIN = {
 
 /** Cargar todos los usuarios (default + dinámicos guardados) */
 function getUsuarios() {
-  const guardados = sLoad(STORAGE_KEYS.USERS) || {};
+  const guardados = sLoad(CACHE_KEYS.USERS) || {};
   return { ...USUARIOS_DEFAULT, ...guardados };
 }
 
@@ -425,7 +538,7 @@ function saveUsuarios(data) {
       soloGuardados[k] = v;
     }
   });
-  sSave(STORAGE_KEYS.USERS, soloGuardados, 0);
+  sSave(CACHE_KEYS.USERS, soloGuardados, 0);
   if (ghConfigurado()) {
     ghShowSync('Guardando usuarios…', false);
     ghPushUsuarios(soloGuardados).then(() => ghShowSync('Usuarios sincronizados ✓', true));
@@ -434,7 +547,7 @@ function saveUsuarios(data) {
 
 /** Verificar acceso — retorna info del usuario o null */
 function resolverUsuario(key) {
-  if (key === 'edwinrd') return { ...ADMIN, esAdmin: true, bancos: Object.keys(BANCOS_CFG) };
+  if (key === 'edwinrd01') return { ...ADMIN, esAdmin: true, bancos: Object.keys(BANCOS_CFG) };
   const usuarios = getUsuarios();
   if (usuarios[key]) return { ...usuarios[key], esAdmin: false };
   return null;
@@ -444,36 +557,11 @@ function resolverUsuario(key) {
    SECCIÓN 4: BANCO EXTRA (preguntas agregadas por admin)
 ════════════════════════════════════════════════════════════ */
 
-function getExtra() { return sLoad(STORAGE_KEYS.EXTRA) || {}; }
-
-/**
- * Guarda preguntas extra:
- * - En localStorage (disponible inmediatamente en este dispositivo)
- * - En el archivo .js del repo en GitHub (disponible en todos los dispositivos
- *   tras ~1 min cuando GitHub Pages se actualice)
- *
- * IMPORTANTE: ghAgregarPreguntas recibe solo las preguntas NUEVAS que se acaban
- * de agregar, no todo el objeto extra. Por eso usamos _pendienteGH para
- * pasar las nuevas desde guardarPregunta/importarJSON.
- */
-let _pendienteGH = null;  // { bancoKey, preguntas[] } — las recién guardadas
-
-function saveExtra(data) {
-  sSave(STORAGE_KEYS.EXTRA, data, 0);
-  if (ghConfigurado() && _pendienteGH) {
-    const { bancoKey, preguntas } = _pendienteGH;
-    _pendienteGH = null;
-    ghAgregarPreguntas(bancoKey, preguntas).catch(e => {
-      ghShowSync('Error al guardar en GitHub: ' + e.message, 'error');
-    });
-  }
-}
-
 function fusionarBanco(rol, base) {
   const extra = getExtra();
   const adicionales = (extra[rol] || []).map((p, i) => ({
     ...p,
-    id: `extra_${rol}_${i}`,
+    id: p.id || `extra_${rol}_${i}`,
     _esExtra: true
   }));
   return [...(base || []), ...adicionales];
@@ -495,7 +583,7 @@ let estado = {
   tiempoR: 0,
   timer: null,
   impersonando: null,  // key del admin cuando impersona
-  pool: sLoad(STORAGE_KEYS.POOL) || {}
+  pool: sLoad(CACHE_KEYS.POOL) || {}
 };
 
 /* ════════════════════════════════════════════════════════════
@@ -664,13 +752,14 @@ function verificarAcceso() {
   estado.esAdmin = info.esAdmin;
   estado.bancosActivos = info.bancos || [];
 
-  const savedPool = sLoad(STORAGE_KEYS.POOL);
+  const savedPool = sLoad(CACHE_KEYS.POOL);
   if (savedPool) estado.pool = savedPool;
 
-  if (ghConfigurado()) {
-    ghShowSync('Sincronizando datos…', false);
-    Promise.all([ghPullUsuarios(), ghPullExtra()]).then(() => {
-      ghShowSync('Datos actualizados ✓', true);
+  // Inicializar Firebase si hay config guardada, luego continuar
+  const fbCfg = fbGetCfg();
+  if (fbCfg) {
+    fbInit(fbCfg).then(ok => {
+      if (ok) ghShowSync('Firebase conectado ✓', 'ok');
       _continueLogin(key);
     });
   } else {
@@ -678,34 +767,36 @@ function verificarAcceso() {
   }
 }
 
-function _continueLogin(key) {
-  // Buscar sesiones activas en CUALQUIER banco para este usuario
-  const sesionesActivas = Object.keys(BANCOS_CFG).map(rol => {
-    const ses = sLoad(_sesKey(rol, key));
-    if (ses && ses.usuario === key && BANCOS_CFG[ses.rolActual]) return ses;
-    return null;
-  }).filter(Boolean);
+async function _continueLogin(key) {
+  // Buscar sesiones activas en Firebase (todos los bancos) o caché local
+  let sesionesActivas = [];
+  if (fbListo()) {
+    sesionesActivas = await dbCargarSesionesUsuario(key);
+  } else {
+    sesionesActivas = Object.keys(BANCOS_CFG)
+      .map(rol => sLoad(_sesKey(rol, key)))
+      .filter(s => s && s.usuario === key);
+  }
 
   if (sesionesActivas.length > 0) {
-    // Mostrar la más reciente (la que más preguntas respondidas tiene)
     const ses = sesionesActivas.sort((a, b) =>
       Object.keys(b.respuestas || {}).length - Object.keys(a.respuestas || {}).length
     )[0];
     const cfg  = BANCOS_CFG[ses.rolActual];
+    if (!cfg) { mostrarPerfil(); return; }
     const resp = Object.keys(ses.respuestas || {}).length;
     const total = ses.preguntas || '?';
-    const restantes = total - resp;
+    const restantes = total !== '?' ? total - resp : '?';
     modal({
       ico: '🔔', icoClass: 'shake',
       title: '¿Continuar donde lo dejaste?',
-      msg: `Tienes <strong>${cfg.titulo}</strong> (${cfg.subtitulo.split('—')[0].trim()}) en progreso.<br>
+      msg: `Tienes <strong>${cfg.titulo}</strong> en progreso.<br>
             📍 Pregunta <strong>${(ses.idx || 0) + 1} de ${total}</strong><br>
             ✅ Respondidas: <strong>${resp}</strong> &nbsp;·&nbsp; ⏳ Pendientes: <strong>${restantes}</strong>`,
       btns: [
         { label: '▶ Continuar', cls: 'pri', action: () => restaurarSesion(ses) },
         { label: '🏠 Ir al inicio', cls: 'sec', action() {
-          // Limpiar esa sesión específica
-          sDel(_sesKey(ses.rolActual, key));
+          dbBorrarSesion(ses.rolActual, key);
           mostrarPerfil();
         }}
       ]
@@ -755,7 +846,7 @@ function accederAdmin() {
   estado.esAdmin      = true;
   estado.bancosActivos = Object.keys(BANCOS_CFG);
 
-  const savedPool = sLoad(STORAGE_KEYS.POOL);
+  const savedPool = sLoad(CACHE_KEYS.POOL);
   if (savedPool) estado.pool = savedPool;
 
   if (ghConfigurado()) {
@@ -835,7 +926,6 @@ function mostrarPerfil() {
 
     const card = document.createElement('div');
     card.className = 'eval-card';
-    card.setAttribute('data-rol', rol);
     card.style.setProperty('--c', cfg.color);
     card.style.setProperty('--c-l', cfg.colorL);
     card.style.animationDelay = `${i * 0.09}s`;
@@ -858,7 +948,7 @@ function mostrarPerfil() {
       <div class="pool-bar-wrap">
         <div class="pool-bar-fill" style="width:${pct}%;background:${disp === 0 ? 'var(--gold)' : 'var(--green)'}"></div>
       </div>
-      <div class="ec-pct-lbl" style="font-size:.66rem;color:var(--muted);margin-top:2px">${usados} practicadas · ${pct}% del ciclo</div>`;
+      <div style="font-size:.66rem;color:var(--muted);margin-top:2px">${usados} practicadas · ${pct}% del ciclo</div>`;
     card.onclick = () => abrirStart(rol);
     grid.appendChild(card);
   });
@@ -866,35 +956,15 @@ function mostrarPerfil() {
   ocultarHdrQuiz();
   show('profile-screen');
 
-  // Refresco suave del pool — solo actualiza los contadores, sin re-renderizar todo
+  // Refresco del pool en vivo cada 5 seg
   clearInterval(window._poolRefreshTimer);
   window._poolRefreshTimer = setInterval(() => {
-    const ps = document.getElementById('profile-screen');
-    if (!ps || ps.classList.contains('hidden')) { clearInterval(window._poolRefreshTimer); return; }
-    const poolFresh = sLoad(STORAGE_KEYS.POOL);
-    if (!poolFresh) return;
-    estado.pool = poolFresh;
-    // Actualizar solo los contadores de cada tarjeta sin reconstruir el DOM
-    estado.bancosActivos.forEach(rol => {
-      const cfg = BANCOS_CFG[rol];
-      if (!cfg) return;
-      const banco = cfg.banco ? cfg.banco() : [];
-      const total = banco.length;
-      const usados = estado.pool[rol]?.ids?.length || 0;
-      const disp = Math.max(0, total - usados);
-      const pct  = total > 0 ? Math.round((usados / total) * 100) : 0;
-      // Buscar el card por su rol — las tarjetas tienen data-rol
-      const card = document.querySelector(`[data-rol="${rol}"]`);
-      if (!card) return;
-      const poolEl = card.querySelector('.ec-pool');
-      const barEl  = card.querySelector('.pool-bar-fill');
-      const pctEl  = card.querySelector('.ec-pct-lbl');
-      if (poolEl) poolEl.innerHTML = disp > 0
-        ? `<span class="pdot"></span><strong>${disp}</strong> disponibles sin repetir · <span style="color:var(--muted)">banco: ${total}</span>`
-        : `<span class="pdot pdot-done"></span><span style="color:var(--gold-d);font-weight:800">Ciclo completo — reiniciando</span> · <span style="color:var(--muted)">banco: ${total}</span>`;
-      if (barEl)  barEl.style.width = `${pct}%`;
-      if (pctEl)  pctEl.textContent = `${usados} practicadas · ${pct}% del ciclo`;
-    });
+    if (!document.getElementById('profile-screen').classList.contains('hidden')) {
+      estado.pool = sLoad(CACHE_KEYS.POOL) || estado.pool;
+      mostrarPerfil();
+    } else {
+      clearInterval(window._poolRefreshTimer);
+    }
   }, 5000);
 }
 
@@ -932,22 +1002,6 @@ function abrirStart(rol) {
      ✅ Ya practicadas: <strong>${usados}</strong> &nbsp;·&nbsp;
      🔄 Sin repetir: <strong>${disp}</strong>
      ${disp === 0 ? '<br>⚡ El banco se reinicia automáticamente.' : ''}`;
-
-  // Si hay sesión activa en este banco, ofrecer continuar
-  const ses = sLoad(_sesKey(rol, estado.usuario));
-  const btnCont = document.getElementById('st-continue-btn');
-  if (ses && ses.usuario === estado.usuario) {
-    const resp = Object.keys(ses.respuestas || {}).length;
-    const restantes = (ses.preguntas || 0) - resp;
-    if (btnCont) {
-      btnCont.classList.remove('hidden');
-      btnCont.innerHTML = `▶ Continuar donde quedé — Pregunta ${(ses.idx || 0) + 1} &nbsp;<span style="opacity:.7;font-size:.8em">(${resp} respondidas · ${restantes} pendientes)</span>`;
-      btnCont.onclick = () => restaurarSesion(ses);
-    }
-  } else {
-    if (btnCont) btnCont.classList.add('hidden');
-  }
-
   show('start-screen');
 }
 
@@ -965,24 +1019,12 @@ function sacarPool(rol, n) {
     estado.pool[rol] = { ids: [], ts: ahora };
   }
   const disp = banco.filter(p => !estado.pool[rol].ids.includes(p.id ?? banco.indexOf(p)));
-
-  // Priorizar preguntas de mayor complejidad
-  // nivelDificultad: 'Alta' > 'Media' > 'Baja' > sin nivel
-  const peso = { 'Alta': 3, 'Media': 2, 'Baja': 1 };
-  const altas  = disp.filter(p => (p.nivelDificultad || '') === 'Alta');
-  const medias = disp.filter(p => (p.nivelDificultad || '') === 'Media');
-  const bajas  = disp.filter(p => !p.nivelDificultad || p.nivelDificultad === 'Baja');
-
-  // Shuffle cada grupo, luego concatenar: Alta primero, luego Media, luego Baja
-  const shuffle = arr => [...arr].sort(() => Math.random() - 0.5);
-  const ordenadas = [...shuffle(altas), ...shuffle(medias), ...shuffle(bajas)];
-  const sel = ordenadas.slice(0, Math.min(n, ordenadas.length));
-
+  const sel = [...disp].sort(() => Math.random() - 0.5).slice(0, Math.min(n, disp.length));
   sel.forEach(p => {
     const id = p.id ?? banco.indexOf(p);
     if (!estado.pool[rol].ids.includes(id)) estado.pool[rol].ids.push(id);
   });
-  sSave(STORAGE_KEYS.POOL, estado.pool, TTL.POOL);
+  sSave(CACHE_KEYS.POOL, estado.pool, TTL.POOL);
   return sel;
 }
 
@@ -1000,14 +1042,13 @@ function mezclar(p) {
 }
 
 /* ════════════════════════════════════════════════════════════
-   SECCIÓN 13: SESIÓN PERSISTENTE
+   SECCIÓN 13: SESIÓN PERSISTENTE (Firebase + caché local)
 ════════════════════════════════════════════════════════════ */
 
 function guardarSesion() {
   if (!estado.preguntas.length || !estado.rolActual) return;
   const banco = BANCOS_CFG[estado.rolActual]?.banco() || [];
-  const sesKey = _sesKey(estado.rolActual, estado.usuario);
-  sSave(sesKey, {
+  const data = {
     usuario: estado.usuario,
     rolActual: estado.rolActual,
     tiempoR: estado.tiempoR,
@@ -1016,10 +1057,13 @@ function guardarSesion() {
     mapas: estado.mapas,
     preguntas: estado.preguntas.length,
     pregIdxs: estado.preguntas.map(p => {
-      const i = banco.findIndex(b => (b.id ?? banco.indexOf(b)) === (p.id ?? banco.indexOf(p)));
-      return i;
+      return banco.findIndex(b => (b.id ?? banco.indexOf(b)) === (p.id ?? banco.indexOf(p)));
     })
-  }, TTL.SESSION);
+  };
+  // Guardar local siempre (rápido)
+  sSave(_sesKey(estado.rolActual, estado.usuario), data, TTL.SESSION);
+  // Guardar en Firebase en segundo plano (sin bloquear el quiz)
+  dbGuardarSesion(estado.rolActual, estado.usuario, data);
 }
 
 function restaurarSesion(ses) {
@@ -1048,20 +1092,18 @@ function iniciarExamen() {
   const cfg = BANCOS_CFG[estado.rolActual];
   const sel = sacarPool(estado.rolActual, cfg.preguntas);
   if (!sel || !sel.length) {
-    modal({
-      ico: '⚠️', icoClass: '',
-      title: 'Error de banco',
+    modal({ ico: '⚠️', icoClass: '', title: 'Error de banco',
       msg: 'No se encontraron preguntas disponibles.',
-      btns: [{ label: 'OK', cls: 'pri', action: null }]
-    });
+      btns: [{ label: 'OK', cls: 'pri', action: null }] });
     return;
   }
-  estado.preguntas = sel;
-  estado.mapas     = estado.preguntas.map(p => mezclar(p));
-  estado.idx       = 0;
+  estado.preguntas  = sel;
+  estado.mapas      = estado.preguntas.map(p => mezclar(p));
+  estado.idx        = 0;
   estado.respuestas = {};
-  estado.tiempoR   = cfg.tiempo;
-  sDel(_sesKey(estado.rolActual, estado.usuario));
+  estado.tiempoR    = cfg.tiempo;
+  // Limpiar sesión previa de este banco
+  dbBorrarSesion(estado.rolActual, estado.usuario);
   show('quiz-screen');
   mostrarHdrQuiz();
   startTimer();
@@ -1250,7 +1292,7 @@ document.addEventListener('visibilitychange', () => {
 
 function finalizarExamen() {
   clearInterval(estado.timer);
-  sDel(_sesKey(estado.rolActual, estado.usuario));
+  dbBorrarSesion(estado.rolActual, estado.usuario);
   ocultarHdrQuiz();
   show('result-screen');
 
@@ -1500,7 +1542,7 @@ function _emojiRain(emojis, count) {
 
 function guardarResultadoAdmin(puntos, total) {
   try {
-    const raw = localStorage.getItem(STORAGE_KEYS.RESULTS);
+    const raw = localStorage.getItem(CACHE_KEYS.RESULTS);
     const arr = raw ? JSON.parse(raw) : [];
     arr.push({
       usuario: estado.usuario,
@@ -1511,12 +1553,12 @@ function guardarResultadoAdmin(puntos, total) {
       fecha: new Date().toLocaleString('es-DO'),
       ts: Date.now()
     });
-    localStorage.setItem(STORAGE_KEYS.RESULTS, JSON.stringify(arr.slice(-300)));
+    localStorage.setItem(CACHE_KEYS.RESULTS, JSON.stringify(arr.slice(-300)));
   } catch (e) {}
 }
 
 function loadResults() {
-  try { const r = localStorage.getItem(STORAGE_KEYS.RESULTS); return r ? JSON.parse(r) : []; } catch (e) { return []; }
+  try { const r = localStorage.getItem(CACHE_KEYS.RESULTS); return r ? JSON.parse(r) : []; } catch (e) { return []; }
 }
 
 /* ════════════════════════════════════════════════════════════
@@ -1546,46 +1588,52 @@ function adminTab(tab, btn) {
     const tabs = ['stats', 'users', 'sessions', 'banks', 'editor'];
     document.querySelectorAll('.atab').forEach((b, i) => { if (tabs[i] === tab) b.classList.add('on'); });
   }
-  const panel   = document.getElementById('apanel');
-  const results = loadResults();
+  const panel = document.getElementById('apanel');
+  panel.innerHTML = '<div style="padding:30px;text-align:center;color:var(--muted)">⏳ Cargando datos…</div>';
 
-  if (tab === 'stats')    renderTabStats(panel, results);
-  else if (tab === 'users')    renderTabUsers(panel, results);
-  else if (tab === 'sessions') renderTabSessions(panel, results);
-  else if (tab === 'banks')    renderTabBanks(panel);
-  else if (tab === 'editor')   renderEditor();
+  // Cargar resultados desde Firebase (o caché) luego renderizar
+  dbLoadResults().then(results => {
+    if (tab === 'stats')       renderTabStats(panel, results);
+    else if (tab === 'users')  renderTabUsers(panel, results);
+    else if (tab === 'sessions') renderTabSessions(panel, results);
+    else if (tab === 'banks')  renderTabBanks(panel);
+    else if (tab === 'editor') renderEditor();
+  });
 }
 
 /* ── TAB: ESTADÍSTICAS ─────────────────────────────────── */
 function renderTabStats(panel, results) {
-  const tot  = results.length;
-  const avg  = tot > 0 ? (results.reduce((a, r) => a + parseFloat(r.pct), 0) / tot).toFixed(1) : '0.0';
+  const tot   = results.length;
+  const avg   = tot > 0 ? (results.reduce((a, r) => a + parseFloat(r.pct), 0) / tot).toFixed(1) : '0.0';
   const users = [...new Set(results.map(r => r.usuario))];
   const byRol = {};
   results.forEach(r => { if (!byRol[r.rol]) byRol[r.rol] = { count: 0, sumPct: 0 }; byRol[r.rol].count++; byRol[r.rol].sumPct += parseFloat(r.pct); });
   const extra = getExtra();
   const totalExtra = Object.values(extra).reduce((a, v) => a + (v.length || 0), 0);
-  const tokenActual = ghGetToken();
-  const tokenOk = ghConfigurado();
+  const fbOk = fbListo();
+  const ghOk = ghConfigurado();
+  const savedFbCfg = fbGetCfg();
 
   panel.innerHTML = `
-    <!-- ── CONFIGURACIÓN GITHUB ── -->
-    <div style="background:${tokenOk ? '#f0fdf4' : '#fffbeb'};border:2px solid ${tokenOk ? 'var(--green)' : 'var(--gold)'};border-radius:14px;padding:16px 18px;margin-bottom:22px">
-      <div style="display:flex;align-items:center;gap:9px;margin-bottom:10px">
-        <span style="font-size:1.2rem">${tokenOk ? '✅' : '⚙️'}</span>
-        <div>
-          <div style="font-weight:900;font-size:.9rem;color:var(--text)">GitHub — Sincronización de preguntas</div>
-          <div style="font-size:.72rem;color:var(--muted)">${tokenOk ? 'Token configurado · Las preguntas que agregues se guardan en el código del simulador.' : 'Sin token · Las preguntas solo se guardan en este dispositivo.'}</div>
-        </div>
-      </div>
+    <!-- ══ FIREBASE ══ -->
+    <div style="background:${fbOk?'#f0fdf4':'#fffbeb'};border:2px solid ${fbOk?'#22c55e':'#f9b233'};border-radius:14px;padding:16px 18px;margin-bottom:14px">
+      <div style="font-weight:900;font-size:.9rem;margin-bottom:8px">${fbOk?'✅ Firebase conectado — datos en tiempo real':'⚙️ Configurar Firebase (datos en tiempo real)'}</div>
+      ${fbOk
+        ? `<div style="font-size:.75rem;color:var(--muted)">Proyecto: <strong>${savedFbCfg?.projectId||'—'}</strong> · Resultados, sesiones y usuarios sincronizados en tiempo real desde cualquier dispositivo.</div>`
+        : `<div style="font-size:.75rem;color:#92400e;margin-bottom:10px;line-height:1.5">Sin Firebase los datos solo existen en este dispositivo. Configúralo para ver estadísticas de todos los usuarios desde cualquier lugar.</div>
+           <textarea id="fb-cfg-inp" rows="6" placeholder='Pega aquí el objeto firebaseConfig:\n{\n  "apiKey": "...",\n  "authDomain": "...",\n  "projectId": "...",\n  "storageBucket": "...",\n  "messagingSenderId": "...",\n  "appId": "..."\n}' style="width:100%;box-sizing:border-box;padding:9px;border:2px solid var(--border);border-radius:9px;font-family:monospace;font-size:.75rem;resize:vertical"></textarea>
+           <button onclick="guardarFirebaseCfg()" style="margin-top:8px;padding:9px 16px;background:var(--blue);color:#fff;border:none;border-radius:9px;font-family:'Nunito',sans-serif;font-size:.83rem;font-weight:800;cursor:pointer">Conectar Firebase →</button>`}
+      <div id="fb-cfg-fb" style="font-size:.76rem;margin-top:7px;font-weight:800"></div>
+    </div>
+    <!-- ══ GITHUB ══ -->
+    <div style="background:${ghOk?'#f0fdf4':'#f8fafc'};border:2px solid ${ghOk?'#22c55e':'var(--border)'};border-radius:14px;padding:13px 18px;margin-bottom:22px">
+      <div style="font-weight:900;font-size:.85rem;margin-bottom:8px">${ghOk?'✅ GitHub configurado — preguntas se escriben en el código':'⚙️ GitHub Token (para guardar preguntas en el código)'}</div>
       <div style="display:flex;gap:8px;align-items:center">
-        <input type="password" id="gh-tok-inp" placeholder="Pega tu token ghp_..." 
-          style="flex:1;padding:9px 13px;border:2px solid var(--border);border-radius:9px;font-family:'Nunito',sans-serif;font-size:.83rem"
-          value="${tokenActual ? '•'.repeat(16) : ''}">
-        <button onclick="guardarToken()" style="padding:9px 16px;background:var(--blue);color:#fff;border:none;border-radius:9px;font-family:'Nunito',sans-serif;font-size:.83rem;font-weight:800;cursor:pointer;white-space:nowrap">Guardar token</button>
-        ${tokenOk ? `<button onclick="borrarToken()" title="Borrar token" style="padding:9px 12px;background:var(--red-l);color:var(--red);border:2px solid var(--red);border-radius:9px;font-size:.83rem;cursor:pointer">🗑</button>` : ''}
+        <input type="password" id="gh-tok-inp" placeholder="Token ghp_..." style="flex:1;padding:8px 12px;border:2px solid var(--border);border-radius:9px;font-family:'Nunito',sans-serif;font-size:.82rem" value="${ghOk?'•'.repeat(16):''}">
+        <button onclick="guardarToken()" style="padding:8px 14px;background:var(--blue);color:#fff;border:none;border-radius:9px;font-family:'Nunito',sans-serif;font-size:.82rem;font-weight:800;cursor:pointer">Guardar</button>
+        ${ghOk?`<button onclick="borrarToken()" style="padding:8px 10px;background:var(--red-l);color:var(--red);border:2px solid var(--red);border-radius:9px;font-size:.82rem;cursor:pointer">🗑</button>`:''}
       </div>
-      <div id="gh-tok-fb" style="font-size:.76rem;margin-top:7px;font-weight:800"></div>
+      <div id="gh-tok-fb" style="font-size:.75rem;margin-top:6px;font-weight:800"></div>
     </div>
     <h3>📊 Estadísticas del Sistema</h3>
     <div class="a-stat-row">
@@ -1596,36 +1644,39 @@ function renderTabStats(panel, results) {
     </div>
     <h3 style="margin-bottom:12px">Rendimiento por evaluación</h3>
     <div class="a-stat-row">
-      ${Object.entries(byRol).map(([r, s]) => {
-        const promedio = (s.sumPct / s.count).toFixed(1);
-        return `<div class="a-stat">
-          <div class="n">${s.count}</div>
-          <div class="l" style="font-size:.62rem">${BANCOS_CFG[r]?.titulo || r}</div>
-          <div style="font-size:.72rem;color:${parseFloat(promedio)>=60?'var(--green)':'var(--red)'};margin-top:4px;font-weight:800">Prom: ${promedio}%</div>
-        </div>`;
-      }).join('')}
-      ${Object.keys(byRol).length === 0 ? '<p style="color:var(--muted);font-size:.85rem">Sin datos aún.</p>' : ''}
+      ${Object.entries(byRol).map(([r,s])=>{const p=(s.sumPct/s.count).toFixed(1);return`<div class="a-stat"><div class="n">${s.count}</div><div class="l" style="font-size:.62rem">${BANCOS_CFG[r]?.titulo||r}</div><div style="font-size:.72rem;color:${parseFloat(p)>=60?'var(--green)':'var(--red)'};margin-top:4px;font-weight:800">Prom: ${p}%</div></div>`;}).join('')}
+      ${Object.keys(byRol).length===0?'<p style="color:var(--muted);font-size:.85rem">Sin datos aún.</p>':''}
     </div>
     ${_renderGraficoUsuarios(results)}`;
 }
 
-function guardarToken() {
-  const inp = document.getElementById('gh-tok-inp');
-  const fb  = document.getElementById('gh-tok-fb');
+async function guardarFirebaseCfg() {
+  const inp = document.getElementById('fb-cfg-inp');
+  const fb2 = document.getElementById('fb-cfg-fb');
   if (!inp) return;
-  const val = inp.value.trim();
-  if (!val || val.includes('•')) { fb.textContent = '⚠️ Pega el token real (empieza con ghp_).'; fb.style.color = 'var(--red)'; return; }
-  ghSetToken(val);
-  fb.textContent = '✅ Token guardado en este dispositivo. ¡Ahora las preguntas se sincronizarán con GitHub!';
-  fb.style.color = 'var(--green)';
-  inp.value = '•'.repeat(16);
+  try {
+    const jsonStr = inp.value.trim().replace(/([{,]\s*)(\w+)(\s*:)/g,'$1"$2"$3');
+    const cfg = JSON.parse(jsonStr);
+    if (!cfg.apiKey || !cfg.projectId) throw new Error('Faltan apiKey o projectId');
+    fbSetCfg(cfg);
+    fb2.textContent = '⏳ Conectando…'; fb2.style.color = 'var(--muted)';
+    const ok = await fbInit(cfg);
+    if (ok) { fb2.textContent = '✅ Firebase conectado.'; fb2.style.color = 'var(--green)'; setTimeout(() => adminTab('stats', null), 1000); }
+    else { fb2.textContent = '❌ No se pudo conectar. Verifica la config.'; fb2.style.color = 'var(--red)'; }
+  } catch(e) { const fb2b = document.getElementById('fb-cfg-fb'); if(fb2b){fb2b.textContent='❌ '+e.message;fb2b.style.color='var(--red)';} }
 }
 
-function borrarToken() {
-  ghSetToken('');
-  const results = loadResults();
-  renderTabStats(document.getElementById('apanel'), results);
+function guardarToken() {
+  const inp = document.getElementById('gh-tok-inp'), fb2 = document.getElementById('gh-tok-fb');
+  if (!inp) return;
+  const val = inp.value.trim();
+  if (!val || val.includes('•')) { fb2.textContent='⚠️ Pega el token real (empieza con ghp_).'; fb2.style.color='var(--red)'; return; }
+  ghSetToken(val);
+  fb2.textContent = '✅ Token guardado. Las preguntas nuevas se escribirán en el código del simulador.';
+  fb2.style.color = 'var(--green)'; inp.value = '•'.repeat(16);
 }
+
+function borrarToken() { ghSetToken(''); adminTab('stats', null); }
 
 function _renderGraficoUsuarios(results) {
   if (!results.length) return '';
@@ -2224,20 +2275,17 @@ function importarJSON() {
   let raw     = document.getElementById('imp-json').value.trim();
   if (!raw) { fb.textContent = '❌ El campo JSON está vacío.'; fb.style.color = 'var(--red)'; return; }
 
-  // Limpiar: quitar posible coma final antes de } o ]
-  const limpio = raw
-    .replace(/,(\s*[\}\]])/g, '$1')   // coma trailing antes de } o ]
-    .replace(/^\s*,/, '')             // coma al principio
-    .trim();
-
   let parsed;
   try {
-    parsed = JSON.parse(limpio);
+    const jsonLike = raw
+      .replace(/^\s*(\w+)\s*:/gm, '"$1":')
+      .replace(/,\s*\n?\s*\}/g, '}')
+      .replace(/,\s*\n?\s*\]/g, ']');
+    parsed = JSON.parse(jsonLike);
   } catch (e) {
-    fb.innerHTML = `❌ JSON inválido: <code style="font-size:.8rem">${e.message}</code><br>
-      <span style="font-size:.78rem;color:var(--muted)">Asegúrate de pegar el objeto completo desde <code>{</code> hasta <code>}</code>, o el arreglo desde <code>[</code> hasta <code>]</code>.</span>`;
-    fb.style.color = 'var(--red)';
-    return;
+    try { parsed = JSON.parse(raw); } catch (e2) {
+      fb.textContent = '❌ JSON inválido: ' + e2.message; fb.style.color = 'var(--red)'; return;
+    }
   }
 
   const items = Array.isArray(parsed) ? parsed : [parsed];
@@ -2246,29 +2294,23 @@ function importarJSON() {
   const requeridos = ['pregunta', 'opciones', 'respuestaCorrecta'];
   const invalidas  = items.filter(p => !requeridos.every(k => k in p));
   if (invalidas.length) {
-    fb.textContent = `❌ ${invalidas.length} pregunta(s) sin los campos requeridos: pregunta, opciones, respuestaCorrecta.`;
+    fb.textContent = `❌ ${invalidas.length} pregunta(s) sin campos requeridos (pregunta, opciones, respuestaCorrecta).`;
     fb.style.color = 'var(--red)'; return;
   }
 
   const extra = getExtra();
   if (!extra[banco]) extra[banco] = [];
-
-  // Preservar TODOS los campos del formato oficial
-  const limpias = items.map(p => {
-    const obj = {
-      pregunta:          String(p.pregunta),
-      categoria:         p.categoria || p.subcategoria || 'General',
-      opciones:          p.opciones.map(String),
-      respuestaCorrecta: Number(p.respuestaCorrecta),
-      explicacion:       p.explicacion || p.fundamentoNormativo?.justificacion || ''
-    };
-    if (p.nivelDificultad)    obj.nivelDificultad    = p.nivelDificultad;
-    if (p.competenciaEvaluada) obj.competenciaEvaluada = p.competenciaEvaluada;
-    if (p.fundamentoNormativo) obj.fundamentoNormativo = p.fundamentoNormativo;
-    return obj;
-  });
-
+  const limpias = items.map(p => ({
+    pregunta: String(p.pregunta),
+    categoria: p.categoria || p.subcategoria || 'General',
+    opciones: p.opciones.map(String),
+    respuestaCorrecta: Number(p.respuestaCorrecta),
+    explicacion: p.explicacion || (p.fundamentoNormativo?.justificacion) || '',
+    ...(p.nivelDificultad ? { nivelDificultad: p.nivelDificultad } : {}),
+    ...(p.competenciaEvaluada ? { competenciaEvaluada: p.competenciaEvaluada } : {})
+  }));
   extra[banco].push(...limpias);
+  // Marcar como pendiente para subir al repo
   _pendienteGH = { bancoKey: banco, preguntas: limpias };
   saveExtra(extra);
   fb.textContent = `✅ ${limpias.length} pregunta(s) importada(s) al banco "${BANCO_LABELS[banco]}".`;
