@@ -376,7 +376,30 @@ function saveExtra(data) {
   }
 }
 
-/** Compatibilidad: saveUsuarios antiguo → ahora es async por banco */
+/**
+ * Sincronización completa desde Firebase → caché local.
+ * Se llama al inicio de cada sesión para que cualquier dispositivo
+ * tenga siempre los datos más recientes: usuarios, preguntas extra y bancos.
+ */
+async function dbSyncAll() {
+  if (!fbListo()) return;
+  try {
+    // 1. Usuarios
+    const userDocs = await fbGetAll('usuarios');
+    if (userDocs.length) {
+      const map = {};
+      userDocs.forEach(d => { const { _id, ...rest } = d; map[_id] = rest; });
+      sSave(CACHE_KEYS.USERS, map, 0);
+    }
+    // 2. Preguntas extra
+    const extraDocs = await fbGetAll('extra');
+    if (extraDocs.length) {
+      const map = {};
+      extraDocs.forEach(d => { const { _id, preguntas } = d; map[_id] = preguntas || []; });
+      sSave(CACHE_KEYS.EXTRA, map, 0);
+    }
+  } catch(e) { console.warn('dbSyncAll error:', e); }
+}
 function saveUsuarios(data) {
   sSave(CACHE_KEYS.USERS, data, 0);
   if (fbListo()) {
@@ -702,12 +725,11 @@ function seleccionarCargo(key) {
 }
 
 /** Ejecutar el acceso según cargo seleccionado */
-function verificarAcceso() {
+async function verificarAcceso() {
   const err = document.getElementById('ac-err');
-  if (err) { err.textContent = ''; }
+  if (err) err.textContent = '';
 
   if (!_cargoSeleccionado) {
-    // No seleccionó cargo — resaltar la sección
     const cont = document.getElementById('ac-cargo-btns');
     if (cont) { cont.style.animation = 'none'; cont.offsetHeight; cont.style.animation = 'inpShk .35s ease'; }
     if (err) err.textContent = 'Selecciona tu cargo primero.';
@@ -718,18 +740,33 @@ function verificarAcceso() {
   let key;
 
   if (cargo.direct) {
-    // Técnico: key fija
     key = 'tecnico';
   } else {
-    // Docente / Psicólogo: normalizar nombre escrito
     const inp = document.getElementById('ac-inp');
     if (!inp || !inp.value.trim()) {
-      if (err) { err.textContent = 'Por favor escribe tu nombre.'; }
+      if (err) err.textContent = 'Por favor escribe tu nombre.';
       if (inp) { inp.classList.add('err'); setTimeout(() => inp.classList.remove('err'), 600); }
       return;
     }
     key = norm(inp.value);
   }
+
+  // Mostrar indicador de carga
+  const btnGo = document.querySelector('.btn-go');
+  if (btnGo) { btnGo.disabled = true; btnGo.textContent = '⏳ Verificando…'; }
+
+  // Inicializar Firebase primero — y sincronizar usuarios + preguntas extra
+  const fbCfg = fbGetCfg();
+  if (fbCfg && !fbListo()) {
+    await fbInit(fbCfg);
+  }
+
+  // Si Firebase está listo, descargar usuarios y preguntas extra actualizados
+  if (fbListo()) {
+    await dbSyncAll();
+  }
+
+  if (btnGo) { btnGo.disabled = false; btnGo.textContent = 'Acceder al Simulador →'; }
 
   const info = resolverUsuario(key);
   if (!info) {
@@ -748,23 +785,14 @@ function verificarAcceso() {
     return;
   }
 
-  estado.usuario = key;
-  estado.esAdmin = info.esAdmin;
+  estado.usuario      = key;
+  estado.esAdmin      = info.esAdmin;
   estado.bancosActivos = info.bancos || [];
 
   const savedPool = sLoad(CACHE_KEYS.POOL);
   if (savedPool) estado.pool = savedPool;
 
-  // Inicializar Firebase si hay config guardada, luego continuar
-  const fbCfg = fbGetCfg();
-  if (fbCfg) {
-    fbInit(fbCfg).then(ok => {
-      if (ok) ghShowSync('Firebase conectado ✓', 'ok');
-      _continueLogin(key);
-    });
-  } else {
-    _continueLogin(key);
-  }
+  _continueLogin(key);
 }
 
 async function _continueLogin(key) {
@@ -813,6 +841,13 @@ function errInput(inp, err, msg) {
 
 document.addEventListener('DOMContentLoaded', () => {
   renderCargos();
+  // Auto-inicializar Firebase si ya está configurado, en segundo plano
+  const fbCfg = fbGetCfg();
+  if (fbCfg) {
+    fbInit(fbCfg).then(ok => {
+      if (ok) console.log('Firebase auto-iniciado ✓');
+    });
+  }
 });
 
 /** Mostrar/ocultar el panel de acceso admin */
@@ -825,8 +860,8 @@ function toggleAdminAccess() {
   }
 }
 
-/** Entrar como administrador con la clave edwinrd01 */
-function accederAdmin() {
+/** Entrar como administrador */
+async function accederAdmin() {
   const inp = document.getElementById('ac-admin-inp');
   const err = document.getElementById('ac-err');
   if (!inp) return;
@@ -842,22 +877,19 @@ function accederAdmin() {
     return;
   }
 
-  estado.usuario      = norm(clave);
-  estado.esAdmin      = true;
+  // Inicializar Firebase y sincronizar todo antes de entrar
+  const fbCfg = fbGetCfg();
+  if (fbCfg && !fbListo()) await fbInit(fbCfg);
+  if (fbListo()) await dbSyncAll();
+
+  estado.usuario       = norm(clave);
+  estado.esAdmin       = true;
   estado.bancosActivos = Object.keys(BANCOS_CFG);
 
   const savedPool = sLoad(CACHE_KEYS.POOL);
   if (savedPool) estado.pool = savedPool;
 
-  if (ghConfigurado()) {
-    ghShowSync('Sincronizando datos…', false);
-    Promise.all([ghPullUsuarios(), ghPullExtra()]).then(() => {
-      ghShowSync('Datos actualizados ✓', true);
-      _continueLogin(norm(clave));
-    });
-  } else {
-    _continueLogin(norm(clave));
-  }
+  _continueLogin(norm(clave));
 }
 
 /* ════════════════════════════════════════════════════════════
@@ -1565,7 +1597,7 @@ function loadResults() {
    SECCIÓN 21: PANEL DE ADMINISTRACIÓN
 ════════════════════════════════════════════════════════════ */
 
-function showAdmin() {
+async function showAdmin() {
   ocultarHdrQuiz();
   show('admin-screen');
   document.querySelector('.admin-tabs').innerHTML = `
@@ -1574,6 +1606,8 @@ function showAdmin() {
     <button class="atab"     onclick="adminTab('sessions',this)">📋 Sesiones</button>
     <button class="atab"     onclick="adminTab('banks',this)">📚 Bancos</button>
     <button class="atab"     onclick="adminTab('editor',this)">✏️ Editor</button>`;
+  // Sincronizar desde Firebase antes de mostrar datos
+  if (fbListo()) await dbSyncAll();
   adminTab('stats', null);
 }
 
