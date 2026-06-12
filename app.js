@@ -597,7 +597,7 @@ function show(id) {
 }
 
 function norm(s) {
-  return s.trim().toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/[^a-z]/g, '');
+  return s.trim().toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/[^a-z0-9]/g, '');
 }
 function clean(txt) { return (txt || '').replace(/^[A-Fa-f]\)\s*/, '').trim(); }
 
